@@ -1,0 +1,42 @@
+title = "ゴリラ@転生したら人間だった件"
+defaultContentLanguage = "ja"
+languageCode = "ja-jp"
+disablePathToLower = true
+hasCJKLanguage = true
+pluralizeListTitles = false
+pygmentsUseClasses = true
+pygmentsCodefences = true
+theme = "basic-design-personal-blog"
+
+[outputs]
+    page = [ "HTML" , "AMP"  ]
+
+[Params]
+    profile_image = "images/blank-profile.png"
+    eyecatch = "images/eyecache.jpg"
+    author = "skanehira"
+
+[taxonomies]
+    tag = "tags"
+
+[permalinks]
+    post = "/:section/:year/:month/:filename"
+
+[blackfriday]
+    hrefTargetBlank = true
+    nofollowLinks = true
+    extensionsmask = ["autolink"]
+
+[menu]
+    [[menu.global_header]]
+        name = "Home"
+        url = "/"
+        weight = 1
+    [[menu.global_header]]
+        name = "Posts"
+        url = "/posts"
+        weight = 2
+    [[menu.global_header]]
+        name = "About"
+        url = "/about"
+        weight = 3
