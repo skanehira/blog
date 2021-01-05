@@ -1,3 +1,4 @@
+baseURL = "https://skanehira.github.io/blog/"
 title = "ゴリラ@転生したら人間だった件"
 defaultContentLanguage = "ja"
 languageCode = "ja-jp"
@@ -10,11 +11,6 @@ theme = "basic-design-personal-blog"
 
 [outputs]
     page = [ "HTML" , "AMP"  ]
-
-[Params]
-    profile_image = "images/blank-profile.png"
-    eyecatch = "images/eyecache.jpg"
-    author = "skanehira"
 
 [taxonomies]
     tag = "tags"
@@ -37,6 +33,10 @@ theme = "basic-design-personal-blog"
         url = "/posts"
         weight = 2
     [[menu.global_header]]
-        name = "About"
-        url = "/about"
+        name = "GitHub"
+        url = "https://github.com/skanehira"
+        weight = 3
+    [[menu.global_header]]
+        name = "Twitter"
+        url = "https://twitter.com/gorilla0513"
         weight = 3
