@@ -38,6 +38,10 @@ theme = "basic-design-personal-blog"
         url = "/posts"
         weight = 2
     [[menu.global_header]]
-        name = "About"
-        url = "/about"
+        name = "GitHub"
+        url = "https://github.com/skanehira"
+        weight = 3
+    [[menu.global_header]]
+        name = "Twitter"
+        url = "https://twitter.com/gorilla0513"
         weight = 3
