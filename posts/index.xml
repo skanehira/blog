@@ -1,4 +1,168 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Fri, 25 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Vimでビートマニアする</title><link>https://skanehira.github.io/blog/posts/20201225-vim-beatbanana/</link><pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20201225-vim-beatbanana/</guid><description>以前、トイレ入ってたら突然Vimでビートマニアしたくなったのでskanehira/beatbanana.vimというのを作っていました。 最近</description><content type="html"><![CDATA[<p>以前、トイレ入ってたら突然Vimでビートマニアしたくなったので<a href="https://github.com/skanehira/beatbanana.vim">skanehira/beatbanana.vim</a>というのを作っていました。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>2020年の振り返りと2021年の目標</title><link>https://skanehira.github.io/blog/posts/20210105-look-back-2020/</link><pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210105-look-back-2020/</guid><description>あけましておめでとうございます。 ちょっと遅めですが、2020年の振り返りと2021年の目標について整理しました。 2020年はコロナの影響でい</description><content type="html"><![CDATA[<p>あけましておめでとうございます。
+ちょっと遅めですが、2020年の振り返りと2021年の目標について整理しました。</p>
+<p>2020年はコロナの影響でいろいろは大変でしたが、無事乗り切ったので2021年も引き続き頑張っていこうと思います。</p>
+<h2 id="2020年を振り返る">2020年を振り返る</h2>
+<p><a href="https://skanehira.github.io/blog/posts/20191230-look-back-on-this-year/#%E6%9D%A5%E5%B9%B4%E3%81%AE%E7%9B%AE%E6%A8%99">2019年末</a>に次の目標を立てましたが、
+一部のみ達成したという結果になりました。</p>
+<table>
+<thead>
+<tr>
+<th>目標</th>
+<th>結果</th>
+<th>補足</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>プログラミング言語を作る</td>
+<td>△</td>
+<td>Go言語でパーサーまで書いて満足してしまって<br>その後JSONのパーサーと電卓を書いた</td>
+</tr>
+<tr>
+<td>Goを補完なしでかけるようになる</td>
+<td>○</td>
+<td>Go以外も自動補完使わずに書くようになった</td>
+</tr>
+<tr>
+<td>Goの講師をやる</td>
+<td>○</td>
+<td>無事前編収録完了した</td>
+</tr>
+<tr>
+<td>Goのカンファレンスに登壇する</td>
+<td>☓</td>
+<td>コロナの影響でなし</td>
+</tr>
+<tr>
+<td>Vimのカンファレンスに登壇する</td>
+<td>☓</td>
+<td>コロナの影響でなし</td>
+</tr>
+<tr>
+<td>HTTPサーバーをスクラッチで作る</td>
+<td>☓</td>
+<td>着手していない</td>
+</tr>
+</tbody>
+</table>
+<p>プログラミング言語を作るのは、想像以上に難しかったのでJSONのパーサーを書く、というところまで一旦レベルを落としていました。
+Goで作るインタプリタの本も大体半分くらいまでは書いて理解した（多分）ので、それを活かしてJSONと電卓のパーサーを書いていました。</p>
+<p>HTTPサーバーをスクラッチで作るのは、完全に意欲がなくなったので着手すらしていないです。
+こういうのは、熱意が消えないうちにやるべきですね&hellip;</p>
+<p>2019年末に立てた目標以外にも、コロナの影響などもあり会社が潰れないように自分の中で1つのミッションを持っていました。
+それは新人を育てることです。</p>
+<p>4月にチームを立ち上げて右も左もわからない新人に技術や仕事の仕方を教えていました。最大8人くらいの面倒を見ながら、他に4~5チームのレビュー、実装の相談などを一人でこなしていました。</p>
+<p>どれくらいの忙しさだったかというと、1人で3人分くらいの仕事をしていたという感じです。トイレに行く以外は常に全集中で仕事していました。正直ハゲるかと思ったのは内緒です。
+でもそのおかげで、体感的に2倍くらいキャパが広がったので今思えば良かったなと思っています。</p>
+<p>こういった忙しさの中でも、ものを作ったり記事を書いたりとスキルアップを頑張っていました。
+2020年に作ったもの次の通りです。</p>
+<table>
+<thead>
+<tr>
+<th>OSS</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/skanehira/preview-markdown.vim">skanehira/preview-markdown.vim</a></td>
+<td>Vim上でmarkdownをプレビューするプラグイン</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/gh.vim">skanehira/gh.vim</a></td>
+<td>Vim上でGitHubの機能を使うプラグイン</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/preview-uml.vim">skanehira/preview-uml.vim</a></td>
+<td>Vim上でUMLをプレビューするプラグイン</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/code2img">skanehira/code2img</a></td>
+<td>コード片を画像化するCLI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/code2img.vim">skanehira/code2img.vim</a></td>
+<td>code2imgのVimプラグイン</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/fk">skanehira/fk</a></td>
+<td>プロセスを曖昧検索してkillするCLI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/getpr">skanehira/getpr</a></td>
+<td>コミットIDからGitHubのPRリンクを取得するCLI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/getpr.vim">skanehira/getpr.vim</a></td>
+<td>getprのVimプラグイン</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/mcp">skanehira/mcp</a></td>
+<td>エディタを使って複数のファイルをコピーするCLI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/clipboard-image">skanehira/clipboard-image</a></td>
+<td>画像をクリップボードに書き込み/読み出すライブラリ</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/gyazo">skanehira/gyazo</a></td>
+<td>Gyazoに画像をアップロードするCLI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/gyazo.vim">skanehira/gyazo.vim</a></td>
+<td>gyazoのVimプラグイン</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/beatbanana.vim">skanehira/beatbanana.vim</a></td>
+<td>Vimでビートマニアをするプラグイン（未完成）</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/amzn-url-shorter">skanehira/amzn-url-shorter</a></td>
+<td>AmazonのURLを短縮するCLI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/google-map.vim">skanehira/google-map.vim</a></td>
+<td>VimからGoogle Mapを開くプラグイン</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/go-dockerveth">skanehira/go-dockerveth</a></td>
+<td>Dockerのコンテナがattachしているvethを表示するCLI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/skanehira/xj">skanehira/xj</a></td>
+<td>XMLをJSONに変換するCLI</td>
+</tr>
+</tbody>
+</table>
+<p>こうやってみると、今年はかなりVimに偏っていてあまりGo周り研鑽していなかったなと思いました。
+仕事ではコードを書くことはなくなって、プライベートでVimプラグインばっかり作っているので、Goあまり触っていないです&hellip;</p>
+<h2 id="2021年の目標">2021年の目標</h2>
+<p>2021も仕事は多忙なのは見えているので、あまり多くの目標を立てないようにします。
+具体的に次の目標を今年中にクリアします。</p>
+<table>
+<thead>
+<tr>
+<th>目標</th>
+<th>補足</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TOIEC700点を取る</td>
+<td>将来英語圏で働くのが目標なので英語力をアップする</td>
+</tr>
+<tr>
+<td>Go力アップ</td>
+<td>OSSを作る、Goの仕様を読んでブログにまとめる</td>
+</tr>
+</tbody>
+</table>
+<p>英語に関してはすでに<a href="https://www.abceed.com">abceed</a>というアプリと<a href="https://cdc-eigo365.com">生イングリッシュ</a>というサービスを使って日々勉強しています。
+まだ成長の実感が全然ないんですが、コツコツ頑張っていきます。</p>
+<h2 id="最後に">最後に</h2>
+<p>2020は色々大変でしたが、2021も生き残れるように頑張って行きます。
+人生は短いので、自分の夢のため日々全力を尽くしていきます。</p>
+]]></content></item><item><title>Vimでビートマニアする</title><link>https://skanehira.github.io/blog/posts/20201225-vim-beatbanana/</link><pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20201225-vim-beatbanana/</guid><description>以前、トイレ入ってたら突然Vimでビートマニアしたくなったのでskanehira/beatbanana.vimというのを作っていました。 最近</description><content type="html"><![CDATA[<p>以前、トイレ入ってたら突然Vimでビートマニアしたくなったので<a href="https://github.com/skanehira/beatbanana.vim">skanehira/beatbanana.vim</a>というのを作っていました。
 最近はGitHubのプラグイン<a href="https://github.com/skanehira/gh.vim">gh.vim</a>を作っているので、こちらの開発は止まっていますが、少しその話を書いていこうと思います。</p>
 <h2 id="どんな感じ">どんな感じ？</h2>
 <p>作りかけですが、こんな感じです。</p>
@@ -2558,7 +2722,7 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 <p>いかがですか？
 この記事を見て少しでも早くコーディングできるようになったら嬉しいです。</p>
 <p>では良いコーディングライフを〜</p>
-]]></content></item><item><title>今年の振り返り</title><link>https://skanehira.github.io/blog/posts/20191230-look-back-on-this-year/</link><pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20191230-look-back-on-this-year/</guid><description>今年は個人的に人生の転機の年と感じているいます。 一年間振り返りつつ、来年の目標は自分の中である程度固まってのでそれも整理していきます。 今年の</description><content type="html"><![CDATA[<p>今年は個人的に人生の転機の年と感じているいます。
+]]></content></item><item><title>2019年の振り返り</title><link>https://skanehira.github.io/blog/posts/20191230-look-back-2019/</link><pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20191230-look-back-2019/</guid><description>今年は個人的に人生の転機の年と感じているいます。 一年間振り返りつつ、来年の目標は自分の中である程度固まってのでそれも整理していきます。 今年の</description><content type="html"><![CDATA[<p>今年は個人的に人生の転機の年と感じているいます。
 一年間振り返りつつ、来年の目標は自分の中である程度固まってのでそれも整理していきます。</p>
 <h2 id="今年の目標">今年の目標</h2>
 <p>今年だけの目標というわけではないのですが、やりたいと思っていたことを1つを除き、残りはすべて達成できました。
