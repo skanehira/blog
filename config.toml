@@ -9,7 +9,7 @@ pygmentsCodefences = true
 theme = "basic-design-personal-blog"
 
 [outputs]
-    page = [ "HTML" , "AMP"  ]
+    page = [ "HTML" ]
 
 [taxonomies]
     tag = "tags"
