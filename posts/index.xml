@@ -568,7 +568,7 @@ Vim上でリポジトリのファイルツリーを見ることができる機�
 正直これからどうなるのかわからないのですが、日々Vimでの生活を良くしていきたいと思っています。
 せっかくなのでみなさんも年末にVimを大掃除してみると良いかもしれません。</p>
 <p>では、良いお年を〜</p>
-]]></content></item><item><title>あまり知られていないGoのスライス/配列の初期化の調査</title><link>https://skanehira.github.io/blog/posts/20201202-go-slice-initialize/</link><pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20201202-go-slice-initialize/</guid><description>初めに 先日、こちらの動画で見たことがない配列の初期化をしていたので、それについてわかったことを解説してきます。 配列の初期化 動画のほうでは次の</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+]]></content></item><item><title>あまり知られていないGoのスライス/配列の初期化</title><link>https://skanehira.github.io/blog/posts/20201202-go-slice-initialize/</link><pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20201202-go-slice-initialize/</guid><description>初めに 先日、こちらの動画で見たことがない配列の初期化をしていたので、それについてわかったことを解説してきます。 配列の初期化 動画のほうでは次の</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>先日、<a href="https://www.youtube.com/watch?v=elGjixFQLYE&amp;t=1054s&amp;ab_channel=mercaridevjp">こちらの動画</a>で見たことがない配列の初期化をしていたので、それについてわかったことを解説してきます。</p>
 <h2 id="配列の初期化">配列の初期化</h2>
 <p>動画のほうでは次のような配列宣言をしていました。</p>
@@ -1824,7 +1824,7 @@ Vim上でGitHubを操作できるプラグイン<a href="https://github.com/skan
 </span></code></pre></div><p>ちょっと原因調べるの面倒ですので、ちょっと自作コマンドを用意することにしました。
 今のところは快適ですが、<code>system</code>はVimの操作をブロックしてしまうので、
 困ったら<code>job_start</code>を使って改善するかもしれません。</p>
-]]></content></item><item><title>Vimで画像をツイートするの調査</title><link>https://skanehira.github.io/blog/posts/20200817-vim-tweet-with-image/</link><pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200817-vim-tweet-with-image/</guid><description>初めに ども、連休が終わったのを未だに信じられないゴリラです 先日 code2img.vim というプラグインをつくったんですが、 基本ソースコードを画像にして共有するのは</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+]]></content></item><item><title>Vimで画像をツイートする</title><link>https://skanehira.github.io/blog/posts/20200817-vim-tweet-with-image/</link><pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200817-vim-tweet-with-image/</guid><description>初めに ども、連休が終わったのを未だに信じられないゴリラです 先日 code2img.vim というプラグインをつくったんですが、 基本ソースコードを画像にして共有するのは</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>ども、連休が終わったのを未だに信じられないゴリラです</p>
 <p>先日 <a href="https://github.com/skanehira/code2img.vim">code2img.vim</a> というプラグインをつくったんですが、
 基本ソースコードを画像にして共有するのはTwitterなので、それらをまとめてVimで出来たら良いなと思って、簡単なスクリプトを書きました。</p>
@@ -1846,7 +1846,7 @@ Vim上でGitHubを操作できるプラグイン<a href="https://github.com/skan
 <code>job_start</code>なので非同期で動くのでVimが固まることがないです(これ重要)</p>
 <h2 id="さいごに">さいごに</h2>
 <p>やはりコードを画像化してさくっとTwtterで共有できるのは良い体験</p>
-]]></content></item><item><title>100種類以上のターミナルのカスタムテーマをサクッと導入の調査</title><link>https://skanehira.github.io/blog/posts/20200813-terminal-themes/</link><pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200813-terminal-themes/</guid><description>初めに こんにちわ 最近メインPCがThinkpadになって、メインOSがUbuntuになったゴリラです 普段ターミナルで作業する方はカスタムテー</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+]]></content></item><item><title>100種類以上のターミナルのカスタムテーマをサクッと導入</title><link>https://skanehira.github.io/blog/posts/20200813-terminal-themes/</link><pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200813-terminal-themes/</guid><description>初めに こんにちわ 最近メインPCがThinkpadになって、メインOSがUbuntuになったゴリラです 普段ターミナルで作業する方はカスタムテー</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>こんにちわ
 最近メインPCがThinkpadになって、メインOSがUbuntuになったゴリラです</p>
 <p>普段ターミナルで作業する方はカスタムテーマを使っていますか？
@@ -1865,7 +1865,7 @@ Vim上でGitHubを操作できるプラグイン<a href="https://github.com/skan
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/ddf36f95-5650-2792-c106-82ebbf9130b4.png" alt="image.png"></p>
 <h2 id="さいごに">さいごに</h2>
 <p>100種類以上のテーマをサクッと導入できるのは便利ですね</p>
-]]></content></item><item><title>Goで画像をクリップボードに保存、読み取るライブラリを作ったの調査</title><link>https://skanehira.github.io/blog/posts/20200808-go-clipboard-image/</link><pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200808-go-clipboard-image/</guid><description>初めに こんにちわ ゴリラです 画像をクリップボードにコピー、コピーした画像をクリップボードから読み取るGoのライブラリ clipboard-image をつくったので紹介します</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+]]></content></item><item><title>Goで画像をクリップボードに保存、読み取るライブラリを作った</title><link>https://skanehira.github.io/blog/posts/20200808-go-clipboard-image/</link><pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200808-go-clipboard-image/</guid><description>初めに こんにちわ ゴリラです 画像をクリップボードにコピー、コピーした画像をクリップボードから読み取るGoのライブラリ clipboard-image をつくったので紹介します</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>こんにちわ
 ゴリラです</p>
 <p>画像をクリップボードにコピー、コピーした画像をクリップボードから読み取るGoのライブラリ <a href="https://github.com/skanehira/clipboard-image">clipboard-image</a> をつくったので紹介します。
@@ -1938,7 +1938,7 @@ xclip -selection clipboard -o &gt; /path/to/file.png
 <p>ちなみに、この記事の画像はVimで書いたコードを<a href="https://github.com/skanehira/code2img.vim">code2img.vim</a>でクリップボードにコピーしてサクッとQiitaにアップロードしたものです。
 当初手軽にVimでコードを画像化したいという目的を達成できて、実際使って便利ので満足しています。</p>
 <p>コードブロックが使えないチャットやTwitterといったSNSでコード貼りたいときにぜひCLIを使ってみてください。</p>
-]]></content></item><item><title>Goでソースコードを画像化するCLIを作ったの調査</title><link>https://skanehira.github.io/blog/posts/20200806-go-code2img/</link><pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200806-go-code2img/</guid><description>初めに こんにちわ ゴリラです 普段、Twitterでたまにこういうふうにソースコードの画像を貼り付けることがあります。 画像を作るのにcarbon</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+]]></content></item><item><title>Goでソースコードを画像化するCLIを作った</title><link>https://skanehira.github.io/blog/posts/20200806-go-code2img/</link><pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200806-go-code2img/</guid><description>初めに こんにちわ ゴリラです 普段、Twitterでたまにこういうふうにソースコードの画像を貼り付けることがあります。 画像を作るのにcarbon</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>こんにちわ
 ゴリラです</p>
 <p>普段、Twitterでたまにこういうふうにソースコードの画像を貼り付けることがあります。</p>
@@ -2020,7 +2020,7 @@ tokenの種類から<code>style.Get()</code>で色情報を取得しています
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/fb37eb6f-fb51-8666-af58-bd200229568b.gif" alt="vim-code2img.gif"></p>
 <h2 id="さいごに">さいごに</h2>
 <p>依存なしでソースコードを画像に変換できるので、ぜひ試してみてください。エディタとも連携できて便利です。</p>
-]]></content></item><item><title>Vimでソースコードを画像化してクリップボードにコピーの調査</title><link>https://skanehira.github.io/blog/posts/20200806-vim-code2img/</link><pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200806-vim-code2img/</guid><description>初めに こんにちわ ゴリラです Goでソースコードを画像化するCLIを作った でソースコードを画像化するCLIを紹介しましたが、Vimからもう少し使</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+]]></content></item><item><title>Vimでソースコードを画像化してクリップボードにコピー</title><link>https://skanehira.github.io/blog/posts/20200806-vim-code2img/</link><pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200806-vim-code2img/</guid><description>初めに こんにちわ ゴリラです Goでソースコードを画像化するCLIを作った でソースコードを画像化するCLIを紹介しましたが、Vimからもう少し使</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>こんにちわ
 ゴリラです</p>
 <p><a href="https://qiita.com/gorilla0513/items/013aea9060bca1455137">Goでソースコードを画像化するCLIを作った</a> でソースコードを画像化するCLIを紹介しましたが、Vimからもう少し使いやすくするためプラグインを作りました。</p>
@@ -2046,7 +2046,7 @@ tokenの種類から<code>style.Get()</code>で色情報を取得しています
 <p>久しぶりにVimプラグイン作りましたが、楽かったです
 あとやはり書かないと色々忘れるなと思いました
 定期的にプラグインを作りたい（気持ちはある）</p>
-]]></content></item><item><title>Vim上でツイートをニコ動のコメント風に流すの調査</title><link>https://skanehira.github.io/blog/posts/20200727-vim-tweet-niconico/</link><pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200727-vim-tweet-niconico/</guid><description>初めに こんにちわ ゴリラです Vimでターミナルを使うときは:term ++close +shell {cmd}というふうに実行することが多々ありますが、 オプションが多くな</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+]]></content></item><item><title>Vim上でツイートをニコ動のコメント風に流す</title><link>https://skanehira.github.io/blog/posts/20200727-vim-tweet-niconico/</link><pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200727-vim-tweet-niconico/</guid><description>初めに こんにちわ ゴリラです Vimでターミナルを使うときは:term ++close +shell {cmd}というふうに実行することが多々ありますが、 オプションが多くな</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>こんにちわ
 ゴリラです</p>
 <p>Vimでターミナルを使うときは<code>:term ++close +shell {cmd}</code>というふうに実行することが多々ありますが、
@@ -2079,7 +2079,7 @@ tokenの種類から<code>style.Get()</code>で色情報を取得しています
 
     :edit term://bash
     :vsplit term://top
-</code></pre>]]></content></item><item><title>Vimのターミナルをすこし使いやすくするの調査</title><link>https://skanehira.github.io/blog/posts/20200726-vim-improve-terminal/</link><pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200726-vim-improve-terminal/</guid><description>初めに こんにちわ ゴリラです Vimでターミナルを使うときは:term ++close +shell {cmd}というふうに実行することが多々ありますが、 オプションが多くな</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+</code></pre>]]></content></item><item><title>Vimのターミナルをすこし使いやすくする</title><link>https://skanehira.github.io/blog/posts/20200726-vim-improve-terminal/</link><pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200726-vim-improve-terminal/</guid><description>初めに こんにちわ ゴリラです Vimでターミナルを使うときは:term ++close +shell {cmd}というふうに実行することが多々ありますが、 オプションが多くな</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>こんにちわ
 ゴリラです</p>
 <p>Vimでターミナルを使うときは<code>:term ++close +shell {cmd}</code>というふうに実行することが多々ありますが、
@@ -2112,7 +2112,7 @@ tokenの種類から<code>style.Get()</code>で色情報を取得しています
 
     :edit term://bash
     :vsplit term://top
-</code></pre>]]></content></item><item><title>VimでWorld Wide Webの調査</title><link>https://skanehira.github.io/blog/posts/20200706-vim-www/</link><pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200706-vim-www/</guid><description>初めに こんにちわ ゴリラです 普段Vimを使ってコーディングしていると、「あれ、あの関数名なんだっけ？」とか「引数何を受け取るんだっけ？」とかで</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+</code></pre>]]></content></item><item><title>VimでWorld Wide Web</title><link>https://skanehira.github.io/blog/posts/20200706-vim-www/</link><pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200706-vim-www/</guid><description>初めに こんにちわ ゴリラです 普段Vimを使ってコーディングしていると、「あれ、あの関数名なんだっけ？」とか「引数何を受け取るんだっけ？」とかで</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>こんにちわ
 ゴリラです</p>
 <p>普段Vimを使ってコーディングしていると、「あれ、あの関数名なんだっけ？」とか「引数何を受け取るんだっけ？」とかで思い出せないことが多々あると思います。
@@ -2166,7 +2166,7 @@ keymap C-k GOTO
 </code></pre><h2 id="さいごに">さいごに</h2>
 <p>導入したばっかりなので、しばらく使ってみています。
 みなさんもぜひ使ってみてください。</p>
-]]></content></item><item><title>ブラウザのテキスト入力をVim化の調査</title><link>https://skanehira.github.io/blog/posts/20200621-vim-input-in-browser/</link><pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200621-vim-input-in-browser/</guid><description>初めに こんにちわ ゴリラです 仕事に限らず、普段はブラウザでテキストを入力することも多々あると思います。 ぼくは、その度にVimのキーバインドを使</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+]]></content></item><item><title>ブラウザのテキスト入力をVim化</title><link>https://skanehira.github.io/blog/posts/20200621-vim-input-in-browser/</link><pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200621-vim-input-in-browser/</guid><description>初めに こんにちわ ゴリラです 仕事に限らず、普段はブラウザでテキストを入力することも多々あると思います。 ぼくは、その度にVimのキーバインドを使</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>こんにちわ
 ゴリラです</p>
 <p>仕事に限らず、普段はブラウザでテキストを入力することも多々あると思います。
@@ -2193,7 +2193,7 @@ keymap C-k GOTO
 <h2 id="さいごに">さいごに</h2>
 <p>日本語入力の削除の挙動が若干変ですが、とても便利なのでVimmerの方はぜひ試して見ください
 ぼくはQOLが上りまくりです</p>
-]]></content></item><item><title>Vimでタブ文字を可視化するの調査</title><link>https://skanehira.github.io/blog/posts/20200606-vim-show-tab/</link><pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200606-vim-show-tab/</guid><description>初めに こんにちわ ゴリラです みなさんVimではタブ、空白文字を可視化できることは知っていますか？ タブ、空白文字を可視化することによって、空白と</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+]]></content></item><item><title>Vimでタブ文字を可視化する</title><link>https://skanehira.github.io/blog/posts/20200606-vim-show-tab/</link><pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200606-vim-show-tab/</guid><description>初めに こんにちわ ゴリラです みなさんVimではタブ、空白文字を可視化できることは知っていますか？ タブ、空白文字を可視化することによって、空白と</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>こんにちわ
 ゴリラです</p>
 <p>みなさんVimではタブ、空白文字を可視化できることは知っていますか？
@@ -2238,7 +2238,7 @@ keymap C-k GOTO
 <p>このオプションは地味ですが、可視化して見やすくなるのに役立ちますので、是非試してみてください。
 ちなみに、ぼくはタブと空白文字を<code>ｳﾎ</code>にしています。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/eea9cadc-d404-d6b2-5528-03836ef72e1d.png" alt="image.png"></p>
-]]></content></item><item><title>プロセスをあいまい検索してkillするツールをGoで作ったの調査</title><link>https://skanehira.github.io/blog/posts/20200524-go-fuzzy-kill-process/</link><pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200524-go-fuzzy-kill-process/</guid><description>初めに 仕事しているとプロセスをkillすることがたまにあると思います。 大体はps、awk、grepで必要なプロセスIDを抽出してkillコマ</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+]]></content></item><item><title>プロセスをあいまい検索してkillするツールをGoで作った</title><link>https://skanehira.github.io/blog/posts/20200524-go-fuzzy-kill-process/</link><pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200524-go-fuzzy-kill-process/</guid><description>初めに 仕事しているとプロセスをkillすることがたまにあると思います。 大体はps、awk、grepで必要なプロセスIDを抽出してkillコマ</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>仕事しているとプロセスをkillすることがたまにあると思います。</p>
 <p>大体は<code>ps</code>、<code>awk</code>、<code>grep</code>で必要なプロセスIDを抽出して<code>kill</code>コマンドに渡していますが、
 ぼくはそれがとても面倒に感じているので、あいまい検索してプロセスをkillしたいなと思って<code>fk(fuzzy-finder-killer)</code>ってコマンドを作りました。</p>
@@ -2496,7 +2496,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 <h2 id="まとめ">まとめ</h2>
 <p><code>Compose Specification</code>で仕様がある程度定まったら色々と面白くなりそうだなというのが個人的な感想です。
 せっかくなので、この仕様を元に実用的なCLIを作ろうと思っています。できあたらそのうち公開します。</p>
-]]></content></item><item><title>dockerのイメージ一覧APIのfiltersパラメータについての調査</title><link>https://skanehira.github.io/blog/posts/20200506-docker-api-filters/</link><pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200506-docker-api-filters/</guid><description>初めに こんにちわ。 ゴリラです。 dockerのイメージAPIをcurlで叩いた時にイメージをフィルターしたいが、詰まっていたのでそのやり方を備</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+]]></content></item><item><title>dockerのイメージ一覧APIのfiltersパラメータについて</title><link>https://skanehira.github.io/blog/posts/20200506-docker-api-filters/</link><pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200506-docker-api-filters/</guid><description>初めに こんにちわ。 ゴリラです。 dockerのイメージAPIをcurlで叩いた時にイメージをフィルターしたいが、詰まっていたのでそのやり方を備</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>こんにちわ。
 ゴリラです。</p>
 <p>dockerのイメージAPIを<code>curl</code>で叩いた時にイメージをフィルターしたいが、詰まっていたのでそのやり方を備忘録として残しておきます。</p>
