@@ -1,6 +1,9 @@
 ---
 title: Vimのコマンドラインモードでできること
 date: 2019-04-22
+toc: true
+tags: 
+  - Vim
 ---
 
 こんにちわ

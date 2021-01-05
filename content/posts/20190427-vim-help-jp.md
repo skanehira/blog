@@ -1,6 +1,9 @@
 ---
 title: Vimヘルプを日本語化
 date: 2019-04-27
+toc: true
+tags: 
+  - Vim
 ---
 
 こんにちわ。

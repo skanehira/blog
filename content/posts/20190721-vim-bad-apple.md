@@ -1,6 +1,9 @@
 ---
 title: VimでBad Apple!!
 date: 2019-07-21
+toc: true
+tags: 
+  - Vim
 ---
 
 こんにちわ。

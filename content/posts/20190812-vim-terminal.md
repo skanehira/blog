@@ -1,6 +1,9 @@
 ---
 title: Vimのターミナルの真の力お見せしますよ
 date: 2019-08-12
+toc: true
+tags: 
+  - Vim
 ---
 
 ## はじめに

@@ -1,6 +1,9 @@
 ---
 title: お勧めVimヘルプ
 date: 2019-05-20
+toc: true
+tags: 
+  - Vim
 ---
 
 こんにちわ。
