@@ -105,7 +105,7 @@ toc: true
 | Book                                                                                                                                                                                                      | Description            |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
 | <a href="https://gorilla0513.booth.pm/items/1513974" target="_blank"><img src="https://s2.booth.pm/dd220c7f-3883-4e61-92ee-9de29d0c71ea/i/1513974/494aba9c-ee50-444a-8261-66a07ad44d89_base_resized.jpg" width=150 /></a> | 同人誌(PDFのみ)        |
-| <a href="https://nextpublishing.jp/book/11839.html" target="_blank"><img src="https://nextpublishing.jp/wp-content/uploads/2020/05/N01186.jpg" width=150 /></a>                                                           | 商業紙(紙版、Kindle版) |
+| <a href="https://nextpublishing.jp/book/11839.html" target="_blank"><img src="https://nextpublishing.jp/wp-content/uploads/2020/05/N01186.jpg" width=150 /></a>                                                           | 商業誌(紙版、Kindle版) |
 
 
 
