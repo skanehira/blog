@@ -1,6 +1,9 @@
 ---
 title: Vimのセッション管理プラグイン
 date: 2019-06-20
+toc: true
+tags: 
+  - Vim
 ---
 
 こんにちは。

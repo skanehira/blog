@@ -1,6 +1,9 @@
 ---
 title: 技術書典7の感想
 date: 2019-10-01
+toc: true
+tags: 
+  - techbookfest
 ---
 
 ## はじめに

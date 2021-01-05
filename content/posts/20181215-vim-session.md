@@ -1,6 +1,9 @@
 ---
 title: Vimのセッション機能を使う
 date: 2018-12-15
+toc: true
+tags: 
+  - Vim
 ---
 
 みなさん、vimに[セッション機能](https://vim-jp.org/vimdoc-ja/usr_21.html#21.4)があるのはご存知でしょうか？

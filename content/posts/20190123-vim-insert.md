@@ -1,6 +1,9 @@
 ---
 title: Vimのインサートモードでできること
 date: 2019-01-23
+toc: true
+tags: 
+  - Vim
 ---
 
 こんにちわ
