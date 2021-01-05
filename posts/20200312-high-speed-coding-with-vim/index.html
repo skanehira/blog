@@ -1,0 +1,119 @@
+<!doctype html><html lang=ja><head><meta charset=utf-8><base href=https://skanehira.github.io/blog/><link rel=canonical href=https://skanehira.github.io/blog/posts/20200312-high-speed-coding-with-vim/><meta name=viewport content="width=device-width,initial-scale=1"><title>Vimで高速コーディングする方法 | ゴリラ@転生したら人間だった件</title><meta name=description content="こんにちわ、ゴリラです。 Vimといえば高速でコーディングできるという印象を持っている方が多いのではないでしょうか？ 今日は、Postfix Code Completion"><meta property="og:title" content="Vimで高速コーディングする方法 | ゴリラ@転生したら人間だった件"><meta property="og:type" content="article"><meta property="og:url" content="https://skanehira.github.io/blog/posts/20200312-high-speed-coding-with-vim/"><meta property="og:site_name" content="ゴリラ@転生したら人間だった件"><meta property="og:description" content="こんにちわ、ゴリラです。 Vimといえば高速でコーディングできるという印象を持っている方が多いのではないでしょうか？ 今日は、Postfix Code Completion"><link rel=stylesheet href=https://skanehira.github.io/blog/css/reset.524633911eadaf3cb674408574038ab61826bbd094638faef366ddcaf13e56ab.css><link rel=stylesheet href=https://skanehira.github.io/blog/scss/style.10edae46d9f81f5614a2948ad849646e1db60c0a332e3c53c5b62027c7ba5018.css><link rel=preload href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.8.2/css/all.css as=style onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.8.2/css/all.css></noscript><script>!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(a){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){function e(){t.addEventListener?t.removeEventListener("load",e):t.attachEvent&&t.detachEvent("onload",e),t.setAttribute("onload",null),t.media=a}var a=t.media||"all";t.addEventListener?t.addEventListener("load",e):t.attachEvent&&t.attachEvent("onload",e),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(e,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script></head><body class=m-body><header class=m-global-header><div class=m-logo><a class=m-logo__link href=/blog>ゴリラ@転生したら人間だった件</a></div><div class=m-global-menu><nav class=m-global-menu__navigation><ul class=m-global-menu__navigation-list><li class=m-global-menu__navigation-list-item><a class=m-global-menu__navigation-list-item-link href=/blog/>Home</a></li><li class=m-global-menu__navigation-list-item><a class=m-global-menu__navigation-list-item-link href=/blog/posts>Posts</a></li><li class=m-global-menu__navigation-list-item><a class=m-global-menu__navigation-list-item-link href=https://github.com/skanehira>GitHub</a></li><li class=m-global-menu__navigation-list-item><a class=m-global-menu__navigation-list-item-link href=https://twitter.com/gorilla0513>Twitter</a></li></ul></nav></div></header><main class=m-main><div class=m-main-container><div class=m-content-container><article class=m-entry><div class=m-entry__breadcrumbs><div class=a-breadcrumbs><ul class=a-breadcrumbs__list itemscope itemtype=http://schema.org/BreadcrumbList><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/ itemprop=item><span itemprop=name>Home</span></span><meta itemprop=position content="1"></a><span class=a-breadcrumbs__list-item-link-gt>></span></li><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/posts/ itemprop=item><span itemprop=name>Posts</span><meta itemprop=position content="2"></a><span class=a-breadcrumbs__list-item-link-gt>></span></li><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/posts/20200312-high-speed-coding-with-vim/ itemprop=item><span itemprop=name>Vimで高速コーディングする方法</span><meta itemprop=position content="3"></a></li></ul></div></div><div class=m-entry__header><div class=m-entry__header-taxonomies><div class=m-entry__header-taxonomies-category><span class=m-entry__header-taxonomies-category-title><a class=m-entry__header-taxonomies-category-title-link href=https://skanehira.github.io/blog/posts/>Posts</a></span></div></div><div class=m-entry__header-title><a class=m-entry__header-title-link href=https://skanehira.github.io/blog/posts/20200312-high-speed-coding-with-vim/><h1 class=m-entry__header-title-link-text>Vimで高速コーディングする方法</h1></a></div><div class=m-entry__header-date><time>2020/03/30</time></div></div><div class=m-entry__content><p>こんにちわ、ゴリラです。</p><p>Vimといえば高速でコーディングできるという印象を持っている方が多いのではないでしょうか？
+今日は、Postfix Code Completion という手法をつかって早くコーディングする方法紹介します。</p><p>この方法を使えば次のgifのように、さくっとJSONを返すHTTPサーバーを立てられます。</p><p><img src=https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/69080d5a-bef8-c0d3-c1cc-99efb061bbe5.gif alt=sonictemplate-vim-sample.gif></p><h2 id=postfix-code-completionとは>Postfix Code Completionとは</h2><p>後置補完という補完手法です。
+例えば、<code>(a == b)</code>に対して<code>if</code>を使いたい場合は<code>(a == b).if</code>と入力して展開すると<code>if (a == b) { }</code>というふうに補完してくれます。</p><p>後ろのコード<code>if</code>が前のコード<code>(a == b)</code>に作用するという考え方です。
+これを積極的に使用していくとより高速にコーディングできるようになります。</p><p>僕の場合は、割と後置補完だけではなくスニペットのように使っています。</p><h2 id=vimでpostfix-code-completionを使う方法>VimでPostfix Code Completionを使う方法</h2><p>Vimでは<a href=https://github.com/mattn/sonictemplate-vim>sonictemplate.vim</a>というプラグインがサポートしています。
+デフォルトではPostfixのパターンファイルが用意されています。<code>&lt;C-y>&lt;C-b></code>でパターンを展開できます。
+もちろん自分でパターンファイルを用意することもできます。</p><p>まず、自前のテンプレートディレクトリを設定します。僕の場合は<code>~/.vim/sonictemplate</code> しています。</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-vim data-lang=vim><span style=color:#719e07>let</span> g:sonictemplate_vim_template_dir = expand(<span style=color:#2aa198>&#39;~/.vim/sonictemplate&#39;</span>)
+</code></pre></div><p>次に、言語のディレクトリを作成します。ディレクトリ名はファイルタイプ名と同じにする必要があります。
+<code>js</code>なら<code>javascript</code>というディレクトリを作成します。本記事ではGo言語のテンプレートを作っていきます。</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ mkdir ~/.vim/sonictemplate/go
+</code></pre></div><p>次に、Postfixのパターンファイルを作ります。こちらもファイル名はファイルタイプと同じです。</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ vim ~/.vim/sonictemplate/go/go.stpl
+</code></pre></div><p>この<code>go.stpl</code>にパターンを追記していきます。</p><h2 id=パターンの記述方法>パターンの記述方法</h2><p>次のように、1行目にパターンを2行目以降に展開後のコードを記述します。2行目以降はタブが必要です。</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>\(\S\+\)\.var$
+	var {{$1}} = {{_cursor_}}
+</code></pre></div><p>複数のパターンは空白行で区切られています。</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>\(\S\+\)\.var$
+	var {{$1}} = {{_cursor_}}
+
+\(\S\+\)\.iferr$
+	if {{$1}} != nil {
+		return {{$1}}
+	}
+	{{_cursor_}}
+</code></pre></div><p>パターンは正規表現を使用する事ができます。そして展開したコードでは<code>{{}}</code>で囲ったプラグイン独自の構文を使用できます。
+上記の例では<code>{{$1}}</code>は後方参照（<code>\(\S\+\)</code>の部分）しています。<code>{{_cursor_}}</code>は展開後カーソルの位置を指定しています。
+<code>{{}}</code>を使った構文は他にもあります。ヘルプを参照してください。</p><h2 id=パターンの例>パターンの例</h2><p>ぼくが使っているパターンをいくつか紹介します。</p><h3 id=dbを開く>dbを開く</h3><ul><li>パターン</li></ul><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>db.open\.\(&#34;.*&#34;\)\.\(&#34;.*&#34;\)$
+	db, err := sql.Open({{$1}}, {{$2}})
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer db.Close()
+	{{_cursor_}}
+</code></pre></div><ul><li>コード</li></ul><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#586e75>// 展開前
+</span><span style=color:#586e75></span>db.open.<span style=color:#2aa198>&#34;sqlite3&#34;</span>.<span style=color:#2aa198>&#34;test.db&#34;</span>
+
+<span style=color:#586e75>// 展開後
+</span><span style=color:#586e75></span>db, err <span style=color:#719e07>:=</span> sql.<span style=color:#268bd2>Open</span>(<span style=color:#2aa198>&#34;sqlite3&#34;</span>, <span style=color:#2aa198>&#34;test.db&#34;</span>)
+<span style=color:#719e07>if</span> err <span style=color:#719e07>!=</span> <span style=color:#cb4b16>nil</span> {
+	log.<span style=color:#268bd2>Fatal</span>(err)
+}
+<span style=color:#719e07>defer</span> db.<span style=color:#268bd2>Close</span>()
+</code></pre></div><h3 id=クエリを発行>クエリを発行</h3><ul><li>パターン</li></ul><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>db\.query\.\(.*\)$
+	rows, err := db.Query({{$1}})
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer rows.Close()
+	{{_cursor_}}
+</code></pre></div><ul><li>コード</li></ul><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#586e75>// 展開前
+</span><span style=color:#586e75></span>db.query.<span style=color:#2aa198>&#34;select * from todos&#34;</span>
+
+<span style=color:#586e75>// 展開後
+</span><span style=color:#586e75></span>rows, err <span style=color:#719e07>:=</span> db.<span style=color:#268bd2>Query</span>(<span style=color:#2aa198>&#34;select * from todos&#34;</span>)
+<span style=color:#719e07>if</span> err <span style=color:#719e07>!=</span> <span style=color:#cb4b16>nil</span> {
+	log.<span style=color:#268bd2>Fatal</span>(err)
+}
+<span style=color:#719e07>defer</span> rows.<span style=color:#268bd2>Close</span>()
+</code></pre></div><h3 id=jsonのエンコード>JSONのエンコード</h3><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>json\.encode\.\(\S\+\)\.\(\S\+\)$
+	if err := json.NewEncoder({{$1}}).Encode({{$2}}); err != nil {
+		{{_cursor_}}
+	}
+</code></pre></div><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#586e75>// 展開前
+</span><span style=color:#586e75></span>json.encode.writer.<span style=color:#719e07>&amp;</span>gorilla
+
+<span style=color:#586e75>// 展開後
+</span><span style=color:#586e75></span><span style=color:#719e07>if</span> err <span style=color:#719e07>:=</span> json.<span style=color:#268bd2>NewEncoder</span>(writer).<span style=color:#268bd2>Encode</span>(<span style=color:#719e07>&amp;</span>gorilla); err <span style=color:#719e07>!=</span> <span style=color:#cb4b16>nil</span> {
+	
+}
+</code></pre></div><h3 id=jsonのデコード>JSONのデコード</h3><ul><li>パターン</li></ul><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>json\.decode\.\(\S\+\)\.\(\S\+\)$
+	if err := json.NewDecoder({{$1}}).Decode({{$2}}); err != nil {
+		{{_cursor_}}
+	}
+</code></pre></div><ul><li>コード</li></ul><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#586e75>// 展開前
+</span><span style=color:#586e75></span>json.decode.reader.<span style=color:#719e07>&amp;</span>gorilla
+
+<span style=color:#586e75>// 展開後
+</span><span style=color:#586e75></span><span style=color:#719e07>if</span> err <span style=color:#719e07>:=</span> json.<span style=color:#268bd2>NewDecoder</span>(reader).<span style=color:#268bd2>Decode</span>(<span style=color:#719e07>&amp;</span>gorilla); err <span style=color:#719e07>!=</span> <span style=color:#cb4b16>nil</span> {
+	
+}
+</code></pre></div><h3 id=append>append</h3><ul><li>パターン</li></ul><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>\(\S\+\)\.append\.\(\S\+\)$
+	{{$1}} = append({{$1}}, {{$2}})
+	{{_cursor_}}
+</code></pre></div><ul><li>コード</li></ul><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#586e75>// 展開前
+</span><span style=color:#586e75></span>gorillas.append.gorilla
+
+<span style=color:#586e75>// 展開後
+</span><span style=color:#586e75></span>gorillas = <span style=color:#b58900>append</span>(gorillas, gorilla)
+</code></pre></div><h3 id=httpサーバー>HTTPサーバー</h3><ul><li>パターン</li></ul><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>http\.server\.\(\S\+\)$
+	http.HandleFunc(&#34;/&#34;, func(w http.ResponseWriter, r *http.Request) {
+		{{_cursor_}}
+	})
+	log.Println(&#34;start http server :{{$1}}&#34;)
+	log.Fatal(http.ListenAndServe(&#34;:{{$1}}&#34;, nil))
+</code></pre></div><ul><li>コード</li></ul><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#586e75>// 展開前
+</span><span style=color:#586e75></span>http.server<span style=color:#2aa198>.8080</span>
+
+<span style=color:#586e75>// 展開後
+</span><span style=color:#586e75></span>http.<span style=color:#268bd2>HandleFunc</span>(<span style=color:#2aa198>&#34;/&#34;</span>, <span style=color:#268bd2>func</span>(w http.ResponseWriter, r <span style=color:#719e07>*</span>http.Request) {
+	
+})
+log.<span style=color:#268bd2>Println</span>(<span style=color:#2aa198>&#34;start http server :8080&#34;</span>)
+log.<span style=color:#268bd2>Fatal</span>(http.<span style=color:#268bd2>ListenAndServe</span>(<span style=color:#2aa198>&#34;:8080&#34;</span>, <span style=color:#cb4b16>nil</span>))
+</code></pre></div><h4 id=main>main</h4><ul><li>パターン</li></ul><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>^main$
+	package main
+	
+	func main() {
+		{{_cursor_}}
+	}
+</code></pre></div><ul><li>コード</li></ul><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#586e75>// 展開前
+</span><span style=color:#586e75></span>main
+
+<span style=color:#586e75>// 展開後
+</span><span style=color:#586e75></span><span style=color:#719e07>package</span> main
+
+<span style=color:#268bd2>func</span> <span style=color:#268bd2>main</span>() {
+	
+}
+</code></pre></div><h2 id=最後に>最後に</h2><p>いかがですか？
+この記事を見て少しでも早くコーディングできるようになったら嬉しいです。</p><p>では良いコーディングライフを〜</p></div><div class=m-entry__footer><div class=m-entry__footer-sns-buttons><a class=m-entry__footer-sns-buttons-icon-hatebu href="https://b.hatena.ne.jp/my/add.confirm?title=Vim%E3%81%A7%E9%AB%98%E9%80%9F%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95+%7C+%E3%82%B4%E3%83%AA%E3%83%A9%40%E8%BB%A2%E7%94%9F%E3%81%97%E3%81%9F%E3%82%89%E4%BA%BA%E9%96%93%E3%81%A0%E3%81%A3%E3%81%9F%E4%BB%B6&url=https%3A%2F%2Fskanehira.github.io%2Fblog%2Fposts%2F20200312-high-speed-coding-with-vim%2F" target=_blank rel="noopener noreferrer">B!</a>
+<a class=m-entry__footer-sns-buttons-icon href="https://twitter.com/intent/tweet?text=Vim%E3%81%A7%E9%AB%98%E9%80%9F%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95+%7C+%E3%82%B4%E3%83%AA%E3%83%A9%40%E8%BB%A2%E7%94%9F%E3%81%97%E3%81%9F%E3%82%89%E4%BA%BA%E9%96%93%E3%81%A0%E3%81%A3%E3%81%9F%E4%BB%B6&url=https%3A%2F%2Fskanehira.github.io%2Fblog%2Fposts%2F20200312-high-speed-coding-with-vim%2F" target=_blank rel="noopener noreferrer"><i class="fab fa-twitter">&nbsp;</i></a>
+<a class=m-entry__footer-sns-buttons-icon href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fskanehira.github.io%2Fblog%2Fposts%2F20200312-high-speed-coding-with-vim%2F" target=_blank rel="noopener noreferrer"><i class="fab fa-facebook">&nbsp;</i></a></div></div><div class=m-entry__page-navigation><a class=m-entry__page-navigation-link href=https://skanehira.github.io/blog/posts/20200523-mcp/>&lt; prev</a>
+<a class=m-entry__page-navigation-link href=https://skanehira.github.io/blog/posts/20191230-look-back-on-this-year/>next ></a></div><div class=m-entry__breadcrumbs><div class=a-breadcrumbs><ul class=a-breadcrumbs__list itemscope itemtype=http://schema.org/BreadcrumbList><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/ itemprop=item><span itemprop=name>Home</span></span><meta itemprop=position content="1"></a><span class=a-breadcrumbs__list-item-link-gt>></span></li><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/posts/ itemprop=item><span itemprop=name>Posts</span><meta itemprop=position content="2"></a><span class=a-breadcrumbs__list-item-link-gt>></span></li><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/posts/20200312-high-speed-coding-with-vim/ itemprop=item><span itemprop=name>Vimで高速コーディングする方法</span><meta itemprop=position content="3"></a></li></ul></div></div></article></div><div class=m-aside-container><div class=m-aside-widget__profile><div class=m-aside-widget__profile-avatar></div><div class=m-aside-widget__profile-author></div><div class=m-aside-widget__profile-description></div></div></div></div></main><footer class=m-global-footer><span class=a-copy-right>Copyright 2021
+All rights reserved.</span></footer></body></html>

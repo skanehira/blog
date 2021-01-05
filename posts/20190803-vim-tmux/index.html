@@ -1,0 +1,96 @@
+<!doctype html><html lang=ja><head><meta charset=utf-8><base href=https://skanehira.github.io/blog/><link rel=canonical href=https://skanehira.github.io/blog/posts/20190803-vim-tmux/><meta name=viewport content="width=device-width,initial-scale=1"><title>Vimをtmuxの代わりに使う | ゴリラ@転生したら人間だった件</title><meta name=description content="はじめに ぼくは普段開発する時、必ずtmuxとVimを併用しています。tmuxは本当に便利で、画面分割したり、セッションを繰り替えたりながら作"><meta property="og:title" content="Vimをtmuxの代わりに使う | ゴリラ@転生したら人間だった件"><meta property="og:type" content="article"><meta property="og:url" content="https://skanehira.github.io/blog/posts/20190803-vim-tmux/"><meta property="og:site_name" content="ゴリラ@転生したら人間だった件"><meta property="og:description" content="はじめに ぼくは普段開発する時、必ずtmuxとVimを併用しています。tmuxは本当に便利で、画面分割したり、セッションを繰り替えたりながら作"><link rel=stylesheet href=https://skanehira.github.io/blog/css/reset.524633911eadaf3cb674408574038ab61826bbd094638faef366ddcaf13e56ab.css><link rel=stylesheet href=https://skanehira.github.io/blog/scss/style.10edae46d9f81f5614a2948ad849646e1db60c0a332e3c53c5b62027c7ba5018.css><link rel=preload href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.8.2/css/all.css as=style onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.8.2/css/all.css></noscript><script>!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(a){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){function e(){t.addEventListener?t.removeEventListener("load",e):t.attachEvent&&t.detachEvent("onload",e),t.setAttribute("onload",null),t.media=a}var a=t.media||"all";t.addEventListener?t.addEventListener("load",e):t.attachEvent&&t.attachEvent("onload",e),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(e,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script></head><body class=m-body><header class=m-global-header><div class=m-logo><a class=m-logo__link href=/blog>ゴリラ@転生したら人間だった件</a></div><div class=m-global-menu><nav class=m-global-menu__navigation><ul class=m-global-menu__navigation-list><li class=m-global-menu__navigation-list-item><a class=m-global-menu__navigation-list-item-link href=/blog/>Home</a></li><li class=m-global-menu__navigation-list-item><a class=m-global-menu__navigation-list-item-link href=/blog/posts>Posts</a></li><li class=m-global-menu__navigation-list-item><a class=m-global-menu__navigation-list-item-link href=https://github.com/skanehira>GitHub</a></li><li class=m-global-menu__navigation-list-item><a class=m-global-menu__navigation-list-item-link href=https://twitter.com/gorilla0513>Twitter</a></li></ul></nav></div></header><main class=m-main><div class=m-main-container><div class=m-content-container><article class=m-entry><div class=m-entry__breadcrumbs><div class=a-breadcrumbs><ul class=a-breadcrumbs__list itemscope itemtype=http://schema.org/BreadcrumbList><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/ itemprop=item><span itemprop=name>Home</span></span><meta itemprop=position content="1"></a><span class=a-breadcrumbs__list-item-link-gt>></span></li><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/posts/ itemprop=item><span itemprop=name>Posts</span><meta itemprop=position content="2"></a><span class=a-breadcrumbs__list-item-link-gt>></span></li><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/posts/20190803-vim-tmux/ itemprop=item><span itemprop=name>Vimをtmuxの代わりに使う</span><meta itemprop=position content="3"></a></li></ul></div></div><div class=m-entry__header><div class=m-entry__header-taxonomies><div class=m-entry__header-taxonomies-category><span class=m-entry__header-taxonomies-category-title><a class=m-entry__header-taxonomies-category-title-link href=https://skanehira.github.io/blog/posts/>Posts</a></span></div></div><div class=m-entry__header-title><a class=m-entry__header-title-link href=https://skanehira.github.io/blog/posts/20190803-vim-tmux/><h1 class=m-entry__header-title-link-text>Vimをtmuxの代わりに使う</h1></a></div><div class=m-entry__header-date><time>2019/08/03</time></div></div><div class=m-entry__content><p><a href=https://asciinema.org/a/260659><img src=https://asciinema.org/a/260659.svg alt=asciicast></a></p><h2 id=はじめに>はじめに</h2><p>ぼくは普段開発する時、必ずtmuxとVimを併用しています。tmuxは本当に便利で、画面分割したり、セッションを繰り替えたりながら作業をするのに必須と言ってよいほどです。</p><p>しかしVim使いのぼくはやはりVimだけで生活したいので、tmuxをやめてVimだけでtmuxの機能を一部実現してみました。
+意外となんとかなったので、そのやり方を解説していきます。</p><h2 id=仕組みの概要>仕組みの概要</h2><p>tmuxの画面分割してターミナルを開くのは、Vimの画面分割とターミナルを組み合わせて実現できます。
+例えば<code>:vert terminal ++close bash</code>で縦二分割してターミナルを開くことができます。</p><p>tmuxのセッションに関しては、Vimのセッション機能を使用します。
+セッションについては<a href=https://gorilla.netlify.com/articles/20190620-vim-session-plugin.html>こちらの記事</a>を参照してください。</p><p>ただ、Vimではターミナルウィンドウの位置、サイズを復元できますが、状態までは復元できません。
+仕様上どうしてもここは完全代用が難しいので、ここは無理せず使い方でカバーすればよいです。</p><h2 id=画面分割>画面分割</h2><p><a href=https://asciinema.org/a/260715><img src=https://asciinema.org/a/260715.svg alt=asciicast></a></p><p>tmux使用していた時は<code>CTRL-S + \</code>で縦、<code>CTRL-S + -</code>で横で画面分割、<code>CTRL-S + c</code>でタブを開くようにしていました。
+Vimでは<code>OpenTermianl</code>コマンドを定義して、そのコマンド内でバッファを作成して、バッファでターミナルを開くようにしています。
+コマンドをキーマッピングすれば、tmuxと同じことができます。</p><p>ソースは次になります。</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-vim data-lang=vim><span style=color:#586e75>&#34; ターミナルを開く</span>
+<span style=color:#586e75>&#34; a:1 new or vnew or tabnew(default is new)</span>
+<span style=color:#586e75>&#34; a:2 path (default is current)</span>
+<span style=color:#586e75>&#34; a:3 shell (default is &amp;shell)</span>
+<span style=color:#719e07>function</span>! s:open_terminal(...) abort
+	<span style=color:#719e07>let</span> open_type = <span style=color:#2aa198>&#39;new&#39;</span>
+	<span style=color:#719e07>let</span> shell = &amp;shell
+	<span style=color:#719e07>let</span> path = getcwd()
+
+	<span style=color:#719e07>if</span> a:<span style=color:#2aa198>0</span> &gt; <span style=color:#2aa198>0</span> &amp;&amp; a:<span style=color:#2aa198>0</span> !=# <span style=color:#2aa198>&#39;&#39;</span>
+		<span style=color:#719e07>let</span> open_type = a:<span style=color:#2aa198>1</span>
+	<span style=color:#719e07>endif</span>
+	<span style=color:#719e07>if</span> a:<span style=color:#2aa198>0</span> &gt; <span style=color:#2aa198>1</span> &amp;&amp; a:<span style=color:#2aa198>2</span> !=# <span style=color:#2aa198>&#39;&#39;</span>
+		<span style=color:#719e07>let</span> path = a:<span style=color:#2aa198>2</span>
+	<span style=color:#719e07>endif</span>
+	<span style=color:#719e07>if</span> a:<span style=color:#2aa198>0</span> &gt; <span style=color:#2aa198>2</span> &amp;&amp; a:<span style=color:#2aa198>3</span> !=# <span style=color:#2aa198>&#39;&#39;</span>
+		<span style=color:#719e07>let</span> shell = a:<span style=color:#2aa198>3</span>
+	<span style=color:#719e07>endif</span>
+	<span style=color:#719e07>if</span> open_type ==# <span style=color:#2aa198>&#39;new&#39;</span>
+		<span style=color:#719e07>let</span> open_type = <span style=color:#2aa198>&#39;bo &#39;</span> .. open_type
+	<span style=color:#719e07>endif</span>
+
+	exe printf(<span style=color:#2aa198>&#39;%s | lcd %s&#39;</span>, open_type, path)
+	exe printf(<span style=color:#2aa198>&#39;term ++curwin ++close %s&#39;</span>, shell)
+	exe <span style=color:#2aa198>&#39;call term_setrestore(&#34;%&#34;, printf(&#34;++close bash -c \&#34;cd %s &amp;&amp; bash\&#34;&#34;, getcwd()))&#39;</span>
+<span style=color:#719e07>endfunction</span>
+
+command! -nargs=* OpenTerminal call s:open_terminal(&lt;f-args&gt;)
+<span style=color:#586e75>
+</span><span style=color:#586e75>&#34; ターミナルを開く</span>
+noremap &lt;silent&gt; &lt;C-s&gt;\ :OpenTerminal vnew&lt;CR&gt;
+noremap &lt;silent&gt; &lt;C-s&gt;- :OpenTerminal&lt;CR&gt;
+noremap &lt;silent&gt; &lt;C-s&gt;^ :OpenTerminal tabnew&lt;CR&gt;
+tnoremap &lt;silent&gt; &lt;C-s&gt;\ &lt;C-w&gt;:OpenTerminal vnew&lt;CR&gt;
+tnoremap &lt;silent&gt; &lt;C-s&gt;- &lt;C-w&gt;:OpenTerminal&lt;CR&gt;
+tnoremap &lt;silent&gt; &lt;C-s&gt;^ &lt;C-w&gt;:OpenTerminal tabnew&lt;CR&gt;
+</code></pre></div><p><code>noremap</code>はノーマルモード、<code>tnoremap</code>はターミナルで動作するマッピングです。</p><p>ターミナルのオプションですが、<code>++close</code>はターミナルを終了する時にバッファを閉じる、<code>++curwin</code>は現在のバッファでターミナルを開くという動きになります。</p><p>ターミナルを開いた後に実行している<code>term_setrestore</code>はかなり重要で、これはセッションでターミナルを復元する時に実行するコマンドです。</p><p>デフォルト、ターミナルを復元する時はカレントディレクトリになってしまいます。
+なので、セッション保存時のディレクトリで復元するように設定する必要があります。</p><p>上記のコードを<code>vimrc</code>に追記すれば、そのまま動くはずです。</p><h2 id=セッション保存復元>セッション保存/復元</h2><p>セッション機能を使用することで、画面の状態をそのまま保持できます。
+なので、基本的セッションを保存、起動時or起動後にセッションを読み込むことで復元できます。</p><p>しかし、セッションを使う上でいくつか注意する必要があります。</p><ul><li><p>なるべくプレーンの状態でセッションを復元する<br>大体復元するタイミングはVimを再起動した後だと思うので、それほど意識する必要は無いですが、
+例えばターミナルを開いた状態でセッションを復元しようとするとエラーが出ます。
+なので、基本的に起動後にセッションを読み込むようにします。</p></li><li><p>セッションを保存する時のオプションに<code>globals</code>を外す<br>セッションの保存対象を設定する <code>sessionoptions</code>というオプションがありますが、
+デフォルではフローバル変数を復元します。それだとvimrcの一部の設定などが復元してしまいます。
+保存時のvimrcの状態を戻すよりも、最新vimrcを適用したいケースが多いので、ここではオプションから外します。</p></li></ul><p>ちなみに、ぼくの設定は次になっています。</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-vim data-lang=vim>set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winsize,terminal
+</code></pre></div><h2 id=タブページの移動>タブページの移動</h2><p>Vimのタブをプロジェクトごとで分けて使うため、タブ移動＝プロジェクト移動にしています。
+デフォルト<code>gt</code>と<code>gT</code>でタブを切り替えられますが、個人的に使いづらいので、次の様にしています。</p><p>このキーマップはtmuxの設定と同じにしています。</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-vim data-lang=vim>nnoremap &lt;C-s&gt;n gt
+nnoremap &lt;C-s&gt;p gT
+tnoremap &lt;C-s&gt;p &lt;C-w&gt;:tabprevious&lt;CR&gt;
+tnoremap &lt;C-s&gt;n &lt;C-w&gt;:tabnext&lt;CR&gt;
+</code></pre></div><h2 id=ghqとfzfvimとと組み合わせる>ghqとfzf.vimとと組み合わせる</h2><h3 id=リポジトリを開く>リポジトリを開く</h3><p><a href=https://asciinema.org/a/260717><img src=https://asciinema.org/a/260717.svg alt=asciicast></a>:</p><p>基本的にVimを開くときは何かしらプロジェクトに移動して作業する時なので、
+<a href=https://github.com/motemen/ghq>ghq</a>と<a href=https://github.com/junegunn/fzf.vim>fzf.vim</a>を組み合わせてプロジェクトに簡単に移動した後にターミナルを開く<code>Repo</code>コマンドを用意しました。</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-vim data-lang=vim><span style=color:#719e07>function</span>! s:cd_repo(shell, repo) abort
+	exe <span style=color:#2aa198>&#39;lcd&#39;</span> trim(system(<span style=color:#2aa198>&#39;ghq root&#39;</span>)) .. <span style=color:#2aa198>&#39;/&#39;</span> .. a:repo
+	call s:open_terminal(<span style=color:#2aa198>&#39;new&#39;</span>, <span style=color:#2aa198>&#39;&#39;</span>, a:shell)
+	exe <span style=color:#2aa198>&#39;wincmd k&#39;</span>
+	pwd
+<span style=color:#719e07>endfunction</span>
+
+<span style=color:#719e07>function</span>! s:repo(multi, cb) abort
+	<span style=color:#719e07>if</span> executable(<span style=color:#2aa198>&#39;ghq&#39;</span>) &amp;&amp; exists(<span style=color:#2aa198>&#39;*fzf#run()&#39;</span>) &amp;&amp; executable(<span style=color:#2aa198>&#39;fzf&#39;</span>)
+		call fzf#run({
+					\ <span style=color:#2aa198>&#39;source&#39;</span>: systemlist(<span style=color:#2aa198>&#39;ghq list&#39;</span>),
+					\ <span style=color:#2aa198>&#39;sink&#39;</span>: a:cb,
+					\ <span style=color:#2aa198>&#39;options&#39;</span>: a:multi,
+					\ <span style=color:#2aa198>&#39;down&#39;</span>: <span style=color:#2aa198>&#39;40%&#39;</span>},
+					\ )
+	<span style=color:#719e07>else</span>
+		echo <span style=color:#2aa198>&#34;doesn&#39;t installed ghq or fzf.vim(require fzf)&#34;</span>
+	<span style=color:#719e07>endif</span>
+<span style=color:#719e07>endfunction</span>
+
+command! Repo call s:repo(<span style=color:#2aa198>&#39;+m&#39;</span>, <span style=color:#719e07>function</span>(<span style=color:#2aa198>&#39;s:cd_repo&#39;</span>, [&amp;shell]))
+</code></pre></div><p><code>ghq list</code>でリポジトリ一覧を取得して、<code>fzf.vim</code>であいまい検索できるようにしています。</p><h3 id=リポジトリを複数開く>リポジトリを複数開く</h3><p><a href=https://asciinema.org/a/260719><img src=https://asciinema.org/a/260719.svg alt=asciicast></a></p><p>ときに複数のプロジェクトを同時に開きたいことがあります。
+何度も<code>:Repo</code>を実行しても良いですが、面倒です。
+なので、<code>NewTab</code>コマンドというのを用意しました。</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-vim data-lang=vim><span style=color:#719e07>function</span>! s:open_tabs(shell, repo) abort
+	exe printf(<span style=color:#2aa198>&#39;tabnew | lcd %s/%s&#39;</span>, trim(system(<span style=color:#2aa198>&#39;ghq root&#39;</span>)), a:repo)
+	exe printf(<span style=color:#2aa198>&#39;bo term ++rows=20 ++close %s&#39;</span>, a:shell)
+	exe <span style=color:#2aa198>&#39;call term_setrestore(&#34;%&#34;, printf(&#34;++close bash -c \&#34;cd %s &amp;&amp; bash\&#34;&#34;, getcwd()))&#39;</span>
+	exe <span style=color:#2aa198>&#39;wincmd k&#39;</span>
+<span style=color:#719e07>endfunction</span>
+
+command! NewTab call s:repo(<span style=color:#2aa198>&#39;-m&#39;</span>, <span style=color:#719e07>function</span>(<span style=color:#2aa198>&#39;s:open_tabs&#39;</span>, [&amp;shell]))
+</code></pre></div><p><code>fzf.vim</code>は<code>-m</code>オプション使うと複数の項目を選択することができるので、それを使用します。
+ここで1点注意ですが<code>fzf.vim</code>のcallbackでは<code>&shell</code>が<code>sh</code>になってしまうので、呼び出し元の<code>shell</code>を渡す必要があります。</p><h2 id=残作業>残作業</h2><h3 id=タブのラベル>タブのラベル</h3><p>タブのラベルを自由に決めれるようにしたいのです、ラベルの仕組みが思ったよりもややこしく途中で諦めました。
+ラベルを簡単に変えれれば一番良いですが、なくてもそこまで問題ないです。</p><h3 id=画面最大化のトグル>画面最大化のトグル</h3><p>tmuxでは<code>prefix+z</code>で画面の最大化のトグルができます。Vimでもそれをやろうと思えば実現はできると思いますが、まだ試せていないです。
+ターミナルがある状態で<code>&lt;C-w>o</code>でターミナルが残るので、その問題が解決できればという感じです。</p><h2 id=まとめ>まとめ</h2><p>ターミナルとセッションの機能で、なんとかtmuxっぽいことはできました。
+今の所それほど困ってはいないのですが、やはりtmuxはすごいなと改めて思いました。</p><p>ただ、Vimだけでもここまでできるこを知れたので大きいですね。
+興味ある方はぜひvimrcに追加して試してみてください。</p></div><div class=m-entry__footer><div class=m-entry__footer-sns-buttons><a class=m-entry__footer-sns-buttons-icon-hatebu href="https://b.hatena.ne.jp/my/add.confirm?title=Vim%E3%82%92tmux%E3%81%AE%E4%BB%A3%E3%82%8F%E3%82%8A%E3%81%AB%E4%BD%BF%E3%81%86+%7C+%E3%82%B4%E3%83%AA%E3%83%A9%40%E8%BB%A2%E7%94%9F%E3%81%97%E3%81%9F%E3%82%89%E4%BA%BA%E9%96%93%E3%81%A0%E3%81%A3%E3%81%9F%E4%BB%B6&url=https%3A%2F%2Fskanehira.github.io%2Fblog%2Fposts%2F20190803-vim-tmux%2F" target=_blank rel="noopener noreferrer">B!</a>
+<a class=m-entry__footer-sns-buttons-icon href="https://twitter.com/intent/tweet?text=Vim%E3%82%92tmux%E3%81%AE%E4%BB%A3%E3%82%8F%E3%82%8A%E3%81%AB%E4%BD%BF%E3%81%86+%7C+%E3%82%B4%E3%83%AA%E3%83%A9%40%E8%BB%A2%E7%94%9F%E3%81%97%E3%81%9F%E3%82%89%E4%BA%BA%E9%96%93%E3%81%A0%E3%81%A3%E3%81%9F%E4%BB%B6&url=https%3A%2F%2Fskanehira.github.io%2Fblog%2Fposts%2F20190803-vim-tmux%2F" target=_blank rel="noopener noreferrer"><i class="fab fa-twitter">&nbsp;</i></a>
+<a class=m-entry__footer-sns-buttons-icon href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fskanehira.github.io%2Fblog%2Fposts%2F20190803-vim-tmux%2F" target=_blank rel="noopener noreferrer"><i class="fab fa-facebook">&nbsp;</i></a></div></div><div class=m-entry__page-navigation><a class=m-entry__page-navigation-link href=https://skanehira.github.io/blog/posts/20190812-vim-terminal/>&lt; prev</a>
+<a class=m-entry__page-navigation-link href=https://skanehira.github.io/blog/posts/20190721-vim-bad-apple/>next ></a></div><div class=m-entry__breadcrumbs><div class=a-breadcrumbs><ul class=a-breadcrumbs__list itemscope itemtype=http://schema.org/BreadcrumbList><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/ itemprop=item><span itemprop=name>Home</span></span><meta itemprop=position content="1"></a><span class=a-breadcrumbs__list-item-link-gt>></span></li><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/posts/ itemprop=item><span itemprop=name>Posts</span><meta itemprop=position content="2"></a><span class=a-breadcrumbs__list-item-link-gt>></span></li><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/posts/20190803-vim-tmux/ itemprop=item><span itemprop=name>Vimをtmuxの代わりに使う</span><meta itemprop=position content="3"></a></li></ul></div></div></article></div><div class=m-aside-container><div class=m-aside-widget__profile><div class=m-aside-widget__profile-avatar></div><div class=m-aside-widget__profile-author></div><div class=m-aside-widget__profile-description></div></div></div></div></main><footer class=m-global-footer><span class=a-copy-right>Copyright 2021
+All rights reserved.</span></footer></body></html>

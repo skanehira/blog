@@ -1,0 +1,111 @@
+<!doctype html><html lang=ja><head><meta charset=utf-8><base href=https://skanehira.github.io/blog/><link rel=canonical href=https://skanehira.github.io/blog/posts/20190721-vim-bad-apple/><meta name=viewport content="width=device-width,initial-scale=1"><title>VimでBad Apple!! | ゴリラ@転生したら人間だった件</title><meta name=description content="こんにちわ。 ゴリラ.vimを運営しているゴリラです。 最近Vimのプラグインを作るのにハマっています。先日もdocker.vimというVimか"><meta property="og:title" content="VimでBad Apple!! | ゴリラ@転生したら人間だった件"><meta property="og:type" content="article"><meta property="og:url" content="https://skanehira.github.io/blog/posts/20190721-vim-bad-apple/"><meta property="og:site_name" content="ゴリラ@転生したら人間だった件"><meta property="og:description" content="こんにちわ。 ゴリラ.vimを運営しているゴリラです。 最近Vimのプラグインを作るのにハマっています。先日もdocker.vimというVimか"><link rel=stylesheet href=https://skanehira.github.io/blog/css/reset.524633911eadaf3cb674408574038ab61826bbd094638faef366ddcaf13e56ab.css><link rel=stylesheet href=https://skanehira.github.io/blog/scss/style.10edae46d9f81f5614a2948ad849646e1db60c0a332e3c53c5b62027c7ba5018.css><link rel=preload href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.8.2/css/all.css as=style onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.8.2/css/all.css></noscript><script>!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(a){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){function e(){t.addEventListener?t.removeEventListener("load",e):t.attachEvent&&t.detachEvent("onload",e),t.setAttribute("onload",null),t.media=a}var a=t.media||"all";t.addEventListener?t.addEventListener("load",e):t.attachEvent&&t.attachEvent("onload",e),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(e,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script></head><body class=m-body><header class=m-global-header><div class=m-logo><a class=m-logo__link href=/blog>ゴリラ@転生したら人間だった件</a></div><div class=m-global-menu><nav class=m-global-menu__navigation><ul class=m-global-menu__navigation-list><li class=m-global-menu__navigation-list-item><a class=m-global-menu__navigation-list-item-link href=/blog/>Home</a></li><li class=m-global-menu__navigation-list-item><a class=m-global-menu__navigation-list-item-link href=/blog/posts>Posts</a></li><li class=m-global-menu__navigation-list-item><a class=m-global-menu__navigation-list-item-link href=https://github.com/skanehira>GitHub</a></li><li class=m-global-menu__navigation-list-item><a class=m-global-menu__navigation-list-item-link href=https://twitter.com/gorilla0513>Twitter</a></li></ul></nav></div></header><main class=m-main><div class=m-main-container><div class=m-content-container><article class=m-entry><div class=m-entry__breadcrumbs><div class=a-breadcrumbs><ul class=a-breadcrumbs__list itemscope itemtype=http://schema.org/BreadcrumbList><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/ itemprop=item><span itemprop=name>Home</span></span><meta itemprop=position content="1"></a><span class=a-breadcrumbs__list-item-link-gt>></span></li><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/posts/ itemprop=item><span itemprop=name>Posts</span><meta itemprop=position content="2"></a><span class=a-breadcrumbs__list-item-link-gt>></span></li><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/posts/20190721-vim-bad-apple/ itemprop=item><span itemprop=name>VimでBad Apple!!</span><meta itemprop=position content="3"></a></li></ul></div></div><div class=m-entry__header><div class=m-entry__header-taxonomies><div class=m-entry__header-taxonomies-category><span class=m-entry__header-taxonomies-category-title><a class=m-entry__header-taxonomies-category-title-link href=https://skanehira.github.io/blog/posts/>Posts</a></span></div></div><div class=m-entry__header-title><a class=m-entry__header-title-link href=https://skanehira.github.io/blog/posts/20190721-vim-bad-apple/><h1 class=m-entry__header-title-link-text>VimでBad Apple!!</h1></a></div><div class=m-entry__header-date><time>2019/07/21</time></div></div><div class=m-entry__content><p>こんにちわ。
+<a href=https://gorillavim.connpass.com/>ゴリラ.vim</a>を運営している<a href=https://twitter.com/gorilla0513>ゴリラ</a>です。</p><p>最近Vimのプラグインを作るのにハマっています。先日も<a href=https://qiita.com/gorilla0513/items/1c756fd3aba8e68b9575>docker.vim</a>というVimからdockerコンテナを操作するプラグインを作りました。
+良かった試してみてください。</p><p>さて、本題ですがみなさんは<code>Bad Apple!!</code>をご存知でしょうか？
+多分ニコニコユーザならほぼ知っているのではないかと思います。
+そうです。かの有名な動画です。</p><p>その動画のAscii版があり、それならVimで再生できるのでは？と思い帰りの電車の中で作ってみました。</p><p><a href=https://github.com/skanehira/badapple.vim><img src=https://github-link-card.s3.ap-northeast-1.amazonaws.com/skanehira/badapple.vim.png width=460px></a></p><h1 id=どんな感じ>どんな感じ？</h1><p>こんな感じです。
+すこしちらつきますが、まぁ見れなくはないかなと言った感じです。</p><p><img src="https://github.com/skanehira/badapple.vim/raw/master/screenshots/screenshot.gif?raw=true" alt></p><h1 id=仕組みは>仕組みは？</h1><p>とっても簡単です。簡潔に言うとテキストファイルを読み込み、フレーム分のテキストを配列に格納して、あとはfor分で回して画面に描写します。</p><p>もう少し細かく解説します。</p><h2 id=asciiテキストファイルの読み込み>Asciiテキストファイルの読み込み</h2><p>Bad Apple!のAsciiテキストファイルは<a href=https://github.com/Chion82/ASCII_bad_apple>こちら</a>にあるので、それを借用しました。</p><details><summary>テキストファイル</summary>
+```
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$SPLIT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$SPLIT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+```</details><p>見て分かる通り、<code>SPLIT</code>で区切っています。なので、<code>SPLIT</code>までを1フレームとしてます。
+処理は次になります。</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-vim data-lang=vim><span style=color:#586e75>&#34; read file to create frames</span>
+<span style=color:#719e07>function</span>! s:read_file() abort
+    <span style=color:#719e07>let</span> file = globpath(&amp;rtp, <span style=color:#2aa198>&#39;resources/badapple.txt&#39;</span>)
+<span style=color:#586e75>	&#34; 全frameを格納</span>
+    <span style=color:#719e07>let</span> frames = []
+<span style=color:#586e75>	&#34; 1frame分のテキストを格納</span>
+    <span style=color:#719e07>let</span> frame = []
+
+    for line in readfile(file)
+<span style=color:#586e75>		&#34; 現在行に`SPLIT`が含まれていなければframeに追加</span>
+        <span style=color:#719e07>if</span> line !~# <span style=color:#2aa198>&#34;SPLIT&#34;</span>
+            call add(frame, line)
+        <span style=color:#719e07>else</span>
+<span style=color:#586e75>			&#34; frameをframes追加</span>
+            call add(frames, frame)
+            <span style=color:#719e07>let</span> frame = []
+        <span style=color:#719e07>endif</span>
+    endfor
+
+    return frames
+<span style=color:#719e07>endfunction</span>
+</code></pre></div><p>なぜframeを配列にしているかというと、vimではバッファにテキストを書き込む<code>setline()</code>とpopup windowのバッファに書き込む<code>popup_settext()</code>という関数がありますが、
+引数に配列を渡すと配列の1要素が1行として画面に出力します。そうすることで改行文字をわざわざ追加しなくて済むのでコードがスッキリします。</p><h2 id=画面に出力する>画面に出力する</h2><p>フレームを作る関数を用意したので、それを使用してフレーム情報を変数に格納し、forで1frameずつ画面に出力します。</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-vim data-lang=vim>for frame in frames
+<span style=color:#586e75>	&#34; ここで画面にframeを出力する</span>
+	call popup_settext(winid, frame)
+<span style=color:#586e75>	&#34; redraw!で画面を再描写する&#34;</span>
+	redraw!
+<span style=color:#586e75>	&#34; 一瞬で出力が終わってしまうので少し待つ</span>
+	sleep <span style=color:#2aa198>50</span>ms
+<span style=color:#586e75>	&#34; qで終了できるように`getchar()`で入力した文字を取得</span>
+<span style=color:#586e75>	&#34; キー入力を待たないように、引数に`0`を渡す</span>
+	<span style=color:#719e07>let</span> key = getchar(<span style=color:#2aa198>0</span>)
+	<span style=color:#719e07>if</span> key ==# <span style=color:#2aa198>113</span>
+		break
+	<span style=color:#719e07>endif</span>
+endfor
+<span style=color:#586e75>&#34; for分を抜けたらウィンドウを閉じる&#34;</span>
+call popup_close(winid)
+</code></pre></div><h2 id=まとめ>まとめ</h2><p>動画をAsciiテキストに変換して、フレームを定義すれば、どんなものでも同じようなロジックでVim再生できます。
+興味ある方はぜひチャレンジしてみてください。</p></div><div class=m-entry__footer><div class=m-entry__footer-sns-buttons><a class=m-entry__footer-sns-buttons-icon-hatebu href="https://b.hatena.ne.jp/my/add.confirm?title=Vim%E3%81%A7Bad+Apple%21%21+%7C+%E3%82%B4%E3%83%AA%E3%83%A9%40%E8%BB%A2%E7%94%9F%E3%81%97%E3%81%9F%E3%82%89%E4%BA%BA%E9%96%93%E3%81%A0%E3%81%A3%E3%81%9F%E4%BB%B6&url=https%3A%2F%2Fskanehira.github.io%2Fblog%2Fposts%2F20190721-vim-bad-apple%2F" target=_blank rel="noopener noreferrer">B!</a>
+<a class=m-entry__footer-sns-buttons-icon href="https://twitter.com/intent/tweet?text=Vim%E3%81%A7Bad+Apple%21%21+%7C+%E3%82%B4%E3%83%AA%E3%83%A9%40%E8%BB%A2%E7%94%9F%E3%81%97%E3%81%9F%E3%82%89%E4%BA%BA%E9%96%93%E3%81%A0%E3%81%A3%E3%81%9F%E4%BB%B6&url=https%3A%2F%2Fskanehira.github.io%2Fblog%2Fposts%2F20190721-vim-bad-apple%2F" target=_blank rel="noopener noreferrer"><i class="fab fa-twitter">&nbsp;</i></a>
+<a class=m-entry__footer-sns-buttons-icon href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fskanehira.github.io%2Fblog%2Fposts%2F20190721-vim-bad-apple%2F" target=_blank rel="noopener noreferrer"><i class="fab fa-facebook">&nbsp;</i></a></div></div><div class=m-entry__page-navigation><a class=m-entry__page-navigation-link href=https://skanehira.github.io/blog/posts/20190803-vim-tmux/>&lt; prev</a>
+<a class=m-entry__page-navigation-link href=https://skanehira.github.io/blog/posts/20190620-vim-session-plugin/>next ></a></div><div class=m-entry__breadcrumbs><div class=a-breadcrumbs><ul class=a-breadcrumbs__list itemscope itemtype=http://schema.org/BreadcrumbList><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/ itemprop=item><span itemprop=name>Home</span></span><meta itemprop=position content="1"></a><span class=a-breadcrumbs__list-item-link-gt>></span></li><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/posts/ itemprop=item><span itemprop=name>Posts</span><meta itemprop=position content="2"></a><span class=a-breadcrumbs__list-item-link-gt>></span></li><li class=a-breadcrumbs__list-item itemscope itemprop=itemListElement itemtype=http://schema.org/ListItem><a class=a-breadcrumbs__list-item-link href=https://skanehira.github.io/blog/posts/20190721-vim-bad-apple/ itemprop=item><span itemprop=name>VimでBad Apple!!</span><meta itemprop=position content="3"></a></li></ul></div></div></article></div><div class=m-aside-container><div class=m-aside-widget__profile><div class=m-aside-widget__profile-avatar></div><div class=m-aside-widget__profile-author></div><div class=m-aside-widget__profile-description></div></div></div></div></main><footer class=m-global-footer><span class=a-copy-right>Copyright 2021
+All rights reserved.</span></footer></body></html>
