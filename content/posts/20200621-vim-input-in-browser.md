@@ -1,5 +1,5 @@
 ---
-title: ブラウザのテキスト入力をVim化の調査
+title: ブラウザのテキスト入力をVim化
 date: 2020-06-21
 toc: true
 tags: 

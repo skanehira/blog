@@ -1,5 +1,5 @@
 ---
-title: プロセスをあいまい検索してkillするツールをGoで作ったの調査
+title: プロセスをあいまい検索してkillするツールをGoで作った
 date: 2020-05-24
 toc: true
 tags: 

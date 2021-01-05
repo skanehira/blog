@@ -1,5 +1,5 @@
 ---
-title: Vimで画像をツイートするの調査
+title: Vimで画像をツイートする
 date: 2020-08-17
 toc: true
 tags: 

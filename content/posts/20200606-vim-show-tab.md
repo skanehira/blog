@@ -1,5 +1,5 @@
 ---
-title: Vimでタブ文字を可視化するの調査
+title: Vimでタブ文字を可視化する
 date: 2020-06-06
 toc: true
 tags: 

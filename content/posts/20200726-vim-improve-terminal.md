@@ -1,5 +1,5 @@
 ---
-title: Vimのターミナルをすこし使いやすくするの調査
+title: Vimのターミナルをすこし使いやすくする
 date: 2020-07-26
 toc: true
 tags: 
