@@ -5,7 +5,6 @@ languageCode = "ja-jp"
 disablePathToLower = true
 hasCJKLanguage = true
 pluralizeListTitles = false
-pygmentsUseClasses = true
 pygmentsCodefences = true
 theme = "basic-design-personal-blog"
 
@@ -18,10 +17,32 @@ theme = "basic-design-personal-blog"
 [permalinks]
     post = "/:section/:year/:month/:filename"
 
-[blackfriday]
-    hrefTargetBlank = true
-    nofollowLinks = true
-    extensionsmask = ["autolink"]
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "solarized-dark"
+    tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xhtml = false
 
 [menu]
     [[menu.global_header]]
@@ -40,3 +61,4 @@ theme = "basic-design-personal-blog"
         name = "Twitter"
         url = "https://twitter.com/gorilla0513"
         weight = 3
+
