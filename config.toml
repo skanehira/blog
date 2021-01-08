@@ -46,13 +46,17 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     url = "/aboutme"
     weight = 10
   [[menu.main]]
+    name = "Translation"
+    url = "translation/"
+    weight = 11
+  [[menu.main]]
     name = "Posts"
     url = "posts/"
-    weight = 11
+    weight = 12
   [[menu.main]]
     name = "Tags"
     url = "tags/"
-    weight = 12
+    weight = 13
 
 [params]
   dateform        = "2006/01/02"
