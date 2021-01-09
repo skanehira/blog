@@ -47,4 +47,38 @@ Repetition  = "{" Expression "}" .
 `a...b`は`a`から`b`までの文字を代わりに表します。省略記号`...`は指定されていない様々な列挙やコードスニペットを示します。
 `...`はGo言語のトークンではありません。
 
+### [ソースコードの表現](https://golang.org/ref/spec#Source_code_representation)
+ソースコードは[UTF-8](https://en.wikipedia.org/wiki/UTF-8)でエンコードされたテキストです。
+テキストは最適化されていないため、単一アクセント付きコードポイントはアクセントと文字の組み合わせで構築された同じ文字と異なります。これらは2つのコードポイントとして扱われます。
+簡易化のため、このドキュメントは装飾されていない用語文字を使用してソースコード内のコードポイントを参照します。
 
+それぞれのコードポイントは異なります。たとえば、大文字小文字は異なる文字です。
+
+実装の制約：他のツールとの互換性のため、コンパイラはソースコード内のNUL文字(U+0000)を許容しません。
+
+実装の制約：他のツールとの互換性のため、コンパイラはソースコードの最初のコードポイントがUTF-8でエンコードされたバイト順マーク(U+FEFE)の場合は無視します。
+他の場所では許容しません。
+
+## [文字](https://golang.org/ref/spec#Characters)
+次の用語は特定のUnicode文字クラスを表すために使用されています。
+
+```
+newline        = /* コードポイント U+000A */ .
+unicode_char   = /* newlineを除いた任意のコードポイント */ .
+unicode_letter = /* "文字"として分類されたコードポイント */ .
+unicode_digit  = /* "数字、10進数"として分類されたコードポイント */ .
+```
+
+[The Unicode Standard 8.0](https://www.unicode.org/versions/Unicode8.0.0/)のセクション4.5の"General Category"で文字のカテゴリを定義しています。GoはLu、LI、Lt、LmまたはLoのいずれかの文字カテゴリをUnicode文字、数値カテゴリNdの文字をUnicode数字として扱います。
+
+### [文と数字](https://golang.org/ref/spec#Letters_and_digits)
+
+アンドースコア文字`_`(U+005F)は字としてみなされます。
+
+```
+letter        = unicode_letter | "_" .
+decimal_digit = "0" … "9" .
+binary_digit  = "0" | "1" .
+octal_digit   = "0" … "7" .
+hex_digit     = "0" … "9" | "A" … "F" | "a" … "f" .
+```
