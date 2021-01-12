@@ -114,3 +114,18 @@ hex_digit     = "0" … "9" | "A" … "F" | "a" … "f" .
 
 慣用的な使い方を反映するため、このドキュメントのコード例はこれらの規則を使って省略しています。
 
+### [識別子](https://golang.org/ref/spec#Identifiers)
+識別子は変数や型といったプログラムの実態に名前を付けたものです。識別子は1つ以上の字または数字からなります。1文字目は字でなければいけません。
+
+```
+Identifier = letter { letter | unicode_digit }
+```
+
+```
+a
+_x9
+ThisVariableIsExported
+αβ
+```
+
+いくつかの識別子は[事前に定義されています]()。
