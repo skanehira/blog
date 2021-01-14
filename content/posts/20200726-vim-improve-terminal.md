@@ -7,7 +7,7 @@ tags:
 ---
 
 ## 初めに
-こんにちわ
+こんにちは
 ゴリラです
 
 Vimでターミナルを使うときは`:term ++close +shell {cmd}`というふうに実行することが多々ありますが、
@@ -15,7 +15,7 @@ Vimでターミナルを使うときは`:term ++close +shell {cmd}`というふ�
 
 そこで、`BufReadCmd`を使えば、ターミナルがちょっと使いやすくなります。
 
-# やりかた
+# やり方
 
 ```vim
 function! s:termopen() abort
@@ -36,15 +36,15 @@ augroup END
 
 ![vim-term.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/346ec215-2109-3c5f-c01c-9601c7ae6054.gif)
 
-## 仕組み
-仕組みは簡単で、bufferが作られたら `BufReadcmd` イベントが走るので、その時 `s:termopen` を実行させるように `autocmd` を設定します。
-`s:termopen`関数内ではバッファ名からterminalで実行するコマンド(`//`よりも後ろの部分)を取得してターミナルを起動します。
+## しくみ
+しくみは簡単で、bufferが作られたら `BufReadcmd` イベントが走るので、そのとき `s:termopen` を実行させるように `autocmd` を設定します。
+`s:termopen`関数内ではバッファ名からterminalで実行するコマンド（`//`よりも後ろの部分）を取得してターミナルを起動します。
 
-`//`よりも後ろがコマンドになるので、例えば`tabnew term://bash`でも動くし、`new term://docker exec -it golang bash`でも動きます。
+`//`よりも後ろがコマンドになるので、たとえば`tabnew term://bash`でも動くし、`new term://docker exec -it golang bash`でも動きます。
 設定自体はシンプルでかつ柔軟にコマンドを実行できるので個人的に便利と思っています。
 
 ## さいごに
-このターミナルのカスタマイズはneovimから着想を得ました。neovimでは標準で同じようなことが出来ます(ヘルプより抜粋)。
+このターミナルのカスタマイズはneovimから着想を得ました。neovimでは標準で同じようなことができます（ヘルプより抜粋）。
 
 ```
 - Edit a file with a name matching `term://(.{-}//(\d+:)?)?\zs.*`.

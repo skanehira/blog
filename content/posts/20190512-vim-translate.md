@@ -6,7 +6,7 @@ tags:
   - Vim
 ---
 
-こんにちわ。
+こんにちは。
 [ゴリラ.vim](https://gorillavim.connpass.com/)を運営しているゴリラです。
 
 みなさんはプラグイン使っていますか？
@@ -18,7 +18,7 @@ tags:
 画面の切り替えは時間ロスなのでVim上で翻訳できるプラグインを作りました。
 
 このプラグインがあればVimは翻訳エディタへと生まれ変わります。
-どうぞお試して下さい。
+どうぞお試してください。
 
 <a href="https://github.com/skanehira/translate.vim"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/skanehira/translate.vim.png" width="460px"></a>
 
@@ -45,8 +45,8 @@ let g:translate_winsize = 10
 ![](https://i.imgur.com/ezLCrSG.gif)
 
 `:AutoTranslateModeToggle`で動的に翻訳するモードに切り替えます。
-再度実行するとモードがOFFにになります。
-自動翻訳モードになると、バッファ上の文字が全て翻訳されます。
+再度実行するとモードがOFFになります。
+自動翻訳モードになると、バッファ上の文字がすべて翻訳されます。
 
 翻訳の契機は`<CR>`になっていて、改行するとその行を翻訳します。
 
@@ -64,13 +64,13 @@ let g:translate_winsize = 10
 ちなみに、`:Translate!`で翻訳元と翻訳先の言語がに入れ替わります。
 控えめに言って、便利です。
 
-## 仕組み
+## しくみ
 
 ### 翻訳API
 一番大事な翻訳処理ですが、
 GAS[^1]の[LanguageApp](https://developers.google.com/apps-script/reference/language/language-app)クラスを使用しています。
 
-GASではプロジェクトをウェブアプリとして公開することができます。
+GASではプロジェクトをWebアプリケーションとして公開できます。
 HTTPリクエストは`doPost(e)`、`doGet(e)`を用意することで受け取りことが可能です。
 
 HTTPリクエストJSONを取得し、それをもとにLanguageAppクラスで翻訳してその結果を返却します。
@@ -102,7 +102,7 @@ https://script.google.com/macros/s/AKfycbywwDmlmQrNPYoxL90NCZYjoEzuzRcnRuUmFCPzE
 ```
 
 次のようにcurlコマンドでJSONをPOSTすれば翻訳結果が返ってきます。
-[gjo](https://github.com/skanehira/gjo)はゴリラ製OSSの一つで`key=value`形式で引数を渡すことで簡単にJSON文字列を生成できます。
+[gjo](https://github.com/skanehira/gjo)はゴリラ製OSSのひとつで`key=value`形式で引数を渡すことで簡単にJSON文字列を生成できます。
 
 ```bash
 $ curl -L https://script.google.com/macros/s/AKfycbywwDmlmQrNPYoxL90NCZYjoEzuzRcnRuUmFCPzEqG7VdWBAhU/exec -d $(gjo text="my name is gorilla" source=en target=ja)
@@ -114,7 +114,7 @@ $ curl -L https://script.google.com/macros/s/AKfycbywwDmlmQrNPYoxL90NCZYjoEzuzRc
 ### 翻訳CLI
 翻訳APIがあればそれに本文と翻訳する言語のオプションを渡すだけです。
 もともとVim scriptのみでHTTP通信を行い、翻訳するつもりでしましたが、
-Goの勉強もしたいためCLIを作りそれをVimで呼び出す仕組みにしました。
+Goの勉強もしたいためCLIを作りそれをVimで呼び出すしくみにしました。
 
 CLIに関してはGoの標準パッケージ`net/http`を使用して、
 引数で渡したオプションと本文をJSONに変換し翻訳APIをコールしています。
@@ -162,7 +162,7 @@ Vimのプラグインは`autoload`と`plugin`ディレクトリがあります�
 |autoload    |使用するときに初めて読み込まれるスクリプトファイルを置く|
 |plugin      |Vim起動時に読み込まれるスクリプトファイルを置く         |
 
-基本的に読み込みに時間がかかるスクリプトは`autoload`に置きますが、今回はとくに重たい処理をするわけではないので`plugin`ディレクトリのみで物足ります。
+基本的に読み込みに時間がかかるスクリプトは`autoload`に置きますが、今回は特に重たい処理をするわけではないので`plugin`ディレクトリのみで物足ります。
 
 プラグインのメイン処理についてざっくり紹介していきます。
 
@@ -170,7 +170,7 @@ Vimのプラグインは`autoload`と`plugin`ディレクトリがあります�
 まずCLIの実行コマンドを生成します。
 `ban`は`!`のことを指していて`!`のときは翻訳元・先の設定を逆転させています。
 
-`let source_ = get(g:, "translate_source", "en")`ではグローバルスコープの設定値がなければ、デフォルト値をを取得するようにしています。
+`let source_ = get(g:, "translate_source", "en")`ではグローバルスコープの設定値がなければ、デフォルト値を取得するようにしています。
 `target`の処理も同様になります。
 
 ```vim
@@ -196,7 +196,7 @@ endfunction
 Vimでは外部コマンドを実行する方法として、`system()`と`systemlist()`がありますが、
 これらは実行が完了するまでVimを操作できないので、翻訳を待ちながらその間に作業をしたいため`job_start()`にしました。
 
-`job_start`ではオプションを指定することができます。
+`job_start`ではオプションを指定できます。
 
 `callback`で指定したcallback関数ではコマンド実行結果の出力を取得します。
 callback関数では出力の行数分呼ばれるので、`s:result`変数に結果を格納していきます。
@@ -245,7 +245,7 @@ function! s:tran_exit_cb(job, status) abort
 endfunction
 ```
 
-ざっくりですがプラグインが動く仕組みについて紹介しました。
+ざっくりですがプラグインが動くしくみについて紹介しました。
 もっと知りたい方はぜひソースを読んでみてください。
 大したことしていないので読みやすいと思います。
 

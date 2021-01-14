@@ -7,10 +7,10 @@ tags:
 ---
 
 ## 初めに
-こんにちわ。
+こんにちは。
 ゴリラです。
 
-dockerのイメージAPIを`curl`で叩いた時にイメージをフィルターしたいが、詰まっていたのでそのやり方を備忘録として残しておきます。
+dockerのイメージAPIを`curl`で叩いた時にイメージをフィルタしたいが、詰まっていたのでそのやり方を備忘録として残しておきます。
 
 ## やりたいこと
 `curl`でdockerのイメージ一覧を絞り込みたい。
@@ -22,7 +22,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 mysql               5.7                 84164b03fa2e        2 months ago        456MB
 ```
 
-## やりかた
+## やり方
 筆者はfishをつかっているため、`urlenc`コマンドの実行結果を`()`で取得していますがbashなどの方は`$()`に置き換えてください。
 
 ```sh
@@ -55,7 +55,7 @@ curl -s --unix-socket /var/run/docker.sock (urlenc -e 'http://localhost/images/j
 以下がポイントです
 
 1. 検索条件は`filters`クエリパラメータで指定
-2. 指定する時のJSONの形は`{"key": [xxx, yyy]}`という形でなければいけない(goの`go[string][]string}`をJSONにエンコードした形)
+2. 指定する時のJSONの形は`{"key": [xxx, yyy]}`という形でなければいけない（goの`go[string][]string}`をJSONにエンコードした形）
 
 今回はイメージ名をつかって絞り込みたいので`filters`には`{"reference": ["イメージ名"]}`をエンコードした値を渡しています。
 

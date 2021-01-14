@@ -7,7 +7,7 @@ tags:
 ---
 
 ## 初めに
-こんにちわ。
+こんにちは。
 ゴリラです。
 
 先日、Docker社が`docker-compose`が提供していた機能の仕様を[Compose Specification](https://compose-spec.io/)としてオープンな仕様にしていく発表がありました。
@@ -22,7 +22,7 @@ tags:
 気になる方はぜひ最後まで読んでみてください。
 
 ## `compose-ref`のインストール
-`compose-ref`はGoで書かれていますので、Goを予め用意して次の手順でインストールします。
+`compose-ref`はGoで書かれていますので、Goをあらかじめ用意して次の手順でインストールします。
 
 ```sh
 $ git clone https://github.com/compose-spec/compose-ref.git
@@ -188,6 +188,6 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 https://github.com/compose-spec/compose-ref/pull/46
 
 ## まとめ
-`Compose Specification`で仕様がある程度定まったら色々と面白くなりそうだなというのが個人的な感想です。
-せっかくなので、この仕様を元に実用的なCLIを作ろうと思っています。できあたらそのうち公開します。
+`Compose Specification`で仕様がある程度定まったらいろいろとおもしろくなりそうだなというのが個人的な感想です。
+せっかくですので、この仕様を元に実用的なCLIを作ろうと思っています。できあたらそのうち公開します。
 

@@ -9,7 +9,7 @@ tags:
 こんにちは。
 [ゴリラ.vim](https://gorillavim.connpass.com/)を運営しているゴリラです。
 
-Vimを始めたての頃に[こちらの記事](https://gorilla.netlify.com/articles/20181215-vim-session.html)で[セッション管理プラグイン](https://github.com/skanehira/vsession)を作りましたが、最近Vimにポップアップウィンドウが入ったのでその機能を使ってアップデートしてみました。
+Vimを始めたてのころに[こちらの記事](https://gorilla.netlify.com/articles/20181215-vim-session.html)で[セッション管理プラグイン](https://github.com/skanehira/vsession)を作りましたが、最近Vimにポップアップウィンドウが入ったのでその機能を使ってアップデートしてみました。
 
 ## セッションとは
 Vimの日本語マニュアルより引用
@@ -31,13 +31,13 @@ Vimの日本語マニュアルより引用
 これだけです、とても簡単です。
 
 ## セッション管理プラグイン
-vsessionの使い方はREADMEを読んで頂ければと思います。
+vsessionの使い方はREADMEを読んでいただければと思います。
 今回は保存したセッションを読み込むときにポップアップウィンドウで選べるようにしました。
 
 ![](https://github.com/skanehira/vsession/blob/master/screenshots/vsession.gif?raw=true)
 
-仕組みとしては簡単で、vsessionはデフォルト`~/.vim/sessions`配下にセッションファイルを保存する様になっています。
-ディレクトリ配下のファイル一覧を`readdir` 組み込み関数で取得してそれをポップアップウィンドウに渡します。
+しくみとしては簡単で、vsessionはデフォルト`~/.vim/sessions`配下にセッションファイルを保存する様になっています。
+ディレクトリ配下のファイル一覧を`readdir` 組込み数で取得してそれをポップアップウィンドウに渡します。
 
 ```vim
 " ['blog', 'docker.vim']
@@ -46,7 +46,7 @@ let l:sessions = readdir(g:session_path)
 
 ポップアップウィンドウを作成に関しては簡易ではあるが[こちらの記事](https://gorilla.netlify.com/articles/20190605-vim-popup-window.html)を書いたので軽く読んでおくと理解しやすいかもしれないです。
 `filter`オプションに`popup_filter_menu`コールバックを指定するとメニュー選択画面を作成できます。では選択したアイテムをどう特定するかというと`callback`オプションを使います。
-こちらはウィンドウが閉じられたときに呼ばれるコールバックを指定します。`popup_filter_menu`を使用した場合、コールバック関数の第2引数に選択したメニューのインデックス(1番目か2番目か...)が渡ってくるのでそれを利用します。
+こちらはウィンドウが閉じられたときに呼ばれるコールバックを指定します。`popup_filter_menu`を使用した場合、コールバック関数の第2引数に選択したメニューのインデックス（1番目か2番目か。..）が渡ってくるのでそれを利用します。
 
 ```vim
 let s:result = ["banana", "apple", "gorilla"]

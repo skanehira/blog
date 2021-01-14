@@ -7,10 +7,10 @@ tags:
 ---
 
 ## 初めに
-ども、連休が終わったのを未だに信じられないゴリラです
+ども、連休が終わったのをいまだに信じられないゴリラです
 
-先日 [code2img.vim](https://github.com/skanehira/code2img.vim) というプラグインをつくったんですが、
-基本ソースコードを画像にして共有するのはTwitterなので、それらをまとめてVimで出来たら良いなと思って、簡単なスクリプトを書きました。
+先日 [code2img.vim](https://github.com/skanehira/code2img.vim) というプラグインを作ったんですが、
+基本ソースコードを画像にして共有するのはTwitterですので、それらをまとめてVimできたら良いなと思って、簡単なスクリプトを書きました。
 
 ![tweet_with_image.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/99185e3a-90d5-9f73-ea7d-c8d52a266c63.gif)
 
@@ -21,15 +21,15 @@ tags:
 - [twty](https://github.com/mattn/twty)
 
 ## 使い方
-コードをvimrcに記述すれば`TweetWithImg`コマンドが使えるようになります。
+コードをvimrcに記述すれば`TweetWithImg`コマンドが使えます。
 
 - 選択した範囲のテキストが画像として出力される
 - コマンドの引数はツイート本文として送信される
 
 ので、`TweetWithImg 私はゴリラです`というふう実行すれば`私はゴリラです`と画像つきのツイートがつぶやけます。
 
-仕組みはシンプルで、`code2img`でソースコードを画像ファイルに出力して、`twty`で画像ファイルと本文をツイートするだけです。
-`job_start`なので非同期で動くのでVimが固まることがないです(これ重要)
+しくみはシンプルで、`code2img`でソースコードを画像ファイルに出力して、`twty`で画像ファイルと本文をツイートするだけです。
+`job_start`なので非同期で動くのでVimが固まることがないです（これ重要）
 
 ## さいごに
 やはりコードを画像化してさくっとTwtterで共有できるのは良い体験

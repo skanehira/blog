@@ -7,7 +7,7 @@ tags:
 ---
 
 ## 初めに
-こんにちわ
+こんにちは
 ゴリラです
 
 仕事に限らず、普段はブラウザでテキストを入力することも多々あると思います。
@@ -32,7 +32,7 @@ Chromeは[こちら](https://chrome.google.com/webstore/detail/wasavi/dgogifpkoi
 いくつかの`ex`コマンドが使用できます。
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/89b155b0-bc81-2484-3066-84cc5344340e.png)
 
-デフォルトではbellが鳴るのでそれをオフにすると良いです。(bellのオプションがあるが、なぜか効かなかったので)
+デフォルトではbellが鳴るのでそれをオフにすると良いです。（bellのオプションがあるが、なぜか効かなかったので）
 
 ```
 set bellvolume=0

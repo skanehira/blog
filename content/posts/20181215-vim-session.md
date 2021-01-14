@@ -6,13 +6,13 @@ tags:
   - Vim
 ---
 
-みなさん、vimに[セッション機能](https://vim-jp.org/vimdoc-ja/usr_21.html#21.4)があるのはご存知でしょうか？
+みなさん、vimに[セッション機能](https://vim-jp.org/vimdoc-ja/usr_21.html#21.4)があるのはご存じでしょうか？
 便利そうなので使ってみようと思っていますが、せっかくなのでVim scriptの勉強も兼ねてコマンド作ってみました。
 
 fzf.vimを使うとこんな感じになります。
 ![image.png](https://qiita-image-store.s3.amazonaws.com/0/66178/21a1dc7b-44cc-0e9c-c88d-03d74abf9cbc.png)
 
-以下のコードをvimrcに貼ればそのまま使えるとおもいます。
+以下のコードをvimrcに貼ればそのまま使えると思います。
 
 ## [2018-12-22] 追記
 プラグイン化しました。
@@ -100,10 +100,10 @@ https://qiita.com/shinshin86/items/6e6cbdb77cb59b87d21f
 http://nanasi.jp/articles/code/io/file-path.html
 
 ## 最後に
-初めてVim script書いたので、おかしなところがありましたら教えて頂けると助かります。
+初めてVim script書いたので、おかしなところがありましたら教えていただけると助かります。
 ちなみに、vimのセッションプラグインはありました。
 
-使ってないのですが、良さげなので興味ある方はどうぞー
+使っていないのですが、良下げなので興味ある方はどうぞー
 
 https://github.com/Shougo/unite-session
 https://github.com/xolox/vim-session

@@ -7,10 +7,10 @@ tags:
 ---
 
 ## 初めに
-こんにちわ
+こんにちは
 ゴリラです
 
-画像をクリップボードにコピー、コピーした画像をクリップボードから読み取るGoのライブラリ [clipboard-image](https://github.com/skanehira/clipboard-image) をつくったので紹介します。
+画像をクリップボードにコピー、コピーした画像をクリップボードから読み取るGoのライブラリ [clipboard-image](https://github.com/skanehira/clipboard-image) を作ったので紹介します。
 このライブラリはMac、Linux、Windowsで動作します。
 
 先日 [Goでソースコードを画像化するCLIを作った](https://qiita.com/gorilla0513/items/013aea9060bca1455137) で紹介したCLIではこのライブラリを使っています。
@@ -29,18 +29,18 @@ tags:
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/5c676cb6-5a69-70d6-4af2-0c5cc9e93178.png)
 
-## 仕組み
+## しくみ
 クリップボードへのアクセスは外部コマンドを用いています。
 それらをGoでラップしてライブラリとして提供しています。それぞれ次になっています。
 
 | OS      | コマンド   |
 |---------|------------|
-| Mac OS  | osascript  |
+| macOS  | osascript  |
 | Windows | PowerShell |
 | Linux   | xclip      |
 
-Mac OSではApple Scriptを使えばクリップボードにアクセスできます。
-Apple Scriptは標準でMac OSに入っているのでライブラリ意外は特に不要です。
+macOSではApple Scriptを使えばクリップボードにアクセスできます。
+Apple Scriptは標準でmacOSに入っているのでライブラリ意外は特に不要です。
 
 ```sh
 # copy to clipboard
@@ -77,7 +77,7 @@ xclip -selection clipboard -o > /path/to/file.png
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/3a94a766-6962-8f61-181b-01500522f5e1.png)
 
-標準入力に渡すには`StdinPipe`でpipeを取得してファイルの中身を書き込んだ後に stdin を閉じる必要あります。
+標準入力に渡すには`StdinPipe`でpipeを取得してファイルの中身を書き込んだ後にstdinを閉じる必要あります。
 `xclip`の実装は[atotto/clipboard](https://github.com/atotto/clipboard)を参考にしました。
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/14aae070-760d-9abb-af14-0ac5c9313aaf.png)
