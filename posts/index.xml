@@ -52,7 +52,7 @@ Functions:
 なぜ識別子を予約語にしていないのかわからないんですが、仕様書を読んでいく内にこの疑問も解決できるかもしれないので引き続き頑張って翻訳しつつ理解していきます。</p>
 ]]></content></item><item><title>2020年の振り返りと2021年の目標</title><link>https://skanehira.github.io/blog/posts/20210105-look-back-2020/</link><pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210105-look-back-2020/</guid><description>あけましておめでとうございます。 ちょっと遅めですが、2020年の振り返りと2021年の目標について整理しました。 2020年はコロナの影響でい</description><content type="html"><![CDATA[<p>あけましておめでとうございます。
 ちょっと遅めですが、2020年の振り返りと2021年の目標について整理しました。</p>
-<p>2020年はコロナの影響でいろいろは大変でしたが、無事乗り切ったので2021年も引き続き頑張っていこうと思います。</p>
+<p>2020年はコロナの影響でいろいろはたいへんでしたが、無事乗り切ったので2021年も引き続き頑張っていこうと思います。</p>
 <h2 id="2020年を振り返る">2020年を振り返る</h2>
 <p><a href="https://skanehira.github.io/blog/posts/20191230-look-back-on-this-year/#%E6%9D%A5%E5%B9%B4%E3%81%AE%E7%9B%AE%E6%A8%99">2019年末</a>に次の目標を立てましたが、
 一部のみ達成したという結果になりました。</p>
@@ -68,7 +68,7 @@ Functions:
 <tr>
 <td>プログラミング言語を作る</td>
 <td>△</td>
-<td>Go言語でパーサーまで書いて満足してしまって<br>その後JSONのパーサーと電卓を書いた</td>
+<td>Go言語でパーサまで書いて満足してしまって<br>その後JSONのパーサと電卓を書いた</td>
 </tr>
 <tr>
 <td>Goを補完なしでかけるようになる</td>
@@ -78,7 +78,7 @@ Functions:
 <tr>
 <td>Goの講師をやる</td>
 <td>○</td>
-<td>無事前編収録完了した</td>
+<td>無事、前編収録完了した</td>
 </tr>
 <tr>
 <td>Goのカンファレンスに登壇する</td>
@@ -91,21 +91,21 @@ Functions:
 <td>コロナの影響でなし</td>
 </tr>
 <tr>
-<td>HTTPサーバーをスクラッチで作る</td>
+<td>HTTPサーバをスクラッチで作る</td>
 <td>☓</td>
 <td>着手していない</td>
 </tr>
 </tbody>
 </table>
-<p>プログラミング言語を作るのは、想像以上に難しかったのでJSONのパーサーを書く、というところまで一旦レベルを落としていました。
-Goで作るインタプリタの本も大体半分くらいまでは書いて理解した（多分）ので、それを活かしてJSONと電卓のパーサーを書いていました。</p>
-<p>HTTPサーバーをスクラッチで作るのは、完全に意欲がなくなったので着手すらしていないです。
-こういうのは、熱意が消えないうちにやるべきですね&hellip;</p>
+<p>プログラミング言語を作るのは、想像以上に難しかったのでJSONのパーサを書く、というところまでいったんレベルを落としていました。
+Goで作るインタプリタの本もだいたい半分くらいまでは書いて理解した（多分）ので、それを活かしてJSONと電卓のパーサを書いていました。</p>
+<p>HTTPサーバをスクラッチで作るのは、完全に意欲がなくなったので着手すらしていないです。
+こういうのは、熱意が消えないうちにやるべきですね。..</p>
 <p>2019年末に立てた目標以外にも、コロナの影響などもあり会社が潰れないように自分の中で1つのミッションを持っていました。
-それは新人を育てることです。</p>
-<p>4月にチームを立ち上げて右も左もわからない新人に技術や仕事の仕方を教えていました。最大8人くらいの面倒を見ながら、他に4~5チームのレビュー、実装の相談などを一人でこなしていました。</p>
+それは新人を育ていることです。</p>
+<p>4月にチームを立ち上げて新人に技術や仕事のし方を教えていました。最大8人くらいの面倒を見ながら、ほかに4〜5チームのレビュー、実装の相談などを一人でこなしていました。</p>
 <p>どれくらいの忙しさだったかというと、1人で3人分くらいの仕事をしていたという感じです。トイレに行く以外は常に全集中で仕事していました。
-めちゃくちゃ大変だったけど、そのおかげで体感的に2倍くらいキャパが広がったので良かったなと思っています。</p>
+めちゃくちゃたいへんだったけど、そのおかげで体感的に2倍くらいキャパが広がったので良かったなと思っています。</p>
 <p>そして忙しいの中でも、ものを作ったり記事を書いたりとスキルアップを頑張っていました。
 2020年に作ったもの次の通りです。</p>
 <table>
@@ -118,7 +118,7 @@ Goで作るインタプリタの本も大体半分くらいまでは書いて理
 <tbody>
 <tr>
 <td><a href="https://github.com/skanehira/preview-markdown.vim">skanehira/preview-markdown.vim</a></td>
-<td>Vim上でmarkdownをプレビューするプラグイン</td>
+<td>Vim上でMarkdownをプレビューするプラグイン</td>
 </tr>
 <tr>
 <td><a href="https://github.com/skanehira/gh.vim">skanehira/gh.vim</a></td>
@@ -138,7 +138,7 @@ Goで作るインタプリタの本も大体半分くらいまでは書いて理
 </tr>
 <tr>
 <td><a href="https://github.com/skanehira/fk">skanehira/fk</a></td>
-<td>プロセスを曖昧検索してkillするCLI</td>
+<td>プロセスをあいまい検索してkillするCLI</td>
 </tr>
 <tr>
 <td><a href="https://github.com/skanehira/getpr">skanehira/getpr</a></td>
@@ -174,7 +174,7 @@ Goで作るインタプリタの本も大体半分くらいまでは書いて理
 </tr>
 <tr>
 <td><a href="https://github.com/skanehira/google-map.vim">skanehira/google-map.vim</a></td>
-<td>VimからGoogle Mapを開くプラグイン</td>
+<td>VimからGoogle Mapsを開くプラグイン</td>
 </tr>
 <tr>
 <td><a href="https://github.com/skanehira/go-dockerveth">skanehira/go-dockerveth</a></td>
@@ -187,9 +187,9 @@ Goで作るインタプリタの本も大体半分くらいまでは書いて理
 </tbody>
 </table>
 <p>こうやってみると、今年はかなりVimに偏っていてあまりGo周り研鑽していなかったなと思いました。
-仕事ではコードを書くことはなくなって、プライベートでVimプラグインばっかり作っているので、そうなるよなぁと&hellip;</p>
+仕事ではコードを書くことはなくなって、プライベートでVimプラグインばっかり作っているので、そうなるよなぁと。..</p>
 <h2 id="2021年の目標">2021年の目標</h2>
-<p>2021も仕事は多忙なのは見えているので、あまり多くの目標を立てないようにします。
+<p>2021も仕事が多忙なのは見えているので、あまり多くの目標を立てないようにします。
 具体的に次の目標を今年中にクリアします。</p>
 <table>
 <thead>
@@ -209,10 +209,10 @@ Goで作るインタプリタの本も大体半分くらいまでは書いて理
 </tr>
 </tbody>
 </table>
-<p>英語に関してはすでに<a href="https://www.abceed.com">abceed</a>というアプリと<a href="https://cdc-eigo365.com">生イングリッシュ</a>というサービスを使って日々勉強しています。
+<p>英語に関してはすでに<a href="https://www.abceed.com">abceed</a>というアプリケーションと<a href="https://cdc-eigo365.com">生イングリッシュ</a>というサービスを使って日々勉強しています。
 まだ成長の実感が全然ないんですが、コツコツ頑張っていきます。</p>
 <h2 id="最後に">最後に</h2>
-<p>2020は色々大変でしたが、2021も生き残れるように頑張って行きます。
+<p>2020はいろいろたいへんでしたが、2021も生き残れるように頑張っていきます。
 人生は短いので、自分の夢のため日々全力を尽くしていきます。</p>
 ]]></content></item><item><title>Vimでビートマニアする</title><link>https://skanehira.github.io/blog/posts/20201225-vim-beatbanana/</link><pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20201225-vim-beatbanana/</guid><description>以前、トイレ入ってたら突然Vimでビートマニアしたくなったのでskanehira/beatbanana.vimというのを作っていました。 最近</description><content type="html"><![CDATA[<p>以前、トイレ入ってたら突然Vimでビートマニアしたくなったので<a href="https://github.com/skanehira/beatbanana.vim">skanehira/beatbanana.vim</a>というのを作っていました。
 最近はGitHubのプラグイン<a href="https://github.com/skanehira/gh.vim">gh.vim</a>を作っているので、こちらの開発は止まっていますが、少しその話を書いていこうと思います。</p>
@@ -299,7 +299,7 @@ Goで作るインタプリタの本も大体半分くらいまでは書いて理
 </span><span class="err"></span><span class="k">endfunction</span><span class="err">
 </span></code></pre></div><h2 id="さいごに">さいごに</h2>
 <p>まだまだ作っている最中で、まともに遊べるかと言われると怪しいですが、できたらちゃんとプラグイン化して公開したいと思います。
-ご期待下さいー</p>
+ご期待くださいー</p>
 ]]></content></item><item><title>Neovimを始めた話</title><link>https://skanehira.github.io/blog/posts/20201210-vim-start-use-nvim/</link><pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20201210-vim-start-use-nvim/</guid><description>初めに 11月中旬くらいからNeovimを使い始めました。 Neovim自体は以前から知っていたが、自分が普段作っているプラグインがVimでしか</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>11月中旬くらいからNeovimを使い始めました。
 Neovim自体は以前から知っていたが、自分が普段作っているプラグインがVimでしか動かないことや、Vimでだいたい満足しているのでなかなか使おうって気になれませんでした。</p>
@@ -311,7 +311,7 @@ Neovimは時代に合わせてよりモダンな技術を積極的に取り入�
 <p>Neovimのモダンな技術といえば次でしょうか。（ほかにもっとあるかもしれないが…）</p>
 <ul>
 <li>ターミナル</li>
-<li>LSP(builtin)</li>
+<li>LSP（builtin）</li>
 <li>リモートプラグイン</li>
 <li>Floating windows</li>
 </ul>
@@ -375,10 +375,10 @@ Vimでは<code>&lt;C-w&gt;&lt;C-N&gt;</code>になって打ちやすい分、タ
 <p>VimにあってNeovimにない関数や、同じような機能だけどIFが異なっている関数がいくつかありました。
 こういった差異が結構プラグイン作者の頭を悩ませるなぁとプラグインを作っていて思いました。</p>
 <p>たとえば、<code>win_execute()</code>という関数はNeovimにはなく、
-特定のWindowでなにか処理を行うには<code>win_gotoid()</code>で一度ウィンドウに移動しなければ行けないです。
-また、<code>job</code>機能はVim/NeovimともにありますがIFが異なっているので、これもまた厄介です。</p>
+特定のWindowで何か処理を行うには<code>win_gotoid()</code>で一度ウィンドウに移動しなければ行けないです。
+また、<code>job</code>機能はVim/NeovimともにありますがIFが異なっているので、これもまたやっかいです。</p>
 <p>このように、使用感はさほど変わらないけど、少し深いところに足を踏み込むと異なるところがちょいちょいあります。
-両方で動作するプラグインを作っているダークパワーを身にまとっている人はやはりすごいなと改めて思いました。</p>
+両方で動作するプラグインを作っているダークパワーを身にまとっている人はやはりすごいなとあらためて思いました。</p>
 <h2 id="最後に">最後に</h2>
 <p>一部ではありますが、Neovimについて筆者が感じていることを書きました。
 もうしばらくNeovim/Vimを交互に使ってみたいと思っています。</p>
@@ -530,13 +530,13 @@ Vim上でリポジトリのファイルツリーを見ることができる機�
 興味ある方は一度触ってみてください。Vim/Neovimともに動きます。</p>
 ]]></content></item><item><title>My Vim philosophy</title><link>https://skanehira.github.io/blog/posts/20201205-vim-my-philosophy/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20201205-vim-my-philosophy/</guid><description>始めに 最近フォロワーさんに「なるべくプラグインに頼りすぎないように様にしているんですよね」って話したら、 「いつもプラグイン作っているからてっ</description><content type="html"><![CDATA[<h2 id="始めに">始めに</h2>
 <p>最近フォロワーさんに「なるべくプラグインに頼りすぎないように様にしているんですよね」って話したら、
-「いつもプラグイン作っているからてっきりプラグインをガンガン使っていると思ってた」と言われました。</p>
+「いつもプラグイン作っているからてっきりプラグインをガンガン使っていると思ってた」といわれました。</p>
 <p>あー、たしかにと思って、あらためて自分のVimへのこだわりについて整理したのでそれについて書いていきます。
 タイトルは哲学と書いてありますが、まぁそんなに真面目な内容ではないです（笑）</p>
 <h2 id="vimの特徴">Vimの特徴</h2>
 <p>Vimはなんと言ってもkeybindが特徴的です。豊富なkeybindがあるので1つのキーボードでさまざまな操作を可能にします。
 特にモーションとオペレーター（<code>ciw</code>など）がテキスト編集を強化していて、これを使いこなすだけで編集スピードが段違いです。</p>
-<p>もう一つはプラグインです。世の中にはたくさん便利なプラグインがあり、それらは標準機能では解決できない問題を解決してくれます。
+<p>もうひとつはプラグインです。世の中にはたくさん便利なプラグインがあり、それらは標準機能では解決できない問題を解決してくれます。
 そしてプラグインは自作が可能ですので、標準機能に不満があれば自分で作れます。
 こういった拡張性が高いことで、Vimプラグインはたくさん作られていて、たくさん使っている人がいます。</p>
 <h2 id="vimへのこだわり">Vimへのこだわり</h2>
@@ -659,7 +659,7 @@ Go、奥が深い。。</p>
 <h3 id="ui">UI</h3>
 <p>ワークフローとジョブがツリー状になっています。
 ルートはリポジトリ名、その下はワークフロー一覧となっています。
-更にその下はジョブとそのステップになっています。</p>
+さらにその下はジョブとそのステップになっています。</p>
 <pre><code>- clipboard-image                                             &lt;-- リポジトリ名
 | - ✗ add github actions... @skanehira [add-github-actions]   &lt;-- ワークフロー
 | | - ✗ Test (ubuntu-latest)                                  &lt;-- ジョブ
@@ -671,7 +671,7 @@ Go、奥が深い。。</p>
 | | | | ✓ #10 Post Run actions/checkout@v2                      |
 | | | | ✓ #11 Complete job                                    &lt;-+
 </code></pre><p>ワークフロー行では次のフォーマットになっていて、
-ジョブが成功しているかどうかが一目でわかるようになっています。</p>
+ジョブが成功しているかどうかが一目で分かるようになっています。</p>
 <pre><code>実行結果 コミットメッセージ 作者 ブランチ名
 ------------------------------------------------------
 ✓ add github actions... @skanehira [add-github-actions]
@@ -685,23 +685,23 @@ Go、奥が深い。。</p>
 <p>gh.vim自体をできるだけシンプルに保ちたいので、
 とりあえずあったら良いんじゃない？という感じで実装をしないようにしています。</p>
 <p>選択したワークフロー/ジョブのURLをコピーする機能を実装したのは、たとえばURLを開発メンバーにここ落ちているよって共有するのに便利です。</p>
-<p>2020/11/29 追記
+<p>2020/11/29追記
 ジョブのログを確認できるようになりました。</p>
 <p><img src="https://i.gyazo.com/c5ed35bbb72fdc247265a6a5b7808600.gif" alt=""></p>
 <h3 id="実装">実装</h3>
 <p>GitHub v3のAPIでリポジトリのGitHub Actionsの情報を取得しています。</p>
 <p><a href="https://developer.github.com/v3/actions/workflow-runs/#list-workflow-runs-for-a-repository">https://developer.github.com/v3/actions/workflow-runs/#list-workflow-runs-for-a-repository</a></p>
 <p>このAPIはGitHub Actionsの情報のみ取得するので、たとえばCIをAWSのcodebuildで行っているといったケースでは情報は取れないです。
-また、このAPIではワークフロー一覧しか取得できないのでさらにその中にあるジョブとステップ情報は次のAPIから取得する必要があります。REST APIだとこういうのがツライですよね&hellip;</p>
+また、このAPIではワークフロー一覧しか取得できないのでさらにその中にあるジョブとステップ情報は次のAPIから取得する必要があります。REST APIだとこういうのがツライですよね。..</p>
 <p><a href="https://developer.github.com/v3/actions/workflow-jobs/#list-jobs-for-a-workflow-run">https://developer.github.com/v3/actions/workflow-jobs/#list-jobs-for-a-workflow-run</a></p>
 <p>本当はRESTではなくGraphQLを使いたかったんですが、v4 APIはGitHub Actions未対応なのでひとまずv3を使っています。
 早くv4でGitHub Actionsの情報を取れるようになってほしいですね。</p>
-<p>ツリー実装は<a href="https://zenn.dev/skanehira/articles/2020-11-22-vim-github-project">VimでGitHubのプロジェクトボードを使う</a>の時に作ったものをそのまま使っているので、難なく実装できました。
+<p>ツリー実装は<a href="https://zenn.dev/skanehira/articles/2020-11-22-vim-github-project">VimでGitHubのプロジェクトボードを使う</a>のときに作ったものをそのまま使っているので、難なく実装できました。
 汎用なツリーモジュールにしといて良かったです。
 ライブラリにするのはちょっと難しいんですが、VimでツリーのUIを実現したい方は適当にコードからパクってもらって大丈夫です。</p>
 <h3 id="余談">余談</h3>
 <p><img src="https://i.gyazo.com/7c3b40585f4ca937f5f0f71e7f4fd03d.png" alt="">
-↑は初期UIですが、文字情報しかなくてとても分かりづらかったので、GitHubのUIを参考にみたら今の形になりました。自分のデザインのセンスがなさすぎてツライ&hellip;</p>
+↑は初期UIですが、文字情報しかなくてとても分かりづらかったので、GitHubのUIを参考にみたら今の形になりました。自分のデザインのセンスがなさすぎてツライ。..</p>
 <p><img src="https://i.gyazo.com/2cc3c5d9521fef08ddb349ea0d3796d6.png" alt=""></p>
 ]]></content></item><item><title>VimでGitHubのプロジェクトボードを使う</title><link>https://skanehira.github.io/blog/posts/20201122-vim-github-project/</link><pubDate>Sun, 22 Nov 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20201122-vim-github-project/</guid><description>初めに みなさん、GitHubのプロジェクトボードはご存じですか？ 詳細は公式を参照していただければと思いますが、いわゆるカンバンです。 とても便</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>みなさん、GitHubのプロジェクトボードはご存じですか？
@@ -758,7 +758,7 @@ v4をたたくことで、選択的にデータを取得できるので処理が
 <p>プロジェクト機能に関しては、あとカードを追加したり、消したりする機能を追加したらぼくのニーズは満たせるのでいったん終わりかなと思っています。
 gh.vim自体はまだまだ未完成なのでのんびり作っていこうと思います。</p>
 <h2 id="余談">余談</h2>
-<p>Vimでツリーを実装したのは初めてですので、最初は小さなツリーをまず作ってみたらこんなのができました。</p>
+<p>Vimでツリーを実装したのはじめてですので、最初は小さなツリーをまず作ってみたらこんなのができました。</p>
 <p><img src="https://i.gyazo.com/8295d83143358c58c39d7d3372e7157e.gif" alt=""></p>
 ]]></content></item><item><title>Gyazoに画像をアップロードするVimプラグインを作った</title><link>https://skanehira.github.io/blog/posts/20201116-go-vim-gyazo/</link><pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20201116-go-vim-gyazo/</guid><description>zenn.devやQiitaで記事を書いていると画像をアップロードしたくなることがあります。 そして、とても良いことにzenn.devやQii</description><content type="html"><![CDATA[<p>zenn.devやQiitaで記事を書いていると画像をアップロードしたくなることがあります。
 そして、とても良いことにzenn.devやQiitaにはWebのエディタ上では<code>Ctrl(Cmd) + v</code>でクリップボードから画像をアップロードできる機能があります。</p>
@@ -1876,10 +1876,10 @@ Vim上でGitHubを操作できるプラグイン<a href="https://github.com/skan
 </span></code></pre></div><p>ちょっと原因調べるの面倒ですので、ちょっと自作コマンドを用意することにしました。
 今のところは快適ですが、<code>system</code>はVimの操作をブロックしてしまうので、
 困ったら<code>job_start</code>を使って改善するかもしれません。</p>
-]]></content></item><item><title>Vimで画像をツイートする</title><link>https://skanehira.github.io/blog/posts/20200817-vim-tweet-with-image/</link><pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200817-vim-tweet-with-image/</guid><description>初めに ども、連休が終わったのを未だに信じられないゴリラです 先日 code2img.vim というプラグインをつくったんですが、 基本ソースコードを画像にして共有するのは</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
-<p>ども、連休が終わったのを未だに信じられないゴリラです</p>
-<p>先日 <a href="https://github.com/skanehira/code2img.vim">code2img.vim</a> というプラグインをつくったんですが、
-基本ソースコードを画像にして共有するのはTwitterなので、それらをまとめてVimで出来たら良いなと思って、簡単なスクリプトを書きました。</p>
+]]></content></item><item><title>Vimで画像をツイートする</title><link>https://skanehira.github.io/blog/posts/20200817-vim-tweet-with-image/</link><pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200817-vim-tweet-with-image/</guid><description>初めに ども、連休が終わったのをいまだに信じられないゴリラです 先日 code2img.vim というプラグインを作ったんですが、 基本ソースコードを画像にして共有するのは</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>ども、連休が終わったのをいまだに信じられないゴリラです</p>
+<p>先日 <a href="https://github.com/skanehira/code2img.vim">code2img.vim</a> というプラグインを作ったんですが、
+基本ソースコードを画像にして共有するのはTwitterですので、それらをまとめてVimできたら良いなと思って、簡単なスクリプトを書きました。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/99185e3a-90d5-9f73-ea7d-c8d52a266c63.gif" alt="tweet_with_image.gif"></p>
 <p>コードの本体は<a href="https://gist.github.com/skanehira/7dd6ed0dc8da8c6e87a11ab70ea83b53">ここ</a>に置いてあります。</p>
 <h2 id="必要なもの">必要なもの</h2>
@@ -1888,18 +1888,18 @@ Vim上でGitHubを操作できるプラグイン<a href="https://github.com/skan
 <li><a href="https://github.com/mattn/twty">twty</a></li>
 </ul>
 <h2 id="使い方">使い方</h2>
-<p>コードをvimrcに記述すれば<code>TweetWithImg</code>コマンドが使えるようになります。</p>
+<p>コードをvimrcに記述すれば<code>TweetWithImg</code>コマンドが使えます。</p>
 <ul>
 <li>選択した範囲のテキストが画像として出力される</li>
 <li>コマンドの引数はツイート本文として送信される</li>
 </ul>
 <p>ので、<code>TweetWithImg 私はゴリラです</code>というふう実行すれば<code>私はゴリラです</code>と画像つきのツイートがつぶやけます。</p>
-<p>仕組みはシンプルで、<code>code2img</code>でソースコードを画像ファイルに出力して、<code>twty</code>で画像ファイルと本文をツイートするだけです。
-<code>job_start</code>なので非同期で動くのでVimが固まることがないです(これ重要)</p>
+<p>しくみはシンプルで、<code>code2img</code>でソースコードを画像ファイルに出力して、<code>twty</code>で画像ファイルと本文をツイートするだけです。
+<code>job_start</code>なので非同期で動くのでVimが固まることがないです（これ重要）</p>
 <h2 id="さいごに">さいごに</h2>
 <p>やはりコードを画像化してさくっとTwtterで共有できるのは良い体験</p>
-]]></content></item><item><title>100種類以上のターミナルのカスタムテーマをサクッと導入</title><link>https://skanehira.github.io/blog/posts/20200813-terminal-themes/</link><pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200813-terminal-themes/</guid><description>初めに こんにちわ 最近メインPCがThinkpadになって、メインOSがUbuntuになったゴリラです 普段ターミナルで作業する方はカスタムテー</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
-<p>こんにちわ
+]]></content></item><item><title>100種類以上のターミナルのカスタムテーマをサクッと導入</title><link>https://skanehira.github.io/blog/posts/20200813-terminal-themes/</link><pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200813-terminal-themes/</guid><description>初めに こんにちは 最近メインPCがThinkpadになって、メインOSがUbuntuになったゴリラです 普段ターミナルで作業する方はカスタムテー</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>こんにちは
 最近メインPCがThinkpadになって、メインOSがUbuntuになったゴリラです</p>
 <p>普段ターミナルで作業する方はカスタムテーマを使っていますか？
 割とカスタムテーマをダウンロードして適用したりするの面倒と感じている方もいると思いますが、
@@ -1907,20 +1907,20 @@ Vim上でGitHubを操作できるプラグイン<a href="https://github.com/skan
 <h2 id="やり方">やり方</h2>
 <p>こちらを使います。MacとLinux対応しています。
 <a href="https://github.com/Mayccoll/Gogh">https://github.com/Mayccoll/Gogh</a></p>
-<p>ぼくはLinuxなので、次のコマンドを実行します。</p>
+<p>ぼくはLinuxですので、次のコマンドを実行します。</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">bash -c  <span class="s2">&#34;</span><span class="k">$(</span>wget -qO- https://git.io/vQgMr<span class="k">)</span><span class="s2">&#34;</span>
-</code></pre></div><p>100種類以上のテーマがあるので、<a href="https://mayccoll.github.io/Gogh/">こちら</a>を見て使ってみたいものの番号を選択して下さい
+</code></pre></div><p>100種類以上のテーマがあるので、<a href="https://mayccoll.github.io/Gogh/">こちら</a>を見て使ってみたいものの番号を選択してください
 もしくは<code>ALL</code>で全テーマを入れてもOKです。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/7aa499a5-9e6f-c63d-60bf-1bd40b24bc2e.png" alt="image.png"></p>
-<p>入れたあと、デフォルト設定にしてターミナルを再起動すれば適用されます(gnome-terminalの場合)
+<p>入れたあと、デフォルト設定にしてターミナルを再起動すれば適用されます（gnome-terminalの場合）
 あとはフォントを変えるなりして見てください。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/ddf36f95-5650-2792-c106-82ebbf9130b4.png" alt="image.png"></p>
 <h2 id="さいごに">さいごに</h2>
 <p>100種類以上のテーマをサクッと導入できるのは便利ですね</p>
-]]></content></item><item><title>Goで画像をクリップボードに保存、読み取るライブラリを作った</title><link>https://skanehira.github.io/blog/posts/20200808-go-clipboard-image/</link><pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200808-go-clipboard-image/</guid><description>初めに こんにちわ ゴリラです 画像をクリップボードにコピー、コピーした画像をクリップボードから読み取るGoのライブラリ clipboard-image をつくったので紹介します</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
-<p>こんにちわ
+]]></content></item><item><title>Goで画像をクリップボードに保存、読み取るライブラリを作った</title><link>https://skanehira.github.io/blog/posts/20200808-go-clipboard-image/</link><pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200808-go-clipboard-image/</guid><description>初めに こんにちは ゴリラです 画像をクリップボードにコピー、コピーした画像をクリップボードから読み取るGoのライブラリ clipboard-image を作ったので紹介します。</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>こんにちは
 ゴリラです</p>
-<p>画像をクリップボードにコピー、コピーした画像をクリップボードから読み取るGoのライブラリ <a href="https://github.com/skanehira/clipboard-image">clipboard-image</a> をつくったので紹介します。
+<p>画像をクリップボードにコピー、コピーした画像をクリップボードから読み取るGoのライブラリ <a href="https://github.com/skanehira/clipboard-image">clipboard-image</a> を作ったので紹介します。
 このライブラリはMac、Linux、Windowsで動作します。</p>
 <p>先日 <a href="https://qiita.com/gorilla0513/items/013aea9060bca1455137">Goでソースコードを画像化するCLIを作った</a> で紹介したCLIではこのライブラリを使っています。</p>
 <h2 id="使い方">使い方</h2>
@@ -1933,7 +1933,7 @@ Vim上でGitHubを操作できるプラグイン<a href="https://github.com/skan
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/598e7a39-59fc-fc35-9982-9093fefde5ff.png" alt="image.png"></p>
 <p>クリップボードから画像ファイルを読み取るときは <code>ReadFromClipboard</code></p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/5c676cb6-5a69-70d6-4af2-0c5cc9e93178.png" alt="image.png"></p>
-<h2 id="仕組み">仕組み</h2>
+<h2 id="しくみ">しくみ</h2>
 <p>クリップボードへのアクセスは外部コマンドを用いています。
 それらをGoでラップしてライブラリとして提供しています。それぞれ次になっています。</p>
 <table>
@@ -1945,7 +1945,7 @@ Vim上でGitHubを操作できるプラグイン<a href="https://github.com/skan
 </thead>
 <tbody>
 <tr>
-<td>Mac OS</td>
+<td>macOS</td>
 <td>osascript</td>
 </tr>
 <tr>
@@ -1958,8 +1958,8 @@ Vim上でGitHubを操作できるプラグイン<a href="https://github.com/skan
 </tr>
 </tbody>
 </table>
-<p>Mac OSではApple Scriptを使えばクリップボードにアクセスできます。
-Apple Scriptは標準でMac OSに入っているのでライブラリ意外は特に不要です。</p>
+<p>macOSではApple Scriptを使えばクリップボードにアクセスできます。
+Apple Scriptは標準でmacOSに入っているのでライブラリ意外は特に不要です。</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># copy to clipboard</span>
 osascript -e <span class="s1">&#39;set the clipboard to (read &#34;/path/to/file.png&#34; as TIFF picture)&#39;</span>
 
@@ -1981,7 +1981,7 @@ xclip -selection clipboard -o &gt; /path/to/file.png
 <h2 id="詰まったポイント">詰まったポイント</h2>
 <p><code>xclip</code>を使う時、標準入力でファイルの中身を渡すのですが、次のように書いても標準入力に渡っていかないです。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/3a94a766-6962-8f61-181b-01500522f5e1.png" alt="image.png"></p>
-<p>標準入力に渡すには<code>StdinPipe</code>でpipeを取得してファイルの中身を書き込んだ後に stdin を閉じる必要あります。
+<p>標準入力に渡すには<code>StdinPipe</code>でpipeを取得してファイルの中身を書き込んだ後にstdinを閉じる必要あります。
 <code>xclip</code>の実装は<a href="https://github.com/atotto/clipboard">atotto/clipboard</a>を参考にしました。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/14aae070-760d-9abb-af14-0ac5c9313aaf.png" alt="image.png"></p>
 <h2 id="さいごに">さいごに</h2>
@@ -1990,8 +1990,8 @@ xclip -selection clipboard -o &gt; /path/to/file.png
 <p>ちなみに、この記事の画像はVimで書いたコードを<a href="https://github.com/skanehira/code2img.vim">code2img.vim</a>でクリップボードにコピーしてサクッとQiitaにアップロードしたものです。
 当初手軽にVimでコードを画像化したいという目的を達成できて、実際使って便利ので満足しています。</p>
 <p>コードブロックが使えないチャットやTwitterといったSNSでコード貼りたいときにぜひCLIを使ってみてください。</p>
-]]></content></item><item><title>Goでソースコードを画像化するCLIを作った</title><link>https://skanehira.github.io/blog/posts/20200806-go-code2img/</link><pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200806-go-code2img/</guid><description>初めに こんにちわ ゴリラです 普段、Twitterでたまにこういうふうにソースコードの画像を貼り付けることがあります。 画像を作るのにcarbon</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
-<p>こんにちわ
+]]></content></item><item><title>Goでソースコードを画像化するCLIを作った</title><link>https://skanehira.github.io/blog/posts/20200806-go-code2img/</link><pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200806-go-code2img/</guid><description>初めに こんにちは ゴリラです 普段、Twitterでたまにこういうふうにソースコードの画像を貼り付けることがあります。 画像を作るのにcarbon</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>こんにちは
 ゴリラです</p>
 <p>普段、Twitterでたまにこういうふうにソースコードの画像を貼り付けることがあります。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/4bf71de8-abd8-ffee-27e5-af3968bbe859.png" alt="image.png"></p>
@@ -2001,7 +2001,7 @@ xclip -selection clipboard -o &gt; /path/to/file.png
 そこで、ブラウザやネットを使用せずCLIでソースコードを画像化できたら良いなと思いCLIを作りました。</p>
 <p><a href="https://github.com/skanehira/code2img"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/skanehira/code2img.png" width="460px"></a></p>
 <h2 id="どんな感じ">どんな感じ</h2>
-<p>こんな感じでpngファイルを出力できます。外部ツール依存無しでGoだけで動くのでインターネットもブラウザも必要ないです。</p>
+<p>こんな感じでpngファイルを出力できます。外部ツール依存なしでGoだけで動くのでインターネットもブラウザも必要ないです。</p>
 <p><img src="https://i.imgur.com/TjoOQct.gif" alt=""></p>
 <h2 id="使い方">使い方</h2>
 <p>2通りあります。ソースコードを標準入力で渡すか、ファイルを渡すかです。</p>
@@ -2026,20 +2026,20 @@ Usage:
 <p>処理の流れは大まかと次になります。</p>
 <ol>
 <li>コードをトークナイズして、トークンごとに色を情報をつける</li>
-<li>トークンを1文字ずつpngに書き込む</li>
+<li>トークンを一文字ずつpngに書き込む</li>
 </ol>
-<p>ソースコードをトークナイズしてトークンごとに色(RGBA)をつけますが、ここをスクラッチで多言語に対応するのは骨が折れるので、素直に<a href="https://github.com/alecthomas/chroma">github.com/alecthomas/chroma</a>というライブラリを使用しました。</p>
+<p>ソースコードをトークナイズしてトークンごとに色（RGBA）をつけますが、ここをスクラッチで多言語に対応するのは骨が折れるので、素直に<a href="https://github.com/alecthomas/chroma">github.com/alecthomas/chroma</a>というライブラリを使用しました。</p>
 <p>このライブラリを使えば、2の処理だけを書けば済みます。</p>
 <p>2の処理は大まかに次になります。</p>
 <ol>
 <li>文字を描画するfontを読み込み</li>
-<li>座標を計算しつつ、1文字ずつ描画する</li>
+<li>座標を計算しつつ、一文字ずつ描画する</li>
 </ol>
 <p>fontに関してはマルチバイト対応の<a href="https://github.com/miiton/Cica">Cica</a>を<a href="https://github.com/jessevdk/go-assets">github.com/jessevdk/go-assets</a>で埋め込んでいます。
 そのためCLIのサイズが倍くらい増えましたが、致し方ない…</p>
 <p>文字描画の処理は次になっています。この<code>iterator.Tokens()</code>がtoken情報を返してくるので、
-tokenの種類から<code>style.Get()</code>で色情報を取得しています。その後、1文字ずつpngに書き込んで、座標を計算して…を繰り返します。</p>
-<p>ここでポイントですが、マルチバイトの場合は座標は +2 しないと文字が重なって読めなくなります。なので1文字の長さを確認して必要あればx座標を +2 しています。これでマルチバイトでも問題なく描画されます。</p>
+tokenの種類から<code>style.Get()</code>で色情報を取得しています。その後、一文字ずつpngに書き込んで、座標を計算して…を繰り返します。</p>
+<p>ここでポイントですが、マルチバイトの場合は座標は +2しないと文字が重なって読めなくなります。なので一文字の長さを確認して必要あればx座標を +2しています。これでマルチバイトでも問題なく描画されます。</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">t</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">iterator</span><span class="p">.</span><span class="nf">Tokens</span><span class="p">()</span> <span class="p">{</span>
 	<span class="nx">c</span> <span class="o">:=</span> <span class="nx">style</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">Type</span><span class="p">).</span><span class="nx">Colour</span>
 	<span class="nx">dr</span><span class="p">.</span><span class="nx">Src</span> <span class="p">=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewUniform</span><span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">RGBA</span><span class="p">{</span><span class="nx">R</span><span class="p">:</span> <span class="nx">c</span><span class="p">.</span><span class="nf">Red</span><span class="p">(),</span> <span class="nx">G</span><span class="p">:</span> <span class="nx">c</span><span class="p">.</span><span class="nf">Green</span><span class="p">(),</span> <span class="nx">B</span><span class="p">:</span> <span class="nx">c</span><span class="p">.</span><span class="nf">Blue</span><span class="p">(),</span> <span class="nx">A</span><span class="p">:</span> <span class="mi">255</span><span class="p">})</span>
@@ -2067,13 +2067,13 @@ tokenの種類から<code>style.Get()</code>で色情報を取得しています
 	<span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><h2 id="エディタと連携">エディタと連携</h2>
-<p><del>標準入力に対応しているので、Vimなどのエディタと連携してサクッと画像化出来ます。</del>
+<p><del>標準入力に対応しているので、Vimなどのエディタと連携してサクッと画像化できます。</del>
 <a href="https://github.com/skanehira/code2img.vim">code2img.vim</a>というプラグインを作りました。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/fb37eb6f-fb51-8666-af58-bd200229568b.gif" alt="vim-code2img.gif"></p>
 <h2 id="さいごに">さいごに</h2>
 <p>依存なしでソースコードを画像に変換できるので、ぜひ試してみてください。エディタとも連携できて便利です。</p>
-]]></content></item><item><title>Vimでソースコードを画像化してクリップボードにコピー</title><link>https://skanehira.github.io/blog/posts/20200806-vim-code2img/</link><pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200806-vim-code2img/</guid><description>初めに こんにちわ ゴリラです Goでソースコードを画像化するCLIを作った でソースコードを画像化するCLIを紹介しましたが、Vimからもう少し使</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
-<p>こんにちわ
+]]></content></item><item><title>Vimでソースコードを画像化してクリップボードにコピー</title><link>https://skanehira.github.io/blog/posts/20200806-vim-code2img/</link><pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200806-vim-code2img/</guid><description>初めに こんにちは ゴリラです Goでソースコードを画像化するCLIを作った でソースコードを画像化するCLIを紹介しましたが、Vimからもう少し使</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>こんにちは
 ゴリラです</p>
 <p><a href="https://qiita.com/gorilla0513/items/013aea9060bca1455137">Goでソースコードを画像化するCLIを作った</a> でソースコードを画像化するCLIを紹介しましたが、Vimからもう少し使いやすくするためプラグインを作りました。</p>
 <p><a href="https://github.com/skanehira/code2img.vim"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/skanehira/code2img.vim.png" width="460px"></a></p>
@@ -2090,21 +2090,21 @@ tokenの種類から<code>style.Get()</code>で色情報を取得しています
 </span><span class="err"></span><span class="c">
 </span><span class="c">&#34; 選択範囲を画像化してファイルに出力</span><span class="err">
 </span><span class="err"></span><span class="p">:</span><span class="s1">&#39;&lt;&#39;</span><span class="p">&gt;</span><span class="nx">Code2img</span> <span class="nx">image</span>.<span class="nx">png</span><span class="err">
-</span></code></pre></div><h2 id="仕組み">仕組み</h2>
+</span></code></pre></div><h2 id="しくみ">しくみ</h2>
 <p>Vimの<code>job_start</code>を使って<code>code2img</code>を実行しているだけです。
 引数がなければクリップボードにコピー、引数があればファイルに出力するように引数を組み合わせています。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/32395da9-4f89-5baf-12e3-934d3fddd221.png" alt="image.png"></p>
 <h2 id="さいごに">さいごに</h2>
 <p>久しぶりにVimプラグイン作りましたが、楽かったです
-あとやはり書かないと色々忘れるなと思いました
+あとやはり書かないといろいろ忘れるなと思いました
 定期的にプラグインを作りたい（気持ちはある）</p>
-]]></content></item><item><title>Vim上でツイートをニコ動のコメント風に流す</title><link>https://skanehira.github.io/blog/posts/20200727-vim-tweet-niconico/</link><pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200727-vim-tweet-niconico/</guid><description>初めに こんにちわ ゴリラです Vimでターミナルを使うときは:term ++close +shell {cmd}というふうに実行することが多々ありますが、 オプションが多くな</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
-<p>こんにちわ
+]]></content></item><item><title>Vim上でツイートをニコ動のコメント風に流す</title><link>https://skanehira.github.io/blog/posts/20200727-vim-tweet-niconico/</link><pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200727-vim-tweet-niconico/</guid><description>初めに こんにちは ゴリラです Vimでターミナルを使うときは:term ++close +shell {cmd}というふうに実行することが多々ありますが、 オプションが多くな</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>こんにちは
 ゴリラです</p>
 <p>Vimでターミナルを使うときは<code>:term ++close +shell {cmd}</code>というふうに実行することが多々ありますが、
 オプションが多くなると、いささか不便に感じます。</p>
 <p>そこで、<code>BufReadCmd</code>を使えば、ターミナルがちょっと使いやすくなります。</p>
-<h1 id="やりかた">やりかた</h1>
+<h1 id="やり方">やり方</h1>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">function</span><span class="p">!</span> <span class="nx">s</span>:<span class="nx">termopen</span><span class="p">()</span> <span class="nx">abort</span><span class="err">
 </span><span class="err"></span>  <span class="k">let</span> <span class="nx">name</span> <span class="p">=</span> <span class="nx">split</span><span class="p">(</span><span class="nx">bufname</span><span class="p">(),</span> <span class="s1">&#39;\/\/&#39;</span><span class="p">)</span><span class="err">
 </span><span class="err"></span>  <span class="k">if</span> <span class="nx">len</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">&lt;</span> <span class="m">2</span><span class="err">
@@ -2119,25 +2119,25 @@ tokenの種類から<code>style.Get()</code>で色情報を取得しています
 </span><span class="err"></span><span class="nx">augroup</span> <span class="nx">END</span><span class="err">
 </span></code></pre></div><p>上記のコードを<code>vimrc</code>に追記&amp;リロードして、<code>:vnew term://top</code> すると、ターミナルが起動して<code>top</code>コマンドが動きます。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/346ec215-2109-3c5f-c01c-9601c7ae6054.gif" alt="vim-term.gif"></p>
-<h2 id="仕組み">仕組み</h2>
-<p>仕組みは簡単で、bufferが作られたら <code>BufReadcmd</code> イベントが走るので、その時 <code>s:termopen</code> を実行させるように <code>autocmd</code> を設定します。
-<code>s:termopen</code>関数内ではバッファ名からterminalで実行するコマンド(<code>//</code>よりも後ろの部分)を取得してターミナルを起動します。</p>
-<p><code>//</code>よりも後ろがコマンドになるので、例えば<code>tabnew term://bash</code>でも動くし、<code>new term://docker exec -it golang bash</code>でも動きます。
+<h2 id="しくみ">しくみ</h2>
+<p>しくみは簡単で、bufferが作られたら <code>BufReadcmd</code> イベントが走るので、そのとき <code>s:termopen</code> を実行させるように <code>autocmd</code> を設定します。
+<code>s:termopen</code>関数内ではバッファ名からterminalで実行するコマンド（<code>//</code>よりも後ろの部分）を取得してターミナルを起動します。</p>
+<p><code>//</code>よりも後ろがコマンドになるので、たとえば<code>tabnew term://bash</code>でも動くし、<code>new term://docker exec -it golang bash</code>でも動きます。
 設定自体はシンプルでかつ柔軟にコマンドを実行できるので個人的に便利と思っています。</p>
 <h2 id="さいごに">さいごに</h2>
-<p>このターミナルのカスタマイズはneovimから着想を得ました。neovimでは標準で同じようなことが出来ます(ヘルプより抜粋)。</p>
+<p>このターミナルのカスタマイズはneovimから着想を得ました。neovimでは標準で同じようなことができます（ヘルプより抜粋）。</p>
 <pre><code>- Edit a file with a name matching `term://(.{-}//(\d+:)?)?\zs.*`.
   For example:
 
     :edit term://bash
     :vsplit term://top
-</code></pre>]]></content></item><item><title>Vimのターミナルをすこし使いやすくする</title><link>https://skanehira.github.io/blog/posts/20200726-vim-improve-terminal/</link><pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200726-vim-improve-terminal/</guid><description>初めに こんにちわ ゴリラです Vimでターミナルを使うときは:term ++close +shell {cmd}というふうに実行することが多々ありますが、 オプションが多くな</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
-<p>こんにちわ
+</code></pre>]]></content></item><item><title>Vimのターミナルをすこし使いやすくする</title><link>https://skanehira.github.io/blog/posts/20200726-vim-improve-terminal/</link><pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200726-vim-improve-terminal/</guid><description>初めに こんにちは ゴリラです Vimでターミナルを使うときは:term ++close +shell {cmd}というふうに実行することが多々ありますが、 オプションが多くな</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>こんにちは
 ゴリラです</p>
 <p>Vimでターミナルを使うときは<code>:term ++close +shell {cmd}</code>というふうに実行することが多々ありますが、
 オプションが多くなると、いささか不便に感じます。</p>
 <p>そこで、<code>BufReadCmd</code>を使えば、ターミナルがちょっと使いやすくなります。</p>
-<h1 id="やりかた">やりかた</h1>
+<h1 id="やり方">やり方</h1>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">function</span><span class="p">!</span> <span class="nx">s</span>:<span class="nx">termopen</span><span class="p">()</span> <span class="nx">abort</span><span class="err">
 </span><span class="err"></span>  <span class="k">let</span> <span class="nx">name</span> <span class="p">=</span> <span class="nx">split</span><span class="p">(</span><span class="nx">bufname</span><span class="p">(),</span> <span class="s1">&#39;\/\/&#39;</span><span class="p">)</span><span class="err">
 </span><span class="err"></span>  <span class="k">if</span> <span class="nx">len</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">&lt;</span> <span class="m">2</span><span class="err">
@@ -2152,34 +2152,34 @@ tokenの種類から<code>style.Get()</code>で色情報を取得しています
 </span><span class="err"></span><span class="nx">augroup</span> <span class="nx">END</span><span class="err">
 </span></code></pre></div><p>上記のコードを<code>vimrc</code>に追記&amp;リロードして、<code>:vnew term://top</code> すると、ターミナルが起動して<code>top</code>コマンドが動きます。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/346ec215-2109-3c5f-c01c-9601c7ae6054.gif" alt="vim-term.gif"></p>
-<h2 id="仕組み">仕組み</h2>
-<p>仕組みは簡単で、bufferが作られたら <code>BufReadcmd</code> イベントが走るので、その時 <code>s:termopen</code> を実行させるように <code>autocmd</code> を設定します。
-<code>s:termopen</code>関数内ではバッファ名からterminalで実行するコマンド(<code>//</code>よりも後ろの部分)を取得してターミナルを起動します。</p>
-<p><code>//</code>よりも後ろがコマンドになるので、例えば<code>tabnew term://bash</code>でも動くし、<code>new term://docker exec -it golang bash</code>でも動きます。
+<h2 id="しくみ">しくみ</h2>
+<p>しくみは簡単で、bufferが作られたら <code>BufReadcmd</code> イベントが走るので、そのとき <code>s:termopen</code> を実行させるように <code>autocmd</code> を設定します。
+<code>s:termopen</code>関数内ではバッファ名からterminalで実行するコマンド（<code>//</code>よりも後ろの部分）を取得してターミナルを起動します。</p>
+<p><code>//</code>よりも後ろがコマンドになるので、たとえば<code>tabnew term://bash</code>でも動くし、<code>new term://docker exec -it golang bash</code>でも動きます。
 設定自体はシンプルでかつ柔軟にコマンドを実行できるので個人的に便利と思っています。</p>
 <h2 id="さいごに">さいごに</h2>
-<p>このターミナルのカスタマイズはneovimから着想を得ました。neovimでは標準で同じようなことが出来ます(ヘルプより抜粋)。</p>
+<p>このターミナルのカスタマイズはneovimから着想を得ました。neovimでは標準で同じようなことができます（ヘルプより抜粋）。</p>
 <pre><code>- Edit a file with a name matching `term://(.{-}//(\d+:)?)?\zs.*`.
   For example:
 
     :edit term://bash
     :vsplit term://top
-</code></pre>]]></content></item><item><title>VimでWorld Wide Web</title><link>https://skanehira.github.io/blog/posts/20200706-vim-www/</link><pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200706-vim-www/</guid><description>初めに こんにちわ ゴリラです 普段Vimを使ってコーディングしていると、「あれ、あの関数名なんだっけ？」とか「引数何を受け取るんだっけ？」とかで</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
-<p>こんにちわ
+</code></pre>]]></content></item><item><title>VimでWorld Wide Web</title><link>https://skanehira.github.io/blog/posts/20200706-vim-www/</link><pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200706-vim-www/</guid><description>初めに こんにちは ゴリラです 普段Vimを使ってコーディングしていると、「あれ、あの関数名なんだっけ？」とか「引数何を受け取るんだっけ？」とかで</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>こんにちは
 ゴリラです</p>
 <p>普段Vimを使ってコーディングしていると、「あれ、あの関数名なんだっけ？」とか「引数何を受け取るんだっけ？」とかで思い出せないことが多々あると思います。
-そういう時、大抵の人はブラウザを使うと思いますが、アプリを切り替えないといけないので効率が悪いなとずっと思っていました。</p>
-<p>そこで、この度<a href="https://ja.wikipedia.org/wiki/W3m">w3m</a>を導入してみました。ちょっとQOL(Quality Of Life)上がった感があるので紹介してきます。</p>
+そういう時、たいていの人はブラウザを使うと思いますが、アプリケーションを切り替えないといけないので効率が悪いなとずっと思っていました。</p>
+<p>そこで、この度<a href="https://ja.wikipedia.org/wiki/W3m">w3m</a>を導入してみました。ちょっとQOL（Quality Of Life）上がった感があるので紹介してきます。</p>
 <h2 id="w3mとは"><code>w3m</code>とは</h2>
 <p>簡単に言うとテキストベースブラウザです。一応<code>sixel</code>対応できるので画像表示もできます。（ただレイアウト崩れるので実用的ではなかった）
 テキストベースゆえ、とても軽快で<code>cookie</code>や<code>openssl</code>も使えるので<code>Twitter</code>などのサービスにログインもできます。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/1e017600-c9bf-d1d0-3e2c-63920ae527d3.png" alt="image.png"></p>
-<p>がっつり色々と調査するなら普通にブラウザを使ったほうが良いですが、
-冒頭で言ったような用途であれば<code>w3m</code>で充分です。</p>
+<p>がっつりいろいろと調査するなら普通にブラウザを使ったほうが良いですが、
+冒頭で言ったような用途であれば<code>w3m</code>で十分です。</p>
 <h2 id="vimでw3mを使う">Vimで<code>w3m</code>を使う</h2>
-<p>Vimでは<code>terminal</code>機能があるので、それを使えばVim上で<code>w3m</code>を使用できます。例えば次のコマンドで<code>google.com</code>を開けます。</p>
+<p>Vimでは<code>terminal</code>機能があるので、それを使えばVim上で<code>w3m</code>を使用できます。たとえば次のコマンドで<code>google.com</code>を開けます。</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">term</span> <span class="p">++</span><span class="nx">close</span> <span class="nx">w3m</span> <span class="nx">google</span>.<span class="nx">com</span><span class="err">
-</span></code></pre></div><p>ただ、これだけだとちょっと不便です。大体は何かしら検索することが多いので、もう少し便利にするため<code>WWW</code>コマンドを用意します。</p>
+</span></code></pre></div><p>ただ、これだけだとちょっと不便です。だいたいは何かしら検索することが多いので、もう少し便利にするため<code>WWW</code>コマンドを用意します。</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">function</span><span class="p">!</span> <span class="nx">s</span>:<span class="nx">www</span><span class="p">(</span><span class="nx">word</span><span class="p">)</span> <span class="nx">abort</span><span class="err">
 </span><span class="err"></span>  <span class="nx">execute</span><span class="p">(</span><span class="s1">&#39;term ++close ++shell w3m google.com/search\?q=&#34;&#39;</span> . <span class="nx">a</span>:<span class="nx">word</span> . <span class="s1">&#39;&#34;&#39;</span><span class="p">)</span><span class="err">
 </span><span class="err"></span><span class="k">endfunction</span><span class="err">
@@ -2197,10 +2197,10 @@ tokenの種類から<code>style.Get()</code>で色情報を取得しています
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/8c6be7cf-4440-3ac4-77ce-44967c49d793.png" alt="image.png"></p>
 <h2 id="vimでw3mのメリット">Vimで<code>w3m</code>のメリット</h2>
 <p>ズバリ、翻訳できることです。ゴリラ製<a href="https://github.com/skanehira/translate.vim">翻訳プラグイン</a>を使って、<code>godoc</code>の英語ドキュメントを翻訳しながら読めます。
-英語苦手なので、こうやって翻訳しながらじゃないと読めないです（ツライ）</p>
+英語苦手ですので、こうやって翻訳しながらじゃないと読めないです（ツライ）</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/7bd5f475-ed04-e8ad-fab3-0d6291d9acbf.png" alt="image.png"></p>
 <h2 id="w3mのキーマップ設定"><code>w3m</code>のキーマップ設定</h2>
-<p>デフォルトのキーマップでしっくり来ないところがあったので、<code>~/.w3m/keymap</code>に次の設定をしてなるべく使用感をVimに近づけています。</p>
+<p>デフォルトのキーマップでしっくり来ないところがあったので、<code>~/.w3m/keymap</code>に次の設定をしてなるべく使用感をVimに近付けています。</p>
 <pre><code>keymap C-u PREV_PAGE
 keymap C-d NEXT_PAGE
 keymap C-h BACK
@@ -2216,10 +2216,10 @@ keymap C-p PREV_LINK
 keymap C-q EXIT
 keymap C-k GOTO
 </code></pre><h2 id="さいごに">さいごに</h2>
-<p>導入したばっかりなので、しばらく使ってみています。
+<p>導入したばっかりですので、しばらく使ってみています。
 みなさんもぜひ使ってみてください。</p>
-]]></content></item><item><title>ブラウザのテキスト入力をVim化</title><link>https://skanehira.github.io/blog/posts/20200621-vim-input-in-browser/</link><pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200621-vim-input-in-browser/</guid><description>初めに こんにちわ ゴリラです 仕事に限らず、普段はブラウザでテキストを入力することも多々あると思います。 ぼくは、その度にVimのキーバインドを使</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
-<p>こんにちわ
+]]></content></item><item><title>ブラウザのテキスト入力をVim化</title><link>https://skanehira.github.io/blog/posts/20200621-vim-input-in-browser/</link><pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200621-vim-input-in-browser/</guid><description>初めに こんにちは ゴリラです 仕事に限らず、普段はブラウザでテキストを入力することも多々あると思います。 ぼくは、その度にVimのキーバインドを使</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>こんにちは
 ゴリラです</p>
 <p>仕事に限らず、普段はブラウザでテキストを入力することも多々あると思います。
 ぼくは、その度にVimのキーバインドを使えたらなと思ったことがこれまで何度もありました。</p>
@@ -2236,7 +2236,7 @@ keymap C-k GOTO
 <h2 id="設定">設定</h2>
 <p>いくつかの<code>ex</code>コマンドが使用できます。
 <img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/89b155b0-bc81-2484-3066-84cc5344340e.png" alt="image.png"></p>
-<p>デフォルトではbellが鳴るのでそれをオフにすると良いです。(bellのオプションがあるが、なぜか効かなかったので)</p>
+<p>デフォルトではbellが鳴るのでそれをオフにすると良いです。（bellのオプションがあるが、なぜか効かなかったので）</p>
 <pre><code>set bellvolume=0
 </code></pre><p>デフォルトは<code>textarea</code>のみ対象になっていますが、<code>input</code>系も入れておくと便利です。
 <img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/fb1ebfdb-e878-5122-be35-16a33bfc7483.png" alt="image.png"></p>
@@ -2245,8 +2245,8 @@ keymap C-k GOTO
 <h2 id="さいごに">さいごに</h2>
 <p>日本語入力の削除の挙動が若干変ですが、とても便利なのでVimmerの方はぜひ試して見ください
 ぼくはQOLが上りまくりです</p>
-]]></content></item><item><title>Vimでタブ文字を可視化する</title><link>https://skanehira.github.io/blog/posts/20200606-vim-show-tab/</link><pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200606-vim-show-tab/</guid><description>初めに こんにちわ ゴリラです みなさんVimではタブ、空白文字を可視化できることは知っていますか？ タブ、空白文字を可視化することによって、空白と</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
-<p>こんにちわ
+]]></content></item><item><title>Vimでタブ文字を可視化する</title><link>https://skanehira.github.io/blog/posts/20200606-vim-show-tab/</link><pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200606-vim-show-tab/</guid><description>初めに こんにちは ゴリラです みなさんVimではタブ、空白文字を可視化できることは知っていますか？ タブ、空白文字を可視化することによって、空白と</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>こんにちは
 ゴリラです</p>
 <p>みなさんVimではタブ、空白文字を可視化できることは知っていますか？
 タブ、空白文字を可視化することによって、空白とタブ文字が混在するのを事前に察知できるので、コーディングするときに役に立つことがあるかと思います。</p>
@@ -2255,7 +2255,7 @@ keymap C-k GOTO
 <p>Vimには<code>listchars</code>というオプションがあります。
 このオプションにタブや空白をどんな文字で可視化するか、という設定ができます。</p>
 <p><code>listchars</code>に設定できる値は次になっています。（ヘルプ抜粋）
-他にも設定値がいくつかあるので気になる人は<code>:h listchars</code>でヘルプを参照してください。</p>
+ほかにも設定値がいくつかあるので気になる人は<code>:h listchars</code>でヘルプを参照してください。</p>
 <table>
 <thead>
 <tr>
@@ -2287,12 +2287,12 @@ keymap C-k GOTO
 <p>例の説明では次の画像のようになります。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/dec5832f-c5ec-64a3-ca14-78bb0f6704ef.png" alt="image.png"></p>
 <h2 id="さいごに">さいごに</h2>
-<p>このオプションは地味ですが、可視化して見やすくなるのに役立ちますので、是非試してみてください。
+<p>このオプションは地味ですが、可視化して見やすくなるのに役立ちますので、ぜひ試してみてください。
 ちなみに、ぼくはタブと空白文字を<code>ｳﾎ</code>にしています。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/eea9cadc-d404-d6b2-5528-03836ef72e1d.png" alt="image.png"></p>
-]]></content></item><item><title>プロセスをあいまい検索してkillするツールをGoで作った</title><link>https://skanehira.github.io/blog/posts/20200524-go-fuzzy-kill-process/</link><pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200524-go-fuzzy-kill-process/</guid><description>初めに 仕事しているとプロセスをkillすることがたまにあると思います。 大体はps、awk、grepで必要なプロセスIDを抽出してkillコマ</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+]]></content></item><item><title>プロセスをあいまい検索してkillするツールをGoで作った</title><link>https://skanehira.github.io/blog/posts/20200524-go-fuzzy-kill-process/</link><pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200524-go-fuzzy-kill-process/</guid><description>初めに 仕事しているとプロセスをkillすることがたまにあると思います。 だいたいはps、awk、grepで必要なプロセスIDを抽出してkill</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>仕事しているとプロセスをkillすることがたまにあると思います。</p>
-<p>大体は<code>ps</code>、<code>awk</code>、<code>grep</code>で必要なプロセスIDを抽出して<code>kill</code>コマンドに渡していますが、
+<p>だいたいは<code>ps</code>、<code>awk</code>、<code>grep</code>で必要なプロセスIDを抽出して<code>kill</code>コマンドに渡していますが、
 ぼくはそれがとても面倒に感じているので、あいまい検索してプロセスをkillしたいなと思って<code>fk(fuzzy-finder-killer)</code>ってコマンドを作りました。</p>
 <p><img src="https://i.imgur.com/Q6ONFRz.gif" alt=""></p>
 <h2 id="導入と使い方">導入と使い方</h2>
@@ -2331,9 +2331,9 @@ keymap C-k GOTO
 </tr>
 </tbody>
 </table>
-<h2 id="仕組み">仕組み</h2>
+<h2 id="しくみ">しくみ</h2>
 <p>あいまい検索のUIは<a href="github.com/ktr0731/go-fuzzyfinder">go-fuzzyfinder</a>というライブラリを使っています。
-こちらのライブラリは<code>fzf</code>と似たインターフェイスを持っていてかつとてもシンプルなので、GoでfzfのようなUIを使いたい場合はぜひ使ってみてください。</p>
+こちらのライブラリは<code>fzf</code>と似たインタフェースを持っていてかつとてもシンプルですので、GoでfzfのようなUIを使いたい場合はぜひ使ってみてください。</p>
 <p>プロセス一覧は<a href="github.com/mitchellh/go-ps">go-ps</a>というライブラリを使っています。このライブラリでプロセスIDとコマンド名を取得できるので、それを<code>go-fuzzyfinder</code>に渡します。</p>
 <p>メインの処理は次の部分になります。</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">processes</span><span class="p">()</span> <span class="p">([]</span><span class="nx">process</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
@@ -2385,7 +2385,7 @@ keymap C-k GOTO
 <span class="p">}</span>
 </code></pre></div><h2 id="おわり">おわり</h2>
 <p>小さなツールですが、プロセスをkillする面倒さから開放されます。
-是非試してみてください</p>
+ぜひ試してみてください</p>
 ]]></content></item><item><title>エディタで複数のファイルを簡単にコピーするコマンドをGoで作った</title><link>https://skanehira.github.io/blog/posts/20200523-mcp/</link><pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200523-mcp/</guid><description>エディタを使って複数のファイルを簡単にコピーするコマンドmcpを作りました。 このコマンドはファイルをエディターで一括リネームするツールをGo</description><content type="html"><![CDATA[<p>エディタを使って複数のファイルを簡単にコピーするコマンド<a href="https://github.com/skanehira/mcp">mcp</a>を作りました。</p>
 <p><img src="https://i.imgur.com/2D9S6WW.gif" alt=""></p>
 <p>このコマンドは<a href="https://itchyny.hatenablog.com/entry/2020/01/10/100000">ファイルをエディターで一括リネームするツールをGo言語で作った！ ― 機能を増やさない信念と、OSSとの付き合い方</a>で<code>mmv</code>を知ってしばらく使っていたら、リネームではなくコピーもほしいなと思い作りました。</p>
@@ -2396,12 +2396,12 @@ keymap C-k GOTO
 </code></pre></div><p>コピー元がディレクトリの場合はそのディレクトリをまるごとコピーします。<code>cp -r</code>に相当します。</p>
 <h2 id="さいごに">さいごに</h2>
 <p>ブログに記載されている機能を増やさない信念は個人的にともて感銘を受けた言葉です。
-これまでツールをいくつか作ってきましたが、どれも機能をたくさん盛り込んできました。一つのツールでなるべくたくさんのことができたほうがよいと思っていたからです。</p>
-<p>しかし、ツールが多機能になっていくとその分メンテがめちゃくちゃ大変になっていきます。
-便利さと大変さは比例するんだなってこのブログを読んでから気づきました。</p>
+これまでツールをいくつか作ってきましたが、どれも機能をたくさん盛り込んできました。ひとつのツールでなるべくたくさんのことができたほうがよいと思っていたからです。</p>
+<p>しかし、ツールが多機能になっていくとそのぶんメンテナンスがめちゃくちゃたいへんになっていきます。
+便利さとたいへんさは比例するんだなってこのブログを読んでから気付きました。</p>
 <p>今後は新しいものを作るとき、機能を増やさない信念を念頭に入れていこうと思います。</p>
-]]></content></item><item><title>docker-composeの仕様であるCompose Specificationについて</title><link>https://skanehira.github.io/blog/posts/20200506-docker-compose-specification/</link><pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200506-docker-compose-specification/</guid><description>初めに こんにちわ。 ゴリラです。 先日、Docker社がdocker-composeが提供していた機能の仕様をCompose Specificat</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
-<p>こんにちわ。
+]]></content></item><item><title>docker-composeの仕様であるCompose Specificationについて</title><link>https://skanehira.github.io/blog/posts/20200506-docker-compose-specification/</link><pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200506-docker-compose-specification/</guid><description>初めに こんにちは。 ゴリラです。 先日、Docker社がdocker-composeが提供していた機能の仕様をCompose Specificat</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>こんにちは。
 ゴリラです。</p>
 <p>先日、Docker社が<code>docker-compose</code>が提供していた機能の仕様を<a href="https://compose-spec.io/">Compose Specification</a>としてオープンな仕様にしていく発表がありました。</p>
 <p><code>docker-compose</code>自体はオープンソースとして<a href="https://github.com/docker/compose">GitHub.ocm/docker/compose</a>に公開されてはいますが、
@@ -2411,7 +2411,7 @@ keymap C-k GOTO
 <p>本記事は<code>compose-ref</code>を試してわかったことを共有するのが目的です。
 気になる方はぜひ最後まで読んでみてください。</p>
 <h2 id="compose-refのインストール"><code>compose-ref</code>のインストール</h2>
-<p><code>compose-ref</code>はGoで書かれていますので、Goを予め用意して次の手順でインストールします。</p>
+<p><code>compose-ref</code>はGoで書かれていますので、Goをあらかじめ用意して次の手順でインストールします。</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ git clone https://github.com/compose-spec/compose-ref.git
 $ <span class="nb">cd</span> compose-ref
 $ go install
@@ -2546,19 +2546,19 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 <p><code>compose-ref up</code>するとき、イメージがなければpullしてくれないのは不便なのでPRを投げました</p>
 <p><a href="https://github.com/compose-spec/compose-ref/pull/46">https://github.com/compose-spec/compose-ref/pull/46</a></p>
 <h2 id="まとめ">まとめ</h2>
-<p><code>Compose Specification</code>で仕様がある程度定まったら色々と面白くなりそうだなというのが個人的な感想です。
-せっかくなので、この仕様を元に実用的なCLIを作ろうと思っています。できあたらそのうち公開します。</p>
-]]></content></item><item><title>dockerのイメージ一覧APIのfiltersパラメータについて</title><link>https://skanehira.github.io/blog/posts/20200506-docker-api-filters/</link><pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200506-docker-api-filters/</guid><description>初めに こんにちわ。 ゴリラです。 dockerのイメージAPIをcurlで叩いた時にイメージをフィルターしたいが、詰まっていたのでそのやり方を備</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
-<p>こんにちわ。
+<p><code>Compose Specification</code>で仕様がある程度定まったらいろいろとおもしろくなりそうだなというのが個人的な感想です。
+せっかくですので、この仕様を元に実用的なCLIを作ろうと思っています。できあたらそのうち公開します。</p>
+]]></content></item><item><title>dockerのイメージ一覧APIのfiltersパラメータについて</title><link>https://skanehira.github.io/blog/posts/20200506-docker-api-filters/</link><pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200506-docker-api-filters/</guid><description>初めに こんにちは。 ゴリラです。 dockerのイメージAPIをcurlで叩いた時にイメージをフィルタしたいが、詰まっていたのでそのやり方を備忘</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>こんにちは。
 ゴリラです。</p>
-<p>dockerのイメージAPIを<code>curl</code>で叩いた時にイメージをフィルターしたいが、詰まっていたのでそのやり方を備忘録として残しておきます。</p>
+<p>dockerのイメージAPIを<code>curl</code>で叩いた時にイメージをフィルタしたいが、詰まっていたのでそのやり方を備忘録として残しておきます。</p>
 <h2 id="やりたいこと">やりたいこと</h2>
 <p><code>curl</code>でdockerのイメージ一覧を絞り込みたい。
 <code>docker</code>コマンドだとこんな感じ。</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ docker images -f <span class="nv">reference</span><span class="o">=</span>mysql
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 mysql               5.7                 84164b03fa2e        <span class="m">2</span> months ago        456MB
-</code></pre></div><h2 id="やりかた">やりかた</h2>
+</code></pre></div><h2 id="やり方">やり方</h2>
 <p>筆者はfishをつかっているため、<code>urlenc</code>コマンドの実行結果を<code>()</code>で取得していますがbashなどの方は<code>$()</code>に置き換えてください。</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">curl -s --unix-socket /var/run/docker.sock <span class="o">(</span>urlenc -e <span class="s1">&#39;http://localhost/images/json?filters={&#34;reference&#34;: [&#34;mysql&#34;]}&#39;</span><span class="o">)</span> <span class="p">|</span> jq
 <span class="o">[</span>
@@ -2586,7 +2586,7 @@ mysql               5.7                 84164b03fa2e        <span class="m">2</s
 <p>以下がポイントです</p>
 <ol>
 <li>検索条件は<code>filters</code>クエリパラメータで指定</li>
-<li>指定する時のJSONの形は<code>{&quot;key&quot;: [xxx, yyy]}</code>という形でなければいけない(goの<code>go[string][]string}</code>をJSONにエンコードした形)</li>
+<li>指定する時のJSONの形は<code>{&quot;key&quot;: [xxx, yyy]}</code>という形でなければいけない（goの<code>go[string][]string}</code>をJSONにエンコードした形）</li>
 </ol>
 <p>今回はイメージ名をつかって絞り込みたいので<code>filters</code>には<code>{&quot;reference&quot;: [&quot;イメージ名&quot;]}</code>をエンコードした値を渡しています。</p>
 <p>ちなみに、<code>urlenc -e 'http://localhost/images/json?filters={&quot;reference&quot;: [&quot;mysql&quot;]}'</code>はエンコードしたURLを取得できます。</p>
@@ -2594,16 +2594,16 @@ mysql               5.7                 84164b03fa2e        <span class="m">2</s
 http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3A+%5B%22mysql%22%5D%7D
 </code></pre></div><p>検証に使った<code>urlenc</code>はこちらに置いてあります</p>
 <p><a href="https://github.com/skanehira/go-enc">https://github.com/skanehira/go-enc</a></p>
-]]></content></item><item><title>Vimで高速コーディングする方法</title><link>https://skanehira.github.io/blog/posts/20200312-high-speed-coding-with-vim/</link><pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200312-high-speed-coding-with-vim/</guid><description>こんにちわ、ゴリラです。 Vimといえば高速でコーディングできるという印象を持っている方が多いのではないでしょうか？ 今日は、Postfix Code Completion</description><content type="html"><![CDATA[<p>こんにちわ、ゴリラです。</p>
+]]></content></item><item><title>Vimで高速コーディングする方法</title><link>https://skanehira.github.io/blog/posts/20200312-high-speed-coding-with-vim/</link><pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200312-high-speed-coding-with-vim/</guid><description>こんにちは、ゴリラです。 Vimといえば高速でコーディングできるという印象を持っている方が多いのではないでしょうか？ 今日は、Postfix Code C</description><content type="html"><![CDATA[<p>こんにちは、ゴリラです。</p>
 <p>Vimといえば高速でコーディングできるという印象を持っている方が多いのではないでしょうか？
-今日は、Postfix Code Completion という手法をつかって早くコーディングする方法紹介します。</p>
-<p>この方法を使えば次のgifのように、さくっとJSONを返すHTTPサーバーを立てられます。</p>
+今日は、Postfix Code Completionという手法をつかって早くコーディングする方法紹介します。</p>
+<p>この方法を使えば次のgifのように、さくっとJSONを返すHTTPサーバを立てられます。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/69080d5a-bef8-c0d3-c1cc-99efb061bbe5.gif" alt="sonictemplate-vim-sample.gif"></p>
 <h2 id="postfix-code-completionとは">Postfix Code Completionとは</h2>
 <p>後置補完という補完手法です。
-例えば、<code>(a == b)</code>に対して<code>if</code>を使いたい場合は<code>(a == b).if</code>と入力して展開すると<code>if (a == b) {  }</code>というふうに補完してくれます。</p>
+たとえば、<code>(a == b)</code>に対して<code>if</code>を使いたい場合は<code>(a == b).if</code>と入力して展開すると<code>if (a == b) {  }</code>というふうに補完してくれます。</p>
 <p>後ろのコード<code>if</code>が前のコード<code>(a == b)</code>に作用するという考え方です。
-これを積極的に使用していくとより高速にコーディングできるようになります。</p>
+これを積極的に使用していくとより高速にコーディングできます。</p>
 <p>僕の場合は、割と後置補完だけではなくスニペットのように使っています。</p>
 <h2 id="vimでpostfix-code-completionを使う方法">VimでPostfix Code Completionを使う方法</h2>
 <p>Vimでは<a href="https://github.com/mattn/sonictemplate-vim">sonictemplate.vim</a>というプラグインがサポートしています。
@@ -2630,9 +2630,9 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 		return {{$1}}
 	}
 	{{_cursor_}}
-</code></pre></div><p>パターンは正規表現を使用する事ができます。そして展開したコードでは<code>{{}}</code>で囲ったプラグイン独自の構文を使用できます。
+</code></pre></div><p>パターンは正規表現を使用できます。そして展開したコードでは<code>{{}}</code>で囲ったプラグイン独自の構文を使用できます。
 上記の例では<code>{{$1}}</code>は後方参照（<code>\(\S\+\)</code>の部分）しています。<code>{{_cursor_}}</code>は展開後カーソルの位置を指定しています。
-<code>{{}}</code>を使った構文は他にもあります。ヘルプを参照してください。</p>
+<code>{{}}</code>を使った構文はほかにもあります。ヘルプを参照してください。</p>
 <h2 id="パターンの例">パターンの例</h2>
 <p>ぼくが使っているパターンをいくつか紹介します。</p>
 <h3 id="dbを開く">dbを開く</h3>
@@ -2726,7 +2726,7 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 
 <span class="c1">// 展開後
 </span><span class="c1"></span><span class="nx">gorillas</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">gorillas</span><span class="p">,</span> <span class="nx">gorilla</span><span class="p">)</span>
-</code></pre></div><h3 id="httpサーバー">HTTPサーバー</h3>
+</code></pre></div><h3 id="httpサーバ">HTTPサーバ</h3>
 <ul>
 <li>パターン</li>
 </ul>
@@ -2772,7 +2772,7 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 <span class="p">}</span>
 </code></pre></div><h2 id="最後に">最後に</h2>
 <p>いかがですか？
-この記事を見て少しでも早くコーディングできるようになったら嬉しいです。</p>
+この記事を見て少しでも早くコーディングできるようになったらうれしいです。</p>
 <p>では良いコーディングライフを〜</p>
 ]]></content></item><item><title>2019年の振り返り</title><link>https://skanehira.github.io/blog/posts/20191230-look-back-2019/</link><pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20191230-look-back-2019/</guid><description>今年は個人的に人生の転機の年と感じているいます。 一年間振り返りつつ、来年の目標は自分の中である程度固まってのでそれも整理していきます。 今年の</description><content type="html"><![CDATA[<p>今年は個人的に人生の転機の年と感じているいます。
 一年間振り返りつつ、来年の目標は自分の中である程度固まってのでそれも整理していきます。</p>
@@ -2820,23 +2820,23 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 <p>それぞれについて軽く振り返っていきます。</p>
 <h3 id="技術本の執筆">技術本の執筆</h3>
 <p>技術本を執筆したいのが1つの夢でした。ちょうど年に2度開催される<a href="https://techbookfest.org/">技術書典</a>というイベントがあって、そちらは2回とも執筆、販売しました。</p>
-<p>春では<a href="https://golangtokyo.github.io/">golang.tokyo</a>で合同執筆しました。初めての執筆で文章についてたくさん指摘を頂いたのはとても良い経験になりました。</p>
-<p>秋では一人で<a href="https://gorilla0513.booth.pm/items/1513974">Vimが好きになる本</a>を執筆しました。こちらはたくさんの反響があり、累計600冊以上を販売できました。書いた本がこんなにもたくさんの方に届くのはとても嬉しいことです。</p>
-<p>そして、本を1冊書き上げることの大変さがわかりました。たった130ページくらいのボリュームですが、数ヶ月間の間ほぼ毎日コツコツ書いていました。オライリーのあの分厚い本の凄さがよくわかりました（笑）</p>
-<p>個人的に今年一番大変だったのは執筆業でした。もっと効率良く本を書く技術を身に着けたいですね。</p>
+<p>春では<a href="https://golangtokyo.github.io/">golang.tokyo</a>で合同執筆しました。初めての執筆で文章についてたくさん指摘をいただいたのはとても良い経験になりました。</p>
+<p>秋では一人で<a href="https://gorilla0513.booth.pm/items/1513974">Vimが好きになる本</a>を執筆しました。こちらはたくさんの反響があり、累計600冊以上を販売できました。書いた本がこんなにもたくさんの方に届くのはとてもうれしいことです。</p>
+<p>そして、本を1冊書き上げることのたいへんさがわかりました。たった130ページくらいのボリュームですが、数ヵ月間の間ほぼ毎日コツコツ書いていました。オライリー・ジャパンあのぶん厚い本の凄さがよくわかりました（笑）</p>
+<p>個人的に今年一番たいへんだったのは執筆業でした。もっと効率良く本を書く技術を身に着けたいですね。</p>
 <h3 id="記事連載">記事連載</h3>
-<p>春の技術書典が終わったあとに、<a href="https://twitter.com/kameneko1004">かめねこ</a>さんから声をかけて頂いたことがきっかけで<a href="https://knowledge.sakura.ad.jp/">さくらのナレッジ</a>でVimの連載を持つことができました。
+<p>春の技術書典が終わったあとに、<a href="https://twitter.com/kameneko1004">かめねこ</a>さんから声をかけていただいたことがきっかけで<a href="https://knowledge.sakura.ad.jp/">さくらのナレッジ</a>でVimの連載をもつことができました。
 前から連載やりたいなと思っていたので、それができてとてもうれしかったです。</p>
 <p>Vimの連載も残り1回になり、2020/01で最後になります。最後なので気合を入れようと思っています。</p>
 <h3 id="商業誌出版">商業誌出版</h3>
 <p>Twitterでも軽く報告させていただきましたが、
 来年にVimが好きになる本の商業誌を出版することになりました。</p>
-<p>エンジニアとして自分の書いた本を本屋に並べたらどれほど嬉しいことか、それを想像しながらワクワクして本を執筆しました。
-そしてこの本をベースとして出版社に企画を持ち込もうと考えていましたが、なんと出版社の方から声をかけて頂いて、商業誌を出版する事になりました。
-本を書くことは決して簡単なことじゃないし、出版することももちろん更に難しいと思っていました。それがまさかこんなふうに決まるとは思わず、ただただ嬉しい気持ちでいっぱいです。</p>
+<p>エンジニアとして自分の書いた本を本屋に並べたらどれほどうれしいことか、それを想像しながらワクワクして本を執筆しました。
+そしてこの本をベースとして出版社に企画を持ち込もうと考えていましたが、なんと出版社の方から声をかけていただいて、商業誌を出版することになりました。
+本を書くことはけっして簡単なことじゃないし、出版することももちろんさらに難しいと思っていました。それがまさかこんなふうに決まるとは思わず、ただただうれしい気持ちでいっぱいです。</p>
 <h3 id="カンファレンス登壇">カンファレンス登壇</h3>
 <p>今年はVimの国際カンファレンスである<a href="https://vimconf.org/2019/">VimConf 2019</a>に参加、登壇しました。
-ぼくは今年Vimにすごく力を入れていて、その集大成としてカンファレンス登壇をしたいとずっと思っていて、それを達成できてとても嬉しかったです。次のVimConfも登壇するのが目標です。</p>
+ぼくは今年Vimにすごく力を入れていて、その集大成としてカンファレンス登壇をしたいとずっと思っていて、それを達成できてとてもうれしかったです。次のVimConfも登壇するのが目標です。</p>
 <p>Vim以外にもGoのカンファレンスに登壇したかったのですが、残念ながらプロポーザルが不採用になったため登壇できませんでした。
 プロポーザル不採用の原因はおそらくテーマにあった訴求内容ではなかったからだと思います。来年はリベンジします。</p>
 <h3 id="開発合宿">開発合宿</h3>
@@ -2846,11 +2846,11 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 <h3 id="コミュニティ活動">コミュニティ活動</h3>
 <p>ぼくは今年からいろんな勉強会に参加したりしました。勉強会で得られる知見だったり、つながりはとても多くあって、どれも有益でした。
 その中で、ぼくがほしいと思っているVimのコミュニティがなかったので、<a href="https://gorillavim.connpass.com/">ゴリラ.vim</a>というVimのmeetupを立ち上げ毎月Vimのイベントをやりました。</p>
-<p>ゴリラ.vimの目的はVimmerやそれ興味ある方が集まり、Vimについて知見を共有したり懇親する場です。
-とにかく勢いにまかせてやってきたのですが、自分が勉強したい分野に時間を割けなくなりつつあるので、来年からは毎月ではなく隔月開催にします。</p>
-<p>他にも<a href="https://dockerjp.connpass.com/">Docker Meetup Tokyo</a>とgolang.tokyoの運営もやっています。これ以上増やすと勉強する時間が無くなりそうと思いつつ、来年はGoのコミュニティを作ろうか悩んでいます。</p>
+<p>ゴリラ。vimの目的はVimmerやそれ興味ある方が集まり、Vimについて知見を共有したり懇親する場です。
+とにかく勢いに任せてやってきたのですが、自分が勉強したい分野に時間を割けなくなりつつあるので、来年からは毎月ではなく隔月開催にします。</p>
+<p>他にも<a href="https://dockerjp.connpass.com/">Docker Meetup Tokyo</a>とgolang.tokyoの運営もやっています。これ以上増やすと勉強する時間がなくなりそうと思5つ、来年はGoのコミュニティを作ろうか悩んでいます。</p>
 <h3 id="oss活動">OSS活動</h3>
-<p>今年はずっとOSS活動してきました。しなければ行けないと思っているわけではないのですが、時間がない中で大変だなと思った時もありました。
+<p>今年はずっとOSS活動してきました。しなければ行けないと思っているわけではないのですが、時間がない中でたいへんだなと思った時もありました。
 もっとOSSを作る時間欲しいなと思っています。</p>
 <p>来年は仕事の時間を少し減らしOSS活動に時間を割けるようにする予定です。それができるようになるためにも技術力をもっと磨いていきます。</p>
 <p>ちなみに今年は主にこんなものを作っていました。未完成のものは来年こそ完成させたいです。特にgo-composeは作りきりたいです。</p>
@@ -2860,7 +2860,7 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 <th>OSS</th>
 <th>概要</th>
 <th>カテゴリ</th>
-<th>スター(2019/12/26時点)</th>
+<th>スター（2019/12/26時点）</th>
 </tr>
 </thead>
 <tbody>
@@ -2896,7 +2896,7 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 </tr>
 <tr>
 <td><a href="https://github.com/skanehira/ff">ff</a></td>
-<td>TUIのファイラー</td>
+<td>TUIのファイラ</td>
 <td>Go</td>
 <td>62</td>
 </tr>
@@ -2920,7 +2920,7 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 </tr>
 <tr>
 <td><a href="https://github.com/skanehira/docker-compose.vim">docker-compose.vim</a></td>
-<td>Vim上でdocker-composeを使うためのラッパープラグイン</td>
+<td>Vim上でdocker-composeを使うためのラッパプラグイン</td>
 <td>Vim</td>
 <td>22</td>
 </tr>
@@ -2932,7 +2932,7 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 </tr>
 <tr>
 <td><a href="https://github.com/skanehira/gtran">gtran</a></td>
-<td>Google翻訳コマンド(translate.vimで使っている)</td>
+<td>Google翻訳コマンド（translate.vimで使っている）</td>
 <td>Go</td>
 <td>14</td>
 </tr>
@@ -2944,13 +2944,13 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 </tr>
 <tr>
 <td><a href="https://github.com/skanehira/badapple.vim">say.vim</a></td>
-<td>Macのsayコマンドのラッパープラグイン</td>
+<td>Macのsayコマンドのラッパプラグイン</td>
 <td>Vim</td>
 <td>3</td>
 </tr>
 <tr>
 <td><a href="https://github.com/skanehira/go-compose">go-compose</a></td>
-<td>docker-composeのGo移植版(未完成)</td>
+<td>docker-composeのGo移植版（未完成）</td>
 <td>Go</td>
 <td>3</td>
 </tr>
@@ -2962,7 +2962,7 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 </tr>
 <tr>
 <td><a href="https://github.com/skanehira/badapple.vim">go-enc</a></td>
-<td>各種エンコード、デコードコマンド(未完成)</td>
+<td>各種エンコード、デコードコマンド（未完成）</td>
 <td>Go</td>
 <td>0</td>
 </tr>
@@ -2970,7 +2970,7 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 </table>
 <h2 id="来年の目標">来年の目標</h2>
 <p>OSS活動だったり、イベント開催や参加だったり、今年はすごく濃い一年間でした。
-いろいろなことを学んでいった中で更にやりたいことが出てきました。それが次になります。</p>
+いろいろなことを学んでいった中でさらにやりたいことが出てきました。それが次になります。</p>
 <table>
 <thead>
 <tr>
@@ -2989,7 +2989,7 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 </tr>
 <tr>
 <td>Goの講師をやる</td>
-<td>来年講師をやる予定なので、それらをやりきる</td>
+<td>来年講師をやる予定ですので、それらをやりきる</td>
 </tr>
 <tr>
 <td>Goのカンファレンスに登壇する</td>
@@ -3000,16 +3000,16 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 <td>来年もあれば登壇を目指す</td>
 </tr>
 <tr>
-<td>HTTPサーバーをスクラッチで作る</td>
+<td>HTTPサーバをスクラッチで作る</td>
 <td><a href="https://triple-underscore.github.io/rfc-others/RFC2616-ja.html">HTTP 1.1</a>を元にGoで作る</td>
 </tr>
 </tbody>
 </table>
 <p>上記の目標は必達ですが、それ以外に努力目標としてネットワークスペシャリストの試験を合格するというのがあります。
 来年は必達標をすべて達成してやるという気持ちでまた一年を突っ走ります。</p>
-]]></content></item><item><title>VimConf2019に参加＆発表してきた</title><link>https://skanehira.github.io/blog/posts/20191103-vimconf-2019/</link><pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20191103-vimconf-2019/</guid><description>こんにちわ。ゴリラです。 2019/11/03(日)にVimConf2019が開催され、そちらに発表&amp;amp;参加してきた記事です。 はじめに 最</description><content type="html"><![CDATA[<p>こんにちわ。ゴリラです。</p>
-<p>2019/11/03(日)に<a href="https://vimconf.org/2019/">VimConf2019</a>が開催され、そちらに発表&amp;参加してきた記事です。</p>
-<h2 id="はじめに">はじめに</h2>
+]]></content></item><item><title>VimConf2019に参加＆発表してきた</title><link>https://skanehira.github.io/blog/posts/20191103-vimconf-2019/</link><pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20191103-vimconf-2019/</guid><description>こんにちは。ゴリラです。 2019/11/03（日）にVimConf2019が開催され、そちらに発表&amp;amp;参加してきた記事です。 始めに 最高</description><content type="html"><![CDATA[<p>こんにちは。ゴリラです。</p>
+<p>2019/11/03（日）に<a href="https://vimconf.org/2019/">VimConf2019</a>が開催され、そちらに発表&amp;参加してきた記事です。</p>
+<h2 id="始めに">始めに</h2>
 <p>最高でした！
 そしてありがとうございました！
 という気持ちです。</p>
@@ -3020,22 +3020,22 @@ http://localhost/images/json?filters<span class="o">=</span>%7B%22reference%22%3
 <p><a href="https://github.com/prabirshrestha/vim-lsp">vim-lsp</a>の作者のによるキーノート。
 Vimはこれまでの、そしてこれからの数年間は進化・革命が起きている。これからも革命が続いていく話。
 具体的に、float windowやpopup windowの実装、非同期ジョブ機能、ターミナル機能などがここ数年で行われてきた。</p>
-<p>Prabir氏がvim-lspを作り始めた頃はvimのLSP clientプラグインがなかったそう。
+<p>Prabir氏がvim-lspを作り始めたころはvimのLSP clientプラグインがなかったそう。
 驚いたことに、Vim scriptを書き始めたのはここ2,3年とのこと。</p>
 <p>vim-lspでの実装で苦労したのは仕様に沿って実装したLSP Serverがなくて、いろんなServerに対応したこと。</p>
 <p>現在MSのプロジェクトマネージャーで、コードを書くことがあまりなく、また休日などは飛行機を飛ばしたりと趣味に時間を費やしていることが多い。</p>
-<p>OSSに関しては、なにかアイディアを思いついたとき、深夜までやることもあるが、
+<p>OSSに関しては、何かアイデアを思いついたとき、深夜までやることもあるが、
 やらなきゃと思ってやっているわけではないので、毎日OSS活動に時間を費やしているわけではないとのこと。</p>
 <h4 id="所感">所感</h4>
 <ul>
 <li><strong>多くのエンジニアが生産性を上げられるようにプラグインを作りたい</strong></li>
-<li><strong>OS(Mac,Linux,Windows)エディタ(Neovim,Vim)を定期的に変えながら使っている。</strong></li>
+<li><strong>OS（Mac,Linux,Windows）エディタ（Neovim,Vim）を定期的に変えながら使っている。</strong></li>
 </ul>
 <p>この2点はとても個人的に刺さった。
-マルチプラットフォーム対応、そしていろんなエンジニア、いろんな環境を想定した上でOSSを作っている理念と姿勢は本当にすごいなと思った。</p>
+マルチプラットフォーム対応、そしていろんなエンジニア、いろんな環境を想定したうえでOSSを作っている理念と姿勢は本当にすごいなと思った。</p>
 <p>ぼくもOSS活動をしているけど、OSとエディタを切り替えながら使っているわけではないし、Windows対応もほとんどしていない。
-だからこそ、彼の理念と姿勢はすごいし、憧れるものがあった。
-少しずつだけど　Windowsでもちゃんと動くものを作っていこうと改めて思った。</p>
+だからこそ、彼の理念と姿勢はすごいし、あこがれるものがあった。
+少しずつだけど　Windowsでもちゃんと動くものを作っていこうとあらためて思った。</p>
 <h3 id="we-can-have-nice-things-by-justin-m-keyes">We can have nice things by [Justin M. Keyes]</h3>
 <h4 id="概要-1">概要</h4>
 <p>Neovimの話だけではなく、テキストエディタ、開発の思想などを話していた。
@@ -3050,26 +3050,26 @@ NeoVimのゴールは「Vimに置き換わること」ではなく「Vimの最�
 物静かな語りの下にはすごい情熱と思いがあるんだなと思った。（じゃなければ100枚のスライドを作ってくることはないでしょう）</p>
 <p>セッション自体はエディタにスポットを当てた話だけではなく</p>
 <ul>
-<li><strong>過去の遺産(レガシ)は悪いものではなく、成功した事例もあるし、そこから学べることもある</strong></li>
+<li><strong>過去の遺産（レガシ）は悪いものではなく、成功した事例もあるし、そこから学べることもある</strong></li>
 <li><strong>利用できるものは利用しないという手はない</strong></li>
 </ul>
 <p>という考えにすごく刺さった。まさにその通りだなと思った。
-ただ、個人的に意識しておきたいところは、再利用をするだけで終わらせないこと。少しでもいいから、仕組みを理解すること。</p>
+ただ、個人的に意識しておきたいところは、再利用をするだけで終わらせないこと。少しでもよいから、しくみを理解すること。</p>
 <p>人類の文明も、そうやって再利用の積み重ねなんだよなぁと。車輪の再利用をしなければ進化はもっと遅かったんだろうなぁと。</p>
-<p>そしてキーノートを聞いたあと、Neovimも使おうと改めて思った。というのももう少しモダンな機能を触ってみたいし、それぞれの良さを知っておきたいから。</p>
+<p>そしてキーノートを聞いたあと、Neovimも使おうとあらためて思った。というのももう少しモダンな機能を触ってみ対し、それぞれの良さを知っておきたいから。</p>
 <p>現時点では、Vimはこれまで保守的で安定性を求めているのに対して、Neovimはモダンな機能を取り入れる姿勢が強いという違いくらいしか知らなくて、
 もっと自分で身を持って知っていきたいという思いが強くなってきたから。</p>
-<p>このセッションではものづくりをしていく上で大事な考え方、姿勢について改めて学べたのでとても良かった。</p>
+<p>このセッションではものづくりをしていく上で大事な考え方、姿勢についてあらためて学べたのでとても良かった。</p>
 <h2 id="セッション">セッション</h2>
 <h3 id="your-vim-is-only-for-you-by-mopp">Your Vim is Only for You by [mopp]</h3>
 <h4 id="概要-2">概要</h4>
 <p>自分のエディタの育て方についての話。</p>
 <ul>
 <li>自分のvimrcを改善するには、自分のポリシーをまず見つけることが大事。</li>
-<li>半年に一度vimrcを整理することをおすすめする。</li>
-<li>コピペするだけは良くない、理解もしていくことが大事。</li>
+<li>半年に一度vimrcを整理することをお勧めする。</li>
+<li>コピー&amp;ペーストするだけは良くない、理解もしていくことが大事。</li>
 <li>dotfilesを管理するツールは<a href="https://github.com/anishathalye/dotbot">dotbot</a>というOSSを使っている。</li>
-<li>vimrcをどんなフローで改善していけばいけばいいのか。</li>
+<li>vimrcをどんなフローで改善していけばいけばよいのか。</li>
 </ul>
 <p>といった内容だった。</p>
 <h4 id="所感-2">所感</h4>
@@ -3082,18 +3082,18 @@ NeoVimのゴールは「Vimに置き換わること」ではなく「Vimの最�
 普段から意識しているわけではないけど、ポリシー大事だよなぁと思った。
 ポリシーがなければ方向性がぶれてしまう上、何をしたいのかわからなくなるので、まずは「どんなエディタにしたいのか」を考えると良いんだなと思った。</p>
 <p>個人的にvimrcの掃除に関しては、
-月に一度やりたいと思っているけど、最近放置気味なのでそろそろメンテしようと思った。</p>
-<p>このセッションは、Vimを始めたばっかりの頃に聞きたかったなぁと思ったので、
+月に一度やりたいと思っているけど、最近放置気味なのでそろそろメンテナンスしようと思った。</p>
+<p>このセッションは、Vimを始めたばっかりのころに聞きたかったなぁと思ったので、
 これからだっていう方にとってとてもためになるセッションと思った。</p>
-<p>ちなみに、moppさんは一度ゴリラ.vimに参加してくれたことがあって、
+<p>ちなみに、moppさんは一度ゴリラ。vimに参加してくれたことがあって、
 また参加して今度は発表してほしいなと思った。（本人にはまだ言っていない）</p>
 <h3 id="grown-up-from-vim-user-to-vim-plugin-developer-side-by-ik">Grown up from Vim User to Vim plugin developer side by [IK]</h3>
 <h4 id="概要-3">概要</h4>
-<p>ユーザから開発側に成長していくお話。</p>
+<p>ユーザーから開発側に成長していくお話。</p>
 <ul>
 <li>普段は学生をしているとのこと</li>
 <li>最近Vim scriptしか書いていないとのこと（一時期の自分と同じｗ）</li>
-<li>学校ではVSCodeを使っていたが、学部の先輩にVimをおすすめされて使うようになったとのこと。</li>
+<li>学校ではVSCodeを使っていたが、学部の先輩にVimをお勧めされて使うようになったとのこと。</li>
 <li>Shougoさんのプラグインをたくさん使っていてDark side Vimmerとのこと。</li>
 <li>いままでプラグインを入れてバグがあった場合、我慢して使うか、切り捨てるかしかなかったけど、
 OSSコントリビュートしてから考えが変わった。</li>
@@ -3103,14 +3103,14 @@ OSSコントリビュートしてから考えが変わった。</li>
 <li><strong>一歩踏み出す勇気があればOSSコントリビューターになれる</strong></li>
 </ul>
 <h4 id="所感-3">所感</h4>
-<p>結構いろんなプラグインにコントリビュートしていて、行動力もあってすごいなと思った。</p>
+<p>結かまいろんなプラグインにコントリビュートしていて、行動力もあってすごいなと思った。</p>
 <p>そして、自分自身が一歩を踏み出すことによって、新しい世界に飛び込んで、
-自分自身も成長できたという話は若いながらそこに気づけて、やれたのはすごいなと思った。</p>
+自分自身も成長できたという話は若いながらそこに気付けて、やれたのはすごいなと思った。</p>
 <p>個人的にこれからが楽しみだし、負けられないなと思った。</p>
-<p>ちなみに、IKさんも一度ゴリラ.vimに来てくれて登壇もしてくれた。また来てほしい。</p>
+<p>ちなみに、IKさんも一度ゴリラ。vimに来てくれて登壇もしてくれた。また来てほしい。</p>
 <h3 id="usage-and-manipulation-of-the-tag-stack-by-daisuzu">Usage and manipulation of the tag stack by [daisuzu]</h3>
 <h4 id="概要-4">概要</h4>
-<p>vim-lspのタグジャンプのバグを直したのと、タグスタックの仕組みの話。</p>
+<p>vim-lspのタグジャンプのバグを直したのと、タグスタックのしくみの話。</p>
 <ul>
 <li>諸事情により、VimConfのCfPを出す必要があるので、vim-lspのバグを直してCfPを出して通った（まさに登壇駆動開発、しかもカンファレンス）</li>
 <li>基本的にタグジャンプの使い方を紹介</li>
@@ -3119,14 +3119,14 @@ OSSコントリビュートしてから考えが変わった。</li>
 </ul>
 <h4 id="所感-4">所感</h4>
 <p>スライドによる説明だけだったが、ケースごとのタグスタックの動きがめっちゃくちゃわかりやすかった。</p>
-<p>VimConf2018年の発表もそうだったが、すごくきれいでわかりやすい発表だったので、流石だなぁと思った。
-自分もこういった発表ができたらなぁと思えるとてもわかりやすい、素晴らしい発表だった。</p>
+<p>VimConf2018年の発表もそうだったが、すごくきれいでわかりやすい発表だったので、さすがだなぁと思った。
+自分もこういった発表ができたらなぁと思えるとてもわかりやすい、すばらしい発表だった。</p>
 <p>ちなみに、
-daisuzuさんは普段一緒にゴリラ.vimの運営をやっていて、いつも助けられているので頭が上がらない…</p>
+daisuzuさんは普段一緒にゴリラ。vimの運営をやっていて、いつも助けられているので頭が上がらない…</p>
 <h3 id="make-test-by-m-nishi">make test by [m-nishi]</h3>
 <h4 id="概要-5">概要</h4>
 <p>Vim本体のテストの話だけど、次が発表だったためほぼ聞いていなかった…
-動画が公開されたらちゃんと改めて見る！一応覚えている範囲内で書き出すと…</p>
+動画が公開されたらちゃんとあらためて見る！一応覚えている範囲内で書き出すと…</p>
 <ul>
 <li>これまで何回かVim本体にコントリビュートして名前が載った</li>
 <li>Vimのテストの実行方法</li>
@@ -3136,22 +3136,22 @@ daisuzuさんは普段一緒にゴリラ.vimの運営をやっていて、いつ
 <p>僕の中で、m-nishiさんといえばテスト・翻訳という印象があった。
 というのも、最初にお会いしたときにテストコードをいじったり、見たりしているという話を聞いてすごいなと思った。</p>
 <p>自分はVim本体に一度だけコントリビュートしたけど、
-正直テストとか1ケースしか書いていないし、実行の仕方もm-nishiさんに教わったし、そういった出来事もあってその印象が残った。</p>
-<p>そして、スライドの背景はVimになっていて、ちゃんとページ数が増えていくたびに行数が増えていく仕様になっていて、おしゃれでいいなと思った。</p>
-<p>ちなみに、m-nishiさんも何度かゴリラ.vimに参加してくださって、過去に発表もして頂いたことがあった。
-実はそのときに使っていたスライドを今回も使っていて実は見たことがあるんだぜってこころの中で自慢していたのは内緒(笑)</p>
+正直テストとか1ケースしか書いていないし、実行のし方もm-nishiさんに教わったし、そういった出来こともあってその印象が残った。</p>
+<p>そして、スライドの背景はVimになっていて、ちゃんとページ数が増えていくたびに行数が増えていく仕様になっていて、おしゃれでよいなと思った。</p>
+<p>ちなみに、m-nishiさんも何度かゴリラ。vimに参加してくださって、過去に発表もしていただいたことがあった。
+実はそのときに使っていたスライドを今回も使っていて実は見たことがあるんだぜって心の中で自慢していたのは内緒（笑）</p>
 <h3 id="my-vim-life-by-gorilla0513">My Vim life by [gorilla0513]</h3>
 <h4 id="概要-6">概要</h4>
 <p>ゴリラがVimについてどんな活動をしてきたのか、どのように学んだのか、Vimを使ってどうやって生産性を上げてきたのかといった話。</p>
 <ul>
 <li>なぜVimを使い始めたのか</li>
 <li>どのようにVimを学んできたのか（ヘルプを読み漁ったり、毎日Vimを使ったり、プラグイン作ったり、記事の連載だったり、本の執筆だったり）</li>
-<li>どのようにVimを使って生産性を上げてきたのか（プラグイン、vimrc、プラグイン選定のポイント、おすすめのプラグインなど）</li>
+<li>どのようにVimを使って生産性を上げてきたのか（プラグイン、vimrc、プラグイン選定のポイント、お勧めのプラグインなど）</li>
 </ul>
 <h4 id="所感-6">所感</h4>
 <p>今回の発表のターゲット層は初級者〜中級者あたりまでというイメージで話した。
 Vim歴は1年だけど、1年だからこそ背中を見せられて道を示せられると思ったので、やってきたこと・考えてきたことを話した。</p>
-<p>少しでもみんなの心に刺さって、刺激、モチベになれたらいいなと。</p>
+<p>少しでもみんなの心に刺さって、刺激、モチベになれたらよいなと。</p>
 <p>ちなみに、ぼくは<a href="https://gorillavim.connpass.com/">ゴリラ.vim</a>というコミュニティを運用していて、月イチでイベントを開催しているので、
 興味ある方はぜひ遊びに来てください。
 今月は<a href="https://gorillavim.connpass.com/event/153765/">ゴリラ.vim #10 非公式VimConf後夜祭 girls.vimと合同開催</a>です！</p>
@@ -3160,32 +3160,32 @@ Vim歴は1年だけど、1年だからこそ背中を見せられて道を示せ
 興味ある方はぜひ覗いてみてください。</p>
 <h3 id="using-vim-at-work-by-danish-prakash">Using Vim at Work! by [Danish Prakash]</h3>
 <p>ごめんなさい、発表後バテてたのと翻訳レシーバー持たないまま休んでいたので全然わからなかった…
-ただ、どうやら「エディタを変えないと君とは働けない」とメンターの方に言われたらしく、そんな事あるんだっていうのが印象残った…</p>
+ただ、どうやら「エディタを変えないと君とは働けない」とメンターの方にいわれたらしく、そんなことあるんだっていうのが印象残った…</p>
 <p>内容気になる方はVimConf2019の公式でスライドが公開されているので読んでみてください…</p>
 <h3 id="lets-play-with-vanilla-vim-by-hezby-muhammad">Let&rsquo;s Play with Vanilla Vim by [Hezby Muhammad]</h3>
 <h4 id="概要-7">概要</h4>
-<p>バニラVim (デフォルトのVimのこと)が良いという話</p>
+<p>バニラVim（デフォルトのVimのこと）が良いという話</p>
 <ul>
 <li>写真を取るのが好き、日本に来たのは2回目とのこと</li>
 <li>可能な限りhjklを使うようにしている</li>
-<li>ノーマルモードはワイの親友（いろんな事ができるから）</li>
+<li>ノーマルモードはワイの親友（いろんなことができるから）</li>
 <li>コマンドラインモードを駆使してテキストを編集する（range指定で削除、コピーしたりする）</li>
 <li>モーション（fとtなど）</li>
 <li>画面分割を使う</li>
 </ul>
 <h4 id="所感-7">所感</h4>
 <p>セッションの内容は僕も普段良く使っているコマンドの機能だったので、「お、一緒だ」と思ったのが印象に残った。
-そしてバニラVimでも十分業務できるんだよなぁと改めて思った。</p>
+そしてバニラVimでも十分業務できるんだよなぁとあらためて思った。</p>
 <p>プラグインを普段から使っている方は、一度バニラVimまでは行かなくても標準機能を使って業務をやってみると良いかもれません。
-Vimってこんなことができたんだってなるし、新しい発見があると思うので。</p>
+Vimってこんなことができたんだっていなるし、新しい発見があると思うので。</p>
 <h3 id="13-vim-plugins-i-use-every-day-by-tatsuhiro-ujihisa">13 Vim plugins I use every day by [Tatsuhiro Ujihisa]</h3>
 <h4 id="概要所感">概要&amp;所感</h4>
 <p>ujihisaさんが普段業務で使っているVimのプラグインたちの紹介とライブコーディングで実際どのように使っているのかを紹介した内容。</p>
-<p>なんのプラグインを使っているのかあまり覚えていないけど、
+<p>何のプラグインを使っているのかあまり覚えていないけど、
 ujihisaさんの相変わらず圧倒的なコーディングスピードはやはり見入ってしまう。</p>
 <p>このスピードは自分の理想で、ujihisaさんに追いつくのが目標だったりする。</p>
-<p>ちなみに、ujihisaさんは普段バンクーバーに住んでいてるけど、約半年前までは日本で住んでいて、
-ゴリラ.vimの会場を貸してくれたこともあったし、ライブコーディングしてくれたこともあった。</p>
+<p>ちなみに、ujihisaさんは普段バンクーバーに住んでいているけど、約半年前までは日本で住んでいて、
+ゴリラ。vimの会場を貸してくれたこともあったし、ライブコーディングしてくれたこともあった。</p>
 <p>日本にいないのがとても残念だけど、また来年のVimConfでお会いしてコーディングを見たいなぁと思っている。</p>
 <h3 id="my-dark-plugins-development-history--over-10-years--by-shougo">My dark plugins development history ~ over 10 years ~ by [Shougo]</h3>
 <h4 id="概要-8">概要</h4>
@@ -3196,18 +3196,18 @@ ujihisaさんの相変わらず圧倒的なコーディングスピードはや�
 <p><strong>第1世代</strong>
 カスタマイズ可能、たくさんの機能があり、linuxのプラグインをエミュレートしている</p>
 <p><strong>第2世代</strong>
-if_lua を使っている（Vim scriptが遅すぎるから）</p>
+if_luaを使っている（Vim scriptが遅すぎるから）</p>
 <p><strong>第3世代は</strong>
 if_ptyhon（channel/jobを使って非同期化した、Vim scriptが遅すぎるから）</p>
 <p><strong>第4世代は</strong></p>
 <ul>
 <li>typeを定義して、バグを検出しやすくした</li>
 <li>デフォルトマッピングは必要ない</li>
-<li>他のプラグインとコンフリクト（他にいろいろあった）</li>
+<li>他のプラグインとコンフリクト（ほかにいろいろあった）</li>
 <li>設定変数を取り除いた</li>
-<li>denite.nvim v3 で破壊的な変更を行った</li>
+<li>denite.nvim v3で破壊的な変更を行った</li>
 </ul>
-<p>開発スタイルはメモプラグインも使っているが、普段は紙ノートに色々書いているとのこと。</p>
+<p>開発スタイルはメモプラグインも使っているが、普段は紙ノートにいろいろ書いているとのこと。</p>
 <p>なぜ紙を使うかというとPCいらないからどこでも使えるし自由にかけるからとのこと。</p>
 <h4 id="所感-8">所感</h4>
 <p>実は今回初めて暗黒美無王こと、Shougoさんに会った。
@@ -3215,17 +3215,17 @@ if_ptyhon（channel/jobを使って非同期化した、Vim scriptが遅すぎ�
 <p>Shougoさんのプラグイン開発に込める熱量と思いは、日本どころか世界一とぼくは思っていて、
 どこからそんなに情熱と思いが溢れてくるんだろう？と疑問に思っていたが、少しだけ分かった。</p>
 <p>帰りにShougoさんと少し話したが、「プラグイン開発は命を燃やして開発しているようなもの」と言っていた。
-自分もなんかわかるって思ったし、たしかに自分も情熱とかを燃やしているなと思った。
+自分もなんか分かるって思ったし、たしかに自分も情熱とかを燃やしているなと思った。
 情熱がなくなったらある意味、命がなくなったのと同じだなと思った。</p>
-<p>Shougoさんなりの信念、そして生き様がそこにあって、それを目の前に話を聞けて話せてとても良かったし嬉しかった。
-ぼくはそこまでプラグインづくりに情熱を持っているわけではないが、生き様はともて尊敬できるし、憧れでもある。陰ながら応援しています。</p>
+<p>Shougoさんなりの信念、そして生き様がそこにあって、それを目の前に話を聞けて話せてとても良かったしうれしかった。
+ぼくはそこまでプラグインづくりに情熱を持っているわけではないが、生き様はともて尊敬できるし、あこがれでもある。陰ながら応援しています。</p>
 <h2 id="lightning-talk">Lightning Talk</h2>
 <h3 id="customer-support-with-vim-by-hiroaki-kadomatsu">Customer support with Vim by [Hiroaki KADOMATSU]</h3>
 <h4 id="概要-9">概要</h4>
 <p>カスタマーセンターで働いている方によるカスタマーによるVimの使い方の話。</p>
 <ul>
 <li>お客様からの質問をエディタを使って書いて、完成した文章を返信する</li>
-<li>大体の流れは↓</li>
+<li>だいたいの流れは↓</li>
 </ul>
 <ol>
 <li>タイムスタンプ</li>
@@ -3238,15 +3238,15 @@ if_ptyhon（channel/jobを使って非同期化した、Vim scriptが遅すぎ�
 <li>Vimはカスタマーサポート向けのエディタ、ものを考えながら書く人にとっては便利なエディタであるとのこと。</li>
 </ul>
 <h4 id="所感-9">所感</h4>
-<p>確かに高速で文章を編集するための作業に向いているエディタだよなと改めて思った。
+<p>たしかに高速で文章を編集するための作業に向いているエディタだよなとあらためて思った。
 普段Vimはメモ、開発、記事を書くときに使うけど、ビジネスメールでは使ったことがなかった。</p>
-<p>中々面白い話だったのと、今後自分のメールをVimで書こうかなと思った。</p>
+<p>中々おもしろい話だったのと、今後自分のメールをVimで書こうかなと思った。</p>
 <h3 id="connect-with-many-developers-from-small-plugin-by-lighttiger2505">Connect with many developers from small plugin by [lighttiger2505]</h3>
 <h4 id="概要-10">概要</h4>
 <p>deoplete.nvimのlsp補完プラグインを作った話。</p>
 <ul>
-<li>とても小さい、putyon 175 step, vim script 32 step</li>
-<li>少量のコードで高いUXになる理由 =&gt; 難しい実装はほぼdeoplete.nvimとvim-lsp.vimでできていたから、あとは2つのプラグインをつなげるだけだから。</li>
+<li>とても小さい、putyon 175 step, Vimスクリプト32 step</li>
+<li>少量のコードで高いUXになる理由 =&gt; 難しい実装はほぼdeoplete.nvimとvim-lsp.vimできていたから、あとは2つのプラグインをつなげるだけだから。</li>
 <li>Neovim -&gt; deoplete.nvim -&gt; deoplete-vim-lsp -&gt; vim-lsp -&gt; language server</li>
 <li>たくさんのVimmerと交流できた</li>
 </ul>
@@ -3254,7 +3254,7 @@ if_ptyhon（channel/jobを使って非同期化した、Vim scriptが遅すぎ�
 <p>前から気になっていてlsp補完のプラグインの話を聞けてよかった。意外とコンパクトなプラグインだなぁという印象だった。
 そして、deoplete.nvimとvim-lspが本当によくできているんだなぁと思った。（少ないステップ数で実装できるのがすごい）</p>
 <p>ぼくは普段自動補完使わないけど、deoplete.nvimでlspを使ってみたい方は使ってみてはどうでしょうか？</p>
-<p>ちなみに、lighttigerさんはなんどかゴリラ.vimに参加してくれて、10月ではライブコーディングをしてくれた。
+<p>ちなみに、lighttigerさんは何度かゴリラ。vimに参加してくれて、10月ではライブコーディングをしてくれた。
 普段他人のVimの使い方をなかなか見れないのでとても勉強になった。</p>
 <h3 id="can-we-do-slack-with-vim-by-higashi">Can we do Slack with Vim? by [higashi]</h3>
 <h4 id="概要-11">概要</h4>
@@ -3263,17 +3263,17 @@ if_ptyhon（channel/jobを使って非同期化した、Vim scriptが遅すぎ�
 <li>普段は沖縄で学生やっている</li>
 <li>VimでSlackをするためのプラグインを作った</li>
 <li>Slack API、Slack Legacy Token、if_pythonを使って実装していた</li>
-<li>webapi-vimのことを知りVim scriptで実装し直した -&gt; sarahck.vim</li>
+<li>Webapi-vimのことを知りVim scriptで実装し直した -&gt; sarahck.vim</li>
 <li>ポップアップウィンドウを使ったりしている</li>
 <li>問題：パフォーマンスに問題あり（ちょっと遅い、少し待たないといけない）</li>
-<li>対応：キャッシュサーバーを建てることで高速化 -&gt; sleachk.vim</li>
+<li>対応：キャッシュサーバを建ていることで高速化 -&gt; sleachk.vim</li>
 <li>Slackの表示はできるが、画像の表示とアクションをつけることができていなけど、今後は作っていきたいと思っている</li>
 </ul>
 <h4 id="所感-11">所感</h4>
 <p>最近の学生はすごいなと思いながらLTを聞いていた。
 LTのためにわざわざ沖縄から来て、すごいなと。</p>
-<p>ちなみに、以前higashiさんがゴリラ.vimに参加したことがあって、そのときにslackのプラグインを発表されていたけど、その時よりも進化していた。
-キャッシュサーバーのアイディアについてはなるほどって思って、そういう手もあるねと勉強になった。</p>
+<p>ちなみに、以前higashiさんがゴリラ。vimに参加したことがあって、そのときにslackのプラグインを発表されていたけど、そのときおりも進化していた。
+キャッシュサーバのアイデアについてはなるほどって思って、そういう手もあるねと勉強になった。</p>
 <p>vimでslackしたいのは実はぼくも前から思っていて、作ろうと思ってそこで終わっていた…
 これからどんどん進化させていってほしいなと思った。</p>
 <p>ちなみに、higashiさんは<a href="https://okinawa-vim.connpass.com/">Okinawa.vim</a>というコミュニティを運営していて、たまにリモートでLTやったりしているので、
@@ -3290,7 +3290,7 @@ LTのためにわざわざ沖縄から来て、すごいなと。</p>
 <p>個人的にTime scriptは楽しみにしている
 というのも型があると可読性がぐーんと上がるからもっとVim scriptが書きやすくなると見込んでいるから。</p>
 <p>実際Time script -&gt; Vim scriptにコンバートするっぽいけど、
-ここらへんどうなっているんだっけっていう感じで曖昧で記憶がないので、今度本人に聞いてみようと思う。</p>
+ここらへんどうなっているんだっけっていう感じであいまいで記憶がないので、今度本人に聞いてみようと思う。</p>
 <p>陰ながら応援しています！</p>
 <h3 id="lose-weight-with-vim-and-go-by-micchiebear">Lose Weight with Vim and Go by [micchiebear]</h3>
 <h4 id="概要-13">概要</h4>
@@ -3299,15 +3299,15 @@ LTのためにわざわざ沖縄から来て、すごいなと。</p>
 <li>2017からVimを使い始めて、今年で初めてLT</li>
 <li>プラグインはNeovimで動作確認ずみ</li>
 <li>Goのソースは同じリポジトリ内であった</li>
-<li>VimでGoのコマンドを呼び出して、メインの処理をGoにまかせている</li>
+<li>VimでGoのコマンドを呼び出して、メインの処理をGoに任せている</li>
 <li>将来的にはグラフを描画したい</li>
-<li>float windowが変なところに出てて、業務に支障が出ている</li>
+<li>float windowが変なところに出て、業務に支障が出ている</li>
 <li>Vimのpopup windowとNeovimのfloat windowの違いを知らなくてドキュメント探しでハマっていたとのこと</li>
 </ul>
 <h4 id="所感-13">所感</h4>
 <p>micchieさんのVimプラグインの話ずっと気になっていたので、内容がわかってスッキリした。
-yasetaiという世界的日本語があるのは知らなかったので、へぇってなった。</p>
-<p>ちなみに、micchieさんとはぼくが始めたアキバ.vimというクローズドなコミュニティで一緒にVimを勉強していた方で、
+yasetaiという世界的日本語があるのは知らなかったので、へぇっていなった。</p>
+<p>ちなみに、micchieさんとはぼくが始めたアキバ。vimというクローズドなコミュニティで一緒にVimを勉強していた方で、
 VimConfで一緒にVimの発表をする日が来るとは、とちょっとジーンとしたというのは内緒（笑）</p>
 <h3 id="vim-as-a-text-processor-by-うさみけんた">Vim as a text processor by [うさみけんた]</h3>
 <h4 id="概要-14">概要</h4>
@@ -3319,17 +3319,17 @@ VimConfで一緒にVimの発表をする日が来るとは、とちょっとジ�
 <li>Vim scriptを使うことでテキスト編集のスクリプトを作れるし便利</li>
 </ul>
 <h4 id="所感-14">所感</h4>
-<p>Vimのバッチモードまともに使ったことがないので、使い方によってはこういう事もできるんだなぁと実例を聞けてよかった。
-今度バッチモードでなにかやって記事を書こうかなぁと思った。</p>
+<p>Vimのバッチモードまともに使ったことがないので、使い方によってはこういうこともできるんだなぁと実例を聞けてよかった。
+今度バッチモードで何かやって記事を書こうかなぁと思った。</p>
 <h3 id="vimのリポジトリがgitに移ったときに知られざるはなしのlt-by-koron">VimのリポジトリがGitに移ったときに知られざるはなしのLT by [KoRoN]</h3>
 <h4 id="概要-15">概要</h4>
 <ul>
 <li>VimがGoogle Codeの閉鎖により、GitHubに移行した</li>
-<li>GitHubとBitBucketのVim争奪戦があったとのこと</li>
+<li>GitHubとBitbucketのVim争奪戦があったとのこと</li>
 <li>最終的にGitHub</li>
-<li>プライベートなメールチェーンに巻き込まれた（KoRoNさん）</li>
-<li>vimというユーザがいて、譲ってもらうための交渉があった</li>
-<li>vim-jpがmercurial -&gt; git へミラーリングを行った</li>
+<li>プライベートなメールチェインに巻き込まれた（KoRoNさん）</li>
+<li>vimというユーザーがいて、譲ってもらうための交渉があった</li>
+<li>vim-jpがmercurial -&gt; Gitへミラーリングを行った</li>
 <li>vim-jpがci用のリポジトリを作った</li>
 <li>GitHubに移行したことでパッチを書く敷居がめっちゃ低くなった</li>
 <li>ぜひパッチをチャンレンジしてみてください</li>
@@ -3337,19 +3337,19 @@ VimConfで一緒にVimの発表をする日が来るとは、とちょっとジ�
 </ul>
 <h4 id="所感-15">所感</h4>
 <p>KoRoNさんのVimの歴史系の話は結構好きで、今回もへぇ、そんなことがあったんだって思って、とてもおもしろかった。
-欲を言えばもっと話を聞きたかった（笑）</p>
+欲をいえばもっと話を聞きたかった（笑）</p>
 <h4 id="アフターパーティー">アフターパーティー</h4>
 <p>VimConfが終わり、アフターパーティールームでみんなで談笑しながら、LTをやったりした。
 とてもカジュアルな感じで、たくさんの方と話できてとても良かった。</p>
 <p>ちなみに、ぼくはずっとお会いしたかったmattnさんにお会いできて、
 握手もできて、懇親会で話もできて、目の前でライブコーディングも見れて、とても満足した。</p>
 <p>生mattnさんはslackのときと同様とても優しい方だった。これまでたくさん質問をmattnさんが教えてくれて、
-その御礼をずっと言いたくて、それを言えてとても良かった。</p>
-<p>mattnさんはぼくにとって、憧れのエンジニアで目指したい背中、それを目の前で見れてとても嬉しかった。
-嬉しかった、の一言に尽きる。</p>
+その御礼をずっと言いたくて、それをいえてとても良かった。</p>
+<p>mattnさんはぼくにとって、あこがれのエンジニアで目指したい背中、それを目の前で見れてとてもうれしかった。
+うれしかった、の一言に尽きる。</p>
 <h4 id="hub会">HUB会</h4>
 <p>アフターパーティーが終わったあと、HUBで参加者と複数人で飲んでいた。その中にujihisaさんもいた。
-色々話をしていた中で、個人的に</p>
+いろいろ話をしていた中で、個人的に</p>
 <ul>
 <li>遊びは本気でやる</li>
 <li>仕事は妥協しない</li>
@@ -3357,129 +3357,129 @@ VimConfで一緒にVimの発表をする日が来るとは、とちょっとジ�
 </ul>
 <p>といったujihisaさんの生き方、そして生き様、考え方にとても感銘を受けた。</p>
 <h2 id="全体を通して">全体を通して</h2>
-<p>去年のVimConfはぼくがまだVimを始めたてのころで、存在を知らなくて気づくのが遅かったので行けなかった。
+<p>去年のVimConfはぼくがまだVimを始めたてのころで、存在を知らなくて気付くのが遅かったので行けなかった。
 けど今年はVimConfにちゃんと行けてしかも発表できて、そこでたくさんのものを得られて最高だった。</p>
 <p>このカンファレンスで得られたものを簡潔にまとめると以下になります。</p>
 <ul>
-<li>情熱（もっともっとものづくりをたくさんしたい）</li>
-<li>モチベ（もっともっとたくさん学びたい）</li>
+<li>情熱（最最ものづくりをたくさんしたい）</li>
+<li>モチベ（最もっとたくさん学びたい）</li>
 <li>知見（車輪の再利用の話、妥協しないOSSづくりなど）</li>
 <li>輪（たくさんのエンジニアと話せて知り合えた）</li>
 <li>エンジニアとしての考え方、生き方、矜持（ujihisaさんとか、mattnさんとか、Prabir氏、Justin氏などの話）</li>
 </ul>
-<p>Vimの国際カンファレンスだけど、Vimだけではなく本当にエンジニアとして、人として大事なことをたくさん学ばせて頂きました。
-長い間、カンファレンスのために準備してくださった運営の方々、そしてスポンサーをして頂いた企業様、本当にありがとうございました。</p>
-<p>そして参加して頂いたみなさんもありがとうございました。イベントは主催ではなく、参加者がいて初めて成り立つものです。
+<p>Vimの国際カンファレンスだけど、Vimだけではなく本当にエンジニアとして、人として大事なことをたくさん学ばせていただきました。
+長い間、カンファレンスのために準備してくださった運営の方々、そしてスポンサーをしていただいた企業様、本当にありがとうございました。</p>
+<p>そして参加していただいたみなさんもありがとうございました。イベントは主催ではなく、参加者がいて初めて成り立つものです。
 ぼくもコミュニティを運営している身として、本当にすごいなと思ったし、とってもありがたかったです。
-この恩は、ぼくなりのやり方でVim、ひいてはIT業界全体にかえしていこうと思っています。</p>
+この恩は、ぼくなりのやり方でVim、ひいてはIT業界全体に返していこうと思っています。</p>
 <p>ぼくは来年も登壇を目指しますので、またみなさんにとって利益になるような内容を発表できるように頑張ります！</p>
-<p>改めて、運営も参加者の方もスポンサーの企業様も、みなさんありがとうございました。</p>
-]]></content></item><item><title>技術書典7の感想</title><link>https://skanehira.github.io/blog/posts/20191001-gisho7-after/</link><pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20191001-gisho7-after/</guid><description>はじめに こんにちは。 ゴリラです。 ちょっと時間が経ってしまいましたが、技術書典7の感想ブログを書きました。 今回は初めて一人で本を書く〜サークル</description><content type="html"><![CDATA[<h2 id="はじめに">はじめに</h2>
+<p>あらためて、運営も参加者の方もスポンサーの企業様も、みなさんありがとうございました。</p>
+]]></content></item><item><title>技術書典7の感想</title><link>https://skanehira.github.io/blog/posts/20191001-gisho7-after/</link><pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20191001-gisho7-after/</guid><description>始めに こんにちは。 ゴリラです。 ちょっと時間が経ってしまいましたが、技術書典7の感想ブログを書きました。 今回はじめて一人で本を書く〜サークル参</description><content type="html"><![CDATA[<h2 id="始めに">始めに</h2>
 <p>こんにちは。
 ゴリラです。</p>
 <p>ちょっと時間が経ってしまいましたが、技術書典7の感想ブログを書きました。
-今回は初めて一人で本を書く〜サークル参加しました。
+今回はじめて一人で本を書く〜サークル参加しました。
 本を出すまでの振り返りも含めて書いていこうと思います。</p>
 <h2 id="どんな本を書いたのか">どんな本を書いたのか</h2>
 <p>「Vimが好きになる本」を書きました。
 全部で132ページのボリュームになっています。</p>
 <p>この本の特徴を上げると主に次の通りになります。</p>
 <ul>
-<li>Vimの基本的な操作から、オペレーター、モーション、テキストオブジェクトなどを使った高速編集の仕方について解説</li>
-<li>Vimを触ったことがない方でもわかるように解説</li>
+<li>Vimの基本的な操作から、オペレーター、モーション、テキストオブジェクトなどを使った高速編集のし方について解説</li>
+<li>Vimを触ったことがない方でも分かるように解説</li>
 <li>プラグインの作り方を実例を交えながら解説</li>
 </ul>
 <p>現在物理本は販売していなくて、<a href="https://gorilla0513.booth.pm/items/1513974">BOOTH</a>の方で電子版のみを販売しています。
-Vimに興味ある方や、もっと高速で編集・コーディングしたいという方がいましたら、<a href="https://gorilla0513.booth.pm/items/1514005">無料版</a>がありますので、まずはそちらを読んで頂ければと思います。</p>
+Vimに興味ある方や、もっと高速で編集・コーディングしたいという方がいましたら、<a href="https://gorilla0513.booth.pm/items/1514005">無料版</a>がありますので、まずはそちらを読んでいただければと思います。</p>
 <h2 id="本を書いて苦労した点">本を書いて苦労した点</h2>
-<p>本を書くにあたり、特に意識したのは「初心者でもわかるように解説」というところです。
-本来ならば操作を動画で見せるのが一番わかりやすいのですが、物理本だと動画は無理なので、
+<p>本を書くにあたり、特に意識したのは「初心者でも分かるように解説」というところです。
+本来並ば操作を動画で見せるのが一番わかりやすいのですが、物理本だと動画は無理ですので、
 操作前、操作後のカーソルの位置やテキストの変化を次のように、なるべくわかりやすいように意識して書きました。</p>
 <p><img src="https://i.gyazo.com/3c76f447b54f439b8a87d069955e1109.png" alt=""></p>
 <h2 id="技術書典7の前日">技術書典7の前日</h2>
 <p>前日は当日で使用する道具などを100均で購入しました。
 また、物理本は1500円で販売予定だったので、みなさんが困らないようにお釣りを用意しようとしました。
-そしてあることに気づいたのです。そう、500円硬貨がない。。。
+そしてあることに気付いたのです。そう、500円硬貨がない。。。
 困りました。休日なのでどこの銀行もやっていなくて、Twitterで聞いた換金できる場所も全滅でした。</p>
 <p>困り果てたところ、心優しいフォロワーさんが500円硬貨たくさんあるので交換しますよと言ってくださったので、
 素直に力を借りることにしました。あらためてお礼を申し上げます。ありがとうございました。</p>
-<p>ちゃんと当日の事を考えないとだめだなぁって改めて思いました。
+<p>ちゃんと当日のことを考えないとだめだなぁってあらためて思いました。
 もし、次の技術書典に本を出したいという方は、お釣りの用意を忘れずに。</p>
 <h2 id="技術書典7の当日">技術書典7の当日</h2>
-<p>当日は1時間前くらいに会場に着きましたが、当然開場していないので入れなく、近くに居たフォロワーさんと談笑していました。
-開場が予定より少し遅れていましたが、概ね順調だったのではないかと思います。</p>
-<p>ちなみに、一人サークルだとトイレも行けないので、事前に知人に売り子をお願いしました。お陰様で当日は開場内を回ることができ、
-知り合いにご挨拶することができました。</p>
+<p>当日は1時間前くらいに会場に着きましたが、当然開場していないので入れなく、近くにいたフォロワーさんと談笑していました。
+開場が予定より少し遅れていましたが、おおむね順調だったのではないかと思います。</p>
+<p>ちなみに、一人サークルだとトイレも行けないので、事前に知人に売り子をお願いしました。おかげ様で当日は開場内を回ることができ、
+知り合いにご挨拶できました。</p>
 <p>入場後、自分のサークルスペースがわからず探し回っていました（入り口のすぐ横だったけど…）ことは内緒です。
 一派参加者入場までの時間があまりなかったので、隣のサークルさんにご挨拶をして、ぱぱっと準備してあとはドキドキしながら待っていました。</p>
 <p>そして入場が開始して、一気に慌ただしくなり始めました。
 今回技術書典向けに物理本を144冊（取り置き分を除き）用意しましたが、一時間半ほどで完売しました。
 自分でもびっくりしました。なぜなら「Vim」は結構コアのジャンルなのでそんなに売れないと思っていたからです。
 それがなんと昼前に完売しました。</p>
-<p>とてもありがたいです。自分が2ヶ月間コツコツ書いてきた本、そして本に込めた思いがこんなにもたくさんの人にの手に取ってもらえた。とても嬉しかったです。
-改めて、本を購入して頂いたみなさんにお礼を申し上げます。ありがとうございました。</p>
+<p>とてもありがたいです。自分が2ヵ月間コツコツ書いてきた本、そして本に込めた思いがこんなにもたくさんの人にの手に取ってもらえた。とてもうれしかったです。
+あらためて、本を購入していただいたみなさんにお礼を申し上げます。ありがとうございました。</p>
 <h2 id="当日を振り返って">当日を振り返って</h2>
 <p>さきほど書いたとおり、物理本はすぐ完売しました。そのため物理本がほしいという方に本を渡せませんでした。
-技術書典終わったあとでもTwitter上で物理本がないかという連絡を頂き、とても申し訳ない気持ちが強くなっていきました。</p>
-<p>色々考えた結果、物理本を再販することにしました。物理本が欲しかったけど、仕方なく電子版を買った方もいるので、
-そういった方にはBOOTHの購入履歴もしくはダウンロードカードを見せて頂ければ差分（500円）の額だけで物理本をお渡しすることにしました。
+技術書典終わったあとでもTwitter上で物理本がないかという連絡をいただき、とても申し訳ない気持ちが強くなっていきました。</p>
+<p>いろいろ考えた結果、物理本を再販することにしました。物理本が欲しかったけど、し方なく電子版を買った方もいるので、
+そういった方にはBOOTHの購入履歴もしくはダウンロードカードを見せていただければ差分（500円）の額だけで物理本をお渡しすることにしました。
 それ以外の方はこれまで通り1500円で販売させていただく予定です。
 おそらく次の技術書典（当選すれば）で出すと思います。</p>
 <h2 id="最後に">最後に</h2>
 <p>はじめて一人で本を書いて、物理本を作ってたくさんの方の手に届けました。
 とても良い経験になりました。</p>
-<p>「Vimの本を出す」というのは今年の目標の一つで、それが達成できて一安心です。
-そして、実はもう一つの目標があり、それが「商業本を出す」ことです。</p>
+<p>「Vimの本を出す」というのは今年の目標のひとつで、それが達成できて一安心です。
+そして、実はもうひとつの目標があり、それが「商業本を出す」ことです。</p>
 <p>さくらのナレッジでのVimの連載も、技術ブログも、本も、実はすべて「商業本を出す」というゴールのための目標です。
-ぼくにとって「出版社で技術本を出す」ことが夢の一つです。それが技術者としてのアイデンティティでもあり、自分の存在意義でもあるからです。</p>
-<p>そして、とてもありがたいことに出版社の方から商業本化の打診を頂きました。
+ぼくにとって「出版社で技術本を出す」ことが夢のひとつです。それが技術者としてのアイデンティティでもあり、自分の存在意義でもあるからです。</p>
+<p>そして、とてもありがたいことに出版社の方から商業本化の打診をいただきました。
 こちらについては進展があったらTwitterで報告する予定ですが、
-商業本を出すとなると、さらにパワーアップすることになると思うので、楽しみにして頂ければと思います。</p>
-]]></content></item><item><title>「Vimが好きになる本」の執筆したお話</title><link>https://skanehira.github.io/blog/posts/20190916-vim-book/</link><pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190916-vim-book/</guid><description>はじめに ウホウホ ウホウホっウホ ウホウホっウホウホウホウホ ウホウホウホウホ「ウホウホっウホ」ウホウホウホウホウホウホウホウホっウホウホっ ウウホ</description><content type="html"><![CDATA[<h2 id="はじめに">はじめに</h2>
+商業本を出すとなると、さらにパワーアップすることになると思うので、楽しみにしていただければと思います。</p>
+]]></content></item><item><title>「Vimが好きになる本」の執筆したお話</title><link>https://skanehira.github.io/blog/posts/20190916-vim-book/</link><pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190916-vim-book/</guid><description>始めに ウホウホ ウホウホっウホ ウホウホっウホウホウホウホ ウホウホウホウホ「ウホウホっウホ」ウホウホウホウホウホウホウホウホっウホウホっ ウウホウ</description><content type="html"><![CDATA[<h2 id="始めに">始めに</h2>
 <p>ウホウホ</p>
 <p>ウホウホっウホ</p>
 <p>ウホウホっウホウホウホウホ</p>
 <p>ウホウホウホウホ「ウホウホっウホ」ウホウホウホウホウホウホウホウホっウホウホっ</p>
 <p>ウウホウホウウホホホ</p>
 <h2 id="vimが好きになる本とは">「Vimが好きになる本」とは？</h2>
-<p>2019/09/22(日)の<a href="https://techbookfest.org/event/tbf07">技術書典7</a>で配布する本です。
+<p>2019/09/22（日）の<a href="https://techbookfest.org/event/tbf07">技術書典7</a>で配布する本です。
 タイトル通り、読んだらVimが好きになる本です。</p>
 <p>初心者と中級者向けに、Vimの基本操作から、オペレーター、モーション、テキストオブジェクトといった機能を使った高速編集のやり方や、
 Vim scriptの入門とプラグインの作り方まで一通り解説した本になります。</p>
 <p>現在、BOOTHにて<a href="https://gorilla0513.booth.pm/items/1514005">無料版</a>を公開しています。
-ぜひダウンロードして読んでみて下さい。「無料でもいいから読んでほしい」と思った章をピックアップしています。</p>
+ぜひダウンロードして読んでみてください。「無料でもよいから読んでほしい」と思った章をピックアップしています。</p>
 <h2 id="なぜ本を執筆しようと思ったのか">なぜ本を執筆しようと思ったのか</h2>
 <p>なぜ本を書こうと思ったのか、そこにはいくつか理由があります。</p>
 <ul>
-<li>本を出すことは自分にとっての憧れ、そして夢でもある</li>
-<li>Vimの良さをもっと色んな人に知ってほしい</li>
+<li>本を出すことは自分にとってのあこがれ、そして夢でもある</li>
+<li>Vimの良さをもっといろんな人に知ってほしい</li>
 <li>今まで学んできたことを腹に落としたい</li>
 </ul>
-<p>とくに「本を出すことは自分にとっての憧れ、そして夢でもある」は一番の理由です。
+<p>特に「本を出すことは自分にとってのあこがれ、そして夢でもある」は一番の理由です。
 ぼくにとって、本を出す = その分野を熟知していると同意義です。</p>
-<p>どの様な分野でも、熟知していて本を出せるくらいの知見とノウハウを持っている人はすごいし、憧れます。</p>
+<p>どのような分野でも、熟知していて本を出せるくらいの知見とノウハウを持っている人はすごいし、あこがれます。</p>
 <p>そんな思いでVimの本を書きました。</p>
-<h2 id="執筆で大変だったこと">執筆で大変だったこと</h2>
-<p>色々と大変なことはありました。
+<h2 id="執筆でたいへんだったこと">執筆でたいへんだったこと</h2>
+<p>いろいろとたいへんなことはありました。
 主なところをあげると</p>
 <ul>
 <li>ターゲット層とその層に向けの内容の選定</li>
 <li>内容の順番をどうするか</li>
 <li>執筆の時間をどう確保するか</li>
 <li>Vimの動きをどのように表現するか</li>
-<li>レビューアはどうするか</li>
+<li>レビュアーどうするか</li>
 </ul>
 <p>といったところです。
-一部大変なところについて考えたことを書いていきます。</p>
+一部たいへんなところについて考えたことを書いていきます。</p>
 <h3 id="ターゲット層とその層に響く内容の選定と順番">ターゲット層とその層に響く内容の選定と順番</h3>
 <p>本を書くにあたり、みなさんに絶対読んでほしい部分、つまり幹の部分があります。
 それは「オペレーター、モーション、テキストオブジェクト、カウンタ、リピート」の機能を解説した章です。</p>
 <p>なぜこれを絶対読んでほしいかと言うと、ぼくがVimにのめり込んだのはこれらことを知ったからです。
 それだけ、ぼくにとって魅力的だったのです。なぜVimは慣れたら高速で編集できるのか、その答えがこれら機能だったのです。</p>
 <p>ただ、これだけの内容ではとてもじゃないけど、本として出せないし、きっとそれだけ読んでもVimの良さが分からないでしょう。
-なので、幹に肉付けをして、より価値がある本にしなければいけません。</p>
+ですので、幹に肉付けをして、より価値がある本にしなければいけません。</p>
 <p>そこで、Vimを始めたばっかりの方でも「Vimってこんなことができたのか」と思える内容、
-そして、ある程度Vimを使ってきた方がもう少しだけレベルアップできるような内容にすればいいのでは？と考えました。</p>
+そして、ある程度Vimを使ってきた方がもう少しだけレベルアップできるような内容にすればよいのでは？と考えました。</p>
 <p>これでターゲット層の大枠が決まったので、
 次に「初心者」と「ある程度Vimを使ってきた」といったvimmerのレベルの定義を明確にする必要があります。
 Vimmerのレベルの公式定義はないので、まず定義をするところから始めなければ行けないのです。</p>
@@ -3495,7 +3495,7 @@ Vimmerのレベルの公式定義はないので、まず定義をするとこ�
 <p>Level 2</p>
 <ul>
 <li>a. Vimの操作に慣れてきて、基本的な編集が一通りできる</li>
-<li>b. Vimの良さをすこしずつ理解してきている</li>
+<li>b. Vimの良さを少しずつ理解してきている</li>
 </ul>
 </li>
 <li>
@@ -3520,69 +3520,69 @@ Vimmerのレベルの公式定義はないので、まず定義をするとこ�
 </ul>
 </li>
 </ul>
-<p>この定義は正直、大雑把なものではありますが、厳密に定義できないのと、あくまで指標でしか無いので、拘るポイントでもないと思っています。</p>
-<p>上記のレベル分けをもとに、初心者(level1)の方には「Vimの基本操作と幹の部分」、
-中級者（Level2~3）の方には「Vimの設定やVim scriptの基本、プラグインの作り方」というように内容にしました。</p>
+<p>この定義は正直、大雑把なものではありますが、厳密に定義できないのと、あくまで指標でしかないので、こだわるポイントでもないと思っています。</p>
+<p>上記のレベル分けをもとに、初心者（level1）の方には「Vimの基本操作と幹の部分」、
+中級者（Level2〜3）の方には「Vimの設定やVim scriptの基本、プラグインの作り方」というように内容にしました。</p>
 <h3 id="執筆の時間はどう確保するか">執筆の時間はどう確保するか</h3>
-<p>これはもう気合しか無いです。</p>
-<p>毎月ゴリラ.vimの開催をしたり、連載したり、その合間を縫って使える時間はすべて使いました。
+<p>これはもう気合しかないです。</p>
+<p>毎月ゴリラ。vimの開催をしたり、連載したり、その合間を縫って使える時間はすべて使いました。
 もちろん土日とかも使って書いたりしました。</p>
-<p>これに関してはTwitterのTLを見る限り、みんな同じ感じなので、まぁそうだよねと思いました。
+<p>これに関してはTwitterのTLを見る限り、みんな同じ感じですので、まぁそうだよねと思いました。
 特別なことは何もしていなく、ただ気合だけでした。</p>
-<h3 id="レビューアをどうするか">レビューアをどうするか</h3>
+<h3 id="レビュアーどうするか">レビュアーどうするか</h3>
 <p>もちろん本を書いていくと、内容が正しいのか、誤字脱字がないのかといったチェックしてくれる人が必要です。
-とってもありがたいことに本書をレビューして頂いたのは<a href="https://twitter.com/mattn_jp">mattnさん</a>と<a href="https://twitter.com/dice_zu">daisuzuさん</a>でした。</p>
+とってもありがたいことに本書をレビューしていただいたのは<a href="https://twitter.com/mattn_jp">mattnさん</a>と<a href="https://twitter.com/dice_zu">daisuzuさん</a>でした。</p>
 <p>mattnさんは<a href="https://gihyo.jp/magazine/SD">Software Desgin</a>で「Vimの細道」の連載をされていたり、Vim本体にパッチを送ったりしている方で、
 daisuzuさんはこれまでに数回に渡り<a href="vimconf.org/">Vim Conf</a>で登壇をされたり、Software DesginのVim特集に寄稿した方です。
 どちらもvimmerとして頼れる方たちです。</p>
-<p>この場を借りて改めてお礼を申し上げます。
-お忙しい中、時間を割いて頂きありがとうございました。</p>
+<p>この場を借りてあらためてお礼を申し上げます。
+お忙しい中、時間を割いていただきありがとうございました。</p>
 <h2 id="執筆を通して感じたこと">執筆を通して感じたこと</h2>
 <h3 id="感謝">感謝</h3>
 <p>ぼく一人の力では到底本を出すことができませんでした。</p>
-<p>レビューに協力して頂いたmattnさん、daisuzuさんをはじめ、
-執筆で使用した<a href="https://kauplan.org/reviewstarter/">Re:VIEW Starter</a>を作って頂いた<a href="https://twitter.com/_kauplan">カウプラン</a>さん、
+<p>レビューに協力していただいたmattnさん、daisuzuさんを始め、
+執筆で使用した<a href="https://kauplan.org/reviewstarter/">Re:VIEW Starter</a>を作っていただいた<a href="https://twitter.com/_kauplan">カウプラン</a>さん、
 <a href="https://www.nikko-pc.com/index/top.html">日光印刷所</a>の担当者の方、みなさんにはとても感謝しています。ありがとうございます。</p>
-<h3 id="大変">大変</h3>
-<p>1冊の本を書いて思ったことは「本を書くのって大変だな」でした。
-そんなの当たり前じゃんって言われるかも知れないのですが、
-ぼくはやりたいことがあったら大変さを考えずにとにかくやるという性格なので、やって初めて身を持って「大変さ」を知れたという意味ではとても良い経験になりました。</p>
+<h3 id="たいへん">たいへん</h3>
+<p>1冊の本を書いて思ったことは「本を書くのってたいへんだな」でした。
+そんなの当たり前じゃんって言われるかもしれないのですが、
+ぼくはやりたいことがあったらたいへんさを考えずにとにかくやるという性格ですので、やって初めて身を持って「たいへんさ」を知れたという意味ではとても良い経験になりました。</p>
 <h3 id="不安">不安</h3>
 <p>今回は物理本を140冊用意したのですが、本当に全部売れるかどうかの不安はあります。
-とくにVimというマニアックなジャンルなので、母数は他の技術と比べると少ないでしょう。</p>
+特にVimというマニアックなジャンルですので、母数は他の技術と比べると少ないでしょう。</p>
 <p>本を書いたからといって、売れるわけではないので、まず本の存在を知ってもらう必要ための宣伝が必要です。</p>
 <p>宣伝という意味ではこのブログ、そして無料版はその役割を担っていますね。</p>
-<p>そして一番の宣伝になるのはやはりTwitterです。残念ながらぼくはTwitterでバズる才能はないので、ただただ思ったことをつぶやいてみなさんに拡散して頂いています。</p>
-<p>リツイート、いいねをくれたみなさん、ありがとうございます。</p>
-<p>ありがたいことに取り置きしたいという声を頂いたり、とても良かったという感想を頂いています。とてもうれしく思っています。
-それでも不安はありますが、これ以上は考えても仕方がない領域なので、当日はたくさんの方にこの本を試読して頂けるようにがんばります。</p>
+<p>そして一番の宣伝になるのはやはりTwitterです。残念ながらぼくはTwitterでバズる才能はないので、ただただ思ったことをつぶやいてみなさんに拡散していただいています。</p>
+<p>リツイート、よいねをくれたみなさん、ありがとうございます。</p>
+<p>ありがたいことに取り置きしたいという声をいただいたり、とても良かったという感想をいただいています。とてもうれしく思っています。
+それでも不安はありますが、これ以上は考えてもし方がない領域ですので、当日はたくさんの方にこの本を試読していただけるようにがんばります。</p>
 <h3 id="開放感">開放感</h3>
 <p>当たり前ですが、やるべきことが終わって、ほっとしました。
-2ヶ月間ずっとソワソワしていましたが、無事に入稿できてとても気持ちが楽になりました。
+2ヵ月間ずっとソワソワしていましたが、無事に入稿できてとても気持ちが楽になりました。
 あとは当日楽しむだけですね。</p>
 <h2 id="ちょっとしたお話">ちょっとしたお話</h2>
 <p>ご縁があって、<a href="https://twitter.com/authyasan">Auth屋さん</a>の「<a href="https://twitter.com/authyasan/status/1165951861506990080?s=20">OAuth、OAuth認証、OpenID Connectの違いを整理して理解できる本</a>」と、
 カウプランさんの「<a href="https://twitter.com/_kauplan/status/1170371432104116224?s=20">わかりみSQL</a>」のレビューをさせていただきました。</p>
-<p>人様の本をレビューしたのは初めてですが、とても勉強になりました。
-自分には思いつかなかった様な表現の仕方や注力しているポイントなど、たくさん学ぶことができました。</p>
+<p>人様の本をレビューしたのはじめてですが、とても勉強になりました。
+自分には思いつかなかった様な表現のし方や注力しているポイントなど、たくさん学ぶことができました。</p>
 <p>お二人の本は、わかりやすさを重視しているという共通点があって、
 全体を通してどちらもとても丁寧でわかりやすかったです。</p>
-<p>レビューの指摘、こんなのでいいのかなって不安はありましたが、
-おふたりとも、レビューには満足していただいているようで、役に立ててよかったと思いました。</p>
+<p>レビューの指摘、こんなのでよいのかなって不安はありましたが、
+おふたりとも、レビューには満足していただいているようで、役に立てよかったと思いました。</p>
 <p>今後も余裕があれば本のレビューをやってみようかなと思いました。</p>
-<p>タイミングによってはできないこともありますが、もし本をレビューしてほしい方いましたら、ぜひ声をかけて頂ければと思います。</p>
+<p>タイミングによってはできないこともありますが、もし本をレビューしてほしい方いましたら、ぜひ声をかけていただければと思います。</p>
 <h2 id="最後に">最後に</h2>
 <p>多くは語りませんので、技術書典当日は「き47D」でお待ちしています。
 ぜひ立ち読みしてみてください。</p>
-<p>また、来られない方は<a href="https://gorilla0513.booth.pm/items/1513974">こちら</a>(当日公開)でお買い求め頂けますので、
+<p>また、来られない方は<a href="https://gorilla0513.booth.pm/items/1513974">こちら</a>（当日公開）でお買い求めいただけますので、
 興味ある方はぜひ買ってみてください。</p>
 <p>みなさんにVimの良さを伝わることを願っています。</p>
-]]></content></item><item><title>Vimのターミナルの真の力お見せしますよ</title><link>https://skanehira.github.io/blog/posts/20190812-vim-terminal/</link><pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190812-vim-terminal/</guid><description>はじめに みなさん、こんにちわ 個人ブログにVimの記事しかないゴリラです。 そして今回、またしてもVimです。 Vimの高度な編集を行うことができ</description><content type="html"><![CDATA[<h2 id="はじめに">はじめに</h2>
-<p>みなさん、こんにちわ</p>
+]]></content></item><item><title>Vimのターミナルの真の力お見せしますよ</title><link>https://skanehira.github.io/blog/posts/20190812-vim-terminal/</link><pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190812-vim-terminal/</guid><description>始めに みなさん、こんにちは 個人ブログにVimの記事しかないゴリラです。 そして今回、またしてもVimです。 Vimの高度な編集を行うことができる</description><content type="html"><![CDATA[<h2 id="始めに">始めに</h2>
+<p>みなさん、こんにちは</p>
 <p>個人ブログにVimの記事しかない<a href="https://twitter.com/gorilla0513">ゴリラ</a>です。
 そして今回、またしてもVimです。</p>
 <p>Vimの高度な編集を行うことができる上、ターミナルを操作することもできてしまいます。
-エディタでありながら端末でもある、夢の様なエディタです。</p>
+エディタでありながら端末でもある、夢のようなエディタです。</p>
 <p>そんなVimのターミナル機能について触れている記事をあまり見かけたことがないので、
 今回はVimのターミナルの便利な使い方についていくつか紹介していきます。</p>
 <h2 id="端末の起動">端末の起動</h2>
@@ -3616,7 +3616,7 @@ daisuzuさんはこれまでに数回に渡り<a href="vimconf.org/">Vim Conf</a
 <h2 id="ターミナルでの操作">ターミナルでの操作</h2>
 <p>ターミナルでは入力したキーはそのまま端末に送られます。
 ウィンドウのフォーカスの移動などに関しては特別な操作が必要です。
-最低限の操作は次になります。<code>CTRL-W</code>がプレフィックスキーになっています。</p>
+最低限の操作は次になります。<code>CTRL-W</code>が接頭辞キーになっています。</p>
 <table>
 <thead>
 <tr>
@@ -3654,27 +3654,27 @@ daisuzuさんはこれまでに数回に渡り<a href="vimconf.org/">Vim Conf</a
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/b91812b1-6d5e-dd2d-8109-226af23b59f2.gif" alt="vim-terminal-yank.gif"></p>
 <p>ターミナルノーマルモードを使用することで、<code>less</code>や<code>tail</code>コマンドの出力、また作業ログを簡単にメモに残すことができます。</p>
 <h2 id="外部コマンドとの連携">外部コマンドとの連携</h2>
-<p>Vimでは<code>:!echo gorilla</code>というように<code>:!</code>を使用することで外部コマンドを実行することができます。しかし、それだとコマンドの実行が完了するまでVimを操作できないです。とてもツライ。</p>
-<p>そこでターミナルを使えば非同期で外部コマンドを実行することができます。
+<p>Vimでは<code>:!echo gorilla</code>というように<code>:!</code>を使用することで外部コマンドを実行できます。しかし、それだとコマンドの実行が完了するまでVimを操作できないです。とてもツライ。</p>
+<p>そこでターミナルを使えば非同期で外部コマンドを実行できます。
 コマンドを実行している間にVimの操作がブロックされないのはとても大きいですね。
 では、いくつか例を紹介します。</p>
-<h3 id="git-log">git log</h3>
-<p><code>:vert term ++close git log</code>でGitのログを確認することができます。
+<h3 id="git-log">Git log</h3>
+<p><code>:vert term ++close git log</code>でGitのログを確認できます。
 単にターミナル上で動いているので、いつも通り<code>q</code>で<code>git log</code>を終了できます。
-この例だと<code>++close</code>というオプションをわたしていますが、これは外部コマンドが終了するとウィンドウを自動で閉じるオプションです。</p>
+この例だと<code>++close</code>というオプションを私ていますが、これは外部コマンドが終了するとウィンドウを自動で閉じるオプションです。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/fcfaaba5-53b8-9414-cca5-f8fea634481a.gif" alt="vim-terminal-git-log.gif"></p>
-<h3 id="git-blame">git blame</h3>
-<p><code>:term ++close git blame %</code>でファイルの変更履歴を確認することができます。
+<h3 id="git-blame">Git blame</h3>
+<p><code>:term ++close git blame %</code>でファイルの変更履歴を確認できます。
 <code>%</code>は現在開いているファイル名になります。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/22b3faab-16bc-e035-8d74-066cf13e0639.gif" alt="vim-terminal-git.gif"></p>
-<h3 id="インタラクティブにgitを操作">インタラクティブにgitを操作</h3>
-<p>gitコマンドの実行方法を紹介しましたが、gitをインタラクティブに操作できる<a href="https://github.com/jesseduffield/lazygit">lazygit</a>というTUIツールがあります。
+<h3 id="インタラクティブにgitを操作">インタラクティブにGitを操作</h3>
+<p>Gitコマンドの実行方法を紹介しましたが、Gitをインタラクティブに操作できる<a href="https://github.com/jesseduffield/lazygit">lazygit</a>というTUIツールがあります。
 こちらも同様に<code>:vert term ++close lazygit</code>で実行できます。
-こちらのツールはとても便利なので、ぜひ試してみてください。</p>
+こちらのツールはとても便利ですので、ぜひ試してみてください。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/a79a7356-ce1d-3d07-427f-44ce78526547.gif" alt="vim-terminal-lazygit.gif"></p>
 <h3 id="replを使う">REPLを使う</h3>
 <p>コーディング中に言語の細かい動きやちょっとしたサンプルコードの実行をしたいときがあります。
-REPL<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>を使用することで、インタラクティブにコードを実行する事ができます。
+REPL<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>を使用することで、インタラクティブにコードを実行できます。
 有名ところだと、<code>PHP -a</code>や<code>node</code>などがあります。</p>
 <p>ぼくは普段Goを書いたりするので、<a href="https://github.com/motemen/gore">gore</a>を使っています。
 goreの場合、<code>:vert term ++close gore</code>で起動できます。</p>
@@ -3682,11 +3682,11 @@ goreの場合、<code>:vert term ++close gore</code>で起動できます。</p>
 <h3 id="コンテナを管理">コンテナを管理</h3>
 <p>コンテナ技術がインフラを支える様になった昨今、開発も環境もコンテナを使用することが増えていきました。
 コーディング中にコンテナを操作したいことがあります。</p>
-<p>そこで、ぼくが作った<a href="https://github.com/skanehira/docui">docui</a>というTUIツールを使用することでターミナル上でインタラクティブにコンテナやイメージなどを管理することができます。
+<p>そこで、ぼくが作った<a href="https://github.com/skanehira/docui">docui</a>というTUIツールを使用することでターミナル上でインタラクティブにコンテナやイメージなどを管理できます。
 lazygitと同様<code>:vert term ++close docui</code>でコンテナを操作しつつコーディングできます。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/6f0ce6d8-34d6-3a77-0fc0-a1ff56b5a5aa.gif" alt="vim-terminal-docui.gif"></p>
 <p>ちなみに、コンテナを操作するだけなら<a href="https://github.com/skanehira/docker.vim">docker.vim</a>というプラグインがあります。
-こちらはターミナルを使わずにVimのインターフェイスのみで操作できるようになっています。
+こちらはターミナルを使わずにVimのインタフェースのみで操作できるようになっています。
 興味ある方はぜひ使ってみてください。</p>
 <h3 id="スターウォーズ">スターウォーズ</h3>
 <p>コーディング中にスターウォーズを見たくなるときがあります。
@@ -3715,14 +3715,14 @@ Vimはセッションと言う機能があり、ターミナルと組み合わ�
 </li>
 </ol>
 </section>
-]]></content></item><item><title>Vimをtmuxの代わりに使う</title><link>https://skanehira.github.io/blog/posts/20190803-vim-tmux/</link><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190803-vim-tmux/</guid><description>はじめに ぼくは普段開発する時、必ずtmuxとVimを併用しています。tmuxは本当に便利で、画面分割したり、セッションを繰り替えたりながら作</description><content type="html"><![CDATA[<p><a href="https://asciinema.org/a/260659"><img src="https://asciinema.org/a/260659.svg" alt="asciicast"></a></p>
-<h2 id="はじめに">はじめに</h2>
+]]></content></item><item><title>Vimをtmuxの代わりに使う</title><link>https://skanehira.github.io/blog/posts/20190803-vim-tmux/</link><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190803-vim-tmux/</guid><description>始めに ぼくは普段開発する時、必ずtmuxとVimを併用しています。tmuxは本当に便利で、画面分割したり、セッションを繰り替えたりながら作業</description><content type="html"><![CDATA[<p><a href="https://asciinema.org/a/260659"><img src="https://asciinema.org/a/260659.svg" alt="asciicast"></a></p>
+<h2 id="始めに">始めに</h2>
 <p>ぼくは普段開発する時、必ずtmuxとVimを併用しています。tmuxは本当に便利で、画面分割したり、セッションを繰り替えたりながら作業をするのに必須と言ってよいほどです。</p>
 <p>しかしVim使いのぼくはやはりVimだけで生活したいので、tmuxをやめてVimだけでtmuxの機能を一部実現してみました。
 意外となんとかなったので、そのやり方を解説していきます。</p>
-<h2 id="仕組みの概要">仕組みの概要</h2>
+<h2 id="しくみの概要">しくみの概要</h2>
 <p>tmuxの画面分割してターミナルを開くのは、Vimの画面分割とターミナルを組み合わせて実現できます。
-例えば<code>:vert terminal ++close bash</code>で縦二分割してターミナルを開くことができます。</p>
+たとえば<code>:vert terminal ++close bash</code>で縦二分割してターミナルを開くことができます。</p>
 <p>tmuxのセッションに関しては、Vimのセッション機能を使用します。
 セッションについては<a href="https://gorilla.netlify.com/articles/20190620-vim-session-plugin.html">こちらの記事</a>を参照してください。</p>
 <p>ただ、Vimではターミナルウィンドウの位置、サイズを復元できますが、状態までは復元できません。
@@ -3773,18 +3773,18 @@ Vimでは<code>OpenTermianl</code>コマンドを定義して、そのコマン�
 <p>ターミナルのオプションですが、<code>++close</code>はターミナルを終了する時にバッファを閉じる、<code>++curwin</code>は現在のバッファでターミナルを開くという動きになります。</p>
 <p>ターミナルを開いた後に実行している<code>term_setrestore</code>はかなり重要で、これはセッションでターミナルを復元する時に実行するコマンドです。</p>
 <p>デフォルト、ターミナルを復元する時はカレントディレクトリになってしまいます。
-なので、セッション保存時のディレクトリで復元するように設定する必要があります。</p>
+ですので、セッション保存時のディレクトリで復元するように設定する必要があります。</p>
 <p>上記のコードを<code>vimrc</code>に追記すれば、そのまま動くはずです。</p>
 <h2 id="セッション保存復元">セッション保存/復元</h2>
 <p>セッション機能を使用することで、画面の状態をそのまま保持できます。
-なので、基本的セッションを保存、起動時or起動後にセッションを読み込むことで復元できます。</p>
+ですので、基本的セッションを保存、起動時or起動後にセッションを読み込むことで復元できます。</p>
 <p>しかし、セッションを使う上でいくつか注意する必要があります。</p>
 <ul>
 <li>
 <p>なるべくプレーンの状態でセッションを復元する<br>
-大体復元するタイミングはVimを再起動した後だと思うので、それほど意識する必要は無いですが、
-例えばターミナルを開いた状態でセッションを復元しようとするとエラーが出ます。
-なので、基本的に起動後にセッションを読み込むようにします。</p>
+だいたい復元するタイミングはVimを再起動した後だと思うので、それほど意識する必要はないですが、
+たとえばターミナルを開いた状態でセッションを復元しようとするとエラーが出ます。
+ですので、基本的に起動後にセッションを読み込むようにします。</p>
 </li>
 <li>
 <p>セッションを保存する時のオプションに<code>globals</code>を外す<br>
@@ -3797,7 +3797,7 @@ Vimでは<code>OpenTermianl</code>コマンドを定義して、そのコマン�
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">sessionoptions</span><span class="p">=</span><span class="nx">blank</span><span class="p">,</span><span class="nx">buffers</span><span class="p">,</span><span class="nx">curdir</span><span class="p">,</span><span class="nx">folds</span><span class="p">,</span><span class="nx">help</span><span class="p">,</span><span class="nx">tabpages</span><span class="p">,</span><span class="nx">winsize</span><span class="p">,</span><span class="nx">terminal</span><span class="err">
 </span></code></pre></div><h2 id="タブページの移動">タブページの移動</h2>
 <p>Vimのタブをプロジェクトごとで分けて使うため、タブ移動＝プロジェクト移動にしています。
-デフォルト<code>gt</code>と<code>gT</code>でタブを切り替えられますが、個人的に使いづらいので、次の様にしています。</p>
+デフォルト<code>gt</code>と<code>gT</code>でタブを切り替えられますが、個人的に使いづらいので、次のようにしています。</p>
 <p>このキーマップはtmuxの設定と同じにしています。</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">s</span><span class="p">&gt;</span><span class="nx">n</span> <span class="nx">gt</span><span class="err">
 </span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">s</span><span class="p">&gt;</span><span class="nx">p</span> <span class="nx">gT</span><span class="err">
@@ -3806,7 +3806,7 @@ Vimでは<code>OpenTermianl</code>コマンドを定義して、そのコマン�
 </span></code></pre></div><h2 id="ghqとfzfvimとと組み合わせる">ghqとfzf.vimとと組み合わせる</h2>
 <h3 id="リポジトリを開く">リポジトリを開く</h3>
 <p><a href="https://asciinema.org/a/260717"><img src="https://asciinema.org/a/260717.svg" alt="asciicast"></a>:</p>
-<p>基本的にVimを開くときは何かしらプロジェクトに移動して作業する時なので、
+<p>基本的にVimを開くときは何かしらプロジェクトに移動して作業する時ですので、
 <a href="https://github.com/motemen/ghq">ghq</a>と<a href="https://github.com/junegunn/fzf.vim">fzf.vim</a>を組み合わせてプロジェクトに簡単に移動した後にターミナルを開く<code>Repo</code>コマンドを用意しました。</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">function</span><span class="p">!</span> <span class="nx">s</span>:<span class="nx">cd_repo</span><span class="p">(</span><span class="nx">shell</span><span class="p">,</span> <span class="nx">repo</span><span class="p">)</span> <span class="nx">abort</span><span class="err">
 </span><span class="err"></span>	<span class="nx">exe</span> <span class="s1">&#39;lcd&#39;</span> <span class="nx">trim</span><span class="p">(</span><span class="nx">system</span><span class="p">(</span><span class="s1">&#39;ghq root&#39;</span><span class="p">))</span> .. <span class="s1">&#39;/&#39;</span> .. <span class="nx">a</span>:<span class="nx">repo</span><span class="err">
@@ -3834,7 +3834,7 @@ Vimでは<code>OpenTermianl</code>コマンドを定義して、そのコマン�
 <p><a href="https://asciinema.org/a/260719"><img src="https://asciinema.org/a/260719.svg" alt="asciicast"></a></p>
 <p>ときに複数のプロジェクトを同時に開きたいことがあります。
 何度も<code>:Repo</code>を実行しても良いですが、面倒です。
-なので、<code>NewTab</code>コマンドというのを用意しました。</p>
+ですので、<code>NewTab</code>コマンドというのを用意しました。</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">function</span><span class="p">!</span> <span class="nx">s</span>:<span class="nx">open_tabs</span><span class="p">(</span><span class="nx">shell</span><span class="p">,</span> <span class="nx">repo</span><span class="p">)</span> <span class="nx">abort</span><span class="err">
 </span><span class="err"></span>	<span class="nx">exe</span> <span class="nx">printf</span><span class="p">(</span><span class="s1">&#39;tabnew | lcd %s/%s&#39;</span><span class="p">,</span> <span class="nx">trim</span><span class="p">(</span><span class="nx">system</span><span class="p">(</span><span class="s1">&#39;ghq root&#39;</span><span class="p">)),</span> <span class="nx">a</span>:<span class="nx">repo</span><span class="p">)</span><span class="err">
 </span><span class="err"></span>	<span class="nx">exe</span> <span class="nx">printf</span><span class="p">(</span><span class="s1">&#39;bo term ++rows=20 ++close %s&#39;</span><span class="p">,</span> <span class="nx">a</span>:<span class="nx">shell</span><span class="p">)</span><span class="err">
@@ -3843,34 +3843,34 @@ Vimでは<code>OpenTermianl</code>コマンドを定義して、そのコマン�
 </span><span class="err"></span><span class="k">endfunction</span><span class="err">
 </span><span class="err">
 </span><span class="err"></span><span class="nx">command</span><span class="p">!</span> <span class="nx">NewTab</span> <span class="nx">call</span> <span class="nx">s</span>:<span class="nx">repo</span><span class="p">(</span><span class="s1">&#39;-m&#39;</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="s1">&#39;s:open_tabs&#39;</span><span class="p">,</span> [&amp;<span class="nx">shell</span>]<span class="p">))</span><span class="err">
-</span></code></pre></div><p><code>fzf.vim</code>は<code>-m</code>オプション使うと複数の項目を選択することができるので、それを使用します。
+</span></code></pre></div><p><code>fzf.vim</code>は<code>-m</code>オプション使うと複数の項目を選択できるので、それを使用します。
 ここで1点注意ですが<code>fzf.vim</code>のcallbackでは<code>&amp;shell</code>が<code>sh</code>になってしまうので、呼び出し元の<code>shell</code>を渡す必要があります。</p>
 <h2 id="残作業">残作業</h2>
 <h3 id="タブのラベル">タブのラベル</h3>
-<p>タブのラベルを自由に決めれるようにしたいのです、ラベルの仕組みが思ったよりもややこしく途中で諦めました。
+<p>タブのラベルを自由に決めれるようにしたいのです、ラベルのしくみが思ったよりもややこしく途中で諦めました。
 ラベルを簡単に変えれれば一番良いですが、なくてもそこまで問題ないです。</p>
 <h3 id="画面最大化のトグル">画面最大化のトグル</h3>
 <p>tmuxでは<code>prefix+z</code>で画面の最大化のトグルができます。Vimでもそれをやろうと思えば実現はできると思いますが、まだ試せていないです。
 ターミナルがある状態で<code>&lt;C-w&gt;o</code>でターミナルが残るので、その問題が解決できればという感じです。</p>
 <h2 id="まとめ">まとめ</h2>
 <p>ターミナルとセッションの機能で、なんとかtmuxっぽいことはできました。
-今の所それほど困ってはいないのですが、やはりtmuxはすごいなと改めて思いました。</p>
-<p>ただ、Vimだけでもここまでできるこを知れたので大きいですね。
+今の所それほど困ってはいないのですが、やはりtmuxはすごいなとあらためて思いました。</p>
+<p>ただ、Vimだけでもここまできるこを知れたので大きいですね。
 興味ある方はぜひvimrcに追加して試してみてください。</p>
-]]></content></item><item><title>VimでBad Apple!!</title><link>https://skanehira.github.io/blog/posts/20190721-vim-bad-apple/</link><pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190721-vim-bad-apple/</guid><description>こんにちわ。 ゴリラ.vimを運営しているゴリラです。 最近Vimのプラグインを作るのにハマっています。先日もdocker.vimというVimか</description><content type="html"><![CDATA[<p>こんにちわ。
+]]></content></item><item><title>VimでBad Apple!!</title><link>https://skanehira.github.io/blog/posts/20190721-vim-bad-apple/</link><pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190721-vim-bad-apple/</guid><description>こんにちは。 ゴリラ.vimを運営しているゴリラです。 最近Vimのプラグインを作るのにハマっています。先日もdocker.vimというVimか</description><content type="html"><![CDATA[<p>こんにちは。
 <a href="https://gorillavim.connpass.com/">ゴリラ.vim</a>を運営している<a href="https://twitter.com/gorilla0513">ゴリラ</a>です。</p>
 <p>最近Vimのプラグインを作るのにハマっています。先日も<a href="https://qiita.com/gorilla0513/items/1c756fd3aba8e68b9575">docker.vim</a>というVimからdockerコンテナを操作するプラグインを作りました。
 良かった試してみてください。</p>
-<p>さて、本題ですがみなさんは<code>Bad Apple!!</code>をご存知でしょうか？
-多分ニコニコユーザならほぼ知っているのではないかと思います。
+<p>さて、本題ですがみなさんは<code>Bad Apple!!</code>をご存じでしょうか？
+多分ニコニコユーザーならほぼ知っているのではないかと思います。
 そうです。かの有名な動画です。</p>
 <p>その動画のAscii版があり、それならVimで再生できるのでは？と思い帰りの電車の中で作ってみました。</p>
 <p><a href="https://github.com/skanehira/badapple.vim"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/skanehira/badapple.vim.png" width="460px"></a></p>
 <h1 id="どんな感じ">どんな感じ？</h1>
 <p>こんな感じです。
-すこしちらつきますが、まぁ見れなくはないかなと言った感じです。</p>
+少しちらつきますが、まぁ見れなくはないかなと言った感じです。</p>
 <p><img src="https://github.com/skanehira/badapple.vim/raw/master/screenshots/screenshot.gif?raw=true" alt=""></p>
-<h1 id="仕組みは">仕組みは？</h1>
+<h1 id="しくみは">しくみは？</h1>
 <p>とっても簡単です。簡潔に言うとテキストファイルを読み込み、フレーム分のテキストを配列に格納して、あとはfor分で回して画面に描写します。</p>
 <p>もう少し細かく解説します。</p>
 <h2 id="asciiテキストファイルの読み込み">Asciiテキストファイルの読み込み</h2>
@@ -3939,7 +3939,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$SPLIT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 ```
 </details>
-<p>見て分かる通り、<code>SPLIT</code>で区切っています。なので、<code>SPLIT</code>までを1フレームとしてます。
+<p>見て分かる通り、<code>SPLIT</code>で区切っています。ですので、<code>SPLIT</code>までを1フレームとしてます。
 処理は次になります。</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; read file to create frames</span><span class="err">
 </span><span class="err"></span><span class="k">function</span><span class="p">!</span> <span class="nx">s</span>:<span class="nx">read_file</span><span class="p">()</span> <span class="nx">abort</span><span class="err">
@@ -3985,9 +3985,9 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 </span></code></pre></div><h2 id="まとめ">まとめ</h2>
 <p>動画をAsciiテキストに変換して、フレームを定義すれば、どんなものでも同じようなロジックでVim再生できます。
 興味ある方はぜひチャレンジしてみてください。</p>
-]]></content></item><item><title>Vimのセッション管理プラグイン</title><link>https://skanehira.github.io/blog/posts/20190620-vim-session-plugin/</link><pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190620-vim-session-plugin/</guid><description>こんにちは。 ゴリラ.vimを運営しているゴリラです。 Vimを始めたての頃にこちらの記事でセッション管理プラグインを作りましたが、最近Vimに</description><content type="html"><![CDATA[<p>こんにちは。
+]]></content></item><item><title>Vimのセッション管理プラグイン</title><link>https://skanehira.github.io/blog/posts/20190620-vim-session-plugin/</link><pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190620-vim-session-plugin/</guid><description>こんにちは。 ゴリラ.vimを運営しているゴリラです。 Vimを始めたてのころにこちらの記事でセッション管理プラグインを作りましたが、最近Vim</description><content type="html"><![CDATA[<p>こんにちは。
 <a href="https://gorillavim.connpass.com/">ゴリラ.vim</a>を運営しているゴリラです。</p>
-<p>Vimを始めたての頃に<a href="https://gorilla.netlify.com/articles/20181215-vim-session.html">こちらの記事</a>で<a href="https://github.com/skanehira/vsession">セッション管理プラグイン</a>を作りましたが、最近Vimにポップアップウィンドウが入ったのでその機能を使ってアップデートしてみました。</p>
+<p>Vimを始めたてのころに<a href="https://gorilla.netlify.com/articles/20181215-vim-session.html">こちらの記事</a>で<a href="https://github.com/skanehira/vsession">セッション管理プラグイン</a>を作りましたが、最近Vimにポップアップウィンドウが入ったのでその機能を使ってアップデートしてみました。</p>
 <h2 id="セッションとは">セッションとは</h2>
 <p>Vimの日本語マニュアルより引用</p>
 <blockquote>
@@ -4009,16 +4009,16 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 </ul>
 <p>これだけです、とても簡単です。</p>
 <h2 id="セッション管理プラグイン">セッション管理プラグイン</h2>
-<p>vsessionの使い方はREADMEを読んで頂ければと思います。
+<p>vsessionの使い方はREADMEを読んでいただければと思います。
 今回は保存したセッションを読み込むときにポップアップウィンドウで選べるようにしました。</p>
 <p><img src="https://github.com/skanehira/vsession/blob/master/screenshots/vsession.gif?raw=true" alt=""></p>
-<p>仕組みとしては簡単で、vsessionはデフォルト<code>~/.vim/sessions</code>配下にセッションファイルを保存する様になっています。
-ディレクトリ配下のファイル一覧を<code>readdir</code> 組み込み関数で取得してそれをポップアップウィンドウに渡します。</p>
+<p>しくみとしては簡単で、vsessionはデフォルト<code>~/.vim/sessions</code>配下にセッションファイルを保存する様になっています。
+ディレクトリ配下のファイル一覧を<code>readdir</code> 組込み数で取得してそれをポップアップウィンドウに渡します。</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; [&#39;blog&#39;, &#39;docker.vim&#39;]</span><span class="err">
 </span><span class="err"></span><span class="k">let</span> <span class="nx">l</span>:<span class="nx">sessions</span> <span class="p">=</span> <span class="nx">readdir</span><span class="p">(</span><span class="nx">g</span>:<span class="nx">session_path</span><span class="p">)</span><span class="err">
 </span></code></pre></div><p>ポップアップウィンドウを作成に関しては簡易ではあるが<a href="https://gorilla.netlify.com/articles/20190605-vim-popup-window.html">こちらの記事</a>を書いたので軽く読んでおくと理解しやすいかもしれないです。
 <code>filter</code>オプションに<code>popup_filter_menu</code>コールバックを指定するとメニュー選択画面を作成できます。では選択したアイテムをどう特定するかというと<code>callback</code>オプションを使います。
-こちらはウィンドウが閉じられたときに呼ばれるコールバックを指定します。<code>popup_filter_menu</code>を使用した場合、コールバック関数の第2引数に選択したメニューのインデックス(1番目か2番目か&hellip;)が渡ってくるのでそれを利用します。</p>
+こちらはウィンドウが閉じられたときに呼ばれるコールバックを指定します。<code>popup_filter_menu</code>を使用した場合、コールバック関数の第2引数に選択したメニューのインデックス（1番目か2番目か。..）が渡ってくるのでそれを利用します。</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">let</span> <span class="nx">s</span>:<span class="nx">result</span> <span class="p">=</span> [<span class="s2">&#34;banana&#34;</span><span class="p">,</span> <span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="s2">&#34;gorilla&#34;</span>]<span class="err">
 </span><span class="err"></span><span class="c">
 </span><span class="c">&#34; popup_filter_menuではxで画面を閉じ、idxが-1で渡ってくるので</span><span class="err">
@@ -4050,7 +4050,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 </li>
 </ol>
 </section>
-]]></content></item><item><title>Vimにポップアップウィンドウが入りました</title><link>https://skanehira.github.io/blog/posts/20190605-vim-popup-window/</link><pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190605-vim-popup-window/</guid><description>こんにちわ。 ゴリラ.vimを運営しているゴリラです。 Vim 8.1.1391でポップアップウィンドウという機能が入りました。 これは名前の通り、ポッ</description><content type="html"><![CDATA[<p>こんにちわ。
+]]></content></item><item><title>Vimにポップアップウィンドウが入りました</title><link>https://skanehira.github.io/blog/posts/20190605-vim-popup-window/</link><pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190605-vim-popup-window/</guid><description>こんにちは。 ゴリラ.vimを運営しているゴリラです。 Vim 8.1.1391でポップアップウィンドウという機能が入りました。 これは名前の通り、ポッ</description><content type="html"><![CDATA[<p>こんにちは。
 <a href="https://gorillavim.connpass.com/">ゴリラ.vim</a>を運営している<a href="https://twitter.com/gorilla0513">ゴリラ</a>です。</p>
 <p>Vim 8.1.1391でポップアップウィンドウという機能が入りました。
 これは名前の通り、ポップアップウィンドウを出すという機能です。</p>
@@ -4070,7 +4070,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 第二引数はポップアップウィンドウのオプションになります。</p>
 <p>ポップアップウィンドウを閉じるには<code>popup_clear()</code>か<code>popup_close(winid)</code>で閉じれます。</p>
 <h2 id="オプション">オプション</h2>
-<p>詳しくはヘルプを引いて頂いたほうがわかりやすいので、ここでは軽く紹介します。</p>
+<p>詳しくはヘルプを引いていただいたほうがわかりやすいので、ここでは軽く紹介します。</p>
 <table>
 <thead>
 <tr>
@@ -4081,7 +4081,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">line</td>
+<td style="text-align:left">LINE</td>
 <td style="text-align:left">1, &ldquo;corsor+1&rdquo;</td>
 <td style="text-align:left">ポップアップの位置（横）,&ldquo;corsor+1&quot;だと現在のカーソルから1セル下になります</td>
 </tr>
@@ -4102,7 +4102,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 </tr>
 <tr>
 <td style="text-align:left">filter</td>
-<td style="text-align:left">function(&lsquo;filter_func&rsquo;)</td>
+<td style="text-align:left">function（&lsquo;filter_func&rsquo;）</td>
 <td style="text-align:left">ポップアップウィンドウが表示されている間にキーを取得するためのコールバック、特定キーが押されたら閉じるといった処理をしたいときに指定します</td>
 </tr>
 </tbody>
@@ -4111,11 +4111,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 <p>ポップアップウィンドウは現在も絶賛実装中でまだまだ良くなっていきます。
 今後が楽しみですね。</p>
 <p>ちなみに<a href="https://github.com/thinca/vim-quickrun">vim-quickrun</a>もポップアップウィンドウ対応していたので興味ある方はアップデートして試してみてください。</p>
-]]></content></item><item><title>お勧めVimヘルプ</title><link>https://skanehira.github.io/blog/posts/20190520-vim-quick-manual/</link><pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190520-vim-quick-manual/</guid><description>こんにちわ。 ゴリラ.vimを運営しているゴリラです。 みなさんVimでヘルプ引いていますか？ Vimは機能が多いのでその分ヘルプの量も多く、どこ</description><content type="html"><![CDATA[<p>こんにちわ。
+]]></content></item><item><title>お勧めVimヘルプ</title><link>https://skanehira.github.io/blog/posts/20190520-vim-quick-manual/</link><pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190520-vim-quick-manual/</guid><description>こんにちは。 ゴリラ.vimを運営しているゴリラです。 みなさんVimでヘルプ引いていますか？ Vimは機能が多いのでそのぶんヘルプの量も多く、ど</description><content type="html"><![CDATA[<p>こんにちは。
 <a href="https://gorillavim.connpass.com/">ゴリラ.vim</a>を運営しているゴリラです。</p>
 <p>みなさんVimでヘルプ引いていますか？
-Vimは機能が多いのでその分ヘルプの量も多く、どこに欲しい情報があるのかわからないことが多いです。</p>
-<p>本記事は<a href="https://vim-jp.org/">vim-jp</a>のメンバーによるおすすめヘルプについてまとめた内容となっています。
+Vimは機能が多いのでそのぶんヘルプの量も多く、どこに欲しい情報があるのかわからないことが多いです。</p>
+<p>本記事は<a href="https://vim-jp.org/">vim-jp</a>のメンバーによるお勧めヘルプについてまとめた内容となっています。
 Vimについて詳しく知りたい方はぜひお勧めのヘルプを読んでみてください。</p>
 <p>ぼくもまだ読んでいないのがたくさんあるので、じっくり読んでいきます。</p>
 <h2 id="お勧めvimヘルプ">お勧めVimヘルプ</h2>
@@ -4149,7 +4149,7 @@ Vimについて詳しく知りたい方はぜひお勧めのヘルプを読ん�
 </tr>
 <tr>
 <td>function-list</td>
-<td>組み込み関数の機能別一覧</td>
+<td>組込み数の機能別一覧</td>
 </tr>
 <tr>
 <td>option-list</td>
@@ -4169,7 +4169,7 @@ Vimについて詳しく知りたい方はぜひお勧めのヘルプを読ん�
 </tr>
 </tbody>
 </table>
-]]></content></item><item><title>翻訳プラグイン作りました</title><link>https://skanehira.github.io/blog/posts/20190512-vim-translate/</link><pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190512-vim-translate/</guid><description>こんにちわ。 ゴリラ.vimを運営しているゴリラです。 みなさんはプラグイン使っていますか？ ぼくはプラグイン使っていますが、全然作ったことがない</description><content type="html"><![CDATA[<p>こんにちわ。
+]]></content></item><item><title>翻訳プラグイン作りました</title><link>https://skanehira.github.io/blog/posts/20190512-vim-translate/</link><pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190512-vim-translate/</guid><description>こんにちは。 ゴリラ.vimを運営しているゴリラです。 みなさんはプラグイン使っていますか？ ぼくはプラグイン使っていますが、全然作ったことがない</description><content type="html"><![CDATA[<p>こんにちは。
 <a href="https://gorillavim.connpass.com/">ゴリラ.vim</a>を運営しているゴリラです。</p>
 <p>みなさんはプラグイン使っていますか？
 ぼくはプラグイン使っていますが、全然作ったことがないので初めて実用的なものを作りました。</p>
@@ -4177,7 +4177,7 @@ Vimについて詳しく知りたい方はぜひお勧めのヘルプを読ん�
 英語力がないため都度ブラウザを開いてGoogle翻訳を使ってはVimに戻る日々でした。</p>
 <p>画面の切り替えは時間ロスなのでVim上で翻訳できるプラグインを作りました。</p>
 <p>このプラグインがあればVimは翻訳エディタへと生まれ変わります。
-どうぞお試して下さい。</p>
+どうぞお試してください。</p>
 <p><a href="https://github.com/skanehira/translate.vim"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/skanehira/translate.vim.png" width="460px"></a></p>
 <h2 id="機能">機能</h2>
 <p>状況に応じて、次のことができます。</p>
@@ -4197,8 +4197,8 @@ Vimについて詳しく知りたい方はぜひお勧めのヘルプを読ん�
 </span></code></pre></div><h3 id="動的に翻訳する">動的に翻訳する</h3>
 <p><img src="https://i.imgur.com/ezLCrSG.gif" alt=""></p>
 <p><code>:AutoTranslateModeToggle</code>で動的に翻訳するモードに切り替えます。
-再度実行するとモードがOFFにになります。
-自動翻訳モードになると、バッファ上の文字が全て翻訳されます。</p>
+再度実行するとモードがOFFになります。
+自動翻訳モードになると、バッファ上の文字がすべて翻訳されます。</p>
 <p>翻訳の契機は<code>&lt;CR&gt;</code>になっていて、改行するとその行を翻訳します。</p>
 <p><code>:AutoTranslateModeToggle!</code>では、翻訳元と翻訳先の言語が入れ替わった状態でモードを切り替ります。</p>
 <p>ぼくは自動翻訳READMEを書く時に日本語が変になっていないかを確認するときに使います。
@@ -4209,11 +4209,11 @@ Vimについて詳しく知りたい方はぜひお勧めのヘルプを読ん�
 こちらはソースのコメントを読む時などに便利です。</p>
 <p>ちなみに、<code>:Translate!</code>で翻訳元と翻訳先の言語がに入れ替わります。
 控えめに言って、便利です。</p>
-<h2 id="仕組み">仕組み</h2>
+<h2 id="しくみ">しくみ</h2>
 <h3 id="翻訳api">翻訳API</h3>
 <p>一番大事な翻訳処理ですが、
 GAS<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>の<a href="https://developers.google.com/apps-script/reference/language/language-app">LanguageApp</a>クラスを使用しています。</p>
-<p>GASではプロジェクトをウェブアプリとして公開することができます。
+<p>GASではプロジェクトをWebアプリケーションとして公開できます。
 HTTPリクエストは<code>doPost(e)</code>、<code>doGet(e)</code>を用意することで受け取りことが可能です。</p>
 <p>HTTPリクエストJSONを取得し、それをもとにLanguageAppクラスで翻訳してその結果を返却します。
 こうすることで簡易の翻訳APIを作ることができます。</p>
@@ -4236,13 +4236,13 @@ HTTPリクエストは<code>doPost(e)</code>、<code>doGet(e)</code>を用意す
 </code></pre></div><p>ちなみに、プラグインが使用しているAPIのEndpointは次になります。</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">https://script.google.com/macros/s/AKfycbywwDmlmQrNPYoxL90NCZYjoEzuzRcnRuUmFCPzEqG7VdWBAhU/exec
 </code></pre></div><p>次のようにcurlコマンドでJSONをPOSTすれば翻訳結果が返ってきます。
-<a href="https://github.com/skanehira/gjo">gjo</a>はゴリラ製OSSの一つで<code>key=value</code>形式で引数を渡すことで簡単にJSON文字列を生成できます。</p>
+<a href="https://github.com/skanehira/gjo">gjo</a>はゴリラ製OSSのひとつで<code>key=value</code>形式で引数を渡すことで簡単にJSON文字列を生成できます。</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ curl -L https://script.google.com/macros/s/AKfycbywwDmlmQrNPYoxL90NCZYjoEzuzRcnRuUmFCPzEqG7VdWBAhU/exec -d <span class="k">$(</span>gjo <span class="nv">text</span><span class="o">=</span><span class="s2">&#34;my name is gorilla&#34;</span> <span class="nv">source</span><span class="o">=</span>en <span class="nv">target</span><span class="o">=</span>ja<span class="k">)</span>
 私の名前はゴリラです⏎
 </code></pre></div><h3 id="翻訳cli">翻訳CLI</h3>
 <p>翻訳APIがあればそれに本文と翻訳する言語のオプションを渡すだけです。
 もともとVim scriptのみでHTTP通信を行い、翻訳するつもりでしましたが、
-Goの勉強もしたいためCLIを作りそれをVimで呼び出す仕組みにしました。</p>
+Goの勉強もしたいためCLIを作りそれをVimで呼び出すしくみにしました。</p>
 <p>CLIに関してはGoの標準パッケージ<code>net/http</code>を使用して、
 引数で渡したオプションと本文をJSONに変換し翻訳APIをコールしています。</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">post</span> <span class="kd">struct</span> <span class="p">{</span>
@@ -4297,12 +4297,12 @@ Goの勉強もしたいためCLIを作りそれをVimで呼び出す仕組みに
 </tr>
 </tbody>
 </table>
-<p>基本的に読み込みに時間がかかるスクリプトは<code>autoload</code>に置きますが、今回はとくに重たい処理をするわけではないので<code>plugin</code>ディレクトリのみで物足ります。</p>
+<p>基本的に読み込みに時間がかかるスクリプトは<code>autoload</code>に置きますが、今回は特に重たい処理をするわけではないので<code>plugin</code>ディレクトリのみで物足ります。</p>
 <p>プラグインのメイン処理についてざっくり紹介していきます。</p>
 <h4 id="cli実行コマンド生成">CLI実行コマンド生成</h4>
 <p>まずCLIの実行コマンドを生成します。
 <code>ban</code>は<code>!</code>のことを指していて<code>!</code>のときは翻訳元・先の設定を逆転させています。</p>
-<p><code>let source_ = get(g:, &quot;translate_source&quot;, &quot;en&quot;)</code>ではグローバルスコープの設定値がなければ、デフォルト値をを取得するようにしています。
+<p><code>let source_ = get(g:, &quot;translate_source&quot;, &quot;en&quot;)</code>ではグローバルスコープの設定値がなければ、デフォルト値を取得するようにしています。
 <code>target</code>の処理も同様になります。</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; create gtran command with text and bang</span><span class="err">
 </span><span class="err"></span><span class="k">function</span><span class="p">!</span> <span class="nx">s</span>:<span class="nx">create_cmd</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="nx">bang</span><span class="p">)</span> <span class="nx">abort</span><span class="err">
@@ -4323,7 +4323,7 @@ Goの勉強もしたいためCLIを作りそれをVimで呼び出す仕組みに
 <p><code>job_start</code>で外部コマンドを非同期で実行します。
 Vimでは外部コマンドを実行する方法として、<code>system()</code>と<code>systemlist()</code>がありますが、
 これらは実行が完了するまでVimを操作できないので、翻訳を待ちながらその間に作業をしたいため<code>job_start()</code>にしました。</p>
-<p><code>job_start</code>ではオプションを指定することができます。</p>
+<p><code>job_start</code>ではオプションを指定できます。</p>
 <p><code>callback</code>で指定したcallback関数ではコマンド実行結果の出力を取得します。
 callback関数では出力の行数分呼ばれるので、<code>s:result</code>変数に結果を格納していきます。</p>
 <p><code>exit_cb</code>で指定したcallback関数ではコマンド実行完了後に呼び出されるので、
@@ -4366,7 +4366,7 @@ callback関数では出力の行数分呼ばれるので、<code>s:result</code>
 </span><span class="err"></span>    <span class="nx">call</span> <span class="nx">s</span>:<span class="nx">focus_window</span><span class="p">(</span><span class="nx">bufnr</span><span class="p">(</span><span class="nx">s</span>:<span class="nx">currentw</span><span class="p">))</span><span class="err">
 </span><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;&#34;</span><span class="err">
 </span><span class="err"></span><span class="k">endfunction</span><span class="err">
-</span></code></pre></div><p>ざっくりですがプラグインが動く仕組みについて紹介しました。
+</span></code></pre></div><p>ざっくりですがプラグインが動くしくみについて紹介しました。
 もっと知りたい方はぜひソースを読んでみてください。
 大したことしていないので読みやすいと思います。</p>
 <h3 id="既知の問題点">既知の問題点</h3>
@@ -4391,11 +4391,11 @@ leximaが入っていると自動翻訳が動かなくなります。</p>
 </li>
 </ol>
 </section>
-]]></content></item><item><title>Vimヘルプを日本語化</title><link>https://skanehira.github.io/blog/posts/20190427-vim-help-jp/</link><pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190427-vim-help-jp/</guid><description>こんにちわ。 ゴリラ.vimを運営しているゴリラです。 みなさん普段vimのヘルプを使っていますか？ vimでは:h text-objectsという</description><content type="html"><![CDATA[<p>こんにちわ。
+]]></content></item><item><title>Vimヘルプを日本語化</title><link>https://skanehira.github.io/blog/posts/20190427-vim-help-jp/</link><pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190427-vim-help-jp/</guid><description>こんにちは。 ゴリラ.vimを運営しているゴリラです。 みなさん普段vimのヘルプを使っていますか？ vimでは:h text-objectsという</description><content type="html"><![CDATA[<p>こんにちは。
 <a href="https://gorillavim.connpass.com/">ゴリラ.vim</a>を運営しているゴリラです。</p>
 <p>みなさん普段vimのヘルプを使っていますか？
 vimでは<code>:h text-objects</code>というようにヘルプコマンドを使用することですばやくヘルプを引くことができます。</p>
-<p>本記事ではそのヘルプを日本語にする方法をご紹介します。</p>
+<p>本記事ではそのヘルプを日本語にする方法を紹介します。</p>
 <p>なお、ぼくの環境は次になっています。</p>
 <table>
 <thead>
@@ -4427,29 +4427,29 @@ vimでは<code>:h text-objects</code>というようにヘルプコマンドを�
 とても簡単なのでぜひみなさんも日本語化してヘルプを引いて見てください。
 想像以上に快適でした。</p>
 <p>では、よいvimライフを〜</p>
-]]></content></item><item><title>Vimモード入門</title><link>https://skanehira.github.io/blog/posts/20190427-vim-mode/</link><pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190427-vim-mode/</guid><description>こんにちわ。 ゴリラ.vimを運営しているゴリラです。 vimを初めて半年過ぎましたが、未だにvimの底がみえていないのでvimは沼ではなくブラ</description><content type="html"><![CDATA[<p>こんにちわ。
+]]></content></item><item><title>Vimモード入門</title><link>https://skanehira.github.io/blog/posts/20190427-vim-mode/</link><pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190427-vim-mode/</guid><description>こんにちは。 ゴリラ.vimを運営しているゴリラです。 vimを初めて半年過ぎましたが、いまだにvimの底が見えていないのでvimは沼ではなくブ</description><content type="html"><![CDATA[<p>こんにちは。
 <a href="https://gorillavim.connpass.com/">ゴリラ.vim</a>を運営しているゴリラです。</p>
-<p>vimを初めて半年過ぎましたが、未だにvimの底がみえていないのでvimは沼ではなくブラックホールであることに気づきました。
+<p>vimを初めて半年過ぎましたが、いまだにvimの底が見えていないのでvimは沼ではなくブラックホールであることに気付きました。
 道のりは遠いですが、楽しみながら旅していこうと思います。</p>
 <p>さて、vimを初めて触る方は最初にモードがあることに戸惑う方が多くいるかと思います。
 本記事は次のことについて触れていきます。</p>
 <ul>
-<li>モードによる恩恵はなにか</li>
+<li>モードによる恩恵は何か</li>
 <li>モード一覧</li>
 <li>モードごとにできること</li>
 </ul>
-<p>この記事を読み終わる頃にはきっとvimはなぜモードがあるのかを理解できると思います。
+<p>この記事を読み終わるころにはきっとvimはなぜモードがあるのかを理解できると思います。
 理解できなかったら、ぼくが面と向かって3時間語りますのでご連絡ください。</p>
-<h2 id="モードによる恩恵はなにか">モードによる恩恵はなにか</h2>
+<h2 id="モードによる恩恵は何か">モードによる恩恵は何か</h2>
 <p>テキストエディタはモードレスが一般的かと思います。
 ではvimはなぜモードがあるのでしょうか？</p>
 <p>それは「操作性・機能性」の幅が広がるからとぼくは考えています。</p>
 <p>Windowsのメモ帳では<code>A~Z0~9</code>や<code>/@</code>といった記号や文字はそのまま入力でき、<code>Ctrl+C</code>で文字列コピー、<code>Ctrl+S</code>でファイル保存を行います。</p>
 <p>対してvimでは入力モードでは文字列の入力、ノーマルモードでは<code>h,j,k,l</code>でカーソル移動、<code>y</code>で文字列ヤンク<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>、<code>dw</code>で単語の削除を行います。
-モードがあることより同じキーが全く異なる動きをします。</p>
+モードがあることより同じキーがまったく異なる動きをします。</p>
 <p>そう、これがモードがもたらす恩恵です。</p>
 <h2 id="モード一覧">モード一覧</h2>
-<p>vimでは以下のモードがあり、それぞれのモードでできることは大まか次の表になります。</p>
+<p>vimでは以下のモードがあり、それぞれのモードできることは大まか次の表になります。</p>
 <table>
 <thead>
 <tr>
@@ -4477,7 +4477,7 @@ vimでは<code>:h text-objects</code>というようにヘルプコマンドを�
 </tbody>
 </table>
 <p>他にオペレーター待機モード、端末ジョブモード、選択モードがありますが、
-こちらに関しては別の機会にご紹介します。</p>
+こちらに関しては別の機会に紹介します。</p>
 <h2 id="モードの切り替え方">モードの切り替え方</h2>
 <p>vimでは基本的にモードを切り替えながら編集します。
 次がモードの移行方法です。</p>
@@ -4524,7 +4524,7 @@ vimでは<code>:h text-objects</code>というようにヘルプコマンドを�
 </table>
 <p>モード移行キーがいくつかありますが、違いについては<a href="#%E3%83%8E%E3%83%BC%E3%83%9E%E3%83%AB%E3%83%A2%E3%83%BC%E3%83%89">ノーマルモード</a>で説明します。</p>
 <h2 id="モードごとにできること">モードごとにできること</h2>
-<p>それぞれのモードでできることを一部ピックアップしてご紹介します。</p>
+<p>それぞれのモードできることを一部ピックアップして紹介します。</p>
 <h3 id="ノーマルモード">ノーマルモード</h3>
 <table>
 <thead>
@@ -4661,7 +4661,7 @@ vimでは<code>:h text-objects</code>というようにヘルプコマンドを�
 </table>
 <p>ノーマルモードでは表通りの操作が可能ですが、その中で<code>y</code>、<code>d</code>、<code>c</code>はオペレーターコマンド、<code>h</code>、<code>j</code>、<code>k</code>、<code>l</code>、<code>w</code>、<code>W</code>、<code>b</code>、<code>B</code>はモーションコマンドと呼ばれています。</p>
 <p>モーションコマンドは範囲を指すため、オペレーターコマンドの後にモーションコマンドを続けて入力することでオペレーターの操作がその範囲に適用されます。</p>
-<p>つまり、<code>dw</code>で単語を削除、<code>cw</code>で単語を削除して入力モードに移行る事ができます。</p>
+<p>つまり、<code>dw</code>で単語を削除、<code>cw</code>で単語を削除して入力モードに移行ることができます。</p>
 <p>範囲を示すコマンドはモーション以外にテキストオブジェクトがあります。
 一般的によく使うと思われるテキストオブジェクトは次の表になります。</p>
 <table>
@@ -4708,10 +4708,10 @@ vimでは<code>:h text-objects</code>というようにヘルプコマンドを�
 </table>
 <p>表以外のテキストオブジェクトは<a href="https://vim-jp.org/vimdoc-ja/motion.html#text-objects">こちら</a>を参照してください。</p>
 <p>この通り、vimではテキストオブジェクト・モーション・オペレーターを駆使することでテキストの高速編集を実現しています。
-ここから楽しくなるので、初学者の方はまずこれらに慣れることをおすすめします。</p>
+ここから楽しくなるので、初学者の方はまずこれらに慣れることをお勧めします。</p>
 <h3 id="入力モード">入力モード</h3>
-<p>一部をご紹介します。
-他に何ができるか気になる方は<a href="https://gorilla.netlify.com/articles/20190123-vim-insert.html">Vimのインサートモードでできること</a>をぜひ読んでみてください。
+<p>一部を紹介します。
+ほかに何ができるか気になる方は<a href="https://gorilla.netlify.com/articles/20190123-vim-insert.html">Vimのインサートモードでできること</a>をぜひ読んでみてください。
 gif付きでわかりやすく説明しています。</p>
 <table>
 <thead>
@@ -4755,7 +4755,7 @@ gif付きでわかりやすく説明しています。</p>
 </tr>
 <tr>
 <td><code>Ctrl-h</code></td>
-<td>1文字削除</td>
+<td>一文字削除</td>
 </tr>
 <tr>
 <td><code>Ctrl-r</code> <code>{0-9a-z&quot;%#*:=}</code></td>
@@ -4802,7 +4802,7 @@ gif付きでわかりやすく説明しています。</p>
 </tr>
 <tr>
 <td><code>I</code></td>
-<td>矩形選択の時、選択範囲のすべての行先頭にテキストを入力</td>
+<td>矩形選択のとき、選択範囲のすべての行先頭にテキストを入力</td>
 </tr>
 <tr>
 <td><code>J</code></td>
@@ -4819,10 +4819,10 @@ gif付きでわかりやすく説明しています。</p>
 <p>こちらの<a href="https://gorilla.netlify.com/articles/20190422-vim-cmdline.html">Vimのコマンドラインモードでできること</a>にまとめてありますので、ぜひ読んでみてください。</p>
 <h2 id="最後に">最後に</h2>
 <p>みなさん、なぜvimにはモードがあるのか理解できましたか？</p>
-<p>本記事で紹介した内容はほんの一部をでしかなくて、他にもできることがたくさんあります。
+<p>本記事で紹介した内容はほんの一部をでしかなくて、ほかにもできることがたくさんあります。
 ぜひ日本語マニュアルや他の方の記事を読んでみてください。</p>
-<p>また、ぼくが運営しているゴリラ.vimではvimmerがたくさん集まっています。
-一人ではなかなか知ることのできない知見がゴリラ.vimにあります。</p>
+<p>また、ぼくが運営しているゴリラ。vimではvimmerがたくさん集まっています。
+一人ではなかなか知ることのできない知見がゴリラ。vimにあります。</p>
 <p>では、よいvimライフを〜</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
@@ -4841,7 +4841,7 @@ gif付きでわかりやすく説明しています。</p>
 </li>
 </ol>
 </section>
-]]></content></item><item><title>Vimのコマンドラインモードでできること</title><link>https://skanehira.github.io/blog/posts/20190422-vim-cmdline/</link><pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190422-vim-cmdline/</guid><description>こんにちわ ゴリラ.vimを運営しているゴリラです。 みなさんvimでコマンドをよく使っていますか？ ぼくは基本的にそんなにコマンドを使わないので</description><content type="html"><![CDATA[<p>こんにちわ</p>
+]]></content></item><item><title>Vimのコマンドラインモードでできること</title><link>https://skanehira.github.io/blog/posts/20190422-vim-cmdline/</link><pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190422-vim-cmdline/</guid><description>こんにちは ゴリラ.vimを運営しているゴリラです。 みなさんvimでコマンドをよく使っていますか？ ぼくは基本的にそんなにコマンドを使わないので</description><content type="html"><![CDATA[<p>こんにちは</p>
 <p><a href="https://gorillavim.connpass.com/">ゴリラ.vim</a>を運営しているゴリラです。</p>
 <p>みなさんvimでコマンドをよく使っていますか？
 ぼくは基本的にそんなにコマンドを使わないので、どんなことができるのかを調べてみました。
@@ -4928,7 +4928,7 @@ gif付きでわかりやすく説明しています。</p>
 </tr>
 <tr>
 <td style="text-align:left"><kbd>ctrl</kbd> + <kbd>w</kbd></td>
-<td style="text-align:left">１単語削除</td>
+<td style="text-align:left">1単語削除</td>
 </tr>
 <tr>
 <td style="text-align:left"><kbd>ctrl</kbd> + <kbd>u</kbd></td>
@@ -4951,7 +4951,7 @@ gif付きでわかりやすく説明しています。</p>
 <td style="text-align:left">コマンドラインウィンドウを開く</td>
 </tr>
 <tr>
-<td style="text-align:left"><kbd>ctrl</kbd> + <kbd>r</kbd> + レジスタ(0-9a-z&quot;%#:-=.)</td>
+<td style="text-align:left"><kbd>ctrl</kbd> + <kbd>r</kbd> + レジスタ（0-9a-z&quot;%#:-=.）</td>
 <td style="text-align:left">レジスタの内容を挿入する</td>
 </tr>
 </tbody>
@@ -4965,8 +4965,8 @@ gif付きでわかりやすく説明しています。</p>
 モードが適用され、<kbd>i</kbd>で入力モードに切り替えて編集でき、<kbd>ctrl</kbd> + <kbd>c</kbd>もしくは<kbd>esc</kbd>で入力モードを抜けることができます。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/8acd5615-93e2-6df1-7fa4-954ab9a57de7.gif" alt="cmdwindow.gif"></p>
 <h2 id="外部コマンド実行">外部コマンド実行</h2>
-<p>よく知られていることですが、コマンドラインモードでは<code>!</code>を先頭につけることで、外部コマンド（lsコマンドなど）を実行することができます。
-ちなみに、<code>r!ls</code>でコマンドの実行結果ををバッファに書き込むことができます。</p>
+<p>よく知られていることですが、コマンドラインモードでは<code>!</code>を先頭につけることで、外部コマンド（lsコマンドなど）を実行できます。
+ちなみに、<code>r!ls</code>でコマンドの実行結果をバッファに書き込むことができます。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/781d70c9-78a2-4d47-84fd-4ec2404bcb7e.gif" alt="ls.gif"></p>
 <p>また、<code>w !xargs echo</code>でバッファを標準入力として外部コマンドにわたすことができます。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/932812e5-d56c-c03b-c27c-8ff5700ef6ff.gif" alt="wecho.gif"></p>
@@ -4996,10 +4996,10 @@ gif付きでわかりやすく説明しています。</p>
 </tbody>
 </table>
 <p>つまり、ファイル内のすべての行に出現する{pattern}を{string}に置換するという意味になります。
-<code>g</code>はフラグと呼ばれていて、他にもいろんなフラグがあるようです。</p>
+<code>g</code>はフラグと呼ばれていて、ほかにもいろんなフラグがあるようです。</p>
 <h2 id="範囲">範囲</h2>
-<p>置換の時に使用する<code>%</code>は範囲指定と先ほど説明しましたが、
-他にも範囲指定する方法があります。</p>
+<p>置換のときに使用する<code>%</code>は範囲指定と先ほど説明しましたが、
+ほかにも範囲指定する方法があります。</p>
 <table>
 <thead>
 <tr>
@@ -5026,12 +5026,12 @@ gif付きでわかりやすく説明しています。</p>
 </tr>
 <tr>
 <td style="text-align:center">&lsquo;&lt;,'&gt;&rsquo;</td>
-<td style="text-align:center">選択モード(visual)で選択した範囲</td>
+<td style="text-align:center">選択モード（visual）で選択した範囲</td>
 </tr>
 </tbody>
 </table>
-<p>このように、範囲と置換を組み合わせることで、任意の範囲内の文字列を置換することができます。
-例えば<code>'&lt;,'&gt;s/world/gorilla/g</code>は選択した範囲内にある<code>world</code>を<code>gorilla</code>に置換できます。</p>
+<p>このように、範囲と置換を組み合わせることで、任意の範囲内の文字列を置換できます。
+たとえば<code>'&lt;,'&gt;s/world/gorilla/g</code>は選択した範囲内にある<code>world</code>を<code>gorilla</code>に置換できます。</p>
 <p>もちろん置換以外もコマンドも実行できます。</p>
 <h2 id="編集">編集</h2>
 <p>コマンドラインモードでは置換以外にヤンク・コピー・削除・ペーストもできます。</p>
@@ -5061,7 +5061,7 @@ gif付きでわかりやすく説明しています。</p>
 </tr>
 </tbody>
 </table>
-<p>コマンドと先程紹介した範囲指定を組み合わせることで次の様にコマンドラインモードでも任意の範囲を編集するできます。</p>
+<p>コマンドとさきほど紹介した範囲指定を組み合わせることで次のようにコマンドラインモードでも任意の範囲を編集するできます。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/5cbea8e6-71b9-32ae-840f-513c4387970c.gif" alt="operate.gif"></p>
 <h2 id="ノーマルモードのコマンド実行">ノーマルモードのコマンド実行</h2>
 <p>コマンドラインモードでノーマルモードのコマンドを実行できます。
@@ -5069,28 +5069,28 @@ gif付きでわかりやすく説明しています。</p>
 <p>次のgifでは<code>%normal v=</code>でファイル全体を整形しています。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/4e89a963-7d46-c7d0-e0a5-a028ec0b9abc.gif" alt="normal.gif"></p>
 <h2 id="笑顔になれるコマンド">笑顔になれるコマンド</h2>
-<p>vimにはユーザが笑顔になれる<code>smile</code>コマンドが用意されています。
-実行すると次の様になります。
+<p>vimにはユーザーが笑顔になれる<code>smile</code>コマンドが用意されています。
+実行すると次のようになります。
 ちなみに、ぼくは笑顔になれました。</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/66178/1529aa2e-a912-9c2e-66f8-da3c413cb8dc.png" alt="image.png"></p>
 <h2 id="まとめ">まとめ</h2>
-<p>vimには実践的なコマンドから<code>smile</code>のようなユーモアのあるコマンドまで、たくさんあって面白いなと思いました。
-TwitterのDMでもリプでも構わないので、他にこのコマンド便利だよというのがあればぜひ教えてください。</p>
+<p>vimには実践的なコマンドから<code>smile</code>のようなユーモアのあるコマンドまで、たくさんあっておもしろいなと思いました。
+TwitterのDMでもリプでもかまわないので、ほかにこのコマンド便利だよというのがあればぜひ教えてください。</p>
 <p>ではみなさん、よいvimライフを〜</p>
-]]></content></item><item><title>Vimの標準ファイラnetrwは普通に良さそうな話し</title><link>https://skanehira.github.io/blog/posts/20190321-vim-netrw/</link><pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190321-vim-netrw/</guid><description>こんにちわ ゴリラ.vimを運営しているゴリラです。 みなさんvimでファイラを使っていますか？ 多分vim入門したての方はnerdtreeという</description><content type="html"><![CDATA[<p>こんにちわ
+]]></content></item><item><title>Vimの標準ファイラnetrwは普通に良さそうな話し</title><link>https://skanehira.github.io/blog/posts/20190321-vim-netrw/</link><pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190321-vim-netrw/</guid><description>こんにちは ゴリラ.vimを運営しているゴリラです。 みなさんvimでファイラを使っていますか？ 多分vim入門したての方はnerdtreeという</description><content type="html"><![CDATA[<p>こんにちは
 <a href="https://gorillavim.connpass.com/">ゴリラ.vim</a>を運営しているゴリラです。</p>
 <p>みなさんvimでファイラを使っていますか？
 多分vim入門したての方は<a href="https://github.com/scrooloose/nerdtree">nerdtree</a>というプラグインを入れることが多いかと思います。
 ぼくも実際IDEからのvimへ移行しましたが、ファイルツリーがないと落ち着かなくて入れていました。</p>
 <p>実は、vimには標準でnetrwというファイラがあります。
-そちらについてすこし紹介していきます。</p>
+そちらについて少し紹介していきます。</p>
 <h2 id="netrwについて">netrwについて</h2>
 <p>netrwはvim標準で用意されているプラグインになります。
 netrwを使用することでファイラのように、画像のようにディレクトリをブラウジングできます。</p>
 <p><img src="https://qiita-image-store.s3.amazonaws.com/0/66178/59adb3c6-9e2d-909e-a36f-626876a63e0c.png" alt="image.png"></p>
-<p>いろんなオプションが用意されていて、それらをカスタマイズすることで更に使いやすくなります。</p>
+<p>いろんなオプションが用意されていて、それらをカスタマイズすることでさらに使いやすくなります。</p>
 <h2 id="netrwを有効にする">netrwを有効にする</h2>
-<p>netrwはプラグインなので、以下の設定がされていない方は<code>~/.vimrc</code>に設定してください。</p>
+<p>netrwはプラグインですので、以下の設定がされていない方は<code>~/.vimrc</code>に設定してください。</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">filetype</span> <span class="nx">plugin</span> <span class="nx">on</span><span class="err">
 </span></code></pre></div><h2 id="netrwの基本操作">netrwの基本操作</h2>
 <p>vim起動時に使用したい場合は<code>vim .</code>でnetrwが立ち上がります。
@@ -5126,11 +5126,11 @@ vim起動済みの場合は<code>:Ex</code>でカレントバッファ、<code>:
 </tr>
 <tr>
 <td style="text-align:left">-</td>
-<td style="text-align:left">一つ上のディレクトリに移動</td>
+<td style="text-align:left">ひとつ上のディレクトリに移動</td>
 </tr>
 <tr>
 <td style="text-align:left">u</td>
-<td style="text-align:left">undo、１つ前のディレクトリに戻る</td>
+<td style="text-align:left">undo、1つ前のディレクトリに戻る</td>
 </tr>
 <tr>
 <td style="text-align:left">U</td>
@@ -5176,15 +5176,15 @@ vim起動済みの場合は<code>:Ex</code>でカレントバッファ、<code>:
 </table>
 <p>ファイルのコピーと移動以外は普通に便利ですね。</p>
 <h2 id="リモート編集">リモート編集</h2>
-<p>netrwの目玉機能の一つとも言えるリモート編集ですが、
+<p>netrwの目玉機能のひとつとも言えるリモート編集ですが、
 以下の<a href="https://vim-jp.org/vimdoc-ja/pi_netrw.html#netrw-ref">プロトコル</a>に対応しています。</p>
 <p><img src="https://qiita-image-store.s3.amazonaws.com/0/66178/7d579647-f92f-fcee-be5e-1cf16e5d996e.png" alt="image.png"></p>
-<p>sshでサーバー上のファイルをちょこっと編集・確認したいときなどに使用できるので便利ですね。
+<p>sshでサーバ上のファイルをちょこっと編集・確認したいときなどに使用できるので便利ですね。
 ちなみに、以下のようにするとファイルを編集・保存（してからアップロード）できます。</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">vim scp://remote-server//home/gorilla/.vimrc
-</code></pre></div><p>これはvim内部でscpコマンドを実行している様なので、scpコマンドは必要と思います。</p>
+</code></pre></div><p>これはvim内部でscpコマンドを実行している様ですので、scpコマンドは必要と思います。</p>
 <h2 id="カスタマイズ">カスタマイズ</h2>
-<p>標準のnetrwのファイルツリーでは、若干見づらいので、見た目を<code>ls -la</code>コマンドに近づけます。</p>
+<p>標準のnetrwのファイルツリーでは、若干見づらいので、見た目を<code>ls -la</code>コマンドに近付けます。</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; ファイルツリーの表示形式、1にするとls -laのような表示になります</span><span class="err">
 </span><span class="err"></span><span class="k">let</span> <span class="nx">g</span>:<span class="nx">netrw_liststyle</span><span class="p">=</span><span class="m">1</span><span class="err">
 </span><span class="err"></span><span class="c">&#34; ヘッダを非表示にする</span><span class="err">
@@ -5196,12 +5196,12 @@ vim起動済みの場合は<code>:Ex</code>でカレントバッファ、<code>:
 </span><span class="err"></span><span class="c">&#34; プレビューウィンドウを垂直分割で表示する</span><span class="err">
 </span><span class="err"></span><span class="k">let</span> <span class="nx">g</span>:<span class="nx">netrw_preview</span><span class="p">=</span><span class="m">1</span><span class="err">
 </span></code></pre></div><p>上記の設定をvimrcに追加すれば、冒頭のスクショの表示になります。
-個人的に上記設定が一番見やすいのですが、もっと良い設定があるかも知れないのでぜひイジって見ください。</p>
+個人的に上記設定が一番見やすいのですが、もっと良い設定があるかもしれないのでぜひイジって見ください。</p>
 <h2 id="まとめ">まとめ</h2>
-<p>公式マニュアルを見ればもっといろんな事が書かれています。
+<p>公式マニュアルを見ればもっといろんなことが書かれています。
 個人的に、これくらいの機能を知れば困ることはないので、これ以上深掘りはしていません。</p>
-<p>興味ある方はぜひ深く掘ってみて、これいいぞってのがあれば教えて頂けると幸いです。</p>
-]]></content></item><item><title>Vim起動時にできること</title><link>https://skanehira.github.io/blog/posts/20190201-vim-start/</link><pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190201-vim-start/</guid><description>こんにちわ ゴリラです。 前回Vimのインサートモードでできることを書いたのですが、 思いの外需要があるだなと思ったので、Vimの起動時にできるこ</description><content type="html"><![CDATA[<p>こんにちわ
+<p>興味ある方はぜひ深く掘ってみて、これよいぞってのがあれば教えていただけると幸いです。</p>
+]]></content></item><item><title>Vim起動時にできること</title><link>https://skanehira.github.io/blog/posts/20190201-vim-start/</link><pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190201-vim-start/</guid><description>こんにちは ゴリラです。 前回Vimのインサートモードでできることを書いたのですが、 思いの外需要があるだなと思ったので、Vimの起動時にできるこ</description><content type="html"><![CDATA[<p>こんにちは
 ゴリラです。</p>
 <p>前回<a href="https://qiita.com/gorilla0513/items/95e0d36045682a1f0123">Vimのインサートモードでできること</a>を書いたのですが、
 思いの外需要があるだなと思ったので、Vimの起動時にできることを今回紹介していきます。
@@ -5234,7 +5234,7 @@ vim起動済みの場合は<code>:Ex</code>でカレントバッファ、<code>:
 <img src="https://qiita-image-store.s3.amazonaws.com/0/66178/429baf51-fcc3-235b-91b5-bb8eb430c438.gif" alt="vim-R.gif"></p>
 <h2 id="exモードで起動httpsvim-jporgvimdoc-jastartinghtml-e"><a href="https://vim-jp.org/vimdoc-ja/starting.html#-e">Exモードで起動</a></h2>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">vim -e
-</code></pre></div><p>vim scriptの学習時に使える。
+</code></pre></div><p>Vimスクリプトの学習時に使える。
 <img src="https://qiita-image-store.s3.amazonaws.com/0/66178/663d8530-80da-2fe4-64d5-80091ff7ceae.gif" alt="vim-e.gif"></p>
 <h2 id="差分確認httpsvim-jporgvimdoc-jastartinghtml-d"><a href="https://vim-jp.org/vimdoc-ja/starting.html#-d">差分確認</a></h2>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">vim -d file1  file2
@@ -5256,21 +5256,21 @@ vim -b gorilla.bin
 <pre><code>vim -r gorilla.swp
 </code></pre><p><img src="https://qiita-image-store.s3.amazonaws.com/0/66178/ef8c0903-a998-d82e-ffec-8bf281eeaa4b.gif" alt="vim-recover.gif"></p>
 <h2 id="まとめ">まとめ</h2>
-<p>Vimはいいぞ！
+<p>Vimはよいぞ！
 ではよいVimライフを〜</p>
-]]></content></item><item><title>Vimのインサートモードでできること</title><link>https://skanehira.github.io/blog/posts/20190123-vim-insert/</link><pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190123-vim-insert/</guid><description>こんにちわ ゴリラです。 久しぶりの投稿になりました。 今年に入って自分のOSSの活動やらイベント登壇やらで、 あまり記事を書く時間とっていなかった</description><content type="html"><![CDATA[<p>こんにちわ
+]]></content></item><item><title>Vimのインサートモードでできること</title><link>https://skanehira.github.io/blog/posts/20190123-vim-insert/</link><pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20190123-vim-insert/</guid><description>こんにちは ゴリラです。 久しぶりの投稿になりました。 今年に入って自分のOSSの活動やらイベント登壇やらで、 あまり記事を書く時間とっていなかった</description><content type="html"><![CDATA[<p>こんにちは
 ゴリラです。</p>
 <p>久しぶりの投稿になりました。
 今年に入って自分のOSSの活動やらイベント登壇やらで、
 あまり記事を書く時間とっていなかったので久しぶりに書きました。</p>
-<p>最近、vimのインサートモードでなにげに色々できることを知ったので、
+<p>最近、vimのインサートモードでなにげにいろいろできることを知ったので、
 それについて軽くまとめた記事になります。</p>
 <p>知らないこと多かったので、自分は結構勉強になりました。
-この記事で紹介した内容を大体知っている方は、多分すごいvimmerと思われます。</p>
+この記事で紹介した内容をだいたい知っている方は、多分すごいvimmerと思われます。</p>
 <h2 id="ペーストhttpsvim-jporgvimdoc-jainserthtmli_ctrl-r"><a href="https://vim-jp.org/vimdoc-ja/insert.html#i_CTRL-R">ペースト</a></h2>
 <p>ペーストする時はノーマルモードに戻ってからペーストすることが一般的（と思われる）ですが、
 実はyankしたデータはレジスタに入っていて、
-そのレジスタの内容をインサートモードでも挿入することができます。</p>
+そのレジスタの内容をインサートモードでも挿入できます。</p>
 <p><kbd>Ctrl</kbd> + <kbd>r</kbd>でレジスタ名が挿入するのを待ってくれます。
 その状態で挿入したいレジスタ入力するだけでOKです。</p>
 <p><img src="https://qiita-image-store.s3.amazonaws.com/0/66178/fcd22cb8-6811-ac14-6e20-6458172230e7.gif" alt="insert-paste.gif"></p>
@@ -5292,7 +5292,7 @@ vim -b gorilla.bin
 <img src="https://qiita-image-store.s3.amazonaws.com/0/66178/1ee127fb-a311-00eb-a6d2-316510cc3796.gif" alt="line-completion.gif"></p>
 <h2 id="文字挿入削除">文字挿入・削除</h2>
 <h3 id="一文字削除">一文字削除</h3>
-<p><kbd>Ctrl</kbd> + <kbd>h</kbd>で一文字削除します（backspace同様)
+<p><kbd>Ctrl</kbd> + <kbd>h</kbd>で一文字削除します（backspace同様）
 <img src="https://qiita-image-store.s3.amazonaws.com/0/66178/1e7582d6-5e0b-355d-c614-be3c5bbdd988.gif" alt="remove-char.gif"></p>
 <h3 id="一単語削除">一単語削除</h3>
 <p><kbd>Ctrl</kbd> + <kbd>w</kbd>で一単語を削除します。
@@ -5310,11 +5310,11 @@ vim -b gorilla.bin
 <p>全部日本語ドキュメントに書いてあることですが、
 gif付きでわかりやすい備忘録として残しておきました。</p>
 <p><a href="https://vim-jp.org/vimdoc-ja/insert.html">https://vim-jp.org/vimdoc-ja/insert.html</a></p>
-]]></content></item><item><title>Vimのセッション機能を使う</title><link>https://skanehira.github.io/blog/posts/20181215-vim-session/</link><pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20181215-vim-session/</guid><description>みなさん、vimにセッション機能があるのはご存知でしょうか？ 便利そうなので使ってみようと思っていますが、せっかくなのでVim scriptの勉</description><content type="html"><![CDATA[<p>みなさん、vimに<a href="https://vim-jp.org/vimdoc-ja/usr_21.html#21.4">セッション機能</a>があるのはご存知でしょうか？
+]]></content></item><item><title>Vimのセッション機能を使う</title><link>https://skanehira.github.io/blog/posts/20181215-vim-session/</link><pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20181215-vim-session/</guid><description>みなさん、vimにセッション機能があるのはご存じでしょうか？ 便利そうなので使ってみようと思っていますが、せっかくなのでVim scriptの勉</description><content type="html"><![CDATA[<p>みなさん、vimに<a href="https://vim-jp.org/vimdoc-ja/usr_21.html#21.4">セッション機能</a>があるのはご存じでしょうか？
 便利そうなので使ってみようと思っていますが、せっかくなのでVim scriptの勉強も兼ねてコマンド作ってみました。</p>
 <p>fzf.vimを使うとこんな感じになります。
 <img src="https://qiita-image-store.s3.amazonaws.com/0/66178/21a1dc7b-44cc-0e9c-c88d-03d74abf9cbc.png" alt="image.png"></p>
-<p>以下のコードをvimrcに貼ればそのまま使えるとおもいます。</p>
+<p>以下のコードをvimrcに貼ればそのまま使えると思います。</p>
 <h2 id="2018-12-22-追記">[2018-12-22] 追記</h2>
 <p>プラグイン化しました。
 また、記事中のソース若干変更は入っています。
@@ -5371,9 +5371,9 @@ gif付きでわかりやすい備忘録として残しておきました。</p>
 <a href="https://qiita.com/shinshin86/items/6e6cbdb77cb59b87d21f">https://qiita.com/shinshin86/items/6e6cbdb77cb59b87d21f</a>
 <a href="http://nanasi.jp/articles/code/io/file-path.html">http://nanasi.jp/articles/code/io/file-path.html</a></p>
 <h2 id="最後に">最後に</h2>
-<p>初めてVim script書いたので、おかしなところがありましたら教えて頂けると助かります。
+<p>初めてVim script書いたので、おかしなところがありましたら教えていただけると助かります。
 ちなみに、vimのセッションプラグインはありました。</p>
-<p>使ってないのですが、良さげなので興味ある方はどうぞー</p>
+<p>使っていないのですが、良下げなので興味ある方はどうぞー</p>
 <p><a href="https://github.com/Shougo/unite-session">https://github.com/Shougo/unite-session</a>
 <a href="https://github.com/xolox/vim-session">https://github.com/xolox/vim-session</a></p>
 ]]></content></item></channel></rss>
