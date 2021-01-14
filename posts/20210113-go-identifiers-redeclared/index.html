@@ -27,7 +27,7 @@ Functions:
 	<span class=nb>println</span><span class=p>(</span><span class=kc>true</span><span class=p>)</span> <span class=c1>// false
 </span><span class=c1></span><span class=p>}</span>
 </code></pre></div><p>これは<a href=https://golang.org/ref/spec#Declarations_and_scope>宣言とスコープ</a>で次のように明言されています。</p><pre><code>An identifier declared in a block may be redeclared in an inner block.
-</code></pre><p>つまり、外側のスコープ(<code>universe block</code>)で宣言された識別子(<code>true</code>や<code>false</code>)を内側のスコープ(上記の例でいうと<code>main</code>関数内)で再定義されたということです。
+</code></pre><p>つまり、外側のスコープ(<code>universe block</code>)で宣言された識別子(<code>true</code>や<code>false</code>)を内側のスコープ(上記の例でいうと<code>main</code>関数内)で再宣言されたということです。
 次の例も同様に<code>{}</code>内で<code>int</code>を再宣言しています。</p><div class=highlight><pre class=chroma><code class=language-go data-lang=go><span class=kn>package</span> <span class=nx>main</span>
 
 <span class=kd>func</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
