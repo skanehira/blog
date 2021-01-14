@@ -63,7 +63,7 @@ func main() {
 An identifier declared in a block may be redeclared in an inner block.
 ```
 
-つまり、外側のスコープ(`universe block`)で宣言された識別子(`true`や`false`)を内側のスコープ(上記の例でいうと`main`関数内)で再定義されたということです。
+つまり、外側のスコープ(`universe block`)で宣言された識別子(`true`や`false`)を内側のスコープ(上記の例でいうと`main`関数内)で再宣言されたということです。
 次の例も同様に`{}`内で`int`を再宣言しています。
 
 ```go
