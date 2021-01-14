@@ -1,4 +1,56 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>2020年の振り返りと2021年の目標</title><link>https://skanehira.github.io/blog/posts/20210105-look-back-2020/</link><pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210105-look-back-2020/</guid><description>あけましておめでとうございます。 ちょっと遅めですが、2020年の振り返りと2021年の目標について整理しました。 2020年はコロナの影響でい</description><content type="html"><![CDATA[<p>あけましておめでとうございます。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Wed, 13 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Goの宣言済みの識別子は再宣言できる</title><link>https://skanehira.github.io/blog/posts/20210113-go-identifiers-redeclared/</link><pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210113-go-identifiers-redeclared/</guid><description>最近コツコツとGoの仕様書を日本語に翻訳しています。 その中で識別子について分かったことがあるので、それについてまとめた記事になります。 識別子</description><content type="html"><![CDATA[<p>最近コツコツとGoの<a href="https://golang.org/ref/spec">仕様書</a>を日本語に<a href="https://github.com/skanehira/blog/pull/4">翻訳</a>しています。
+その中で識別子について分かったことがあるので、それについてまとめた記事になります。</p>
+<h2 id="識別子とは">識別子とは</h2>
+<p>Goでは<a href="https://golang.org/ref/spec#Identifiers">識別子</a>という概念があります。</p>
+<pre><code>Identifiers name program entities such as variables and types.
+An identifier is a sequence of one or more letters and digits.
+The first character in an identifier must be a letter.
+</code></pre><p>これを意訳すると<code>識別子（文字や数字）を使って、変数や型といったプログラムの構成要素に名前を付けることができます。</code>になります。
+たとえば<code>name := &quot;gorilla&quot;</code>の<code>name</code>は識別子、といった感じです。</p>
+<p>この識別子は事前に宣言されているものがいくつかあり、それが次になっています。</p>
+<p><strong><a href="https://golang.org/ref/spec#Predeclared_identifiers">事前宣言された識別子</a></strong></p>
+<pre><code>Types:
+	bool byte complex64 complex128 error float32 float64
+	int int8 int16 int32 int64 rune string
+	uint uint8 uint16 uint32 uint64 uintptr
+
+Constants:
+	true false iota
+
+Zero value:
+	nil
+
+Functions:
+	append cap close complex copy delete imag len
+	make new panic print println real recover
+</code></pre><p>この宣言済みの識別子のスコープは<code>universe block</code>と呼ばれる一番外側のスコープで宣言されています。
+詳細は<a href="https://motemen.github.io/go-for-go-book/#%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B9%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%97">こちら</a>を参照下さい。</p>
+<h2 id="宣言済みの識別子は再宣言できる">宣言済みの識別子は再宣言できる</h2>
+<p>Goでは宣言済の識別子を上書きできます。たとえば次のコードはOKです。</p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kc">true</span> <span class="o">:=</span> <span class="kc">false</span>
+	<span class="nb">println</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="c1">// false
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>これは<a href="https://golang.org/ref/spec#Declarations_and_scope">宣言とスコープ</a>で次のように明言されています。</p>
+<pre><code>An identifier declared in a block may be redeclared in an inner block.
+</code></pre><p>つまり、外側のスコープ(<code>universe block</code>)で宣言された識別子(<code>true</code>や<code>false</code>)を内側のスコープ(上記の例でいうと<code>main</code>関数内)で再定義されたということです。
+次の例も同様に<code>{}</code>内で<code>int</code>を再宣言しています。</p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="o">:=</span> <span class="mi">1</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="o">:=</span> <span class="s">&#34;a&#34;</span>
+		<span class="nb">println</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="c1">// a
+</span><span class="c1"></span>	<span class="p">}</span>
+	<span class="nb">println</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="c1">// 1
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><h2 id="最後に">最後に</h2>
+<p>Goでは型などは予約語ではなく識別子、そして識別子は再宣言可能で<code>true := false</code>が有効になるのは意外でした。
+なぜ識別子を予約語にしていないのかわからないんですが、仕様書を読んでいく内にこの疑問も解決できるかもしれないので引き続き頑張って翻訳しつつ理解していきます。</p>
+]]></content></item><item><title>2020年の振り返りと2021年の目標</title><link>https://skanehira.github.io/blog/posts/20210105-look-back-2020/</link><pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210105-look-back-2020/</guid><description>あけましておめでとうございます。 ちょっと遅めですが、2020年の振り返りと2021年の目標について整理しました。 2020年はコロナの影響でい</description><content type="html"><![CDATA[<p>あけましておめでとうございます。
 ちょっと遅めですが、2020年の振り返りと2021年の目標について整理しました。</p>
 <p>2020年はコロナの影響でいろいろは大変でしたが、無事乗り切ったので2021年も引き続き頑張っていこうと思います。</p>
 <h2 id="2020年を振り返る">2020年を振り返る</h2>
