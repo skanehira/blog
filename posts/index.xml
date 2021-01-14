@@ -24,7 +24,7 @@ Functions:
 	append cap close complex copy delete imag len
 	make new panic print println real recover
 </code></pre><p>この宣言済みの識別子のスコープは<code>universe block</code>と呼ばれる一番外側のスコープで宣言されています。
-詳細は<a href="https://motemen.github.io/go-for-go-book/#%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B9%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%97">こちら</a>を参照下さい。</p>
+詳細は<a href="https://motemen.github.io/go-for-go-book/#%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B9%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%97">こちら</a>を参照ください。</p>
 <h2 id="宣言済みの識別子は再宣言できる">宣言済みの識別子は再宣言できる</h2>
 <p>Goでは宣言済の識別子を上書きできます。たとえば次のコードはOKです。</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
@@ -35,7 +35,7 @@ Functions:
 </span><span class="c1"></span><span class="p">}</span>
 </code></pre></div><p>これは<a href="https://golang.org/ref/spec#Declarations_and_scope">宣言とスコープ</a>で次のように明言されています。</p>
 <pre><code>An identifier declared in a block may be redeclared in an inner block.
-</code></pre><p>つまり、外側のスコープ(<code>universe block</code>)で宣言された識別子(<code>true</code>や<code>false</code>)を内側のスコープ(上記の例でいうと<code>main</code>関数内)で再宣言されたということです。
+</code></pre><p>つまり、外側のスコープ（<code>universe block</code>)で宣言された識別子（<code>true</code>や<code>false</code>)を内側のスコープ（上記の例でいうと<code>main</code>関数内）で再宣言されたということです。
 次の例も同様に<code>{}</code>内で<code>int</code>を再宣言しています。</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
