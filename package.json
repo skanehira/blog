@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "https://skanehira.github.io/blog/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/skanehira/blog.git"
+  },
+  "author": "skanehira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skanehira/blog/issues"
+  },
+  "homepage": "https://github.com/skanehira/blog#readme",
+  "dependencies": {
+    "textlint-rule-preset-ja-technical-writing": "^4.0.1",
+    "textlint-rule-preset-jtf-style": "^2.3.6",
+    "textlint-rule-prh": "^5.3.0"
+  }
+}
