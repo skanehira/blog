@@ -94,7 +94,7 @@ hex_digit     = "0" … "9" | "A" … "F" | "a" … "f" .
 改行を含まない範囲コメントはスペースのように機能します。その他のコメントは改行のように機能します。
 
 ### [トークン](https://golang.org/ref/spec#Tokens)
-トークンはGo言語を形作っています。識別子、キーワード、演算子や句読点、リテラルの4種類があります。
+トークンはGo言語を形作っています。識別子、キーワード、演算子や区切り文字、リテラルの4種類があります。
 スペース(U+0020)、タブ(U+0009)、キャリッジリターン(U+000D)や改行(U+000A)からなるホワイトスペースは、それがないと一つのトークンに結合されてしまうようなトークンを分割している場合を除いて、無視されます。
 
 また、改行とファイル終端に[セミコロン](#セミコロンhttpsgolangorgrefspecsemicolons)が挿入される場合があります。
@@ -109,7 +109,7 @@ hex_digit     = "0" … "9" | "A" … "F" | "a" … "f" .
   - [識別子]()
   - [整数]()、[浮動小数点]()、[虚数]()、[ルーン]()、または[文字列]()
   - [キーワード]()の`break`、`continue`、`fallthrough`また`return`のどれか
-  - [オペレータと句読点]()
+  - [演算子と区切り文字]()
 2. 複雑な式を1行にする場合、`)`または`}`の前のセミコロンを省略できます。
 
 慣用的な使い方を反映するため、このドキュメントのコード例はこれらの規則を使って省略しています。
@@ -129,3 +129,66 @@ ThisVariableIsExported
 ```
 
 いくつかの識別子は[事前に定義されています]()。
+
+### [キーワード](https://golang.org/ref/spec#Keywords)
+次のキーワードは予約済みで、識別子として使用できません。
+
+```
+break        default      func         interface    select
+case         defer        go           map          struct
+chan         else         goto         package      switch
+const        fallthrough  if           range        type
+continue     for          import       return       var
+```
+
+### [演算子と区切り文字](https://golang.org/ref/spec#Operators_and_punctuation)
+次の文字列は[演算子]()（[代入演算子]()を含む）と区切り文字を表します。
+
+```
++    &     +=    &=     &&    ==    !=    (    )
++    -    |     -=    |=     ||    <     <=    [    ]
++    *    ^     *=    ^=     <-    >     >=    {    }
++    /    <<    /=    <<=    ++    =     :=    ,    ;
++    %    >>    %=    >>=    --    !     ...   .    :
++         &^          &^=
+```
+
+### [整数リテラル](https://golang.org/ref/spec#Integer_literals)
+整数リテラルは整数定数を表す数字列です。プレフィックスに10進数以外の任意の基数を付けられます。
+`0b`または`0B`の場合は2進数、`0`または`0o`、`00`は8進数、`0x`または`0X`は16進数です。単一の`0`は10進数のゼロとみなされます。
+16進数のリテラルでは、`a`から`f`と`A`から`F`は`10`から`15`を表しています。
+
+可読性のため、アンダースコア文字（`_`）はプレフィックスの後または連続した数字の間に現れる場合があります。
+このようなアンダースコアはリテラル値を変更しません。
+
+```
+int_lit        = decimal_lit | binary_lit | octal_lit | hex_lit .
+decimal_lit    = "0" | ( "1" … "9" ) [ [ "_" ] decimal_digits ] .
+binary_lit     = "0" ( "b" | "B" ) [ "_" ] binary_digits .
+octal_lit      = "0" [ "o" | "O" ] [ "_" ] octal_digits .
+hex_lit        = "0" ( "x" | "X" ) [ "_" ] hex_digits .
+
+decimal_digits = decimal_digit { [ "_" ] decimal_digit } .
+binary_digits  = binary_digit { [ "_" ] binary_digit } .
+octal_digits   = octal_digit { [ "_" ] octal_digit } .
+hex_digits     = hex_digit { [ "_" ] hex_digit } .
+```
+
+```
+42
+4_2
+0600
+0_600
+0o600
+0O600       // 2つ目は大文字の'O'
+0xBadFace
+0xBad_Face
+0x_67_7a_2f_cc_40_c6
+170141183460469231731687303715884105727
+170_141183_460469_231731_687303_715884_105727
+
+_42         // 数字リテラルではなく、識別子
+42_         // 無効: _ は連続した数字を区切る必要がある
+4__2        // 無効: 1度に1つの _
+0_xBadFace  // 無効: _ は連続した数字を区切る必要がある
+```
