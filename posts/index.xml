@@ -762,6 +762,537 @@ Vim上でリポジトリのファイルツリーを見ることができる機�
 正直これからどうなるのかわからないのですが、日々Vimでの生活を良くしていきたいと思っています。
 せっかくなのでみなさんも年末にVimを大掃除してみると良いかもしれません。</p>
 <p>では、良いお年を〜</p>
+]]></content></item><item><title>VimでGitHubを操作するプラグインgh.vimの紹介</title><link>https://skanehira.github.io/blog/posts/20201203-introduce-gh-vim/</link><pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20201203-introduce-gh-vim/</guid><description>始めに 最近GitHubのVimプラグインgh.vimというのを作っています。 issueやPR、プロジェクト、GitHub Actionsのステ</description><content type="html"><![CDATA[<h2 id="始めに">始めに</h2>
+<p>最近GitHubのVimプラグイン<a href="https://github.com/skanehira/gh.vim">gh.vim</a>というのを作っています。
+issueやPR、プロジェクト、GitHub ActionsのステータスなどをVim/Neovim上で確認、操作できます。
+よい感じにいろいろな機能が入ったので、あらためてちゃんとプラグインを紹介したいと思います。</p>
+<p><img src="https://i.gyazo.com/061eea10fef226b1dc104e24f0b6995c.png" alt=""></p>
+<h3 id="機能">機能</h3>
+<p>現時点では次の機能が実装されています。</p>
+<table>
+<thead>
+<tr>
+<th>カテゴリ</th>
+<th>機能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>issue</td>
+<td>一覧/作成/更新</td>
+</tr>
+<tr>
+<td>issue comment</td>
+<td>一覧/作成/更新</td>
+</tr>
+<tr>
+<td>issue</td>
+<td>open/close</td>
+</tr>
+<tr>
+<td>pull request</td>
+<td>一覧/パッチ（差分）</td>
+</tr>
+<tr>
+<td>repository</td>
+<td>一覧/README</td>
+</tr>
+<tr>
+<td>project</td>
+<td>一覧/カード・カラム一覧</td>
+</tr>
+<tr>
+<td>actions</td>
+<td>ワークフロー・ジョブステップ一覧/ジョブログ</td>
+</tr>
+<tr>
+<td>bookmark</td>
+<td>一覧/バッファを開く</td>
+</tr>
+</tbody>
+</table>
+<p><code>gh.vim</code>では<code>gh://xxx</code>といった仮想バッファのみ提供していて、Exコマンドは用意していません。なので一般的なプラグインとちょっと異なる使い方をします。
+たとえば<code>gh://golang/go/issues?state=all</code>というバッファ名を開くと、そのバッファにissue一覧が表示され、キーマップが設定されます。</p>
+<p>仮想バッファというのは、実際ファイルを作成せず一時的なバッファにデータを表示したり、キーマップを設定したりする手法です。
+仮想バッファのみにした理由はこれまでにない形のプラグインを作ってみたかったからです。
+あとは実装しやすさがあります。詳細については<a href="#%E4%BB%95%E7%B5%84%E3%81%BF">仕組み</a>の項で解説します。</p>
+<p>現在<code>gh.vim</code>が提供している仮想バッファは次になります。大体機能ごとにバッファが別れています。</p>
+<table>
+<thead>
+<tr>
+<th>buffer</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gh://:owner/:repo/issues[?state=open&amp;..]</code></td>
+<td>issue一覧</td>
+</tr>
+<tr>
+<td><code>gh://:owner/:repo/issues/:number</code></td>
+<td>issue編集</td>
+</tr>
+<tr>
+<td><code>gh://:owner/:repo/:branch/issues/new</code></td>
+<td>新規issue作成</td>
+</tr>
+<tr>
+<td><code>gh://:owner/:repo/issues/comments[?page=1&amp;..]</code></td>
+<td>issueコメント一覧</td>
+</tr>
+<tr>
+<td><code>gh://:owner/:repo/issues/comments/new</code></td>
+<td>新規issueコメント作成</td>
+</tr>
+<tr>
+<td><code>gh://:owner/repos</code></td>
+<td>レポジトリ一覧</td>
+</tr>
+<tr>
+<td><code>gh://user/repos</code></td>
+<td>認証済みユーザリポジトリ一覧</td>
+</tr>
+<tr>
+<td><code>gh://:owner/:repo/readme</code></td>
+<td>リポジトリのREADME</td>
+</tr>
+<tr>
+<td><code>gh://:owner/:repo/pulls[?state=open&amp;...]</code></td>
+<td>PR一覧</td>
+</tr>
+<tr>
+<td><code>gh://:owner/:repo/pulls/:number/diff</code></td>
+<td>PRの差分</td>
+</tr>
+<tr>
+<td><code>gh://:owner/:repo/projects</code></td>
+<td>project一覧</td>
+</tr>
+<tr>
+<td><code>gh://orgs/:org/projects</code></td>
+<td>Organazationのproject一覧</td>
+</tr>
+<tr>
+<td><code>gh://projects/:id/columns</code></td>
+<td>projectのカラム一覧</td>
+</tr>
+<tr>
+<td><code>gh://:owner/:repo/actions[?status=success&amp;...]</code></td>
+<td>actionsステータス一覧</td>
+</tr>
+<tr>
+<td><code>gh://bookmarks</code></td>
+<td>ブックマーク一覧</td>
+</tr>
+</tbody>
+</table>
+<p>次に、機能の詳細について紹介していきます。</p>
+<h4 id="issue機能">Issue機能</h4>
+<p>issueの一覧や作成、編集、及びコメントの作成&amp;編集などを行えます。</p>
+<p><img src="https://i.gyazo.com/19d67ef4bc621b5f9fe1a09609844284.gif" alt=""></p>
+<p><strong>issue一覧</strong><br>
+<code>gh://:owner/:repo/issues[?state=open&amp;...]</code>でissueの一覧を表示できます。
+<code>?</code>より後ろはクエリパラメータとして認識されるので、APIで使用できるクエリパラメータをそのまま使えます。
+たとえば<code>?state=all</code>をつけるとclosedしたissueも一覧に表示されます。詳細は<code>gh.vim</code>のヘルプを参照下さい。
+実行可能なアクションは次になります。</p>
+<table>
+<thead>
+<tr>
+<th>キー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;C-h&gt;</code></td>
+<td>前のページ</td>
+</tr>
+<tr>
+<td><code>&lt;C-l&gt;</code></td>
+<td>次のページ</td>
+</tr>
+<tr>
+<td><code>&lt;C-o&gt;</code></td>
+<td>issueをブラウザで開く</td>
+</tr>
+<tr>
+<td><code>ghe</code></td>
+<td>issueを編集</td>
+</tr>
+<tr>
+<td><code>ghc</code></td>
+<td>issueをclose</td>
+</tr>
+<tr>
+<td><code>gho</code></td>
+<td>issueをopen</td>
+</tr>
+<tr>
+<td><code>ghm</code></td>
+<td>issueのコメントを開く</td>
+</tr>
+<tr>
+<td><code>ghy</code></td>
+<td>issueのURLをコピー</td>
+</tr>
+</tbody>
+</table>
+<p><strong>issueの作成</strong><br>
+<code>gh://:owner/:repo/:branch/issues/new</code>で新規issueを作成できます。
+リポジトリにテンプレートがある場合、テンプレートを選択してissueを作成できます。</p>
+<p><img src="https://i.gyazo.com/6373b68c39829a5c3c4288e94bd1be20.gif" alt=""></p>
+<p><strong>issueの編集</strong><br>
+<code>gh://:owner/:repo/:branch/issues/:number</code>でissueの本文を編集&amp;更新できます。
+本文を編集後<code>:w</code>で更新されます。更新の際タイトルも変更するか聞かれるので合わせて修正したいときは新しいタイトルを入力します。</p>
+<p><strong>issueのコメント一覧</strong><br>
+<code>gh://:owner/:repo/issues/:number/comments[?page=1&amp;...]</code>でissueのコメント一覧を表示できます。
+実行可能なアクションは次になります。</p>
+<table>
+<thead>
+<tr>
+<th>キー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;C-h&gt;</code></td>
+<td>前のページ</td>
+</tr>
+<tr>
+<td><code>&lt;C-l&gt;</code></td>
+<td>次のページ</td>
+</tr>
+<tr>
+<td><code>&lt;C-o&gt;</code></td>
+<td>コメントをブラウザで開く</td>
+</tr>
+<tr>
+<td><code>ghn</code></td>
+<td>新規コメント</td>
+</tr>
+<tr>
+<td><code>ghy</code></td>
+<td>コメントのURLをコピー</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pull-request機能">Pull Request機能</h4>
+<p>PRの一覧&amp;差分を確認できます。</p>
+<p><img src="https://i.gyazo.com/ba4aa068fdaeebcf8168c8994ac73db4.gif" alt=""></p>
+<p><strong>PR一覧</strong><br>
+<code>gh://:owner/:repo/pulls[?page=1&amp;...]</code>でPR一覧を表示できます。</p>
+<p>実行可能なアクションは次になります。</p>
+<table>
+<thead>
+<tr>
+<th>キー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;C-h&gt;</code></td>
+<td>前のページ</td>
+</tr>
+<tr>
+<td><code>&lt;C-l&gt;</code></td>
+<td>次のページ</td>
+</tr>
+<tr>
+<td><code>&lt;C-o&gt;</code></td>
+<td>PRをブラウザで開く</td>
+</tr>
+<tr>
+<td><code>ghd</code></td>
+<td>PRの差分</td>
+</tr>
+<tr>
+<td><code>ghy</code></td>
+<td>PRのURLをコピー</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PRの差分</strong>
+<code>gh://:owner/:repo/pull/:number/diff</code>でPRの差分を確認できます。
+現時点では差分確認のみですが将来的にはレビューコメントもできるようにする予定です。</p>
+<h4 id="repository機能">Repository機能</h4>
+<p>リポジトリ一覧&amp;READMEを確認できます。</p>
+<p><strong>リポジトリ一覧</strong>
+<code>gh://:owner/repos[?page=1&amp;...]</code>でリポジトリ一覧を表示できます。
+<code>:owner</code>が<code>user</code>の場合、認証されたユーザ（tokenを発行したユーザ）のプライベートやOrganazationのリポジトリも表示されます。</p>
+<p><strong>リポジトリのREADME</strong>
+<code>gh://:owner/:repo/readme</code>でリポジトリのREADMEを確認できます。</p>
+<p><img src="https://i.gyazo.com/cd2d9bfebce0975fa8d75eaad1582f00.gif" alt=""></p>
+<h4 id="project機能">Project機能</h4>
+<p>リポジトリのproject一覧&amp;カード一覧を確認できます。
+プロジェクトとカラム、カードはツリーになっていて、折りたたみが可能です。
+また、カードの移動も出来ます。</p>
+<p>この機能の実装については<a href="https://zenn.dev/skanehira/articles/2020-11-22-vim-github-project">こちら</a>を参照ください。</p>
+<p><img src="https://i.gyazo.com/e1dfc9d4880ca68f8ca84dfe025bd160.gif" alt=""></p>
+<p><strong>プロジェクト一覧</strong>
+<code>gh://:owner/:repo/projects</code>で指定したリポジトリのproject一覧を表示します。
+<code>:owner</code>が<code>orgs</code>の場合、<code>:repo</code>はOrganazationの名前を指定する必要があります。</p>
+<p>実行可能なアクションは次になります。</p>
+<table>
+<thead>
+<tr>
+<th>キー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;CR&gt;</code></td>
+<td>カード一覧を開く</td>
+</tr>
+<tr>
+<td><code>&lt;C-o&gt;</code></td>
+<td>プロジェクトをブラウザで開く</td>
+</tr>
+<tr>
+<td><code>ghy</code></td>
+<td>プロジェクトのURLをコピー</td>
+</tr>
+</tbody>
+</table>
+<p><strong>カード一覧</strong>
+<code>gh://projects/:id/columns</code>でprojectのカラムとカード一覧とカードの操作が出来ます。</p>
+<table>
+<thead>
+<tr>
+<th>キー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;C-o&gt;</code></td>
+<td>選択したカードのURLを開く（現時点issueのみ対応）</td>
+</tr>
+<tr>
+<td><code>gho</code></td>
+<td>選択したカードの詳細を開く（現時点issueのみ対応）</td>
+</tr>
+<tr>
+<td><code>ghm</code></td>
+<td>選択したカードを現在のカラムに移動</td>
+</tr>
+<tr>
+<td><code>ghy</code></td>
+<td>選択したカードのURLをコピー</td>
+</tr>
+</tbody>
+</table>
+<h4 id="github-actions機能">GitHub Actions機能</h4>
+<p><code>gh://:owner/:repo/actions[?status=success&amp;...]</code>でリポジトリのGitHub Actionsのワークフローとジョブを確認できます。
+実装の詳細については<a href="https://zenn.dev/skanehira/articles/2020-11-29-vim-gh-add-actions">こちら</a>を参照下さい。</p>
+<p><img src="https://i.gyazo.com/bb920d9694c126b571e4f90fa7cc9a9a.gif" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>キー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;C-o&gt;</code></td>
+<td>選択したワークフロー/ジョブをブラウザで開く</td>
+</tr>
+<tr>
+<td><code>ghy</code></td>
+<td>選択したワークフロー/ジョブのURLをコピー</td>
+</tr>
+<tr>
+<td><code>gho</code></td>
+<td>選択したジョブのログを確認</td>
+</tr>
+</tbody>
+</table>
+<h4 id="キーマップ">キーマップ</h4>
+<p><code>gh.vim</code>では各種バッファで使用できるキーマップを用意しています。
+詳細なキーマップはヘルプを参照いただければと思いますが、vimrcに次のような設定を書くことで独自のキーマップを設定できます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">function</span><span class="p">!</span> <span class="nx">s</span>:<span class="nx">gh_map_add</span><span class="p">()</span> <span class="nx">abort</span><span class="err">
+</span><span class="err"></span>  <span class="k">if</span> <span class="p">!</span><span class="nx">exists</span><span class="p">(</span><span class="s1">&#39;g:loaded_gh&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>    <span class="nx">return</span><span class="err">
+</span><span class="err"></span>  <span class="k">endif</span><span class="err">
+</span><span class="err"></span>  <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">map</span>#<span class="nx">add</span><span class="p">(</span><span class="s1">&#39;gh-buffer-issue-list&#39;</span><span class="p">,</span> <span class="s1">&#39;nnoremap&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;:bw!&lt;CR&gt;&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">map</span>#<span class="nx">add</span><span class="p">(</span><span class="s1">&#39;gh-buffer-issue-list&#39;</span><span class="p">,</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;Plug&gt;(gh_issue_list_prev)&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">map</span>#<span class="nx">add</span><span class="p">(</span><span class="s1">&#39;gh-buffer-issue-list&#39;</span><span class="p">,</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;Plug&gt;(gh_issue_list_next)&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="k">endfunction</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="nx">augroup</span> <span class="nx">gh</span><span class="p">-</span><span class="nx">maps</span><span class="err">
+</span><span class="err"></span>  <span class="nx">au</span><span class="p">!</span><span class="err">
+</span><span class="err"></span>  <span class="nx">au</span> <span class="nx">VimEnter</span> * <span class="nx">call</span> <span class="p">&lt;</span><span class="nx">SID</span><span class="p">&gt;</span><span class="nx">gh_map_add</span><span class="p">()</span><span class="err">
+</span><span class="err"></span><span class="nx">augroup</span> <span class="nx">END</span><span class="err">
+</span></code></pre></div><h3 id="仕組み">仕組み</h3>
+<h4 id="通信">通信</h4>
+<p>Vimの<code>job</code>機能を使って非同期に<code>curl</code>でGithubのv3 APIを叩いています。取得した結果をいい感じに表示させているだけなので、すごくムズカシイことをやっているわけではないです。
+たとえばissue一覧のバッファを開くと、裏では次のコマンドが実行されます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">curl -H <span class="s2">&#34;Accept: application/vnd.github.v3+json&#34;</span> -H <span class="s2">&#34;Authorization: token xxxxxxxxxxxxxxxxxxx&#34;</span> <span class="s2">&#34;https://api.github.com/repos/golang/go/issues&#34;</span>
+</code></pre></div><p>ただ、生の<code>job</code>機能を使うのはけっこう面倒なので、それをいい感じに使いやすくしてくれた<a href="https://github.com/vim-jp/vital.vim">vital.vim</a>と<code>vital.vim</code>の追加モジュールである<a href="https://github.com/lambdalisue/vital-Whisky">vital-Whisky</a>を使っています。
+複雑なVimプラグインを作る上で欠かせないライブラリとなっているので、知らない方は一度使ってみると良いと思います。本当によく出来ています。</p>
+<h4 id="仮想バッファ">仮想バッファ</h4>
+<p>仮想バッファの仕組みはVimの<code>autocmd</code>の<code>BufReadCmd</code>を使って実現しています。
+<code>BufReadCmd</code>は新たなバッファが作られたときに何かしらの処理をしたいときに使えます。<code>gh.vim</code>では<code>gh://*</code>と一致したバッファ名が作られたときに<code>gh#gh#init()</code>という関数を呼び、バッファ名をもとに処理を分岐させています。</p>
+<div class="highlight"><pre class="chroma"><code class="language-vim:gh/plugin.vim" data-lang="vim:gh/plugin.vim"><span class="nx">augroup</span> <span class="nx">gh</span><span class="err">
+</span><span class="err"></span>  <span class="nx">au</span><span class="p">!</span><span class="err">
+</span><span class="err"></span>  <span class="nx">au</span> <span class="nx">BufReadCmd</span> <span class="nx">gh</span>:<span class="sr">//</span>* <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">gh</span>#<span class="nx">init</span><span class="p">()</span><span class="err">
+</span><span class="err"></span><span class="nx">augroup</span> <span class="nx">END</span><span class="err">
+</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-vim:autoload/gh/gh.vim" data-lang="vim:autoload/gh/gh.vim"><span class="k">function</span><span class="p">!</span> <span class="nx">gh</span>#<span class="nx">gh</span>#<span class="nx">init</span><span class="p">()</span> <span class="nx">abort</span><span class="err">
+</span><span class="err"></span>  <span class="nx">setlocal</span> <span class="nx">nolist</span><span class="err">
+</span><span class="err"></span>  <span class="k">let</span> <span class="nx">bufname</span> <span class="p">=</span> <span class="nx">bufname</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">if</span> <span class="nx">bufname</span> <span class="nx">is</span># <span class="s1">&#39;gh://user/repos/new&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">repos</span>#<span class="nx">new</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">elseif</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/repos$&#39;</span> <span class="p">||</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/repos?\+&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">repos</span>#<span class="nx">list</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">elseif</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/readme$&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">repos</span>#<span class="nx">readme</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">elseif</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/issues$&#39;</span><span class="err">
+</span><span class="err"></span>        \ <span class="p">||</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/issues?\+&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">issues</span>#<span class="nx">list</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">elseif</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/issues\/[0-9]\+$&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">issues</span>#<span class="nx">issue</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">elseif</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/[^/]\+\/issues\/new$&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">issues</span>#<span class="nx">new</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">elseif</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/issues\/\d\+\/comments$&#39;</span><span class="err">
+</span><span class="err"></span>        \ <span class="p">||</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/issues\/\d\+\/comments?\+&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">issues</span>#<span class="nx">comments</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">elseif</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/issues\/\d\+\/comments\/new$&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">issues</span>#<span class="nx">comment_new</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">elseif</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/pulls$&#39;</span><span class="err">
+</span><span class="err"></span>        \ <span class="p">||</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/pulls?\+&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">pulls</span>#<span class="nx">list</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">elseif</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/pulls\/\d\+\/diff$&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">pulls</span>#<span class="nx">diff</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">elseif</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/projects$&#39;</span><span class="err">
+</span><span class="err"></span>        \ <span class="p">||</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/projects?\+&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">projects</span>#<span class="nx">list</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">elseif</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/projects\/[^/]\+\/columns$&#39;</span><span class="err">
+</span><span class="err"></span>        \ <span class="p">||</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/projects\/[^/]\+\/columns?\+&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">projects</span>#<span class="nx">columns</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">elseif</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/actions$&#39;</span><span class="err">
+</span><span class="err"></span>        \ <span class="p">||</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/[^/]\+\/[^/]\+\/actions?\+&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">actions</span>#<span class="nx">list</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">elseif</span> <span class="nx">bufname</span> <span class="p">=~</span># <span class="s1">&#39;^gh:\/\/bookmarks$&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">bookmark</span>#<span class="nx">list</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="k">endfunction</span><span class="err">
+</span></code></pre></div><p>仮想バッファのメリットは簡単にいうとバッファを開く処理とバッファ初期化の処理を分断できる、ということです。
+分断することで、たとえばissue編集バッファをissue一覧やprojectバッファから開くときは以下を実行するだけで済みます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">exe</span> <span class="s1">&#39;gh://:owner/:repo/issues/:number&#39;</span><span class="err">
+</span></code></pre></div><p>しかし分断されていない場合、バッファ作成したあとに初期化の処理関数を呼び出す必要があります。
+そして関数名が変わったら修正範囲も広がってしまいます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">exe</span> <span class="s1">&#39;gh://:owner/:repo/issues/:number&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">issue</span>#<span class="nx">edit</span><span class="p">()</span><span class="err">
+</span></code></pre></div><p>このように、結合度を低く保てることにメリットがあるため<code>gh.vim</code>は積極的に仮想バッファを採用しています。</p>
+<h4 id="モジュール">モジュール</h4>
+<p><code>gh.vim</code>では大きく分けて次のモジュール群があります。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>autoload/gh/http.vim</code></td>
+<td>http通信を提供する</td>
+</tr>
+<tr>
+<td><code>autoload/gh/tree.vim</code></td>
+<td>treeバッファを提供する</td>
+</tr>
+<tr>
+<td><code>autoload/gh/github/*.vim</code></td>
+<td>http通信をラップしてわかりやすくした</td>
+</tr>
+<tr>
+<td><code>autoload/gh/*.vim</code></td>
+<td>各種バッファを提供している</td>
+</tr>
+<tr>
+<td><code>autoload/gh/gh.vim</code></td>
+<td>全バッファ共通のutil関数などを提供している</td>
+</tr>
+</tbody>
+</table>
+<p>ディレクトリ構成は次になっています。
+他のプラグインと名前空間がかぶらないように、<code>gh</code>というディレクトリ配下にコードを置くようにしています。</p>
+<pre><code> gh.vim
+ |- autoload/
+  |- gh/
+   |- github/
+    |  actions.vim
+    |  issues.vim
+    |  projects.vim
+    |  pulls.vim
+    |  repos.vim
+   |  actions.vim
+   |  bookmark.vim
+   |  buffer.vim
+   |  gh.vim
+   |  http.vim
+   |  issues.vim
+   |  map.vim
+   |  projects.vim
+   |  pulls.vim
+   |  repos.vim
+   |  tree.vim
+</code></pre><p>基本、各種バッファから<code>gh#http#xxx()</code>または<code>gh#github#xxx()</code>を呼び出して、結果を受け取って画面描画とキーマップの設定を行っています。
+次はissue一覧バッファを開いたときに実行される関数です。中で<code>gh#github#issues#list()</code>を呼び出していてissue一覧を取得しています。
+大体どの機能も、バッファの処理と通信の処理に分かれているのでファイル単位で分割しました。</p>
+<div class="highlight"><pre class="chroma"><code class="language-vim:autoload/gh/issue.vim" data-lang="vim:autoload/gh/issue.vim"><span class="k">function</span><span class="p">!</span> <span class="nx">gh</span>#<span class="nx">issues</span>#<span class="nx">list</span><span class="p">()</span> <span class="nx">abort</span><span class="err">
+</span><span class="err"></span>  <span class="nx">setlocal</span> <span class="nx">ft</span><span class="p">=</span><span class="nx">gh</span><span class="p">-</span><span class="nx">issues</span><span class="err">
+</span><span class="err"></span>  <span class="k">let</span> <span class="nx">m</span> <span class="p">=</span> <span class="nx">matchlist</span><span class="p">(</span><span class="nx">bufname</span><span class="p">(),</span> <span class="s1">&#39;gh://\(.*\)/\(.*\)/issues?*\(.*\)&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span>  <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">gh</span>#<span class="nx">delete_buffer</span><span class="p">(</span><span class="nx">s</span>:<span class="p">,</span> <span class="s1">&#39;gh_issues_list_bufid&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="k">let</span> <span class="nx">s</span>:<span class="nx">gh_issues_list_bufid</span> <span class="p">=</span> <span class="nx">bufnr</span><span class="p">()</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span>  <span class="k">let</span> <span class="nx">param</span> <span class="p">=</span> <span class="nx">gh</span>#<span class="nx">http</span>#<span class="nx">decode_param</span><span class="p">(</span><span class="nx">m</span>[<span class="m">3</span>]<span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="k">if</span> <span class="p">!</span><span class="nx">has_key</span><span class="p">(</span><span class="nx">param</span><span class="p">,</span> <span class="s1">&#39;page&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>    <span class="k">let</span> <span class="nx">param</span>[<span class="s1">&#39;page&#39;</span>] <span class="p">=</span> <span class="m">1</span><span class="err">
+</span><span class="err"></span>  <span class="k">endif</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span>  <span class="k">let</span> <span class="nx">s</span>:<span class="nx">issue_list</span> <span class="p">=</span> {<span class="err">
+</span><span class="err"></span>        \ <span class="s1">&#39;repo&#39;</span>: {<span class="err">
+</span><span class="err"></span>        \   <span class="s1">&#39;owner&#39;</span>: <span class="nx">m</span>[<span class="m">1</span>]<span class="p">,</span><span class="err">
+</span><span class="err"></span>        \   <span class="s1">&#39;name&#39;</span>: <span class="nx">m</span>[<span class="m">2</span>]<span class="p">,</span><span class="err">
+</span><span class="err"></span>        \ }<span class="p">,</span><span class="err">
+</span><span class="err"></span>        \ <span class="s1">&#39;param&#39;</span>: <span class="nx">param</span><span class="p">,</span><span class="err">
+</span><span class="err"></span>        \ }<span class="err">
+</span><span class="err">
+</span><span class="err"></span>  <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">gh</span>#<span class="nx">init_buffer</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">gh</span>#<span class="nx">set_message_buf</span><span class="p">(</span><span class="s1">&#39;loading&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span>  <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">github</span>#<span class="nx">issues</span>#<span class="nx">list</span><span class="p">(</span><span class="nx">s</span>:<span class="nx">issue_list</span>.<span class="nx">repo</span>.<span class="nx">owner</span><span class="p">,</span> <span class="nx">s</span>:<span class="nx">issue_list</span>.<span class="nx">repo</span>.<span class="nx">name</span><span class="p">,</span> <span class="nx">s</span>:<span class="nx">issue_list</span>.<span class="nx">param</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>        \.<span class="nx">then</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="s1">&#39;s:issue_list&#39;</span><span class="p">))</span><span class="err">
+</span><span class="err"></span>        \.<span class="nx">then</span><span class="p">(</span>{<span class="p">-&gt;</span> <span class="nx">gh</span>#<span class="nx">map</span>#<span class="nx">apply</span><span class="p">(</span><span class="s1">&#39;gh-buffer-issue-list&#39;</span><span class="p">,</span> <span class="nx">s</span>:<span class="nx">gh_issues_list_bufid</span><span class="p">)</span>}<span class="p">)</span><span class="err">
+</span><span class="err"></span>        \.<span class="nx">catch</span><span class="p">(</span>{<span class="nx">err</span> <span class="p">-&gt;</span> <span class="nx">execute</span><span class="p">(</span><span class="s1">&#39;call gh#gh#error_message(err.body)&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>}<span class="p">)</span><span class="err">
+</span><span class="err"></span>        \.<span class="nx">finally</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="s1">&#39;gh#gh#global_buf_settings&#39;</span><span class="p">))</span><span class="err">
+</span><span class="err"></span><span class="k">endfunction</span><span class="err">
+</span></code></pre></div><p>以上が<code>gh.vim</code>の大まかな仕組みです。
+まだまだリファクタリングしないといけない箇所がたくさんありますが、より詳細な実装を知りたい方はコードを覗いてみて下さい。</p>
+<h3 id="課題">課題</h3>
+<p><strong>一覧バッファの共通化</strong>
+現在、一覧バッファは大体どれも同じ仕組みですが、共通の部分を分けられていない状態です。
+<code>tree.vim</code>のように、<code>list.vim</code>を作って一覧の処理の共通化をする必要があります。
+共通化しておかないと、今後一覧画面が増えるたびに似通った処理が増えてメンテナンスが大変なので、いまのうちに手を付けておきたいと思っています。</p>
+<p><strong>API通信量の削減</strong>
+v3のAPIを使っているため、通信量が結構多いです。
+たとえばプロジェクトのカード一覧を取得するAPIがありますが、こちらにはカードの種類とURLの情報くらいしかなくて、種類がissueやPRの場合は別途APIを叩く必要があります。
+カードがN百枚の場合、Vimが死ぬのでv4のGraphQLを使って通信量と回数を減らすのが直近一番やらないと行けない課題です。</p>
+<p><strong>エラーハンドリング</strong>
+<code>vital.vim</code>の<code>promise</code>を使っていることによる原因かわからないんですが、処理でエラーが起きたときに握りつぶされることがあります。
+実装時結構大変なのでこれも早い段階で解決しなければ行けないんですが、良い解決策が浮かばずという状態です。
+知見がある方はアドバイスをお願いします。</p>
+<h3 id="最後">最後</h3>
+<p>少し長くなりましたが、<code>gh.vim</code>の大体の機能について紹介しました。
+このプラグインはまだまだ未完成なので、今後もコツコツと作っていきたいと思います。</p>
+<p>プラグイン気になる方は、ぜひ一度使ってみて下さい。</p>
 ]]></content></item><item><title>あまり知られていないGoのスライス/配列の初期化</title><link>https://skanehira.github.io/blog/posts/20201202-go-slice-initialize/</link><pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20201202-go-slice-initialize/</guid><description>初めに 先日、こちらの動画で見たことがない配列の初期化をしていたので、それについてわかったことを解説してきます。 配列の初期化 動画のほうでは次の</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>先日、<a href="https://www.youtube.com/watch?v=elGjixFQLYE&amp;t=1054s&amp;ab_channel=mercaridevjp">こちらの動画</a>で見たことがない配列の初期化をしていたので、それについてわかったことを解説してきます。</p>
 <h2 id="配列の初期化">配列の初期化</h2>
@@ -1839,123 +2370,6 @@ issue作成、確認、コメント、PR作成、レビューなどができま�
 </code></pre></div><h3 id="雑感">雑感</h3>
 <p>一応この機能は<a href="https://echo.labstack.com/guide/request">公式ガイド</a>に書いてありましたが、コードリーディングして見つけました…
 ちゃんと公式ドキュメントを読もうねって気持ちになりました。</p>
-]]></content></item><item><title>ブラウザをやめてVimでGitHubを使う</title><link>https://skanehira.github.io/blog/posts/20200919-vim-plugin-for-github/</link><pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200919-vim-plugin-for-github/</guid><description>始めに 最近仕事でGitHubを使っていますが、ターミナルとブラウザの行き来が面倒になってきたので Vim上でGitHubを操作できるプラグイン</description><content type="html"><![CDATA[<h2 id="始めに">始めに</h2>
-<p>最近仕事でGitHubを使っていますが、ターミナルとブラウザの行き来が面倒になってきたので
-Vim上でGitHubを操作できるプラグイン<a href="https://github.com/skanehira/gh.vim">gh.vim</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>を作りました。</p>
-<p>ようやくまともに動くようになったので、
-プラグインの紹介と実装について解説していきます。</p>
-<h2 id="デモ">デモ</h2>
-<p>こんな感じで使います。</p>
-<p><img src="https://i.imgur.com/VK6rebH.gif" alt=""></p>
-<h2 id="機能一覧">機能一覧</h2>
-<ul>
-<li>issue一覧、作成、更新、close</li>
-<li>repository一覧、作成、削除（デフォルトOFF）</li>
-<li>Pull Request一覧、差分</li>
-</ul>
-<h2 id="使い方">使い方</h2>
-<p>詳細はREADMEやhelpを読んでいただければと思います。ここでは大まかな使い方を解説します。</p>
-<p><code>gh.vim</code>は通常のプラグインのようなコマンドを用意してません。
-代わりに<code>gh://</code>から始まるバッファを開くことでGitHubに対するさまざまな操作を可能にします。</p>
-<p>たとえば<code>:new gh://:owner/:repo/issues</code>でバッファを開くとissue一覧が表示されます。
-<code>:owner</code>はユーザー名もしくはorg名で、<code>:repo</code>はリポジトリ名です。</p>
-<p>現時点で使用可能なバッファは次になります。
-ちょっとわかりづらいので補足します。
-<code>gh://user/repos</code>は自身がアクセスprivateやorgnizationのリポジトリ一覧
-<code>gh://:owner/repos</code>は他のユーザーの公開リポジトリ一覧
-を確認できます。</p>
-<table>
-<thead>
-<tr>
-<th>buffer</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>gh://:owner/:repo/issues[?state=open&amp;..]</code></td>
-<td>get issue list</td>
-</tr>
-<tr>
-<td><code>gh://:owner/:repo/issues/:number</code></td>
-<td>edit issue</td>
-</tr>
-<tr>
-<td><code>gh://:owner/:repo/issues/new</code></td>
-<td>create issue</td>
-</tr>
-<tr>
-<td><code>gh://:owner/repos</code></td>
-<td>get repository list</td>
-</tr>
-<tr>
-<td><code>gh://user/repos</code></td>
-<td>get authenticated user repository list</td>
-</tr>
-<tr>
-<td><code>gh://user/repos/new</code></td>
-<td>create repository</td>
-</tr>
-<tr>
-<td><code>gh://:owner/:repo/readme</code></td>
-<td>get repository readme</td>
-</tr>
-<tr>
-<td><code>gh://:owner/:repo/pulls[?state=open&amp;...]</code></td>
-<td>get Pull Request list</td>
-</tr>
-<tr>
-<td><code>gh://:owner/:repo/pulls/:number/diff</code></td>
-<td>show Pull Request list diff</td>
-</tr>
-</tbody>
-</table>
-<p>さて、お気付きの方がいるかもしれないんですが、HTTPのURIと似た形になっています（<code>http</code> -&gt; <code>gh</code>に変わったくらい）
-普段エンジニアの我々からすれば馴染みがありますね。</p>
-<p>このようなIFにしたのは
-<strong>これまでにない形のプラグインを作ってみたい（1つもコマンドを提供しない）</strong>
-というのが一番です。</p>
-<p>現時点で特にお気に入りな機能は次です。</p>
-<ul>
-<li>issue作成と更新</li>
-<li>Pull Requestの差分表示</li>
-</ul>
-<p>どちらも業務で実際結構使用するので、それがVimできるようになったのはコストが低下して良きです。</p>
-<h2 id="しくみ">しくみ</h2>
-<p>コマンドを提供しないで、どうやってバッファを開いたときに処理させているかについて解説します。</p>
-<p>Vimには<code>BufReadCmd</code>というautocmdがあります。こちらはパターンにマッチしたバッファ（名）が読み込まれるときに発行して指定した関数を実行します。</p>
-<p>この機能を利用して、<code>gh://*</code>から始まるバッファが読み込まれるときに任意の関数を処理させています。
-実際の定義は次になっています。（一部抜粋）</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">au</span> <span class="nx">BufReadCmd</span> <span class="nx">gh</span>:<span class="sr">//</span>*/<span class="nx">repos</span> <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">repos</span>#<span class="nx">list</span><span class="p">()</span><span class="err">
-</span><span class="err"></span><span class="nx">au</span> <span class="nx">BufReadCmd</span> <span class="nx">gh</span>:<span class="sr">//</span>*/<span class="nx">repos</span>\?* <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">repos</span>#<span class="nx">list</span><span class="p">()</span><span class="err">
-</span><span class="err"></span><span class="nx">au</span> <span class="nx">BufReadCmd</span> <span class="nx">gh</span>:<span class="sr">//</span>*<span class="sr">/*/</span><span class="nx">issues</span> <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">issues</span>#<span class="nx">list</span><span class="p">()</span><span class="err">
-</span><span class="err"></span><span class="nx">au</span> <span class="nx">BufReadCmd</span> <span class="nx">gh</span>:<span class="sr">//</span>*<span class="sr">/*/</span><span class="nx">issues</span>\?* <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">issues</span>#<span class="nx">list</span><span class="p">()</span><span class="err">
-</span><span class="err"></span><span class="nx">au</span> <span class="nx">BufReadCmd</span> <span class="nx">gh</span>:<span class="sr">//</span>*<span class="sr">/*/</span><span class="nx">issues</span>/[<span class="m">0-9</span>]* <span class="nx">call</span> <span class="nx">gh</span>#<span class="nx">issues</span>#<span class="nx">issue</span><span class="p">()</span><span class="err">
-</span></code></pre></div><p>バッファ名はVimの正規表現が使えます。
-そして関数内でバッファ名から必要な：ownerと：repo情報を取得して<code>curl</code>でGitHubのAPIを叩いています。</p>
-<p>実は、これは以前<a href="https://twitter.com/thinca">thincaさん</a>に教えていただいていました。
-さらに<a href="https://twitter.com/lambdalisue">lambdaalisue</a>さんの<a href="https://github.com/lambdalisue/gina.vim">gina.vim</a>というプラグインも同じしくみを使っていました。</p>
-<p>このしくみを使うメリット次になります。
-やりたいこと次第では実装が結構楽になります。</p>
-<ul>
-<li>バッファを開いた時の処理と開く前の処理を分断できる</li>
-<li>同じ処理をさせたければバッファを開くだけで良くなる</li>
-</ul>
-<h2 id="今後">今後</h2>
-<p>当初VimでGitHubのPRをレビュー（コメント、approve、change requestなど）したいというのが目的でした。
-個人的な目的はまだ達成していないので、今後はそこを達成したらさらにUI周りもリッチにして行きたいと感がています。</p>
-<p>ひとまず<a href="https://github.com/skanehira/gh.vim#roadmap">Rloadmap</a>を片付けてからってところですね。</p>
-<h2 id="雑感">雑感</h2>
-<p>しくみ自体はシンプルですが、Vimのバッファ操作周りが相変わらず面倒なのでいろいろとたいへんでした。
-みなさんのフィードバックをお待ちしています。</p>
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>現時点ではNeovimでは動作しない、対応したい気持ちはある <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
 ]]></content></item><item><title>vim-lspでgoplsがディレクトリ構成によっては正しく動作しない</title><link>https://skanehira.github.io/blog/posts/20200918-vim-lsp-gopls-doesnt-work/</link><pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200918-vim-lsp-gopls-doesnt-work/</guid><description>こんにちは、VimとGo使いのゴリラです。 zenn.devが良さそうだったので使ってみようと思い、最近ハマっていた問題を記事にしました。 同じ</description><content type="html"><![CDATA[<p>こんにちは、VimとGo使いのゴリラです。</p>
 <p>zenn.devが良さそうだったので使ってみようと思い、最近ハマっていた問題を記事にしました。
 同じ問題にハマった方の助けになれればと思います。</p>
