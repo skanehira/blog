@@ -1,4 +1,152 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Fri, 05 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Swaggerをプレビューする簡単なCLI</title><link>https://skanehira.github.io/blog/posts/20200205-go-swagger-preview/</link><pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200205-go-swagger-preview/</guid><description>初めに 仕事でAPIのドキュメントにswaggerを使っていますが、プレビューするために毎度VSCodeを立ち上げて使っていました。 しかし、こ</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 22 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHubのTUIツールを作った</title><link>https://skanehira.github.io/blog/posts/20210222-go-github-tui/</link><pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210222-go-github-tui/</guid><description>以前に VimでGitHubを操作するプラグインgh.vimの紹介 という記事を書きました。 こちらの記事で紹介したgh.vimはVim上でGit</description><content type="html"><![CDATA[<p>以前に <a href="https://skanehira.github.io/blog/posts/20201203-introduce-gh-vim/">VimでGitHubを操作するプラグインgh.vimの紹介</a> という記事を書きました。
+こちらの記事で紹介した<code>gh.vim</code>はVim上でGitHubの機能を使えるようにしたVimプラグインです。仕事でがっつりGitHubを使うならとても便利なプラグインと思っています。</p>
+<p>しかしVimを使っていない人もたくさんいるので、そういった人向けのツールあったほうが良いかなと思い、GitHubのTUIツール <a href="https://github.com/skanehira/github-tui">github-tui</a> を作りました。
+CLIと比べ、TUIはインタラクティブに、そして直感的に操作できるというメリットがあるので便利なのではないかなと思っています。
+余談ですが過去にDockerのTUIツール <a href="https://github.com/skanehira/docui">docui</a> を作ったりもしました。</p>
+<p><a href="https://github.com/skanehira/github-tui">github-tui</a> は未完成ではありますが、最低限形になったし、需要があるかどうかを見たかったのでひとまず一般公開しました。
+本記事は<code>github-tui</code>について、紹介と展望について書いていきますので興味ある方はぜひ最後まで読んでみてください。</p>
+<h3 id="画面構成">画面構成</h3>
+<p><img src="https://i.gyazo.com/ca2dc9bed29bb5b446d58d9aeae94e8c.png" alt=""></p>
+<p><code>github-tui</code>では大きく分けて以下の3種類のパネルがあります。</p>
+<ol>
+<li>入力</li>
+<li>一覧</li>
+<li>プレビュー</li>
+</ol>
+<p>詳細は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>パネル</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filters</td>
+<td>画面上部のクエリを入力する部分</td>
+</tr>
+<tr>
+<td>issues</td>
+<td>issue一覧</td>
+</tr>
+<tr>
+<td>assignees</td>
+<td>選択中のissueにアサインされているユーザー覧</td>
+</tr>
+<tr>
+<td>labels</td>
+<td>選択中のissueに付けたラベル一覧</td>
+</tr>
+<tr>
+<td>milestones</td>
+<td>選択中のissueに紐付いているマイルストーン</td>
+</tr>
+<tr>
+<td>projects</td>
+<td>選択中のissueに紐付いているプロジェクト一覧</td>
+</tr>
+<tr>
+<td>issue preview</td>
+<td>選択中のissue本文のプレビュー</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>選択中のissueのコメント一覧</td>
+</tr>
+<tr>
+<td>comment preview</td>
+<td>選択中のコメント本文のプレビュー</td>
+</tr>
+<tr>
+<td>search</td>
+<td>画面下部の検索キーワードを入力する部分</td>
+</tr>
+</tbody>
+</table>
+<h3 id="機能">機能</h3>
+<p>現時点ではissue関連の機能が実装されています。未実装の機能は<a href="https://github.com/skanehira/github-tui#still-under-development">こちら</a>を参照ください。</p>
+<ul>
+<li>Issue
+<ul>
+<li>list</li>
+<li>create</li>
+<li>close</li>
+<li>open</li>
+<li>open browser</li>
+<li>preview</li>
+<li>edit</li>
+</ul>
+</li>
+<li>Issue comment
+<ul>
+<li>list</li>
+<li>preview</li>
+<li>delete</li>
+<li>edit
+<ul>
+<li>add</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="基本的な使い方">基本的な使い方</h4>
+<p>リポジトリを指定して起動するか、指定しない場合はカレントディレクトリのリポジトリが自動で指定されます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># current repository</span>
+$ ght
+
+<span class="c1"># specified repository</span>
+$ ght owner/repo
+</code></pre></div><p>起動後にissueの検索が行われ、一覧が表示されます。パネルを移動するには<code>Ctrl-N</code>/<code>Ctrl-P</code>を使います。</p>
+<h4 id="検索">検索</h4>
+<p><code>github-tui</code>では<a href="https://docs.github.com/en/github/searching-for-information-on-github/searching-issues-and-pull-requests#search-only-issues-or-pull-requests">search</a>のクエリを使ってissueを検索できます。現時点ではissueのみ検索可能ですが、将来的にはPRなども検索できるようにする予定です。</p>
+<p>どんなクエリが使えるかは、searchのドキュメントを参照していただければと思いますが、たとえばissueのタイトルと本文に&quot;ゴリラ&quot;という文字を含んだissueを検索したい場合は次のクエリを入力してEnterを押すと検索できます。</p>
+<pre><code>is:issue state:open ゴリラ in:body,title
+</code></pre><p><img src="https://i.gyazo.com/9dbfc882ce9305b7a1652c5c71c00737.gif" alt=""></p>
+<p>demoのように、基本的に選択しているissueが変わる度、issue本文とコメントのプレビューが変わるようになっています。
+検索時にissueの本文、それに紐づくラベルやコメントなどを一斉に取得するため、タイムラグなしにプレビューできます。</p>
+<p>デフォルトでは検索で取得するissueは30件までとなっていますが、<code>f</code>を使って更に検索結果を取得できます。
+GitHubの仕様では1度に100件まで取得可能ですが、前述したとおりissueに関連している情報も色々取得しているため30件に制限しています。
+将来的にデフォルトのlimitをconfigで変更できるようにしたいと考えています。</p>
+<h4 id="キーワード検索">キーワード検索</h4>
+<p>一覧とプレビューパネルでは<code>/</code>を押すとキーワードを検索できます。一覧の場合は表示されている項目、プレビューパネルの場合は表示されている中身をそれぞれ検索します。</p>
+<p><img src="https://i.gyazo.com/91631e116d3349fb043cae76f5627df1.gif" alt=""></p>
+<p>プレビューパネルの場合はキーワードがハイライトされ、<code>n</code>で次の、<code>N</code>で前のキーワードにジャンプできます。Vimmerならこの操作に馴染みやすいかと思います。</p>
+<h4 id="プレビューパネルの拡大">プレビューパネルの拡大</h4>
+<p><code>github-tui</code>はターミナルのサイズに合わせてパネルのサイズを動的に変更します。各パネルのサイズの割合は決まっています。
+そのため、画面が小さいとプレビュー画面も小さくなりissueやコメントの本文が読みづらくなります。
+その際は<code>o</code>でパネルを拡大でき、再度<code>o</code>を押すと元に戻ります。</p>
+<p><img src="https://i.gyazo.com/6e25f0e970f0ab6ef1dbbe17b55d7ebf.gif" alt=""></p>
+<h4 id="issueのopenとclose">issueのOpenとClose</h4>
+<p>issue一覧パネルでは<code>Ctrl-J</code>/<code>Ctrl+K</code>を使って複数のissueにチェックを付けて、それらをまとめてOpenまたはCloseできます。
+チェックしていない場合は、現在選択しているissueに作用します。issueをOpenするには<code>o</code>、Closeするには<code>c</code>を使います。</p>
+<p><img src="https://i.gyazo.com/b30c8107ae75fda1c7da42c8170c871e.gif" alt=""></p>
+<p>また、選択したissueを<code>Ctrl-O</code>を使ってブラウザで開くこともできます。</p>
+<h4 id="issue作成">issue作成</h4>
+<p>issue一覧パネルで<code>n</code>を使ってissueを新規作成できます。作成の際にフォームが表示されるので、<code>Tab</code>で各項目を切り替えながら必要な部分を埋めていく使い方になります。</p>
+<p><img src="https://i.gyazo.com/fb665369057c5f096517a24e606e7884.png" alt=""></p>
+<p><code>Repo</code>は<code>Filters</code>にある<code>repo:owner/repo</code>から取得するので、作成する際にはそのクエリが必須です。
+<code>Assignees</code>と<code>Labels</code>、<code>Projects</code>は入力補完が可能ですので、任意のキーワードを入力すると補完候補が表示されます。ただし、複数の候補を追加したい場合は<code>,</code>で区切る必要があります。これはUIによる制限です。（ツライ）</p>
+<p><code>MileStone</code>と<code>Temaplte</code>はオプションになっていて、<code>↑</code>と<code>↓</code>で選択でき、<code>Esc</code>で選択をキャンセルできます。
+<code>Edit Body</code>ボタンは<code>$EDITOR</code>で設定されているエディタを使ってissue本文を編集できますが、<code>$EDITOR</code>が特に設定されていない場合は<code>Vim</code>がデフォルトで使用されます。
+<code>Create</code>ボタンで<code>Enter</code>を押下するとissueが作成されます。成功するとフォームが閉じられ1秒経ってからissue一覧が更新されます。1秒待つ理由としては作成後すぐにissue一覧を取得してもすぐに反映されないためです。</p>
+<p><img src="https://i.gyazo.com/c9b132ac7f44d0366dbd5d932529816d.gif" alt=""></p>
+<p>注意点として、以下のデータがない場合は項目自体が表示されない様になっています。</p>
+<ul>
+<li><code>Labels</code></li>
+<li><code>Projects</code></li>
+<li><code>MileStone</code></li>
+<li><code>Temaplte</code></li>
+</ul>
+<h3 id="今後の展望">今後の展望</h3>
+<p>基本的にブラウザでやっていたことをターミナルでもできるようにするという方針です。たとえば、issueの作成、PRの作成、PRのレビューなどです。
+ただし、使用しているライブラリでは実現が難しい可能性もあるので、ある程度妥協も必要かなと考えています。
+直近はまずisssueとPR周りの機能を充実させていきます。やることは多いですがコツコツ作っていきます。</p>
+<h3 id="最後に">最後に</h3>
+<p>一通り、現時点の実装済みの機能について紹介しましたが、どうでしたか？便利そうだなと思ったらぜひ試してみてください。要望などはissueで受け付けますので、こういう機能欲しい！というのがあればぜひリクエストください。検討します。</p>
+<p>そして、もし開発に興味あるなら<a href="https://twitter.com/gorilla0513">Twitter</a>で連絡をいただけるとうれしいです。</p>
+]]></content></item><item><title>Swaggerをプレビューする簡単なCLI</title><link>https://skanehira.github.io/blog/posts/20200205-go-swagger-preview/</link><pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20200205-go-swagger-preview/</guid><description>初めに 仕事でAPIのドキュメントにswaggerを使っていますが、プレビューするために毎度VSCodeを立ち上げて使っていました。 しかし、こ</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>仕事でAPIのドキュメントにswaggerを使っていますが、プレビューするために毎度VSCodeを立ち上げて使っていました。
 しかし、このためだけにVSCodeを起動するのはさすがにオーバースペックでそれに耐えられず、簡単なCLIを作りました。</p>
 <p><a href="https://github.com/skanehira/swagger-preview">https://github.com/skanehira/swagger-preview</a></p>
