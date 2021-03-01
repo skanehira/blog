@@ -13,10 +13,13 @@ toc: true
 ### Go
 | CLIs                                                              | Description                               |
 |-------------------------------------------------------------------|-------------------------------------------|
-| [docui](https://github.com/skanehira/docui)                       | TUI Client tool for docker                |
-| [tson](https://github.com/skanehira/tson)                         | TUI json editor and viewer written in Go  |
+| [docui](https://github.com/skanehira/docui)                       | TUI Client for docker                     |
+| [github-tui](https://github.com/skanehira/github-tui)             | TUI Client for GitHub                     |
 | [gjo](https://github.com/skanehira/gjo)                           | Small utility to create JSON objects      |
 | [code2img](https://github.com/skanehira/code2img)                 | Generate image of source code             |
+| [swagger-preview](https://github.com/skanehira/swagger-preview)   | Swagger preview CLI                       |
+| [ghf](https://github.com/skanehira/ghf)                           | Manage file in GitHub repository          |
+| [tson](https://github.com/skanehira/tson)                         | TUI json editor and viewer written in Go  |
 | [gtran](https://github.com/skanehira/gtran)                       | Google translate CLI                      |
 | [ff](https://github.com/skanehira/ff)                             | File manager written in Go                |
 | [getpr](https://github.com/skanehira/getpr)                       | Get GitHub's pull request url             |
