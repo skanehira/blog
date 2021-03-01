@@ -3,7 +3,7 @@ title: Vimでビートマニアする
 date: 2020-12-25
 toc: true
 tags: 
-  - Go
+  - Vim
 ---
 
 以前、トイレ入ってたら突然Vimでビートマニアしたくなったので[skanehira/beatbanana.vim](https://github.com/skanehira/beatbanana.vim)というのを作っていました。
