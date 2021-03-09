@@ -1,4 +1,103 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 22 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHubのTUIツールを作った</title><link>https://skanehira.github.io/blog/posts/20210222-go-github-tui/</link><pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210222-go-github-tui/</guid><description>以前に VimでGitHubを操作するプラグインgh.vimの紹介 という記事を書きました。 こちらの記事で紹介したgh.vimはVim上でGit</description><content type="html"><![CDATA[<p>以前に <a href="https://skanehira.github.io/blog/posts/20201203-introduce-gh-vim/">VimでGitHubを操作するプラグインgh.vimの紹介</a> という記事を書きました。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>LinuxでもEmacs風なキーバインドを設定する</title><link>https://skanehira.github.io/blog/posts/20210308-linux-autokey/</link><pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210308-linux-autokey/</guid><description>初めに 普段Macでカーソル移動をする時は方向キーを使わず、&amp;lt;C-n&amp;gt;や&amp;lt;C-f&amp;gt;、&amp;lt;C-b&amp;gt;などのEma</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>普段Macでカーソル移動をする時は方向キーを使わず、<code>&lt;C-n&gt;</code>や<code>&lt;C-f&gt;</code>、<code>&lt;C-b&gt;</code>などのEmacs風のキーバインドを使っています。
+ホームポジションを崩さずにカーソルを移動できるこのキーバインドはたいへん便利ですが、Linuxではデフォルトでこのようなキーバインドを使えないです。
+そのため、普段Linuxを使っているとそこが少し不便さを感じていました。</p>
+<p>本記事では自分の備忘録も兼ねて、上記の問題を解消できる<a href="https://github.com/autokey/autokey">autokey</a>というのを紹介していきます。
+なお、筆者の環境は以下になります。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Ubuntu 20.04 TLS</td>
+</tr>
+<tr>
+<td>Desktop</td>
+<td>Xorg</td>
+</tr>
+</tbody>
+</table>
+<h2 id="autokeyとは">Autokeyとは</h2>
+<p>簡単に言うとキーバインドを設定できるソフトウェアになります。
+ちゃんと調べていないですが、イメージとしてはX11を通してソフトウェアに送信されるキー情報を書き換えるという感じでしょうか。
+これを使用することで、キーバインドを自由に設定できます。</p>
+<p>Ubuntuでは、次のコマンドで導入できます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ sudo apt install autokey-gtk
+</code></pre></div><h2 id="なぜautokeyなのか">なぜAutokeyなのか</h2>
+<p>Ubuntuユーザーであれば知っていると思いますが、<a href="https://itsfoss.com/gnome-tweak-tool/">Gnome Tweak Tool</a>というアプリケーションがあります。
+このアプリケーションではキーバインドをEmacs風に変更できます。しかし<code>↓</code>/<code>↑</code>を<code>&lt;C-n&gt;</code>/<code>&lt;C-p&gt;</code>で代用できない、といった適用しきれていない問題があります。</p>
+<p><img src="https://i.gyazo.com/0ebd07d02211b8b910bb8adf51675760.png" alt=""></p>
+<p>そこでAutokeyも併用することで先程の問題を解決できます。今のところ特に問題なく使えているので設定を気を付ければ競合は起きないと思います。</p>
+<h2 id="設定">設定</h2>
+<p>設定は大きく分けて以下の3ステップあります。詳細を説明していきます。</p>
+<ol>
+<li>フォルダを作成する</li>
+<li>フォルダとアプリケーションを紐付ける</li>
+<li>キーバインドを設定する</li>
+</ol>
+<p>autokeyはアプリケーションごとにキーバインドを設定できます
+。筆者は1アプリケーションに1フォルダというふうにしていますが、特にルールはなくフォルダを自由に作成でき、名前も任意に付けられます。</p>
+<p><img src="https://i.gyazo.com/cf47ee01d936c2b4811c606c4fa75bf7.png" alt=""></p>
+<p>フォルダとアプリケーションを紐付けるにはフォルダを選択した状態で右側にある<code>Window Filter</code>の<code>Set</code>ボタンから、<code>Detect Window Properties</code>を選択して、対象のアプリケーションにウィンドウ切り替えをすれば良いです。</p>
+<p><img src="https://i.gyazo.com/f4fa7602c2fa2e710c57e0d7c6e7713e.png" alt=""></p>
+<p>次にキーバインドの設定ですが、フォルダ内にスクリプトを追加していき、設定を書いていきます。
+フォルダを選択した状態で新規ボタンから<code>Script</code>を選択して、任意の名前を付けます。筆者の場合はキー名（たとえば削除なら<code>delete</code>など）にしています。</p>
+<p><img src="https://i.gyazo.com/501c4866cfe5ac000aca198a548386a3.png" alt=""></p>
+<p>次に入力したキーとそれに対応するキーの設定をしていきます。スクリプトを選択して画面右側の<code>HotKey</code>を選択すると入力キーを設定できます。
+次の画面で<code>Press to Set</code>を押してからキーを入力するとキャプチャしてくれます。</p>
+<p><img src="https://i.gyazo.com/884c7eb88f6d636497297251758d24f0.png" alt=""></p>
+<p>次に対応するキーはスクリプト入力部で<code>keyboard.send_keys(&quot;&lt;ctrl&gt;+f&quot;)</code>と入力します。これで<code>HotKey</code>にて設定したキーを押されたらスクリプトで設定したキーが送られます。</p>
+<p><img src="https://i.gyazo.com/39560f94ee874a668368cdf98f5ecd28.png" alt=""></p>
+<p>ちなみに筆者は次のように設定しています。</p>
+<table>
+<thead>
+<tr>
+<th><code>HotKey</code></th>
+<th><code>SendKeys</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;super&gt;+f</code></td>
+<td><code>&lt;ctrl&gt;+f</code></td>
+</tr>
+<tr>
+<td><code>&lt;ctrl&gt;+h</code></td>
+<td><code>&lt;backspace&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;ctrl&gt;+n</code></td>
+<td><code>&lt;down&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;ctrl&gt;+p</code></td>
+<td><code>&lt;up&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;ctrl&gt;+b</code></td>
+<td><code>&lt;left&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;ctrl&gt;+f</code></td>
+<td><code>&lt;right&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="https://github.com/autokey/autokey/wiki/API-Examples#send-keys">https://github.com/autokey/autokey/wiki/API-Examples#send-keys</a></li>
+<li><a href="https://autokey.github.io">https://autokey.github.io</a></li>
+<li><a href="https://qiita.com/sassoon/items/ce6ae698fcfbd1fd8a42">https://qiita.com/sassoon/items/ce6ae698fcfbd1fd8a42</a></li>
+</ul>
+<h2 id="最後に">最後に</h2>
+<p>ざっくりですが<code>AutoKey</code>について紹介しました。これでQOLがだいぶ上がったので、みなさんもぜひ試してみてください。
+また、<code>AutoKey</code>の設定のより詳細な情報は参考文献を見ていただければと思います。</p>
+]]></content></item><item><title>GitHubのTUIツールを作った</title><link>https://skanehira.github.io/blog/posts/20210222-go-github-tui/</link><pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210222-go-github-tui/</guid><description>以前に VimでGitHubを操作するプラグインgh.vimの紹介 という記事を書きました。 こちらの記事で紹介したgh.vimはVim上でGit</description><content type="html"><![CDATA[<p>以前に <a href="https://skanehira.github.io/blog/posts/20201203-introduce-gh-vim/">VimでGitHubを操作するプラグインgh.vimの紹介</a> という記事を書きました。
 こちらの記事で紹介した<code>gh.vim</code>はVim上でGitHubの機能を使えるようにしたVimプラグインです。仕事でがっつりGitHubを使うならとても便利なプラグインと思っています。</p>
 <p>しかしVimを使っていない人もたくさんいるので、そういった人向けのツールあったほうが良いかなと思い、GitHubのTUIツール <a href="https://github.com/skanehira/github-tui">github-tui</a> を作りました。
 CLIと比べ、TUIはインタラクティブに、そして直感的に操作できるというメリットがあるので便利なのではないかなと思っています。
