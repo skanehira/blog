@@ -1,4 +1,282 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>yamlをインタラクティブに絞り込みできるCLIを作った</title><link>https://skanehira.github.io/blog/posts/20210320-go-yaml-yd/</link><pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210320-go-yaml-yd/</guid><description>初めに 最近仕事で少しk8s周りを触っています。k8sのマニフェストはyamlですが、 kustomizeなどを使ってリソースをまとめたりすると</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>GoでCLIを作る時のテンプレートリポジトリを作った</title><link>https://skanehira.github.io/blog/posts/20210421-go-cli-template/</link><pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210421-go-cli-template/</guid><description>初めに 普段Goを使ってCLIなどを作ることが多く、毎度CI/CDをセットアップしたり、go getでライブラリを導入するが面倒なのでテンプレー</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>普段Goを使ってCLIなどを作ることが多く、毎度CI/CDをセットアップしたり、<code>go get</code>でライブラリを導入するが面倒なのでテンプレートリポジトリ<a href="https://github.com/skanehira/go-cli-template">go-cli-template</a>を用意しました。<br>
+基本的に自分用ですが、ちょっと手を入れればみなさんも使えるので軽く紹介していきます。</p>
+<h2 id="デフォルトセット">デフォルトセット</h2>
+<p>GitHub Actions（以降GA）を使って以下を設定してあります。</p>
+<ul>
+<li>golangci-lint</li>
+<li>test</li>
+<li>binary release</li>
+</ul>
+<p><code>golangci-lint</code>はGAがあるので、それをそのまま使っています。<br>
+使う人の好みもあるので<code>.golangci.yaml</code>はあえて設置していないです。各自好きに置いてくださいという感じです。</p>
+<p>binary releaseは<code>goreleaser</code>のGAを使っています。タグをつけてpushすると<code>Releases</code>にCHANGELOG、ハッシュ、各OSのバイナリファイルがアップロードされます。便利ですね。</p>
+<p>上記に加えて、<code>spf13/cobra</code>のベース実装（<code>version</code>コマンドのみ）も入っています。<br>
+個人的にこれまで<code>flag</code>パッケージを使っていましたが、より簡単にオプションやサブコマンドを実装できるように<code>cobra</code>を選びました。<br>
+そのためパッケージ構成も<code>cobra</code>推奨の形（サブコマンドは<code>cmd</code>配下に置く）になっています。<br>
+依存パッケージがかなり多いライブラリですが、<code>docker</code>といった有名なOSSでの採用実績があるため、そちら重視しました。</p>
+<h2 id="使い方">使い方</h2>
+<ol>
+<li>リポジトリの<code>Use this tempalte</code>から新しいリポジトリを作成します。
+<img src="https://i.gyazo.com/3166d239ed1e14611d5d43a989bfd988.png" alt=""></li>
+<li>新しいリポジトリを<code>git clone</code>して<code>make init</code>を実行して、リポジトリ名を変更します。
+<div class="highlight"><pre class="chroma"><code class="language-diff" data-lang="diff"><span class="gh">diff --git a/.goreleaser.yml b/.goreleaser.yml
+</span><span class="gh">index 856c0f0..a993558 100644
+</span><span class="gh"></span><span class="gd">--- a/.goreleaser.yml
+</span><span class="gd"></span><span class="gi">+++ b/.goreleaser.yml
+</span><span class="gi"></span><span class="gu">@@ -1,4 +1,4 @@
+</span><span class="gu"></span><span class="gd">-project_name: go-cli-template
+</span><span class="gd"></span><span class="gi">+project_name: test-cli
+</span><span class="gi"></span> env:
+   - GO111MODULE=on
+ before:
+<span class="gu">@@ -8,5 +8,5 @@ builds:
+</span><span class="gu"></span>   - main: .
+     ldflags:
+       - -s -w
+<span class="gd">-      - -X github.com/skanehira/go-cli-template/cmd.Version={{.Version}}
+</span><span class="gd">-      - -X github.com/skanehira/go-cli-template/cmd.Revision={{.ShortCommit}}
+</span><span class="gd"></span><span class="gi">+      - -X github.com/skanehira/test-cli/cmd.Version={{.Version}}
+</span><span class="gi">+      - -X github.com/skanehira/test-cli/cmd.Revision={{.ShortCommit}}
+</span><span class="gi"></span><span class="gh">diff --git a/Makefile b/Makefile
+</span><span class="gh">index dbfc09c..12d08c5 100644
+</span><span class="gh"></span><span class="gd">--- a/Makefile
+</span><span class="gd"></span><span class="gi">+++ b/Makefile
+</span><span class="gi"></span><span class="gu">@@ -1,7 +1,7 @@
+</span><span class="gu"></span> .PHONY: init
+ init:
+ ifeq ($(shell uname -s),Darwin)
+<span class="gd">-	@grep -r -l go-cli-template * .goreleaser.yml | xargs sed -i &#34;&#34; &#34;s/go-cli-template/$$(basename `git rev-parse --show-toplevel`)/&#34;
+</span><span class="gd"></span><span class="gi">+	@grep -r -l test-cli * .goreleaser.yml | xargs sed -i &#34;&#34; &#34;s/go-cli-template/$$(basename `git rev-parse --show-toplevel`)/&#34;
+</span><span class="gi"></span> else
+<span class="gd">-	@grep -r -l go-cli-template * .goreleaser.yml | xargs sed -i &#34;s/go-cli-template/$$(basename `git rev-parse --show-toplevel`)/&#34;
+</span><span class="gd"></span><span class="gi">+	@grep -r -l test-cli * .goreleaser.yml | xargs sed -i &#34;s/go-cli-template/$$(basename `git rev-parse --show-toplevel`)/&#34;
+</span><span class="gi"></span> endif
+<span class="gh">diff --git a/cmd/root.go b/cmd/root.go
+</span><span class="gh">index 27e0f98..b9feb58 100644
+</span><span class="gh"></span><span class="gd">--- a/cmd/root.go
+</span><span class="gd"></span><span class="gi">+++ b/cmd/root.go
+</span><span class="gi"></span><span class="gu">@@ -8,7 +8,7 @@ import (
+</span><span class="gu"></span> )
+    
+ var rootCmd = &amp;cobra.Command{
+<span class="gd">-	Use: &#34;go-cli-template&#34;,
+</span><span class="gd"></span><span class="gi">+	Use: &#34;test-cli&#34;,
+</span><span class="gi"></span> }
+    
+ func exitError(msg interface{}) {
+<span class="gh">diff --git a/go.mod b/go.mod
+</span><span class="gh">index c586f1b..2598da5 100644
+</span><span class="gh"></span><span class="gd">--- a/go.mod
+</span><span class="gd"></span><span class="gi">+++ b/go.mod
+</span><span class="gi"></span><span class="gu">@@ -1,4 +1,4 @@
+</span><span class="gu"></span><span class="gd">-module github.com/skanehira/go-cli-template
+</span><span class="gd"></span><span class="gi">+module github.com/skanehira/test-cli
+</span><span class="gi"></span>    
+ go 1.16
+    
+<span class="gh">diff --git a/main.go b/main.go
+</span><span class="gh">index 900b7d9..ee06357 100644
+</span><span class="gh"></span><span class="gd">--- a/main.go
+</span><span class="gd"></span><span class="gi">+++ b/main.go
+</span><span class="gi"></span><span class="gu">@@ -1,6 +1,6 @@
+</span><span class="gu"></span> package main
+    
+<span class="gd">-import &#34;github.com/skanehira/go-cli-template/cmd&#34;
+</span><span class="gd"></span><span class="gi">+import &#34;github.com/skanehira/test-cli/cmd&#34;
+</span><span class="gi"></span>    
+ func main() {
+     cmd.Execute()
+</code></pre></div></li>
+<li>試しにサブコマンドを1つ実装してみます。
+<div class="highlight"><pre class="chroma"><code class="language-diff" data-lang="diff"><span class="gh">diff --git a/cmd/hello.go b/cmd/hello.go
+</span><span class="gh"></span>new file mode 100644
+<span class="gh">index 0000000..fa5e640
+</span><span class="gh"></span><span class="gd">--- /dev/null
+</span><span class="gd"></span><span class="gi">+++ b/cmd/hello.go
+</span><span class="gi"></span><span class="gu">@@ -0,0 +1,24 @@
+</span><span class="gu"></span><span class="gi">+package cmd
+</span><span class="gi">+
+</span><span class="gi">+import (
+</span><span class="gi">+	&#34;fmt&#34;
+</span><span class="gi">+
+</span><span class="gi">+	&#34;github.com/spf13/cobra&#34;
+</span><span class="gi">+)
+</span><span class="gi">+
+</span><span class="gi">+func Hello(name string) string {
+</span><span class="gi">+	return &#34;hello &#34; + name
+</span><span class="gi">+}
+</span><span class="gi">+
+</span><span class="gi">+var helloCmd = &amp;cobra.Command{
+</span><span class="gi">+	Use: &#34;hello&#34;,
+</span><span class="gi">+	Run: func(cmd *cobra.Command, args []string) {
+</span><span class="gi">+		if len(args) &gt; 0 {
+</span><span class="gi">+			fmt.Println(Hello(args[0]))
+</span><span class="gi">+		}
+</span><span class="gi">+	},
+</span><span class="gi">+}
+</span><span class="gi">+
+</span><span class="gi">+func init() {
+</span><span class="gi">+	rootCmd.AddCommand(helloCmd)
+</span><span class="gi">+}
+</span></code></pre></div></li>
+<li>テストも書いてみます。
+<div class="highlight"><pre class="chroma"><code class="language-diff" data-lang="diff"><span class="gh">diff --git a/cmd/hello_test.go b/cmd/hello_test.go
+</span><span class="gh"></span>new file mode 100644
+<span class="gh">index 0000000..8842509
+</span><span class="gh"></span><span class="gd">--- /dev/null
+</span><span class="gd"></span><span class="gi">+++ b/cmd/hello_test.go
+</span><span class="gi"></span><span class="gu">@@ -0,0 +1,26 @@
+</span><span class="gu"></span><span class="gi">+package cmd
+</span><span class="gi">+
+</span><span class="gi">+import &#34;testing&#34;
+</span><span class="gi">+
+</span><span class="gi">+func TestHello(t *testing.T) {
+</span><span class="gi">+	tests := []struct {
+</span><span class="gi">+		in   string
+</span><span class="gi">+		want string
+</span><span class="gi">+	}{
+</span><span class="gi">+		{
+</span><span class="gi">+			in:   &#34;gorilla&#34;,
+</span><span class="gi">+			want: &#34;hello gorilla&#34;,
+</span><span class="gi">+		},
+</span><span class="gi">+		{
+</span><span class="gi">+			in:   &#34;cat&#34;,
+</span><span class="gi">+			want: &#34;hello cat&#34;,
+</span><span class="gi">+		},
+</span><span class="gi">+	}
+</span><span class="gi">+
+</span><span class="gi">+	for _, tt := range tests {
+</span><span class="gi">+		got := Hello(tt.in)
+</span><span class="gi">+		if tt.want != got {
+</span><span class="gi">+			t.Errorf(&#34;unexpected result. want=%s, got=%s&#34;, tt.want, got)
+</span><span class="gi">+		}
+</span><span class="gi">+	}
+</span><span class="gi">+}
+</span></code></pre></div></li>
+<li>コミットしてpushするとCIが走ります。ちゃんとテストとlinterが通ることを確認します。
+<img src="https://i.gyazo.com/22c98ab4e3ef1957de3a06635dfe7ab5.png" alt=""></li>
+<li><code>v0.0.1</code>タグをつけてバイナリをリリースします。
+<img src="https://i.gyazo.com/e16fa631ca34d78abc5db26eb0fcbef7.png" alt="">
+<img src="https://i.gyazo.com/7f3fd1e6e0dd014ea388412823c18af5.png" alt=""></li>
+<li>試しにバイナリをダウンロードして使ってみます。
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">MacbookPro13% curl -LO https://github.com/skanehira/test-cli/releases/download/v0.0.1/test-cli_0.0.1_Darwin_arm64.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+<span class="m">100</span>   <span class="m">642</span>  <span class="m">100</span>   <span class="m">642</span>    <span class="m">0</span>     <span class="m">0</span>   <span class="m">2051</span>      <span class="m">0</span> --:--:-- --:--:-- --:--:--  <span class="m">2051</span>
+<span class="m">100</span> 1152k  <span class="m">100</span> 1152k    <span class="m">0</span>     <span class="m">0</span>  1776k      <span class="m">0</span> --:--:-- --:--:-- --:--:-- 9852k
+MacbookPro13% tar xvf test-cli_0.0.1_Darwin_arm64.tar.gz
+x LICENSE
+x test-cli
+MacbookPro13% ./test-cli version
+Version: 0.0.1
+Revision: 3c302bf
+OS: darwin
+Arch: arm64
+MacbookPro13% ./test-cli hello gorilla
+hello gorilla
+MacbookPro13% ./test-cli hello cat
+hello cat
+MacbookPro13%
+</code></pre></div></li>
+</ol>
+<p>簡単ではありますが、以上がサブコマンド追加からリリースまでの一連の流れの説明となります。<br>
+これでだいぶ手間が省けると思います。</p>
+<h2 id="forkして使う時">forkして使う時</h2>
+<p><code>sed</code>などを使って<code>skanehira</code>を自分のユーザー名に置換してください。<br>
+あとは使い方に書いてある通りになります。お試しください。</p>
+<h2 id="最後に">最後に</h2>
+<p>CI/CDについて説明の記事は多くありますが、テンプレートを用意してさぁ使ってみてという記事が観測範囲内ではなかったので書いてみました。</p>
+<p>個人的にいったんこれで満足していますが、使っていくうちに不満が出てきて改善するかもしれません。<br>
+こうするともっと良いよ、というのがあればぜひコメントください。お待ちしています。</p>
+]]></content></item><item><title>Goでハッシュ値計算時にメモリ消費量を抑える方法</title><link>https://skanehira.github.io/blog/posts/20210418-go-hash/</link><pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210418-go-hash/</guid><description>初めに 先日、Lambdaでファイルのチェックサムをしていたら、ファイルサイズが大きすぎてout of memoryを起こしたという事象に遭遇しまし</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
+<p>先日、Lambdaでファイルのチェックサムをしていたら、ファイルサイズが大きすぎてout of memoryを起こしたという事象に遭遇しました。
+その原因と対策について、書いていきます。</p>
+<h3 id="goでのハッシュ値計算">Goでのハッシュ値計算</h3>
+<p>Goでsha256などを使ってファイルをチェックサムをする時に、ファイルをバイト列にして<code>crypto</code>パッケージを使ってハッシュを計算します。
+しかし、ファイルの中身をすべてメモリに展開すると、ファイルのサイズ分のメモリを消費してしまうという問題があります。</p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">b</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nf">ReadFile</span><span class="p">(</span><span class="s">&#34;video.mp4&#34;</span><span class="p">)</span>
+<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+	<span class="c1">// error handling
+</span><span class="c1"></span><span class="p">}</span>
+
+<span class="nx">hash</span> <span class="o">:=</span> <span class="nx">sha256</span><span class="p">.</span><span class="nf">New</span><span class="p">()</span>
+<span class="nx">hash</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+<span class="nx">v</span> <span class="o">:=</span> <span class="nx">hash</span><span class="p">.</span><span class="nf">Sum</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
+</code></pre></div><p>そこで<code>io.Copy</code>を使ってメモリ消費を抑えてハッシュ値を計算できます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">r</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Open</span><span class="p">(</span><span class="s">&#34;video.mp4&#34;</span><span class="p">)</span>
+<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+	<span class="c1">// error handling
+</span><span class="c1"></span><span class="p">}</span>
+
+<span class="nx">hash</span> <span class="o">:=</span> <span class="nx">sha256</span><span class="p">.</span><span class="nf">New</span><span class="p">()</span>
+<span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">io</span><span class="p">.</span><span class="nf">Copy</span><span class="p">(</span><span class="nx">hash</span><span class="p">,</span> <span class="nx">r</span><span class="p">);</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+	<span class="c1">// error handling
+</span><span class="c1"></span><span class="p">}</span>
+
+<span class="nx">v</span> <span class="o">:=</span> <span class="nx">hash</span><span class="p">.</span><span class="nf">Sum</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
+</code></pre></div><h3 id="ベンチマーク">ベンチマーク</h3>
+<p><code>crypto/sha256</code>は<code>io.Writer</code>を実装しているのため、<code>io.Copy</code>を使って効率よくデータを受け取り計算できます。
+実際どれくらいメモリ消費量を抑えられるか、次のコードでベンチマークを取ってみます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;crypto/sha256&#34;</span>
+	<span class="s">&#34;fmt&#34;</span>
+	<span class="s">&#34;io&#34;</span>
+	<span class="s">&#34;io/ioutil&#34;</span>
+	<span class="s">&#34;os&#34;</span>
+	<span class="s">&#34;testing&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">var</span> <span class="nx">good</span> <span class="p">=</span> <span class="s">&#34;a6f1de4f1aba03ff704abfe8264d6b3d5dc4f6a256792f759a80df08b1dfcc42&#34;</span>
+
+<span class="kd">func</span> <span class="nf">BenchmarkHashBuffer</span><span class="p">(</span><span class="nx">b</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">B</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">N</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="nx">input</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nf">ReadFile</span><span class="p">(</span><span class="s">&#34;xxx.log&#34;</span><span class="p">)</span>
+		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+			<span class="nx">b</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+		<span class="p">}</span>
+		<span class="nx">hash</span> <span class="o">:=</span> <span class="nx">sha256</span><span class="p">.</span><span class="nf">New</span><span class="p">()</span>
+		<span class="nx">hash</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span>
+		<span class="nx">got</span> <span class="o">:=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%x&#34;</span><span class="p">,</span> <span class="nx">hash</span><span class="p">.</span><span class="nf">Sum</span><span class="p">(</span><span class="kc">nil</span><span class="p">))</span>
+		<span class="k">if</span> <span class="nx">good</span> <span class="o">!=</span> <span class="nx">got</span> <span class="p">{</span>
+			<span class="nx">b</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="s">&#34;unexpected sum&#34;</span><span class="p">)</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">BenchmarkHashStream</span><span class="p">(</span><span class="nx">b</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">B</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">N</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="nx">r</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Open</span><span class="p">(</span><span class="s">&#34;xxx.log&#34;</span><span class="p">)</span>
+		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+			<span class="nx">b</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+		<span class="p">}</span>
+		<span class="k">defer</span> <span class="nx">r</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
+		<span class="nx">hash</span> <span class="o">:=</span> <span class="nx">sha256</span><span class="p">.</span><span class="nf">New</span><span class="p">()</span>
+		<span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">io</span><span class="p">.</span><span class="nf">Copy</span><span class="p">(</span><span class="nx">hash</span><span class="p">,</span> <span class="nx">r</span><span class="p">);</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+			<span class="nx">b</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+		<span class="p">}</span>
+		<span class="nx">got</span> <span class="o">:=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%x&#34;</span><span class="p">,</span> <span class="nx">hash</span><span class="p">.</span><span class="nf">Sum</span><span class="p">(</span><span class="kc">nil</span><span class="p">))</span>
+		<span class="k">if</span> <span class="nx">good</span> <span class="o">!=</span> <span class="nx">got</span> <span class="p">{</span>
+			<span class="nx">b</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="s">&#34;unexpected sum&#34;</span><span class="p">)</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>次がベンチマークの結果です。<code>1.2GB</code>のファイルのハッシュ値を算出するのに<code>io.Copy</code>を使った方がメモリ使用量を結構抑えらています。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">MacbookPro13% go <span class="nb">test</span> -bench . -benchmem
+goos: darwin
+goarch: arm64
+pkg: github.com/skanehira/test/hash
+BenchmarkHashBuffer-8          <span class="m">2</span>         <span class="m">800078625</span> ns/op        <span class="m">1274898200</span> B/op       <span class="m">16</span> allocs/op
+BenchmarkHashStream-8                  <span class="m">2</span>         <span class="m">661733333</span> ns/op           <span class="m">33912</span> B/op         <span class="m">13</span> allocs/op
+PASS
+ok      github.com/skanehira/test/hash  4.739s
+</code></pre></div><h3 id="まとめ">まとめ</h3>
+<p>sha256以外にもmd5も同様に<code>io.Copy</code>が使えることは確認しています。ほかのハッシュ値計算はできるかは確認していないんですが、おそらく可能だと思います。
+基本的に<code>io.Copy</code>を使ったほうが省メモリですので、可能な場合は使った方が良いと思います。</p>
+]]></content></item><item><title>yamlをインタラクティブに絞り込みできるCLIを作った</title><link>https://skanehira.github.io/blog/posts/20210320-go-yaml-yd/</link><pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210320-go-yaml-yd/</guid><description>初めに 最近仕事で少しk8s周りを触っています。k8sのマニフェストはyamlですが、 kustomizeなどを使ってリソースをまとめたりすると</description><content type="html"><![CDATA[<h2 id="初めに">初めに</h2>
 <p>最近仕事で少しk8s周りを触っています。k8sのマニフェストはyamlですが、
 kustomizeなどを使ってリソースをまとめたりすると、どうしても長くなってしまい可読性が下がってしまう問題があります。</p>
 <p>そこで、<a href="https://github.com/simeji/jid">jid</a>のようなインタラクティブに絞り込みできるツールがほしいなと思って調べたんですが、
