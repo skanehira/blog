@@ -1,6 +1,6 @@
 ---
 title: "Slackのreminder使いづらすぎたのでCLIを作った"
-date: 2021-01-13
+date: 2021-05-13
 toc: true
 tags:
   - Go
