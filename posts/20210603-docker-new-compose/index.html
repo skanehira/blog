@@ -1,0 +1,272 @@
+<!doctype html><html lang=ja-jp><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=theme-color content="#494f5c"><meta name=msapplication-TileColor content="#494f5c"><meta itemprop=name content="新しい docker compose"><meta itemprop=description content="こちらの記事はDockerCon 2021 & Docker Meetup Tokyo #35で発表した資料を記事にしたものです。 初めに docker composeが使えるようになったので、それにつ"><meta itemprop=datePublished content="2021-06-03T00:00:00+00:00"><meta itemprop=dateModified content="2021-06-03T00:00:00+00:00"><meta itemprop=wordCount content="3245"><meta itemprop=keywords content="Docker,docker-compose,"><meta property="og:title" content="新しい docker compose"><meta property="og:description" content="こちらの記事はDockerCon 2021 & Docker Meetup Tokyo #35で発表した資料を記事にしたものです。 初めに docker composeが使えるようになったので、それにつ"><meta property="og:type" content="article"><meta property="og:url" content="https://skanehira.github.io/blog/posts/20210603-docker-new-compose/"><meta property="article:published_time" content="2021-06-03T00:00:00+00:00"><meta property="article:modified_time" content="2021-06-03T00:00:00+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="新しい docker compose"><meta name=twitter:description content="こちらの記事はDockerCon 2021 & Docker Meetup Tokyo #35で発表した資料を記事にしたものです。 初めに docker composeが使えるようになったので、それにつ"><link rel=apple-touch-icon sizes=180x180 href=/blog/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/blog/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/blog/favicon-16x16.png><link rel=manifest href=/blog/site.webmanifest><link rel=mask-icon href=/blog/safari-pinned-tab.svg color><link rel="shortcut icon" href=/blog/favicon.ico><title>新しい docker compose</title><link rel=stylesheet href=https://skanehira.github.io/blog/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin=anonymous></head><body id=page><header id=site-header class="animated slideInUp"><div class="hdr-wrapper section-inner"><div class=hdr-left><div class=site-branding><a href=https://skanehira.github.io/blog/>ゴリラ@転生したら人間だった件</a></div><nav class="site-nav hide-in-mobile"><a href=https://skanehira.github.io/blog/aboutme>About me</a>
+<a href=https://skanehira.github.io/blog/posts/>Posts</a>
+<a href=https://skanehira.github.io/blog/tags/>Tags</a></nav></div><div class="hdr-right hdr-icons"><button id=toc-btn class="hdr-btn desktop-only-ib"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3" y2="6"/><line x1="3" y1="12" x2="3" y2="12"/><line x1="3" y1="18" x2="3" y2="18"/></svg></button><span class="hdr-social hide-in-mobile"><a href=https://twitter.com/gorilla0513 target=_blank rel="noopener me" title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9.0 01-3.14 1.53 4.48 4.48.0 00-7.86 3v1A10.66 10.66.0 013 4s-4 9 5 13a11.64 11.64.0 01-7 2c9 5 20 0 20-11.5a4.5 4.5.0 00-.08-.83A7.72 7.72.0 0023 3z"/></svg></a><a href=https://github.com/skanehira target=_blank rel="noopener me" title=Github><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77a5.44 5.44.0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></a></span><button id=menu-btn class=hdr-btn><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></div></header><div id=mobile-menu class="animated fast"><ul><li><a href=https://skanehira.github.io/blog/aboutme>About me</a></li><li><a href=https://skanehira.github.io/blog/posts/>Posts</a></li><li><a href=https://skanehira.github.io/blog/tags/>Tags</a></li></ul></div><main class="site-main section-inner animated fadeIn faster"><article class=thin><header class=post-header><div class=post-meta><span>2021/06/03</span></div><h1>新しい docker compose</h1></header><div class=content><p>こちらの記事は<a href=https://dockerjp.connpass.com/event/194395/>DockerCon 2021 & Docker Meetup Tokyo #35</a>で発表した資料を記事にしたものです。</p><h1 id=初めに>初めに<a href=#初めに class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h1><p><code>docker compose</code>が使えるようになったので、それについて書いていきます。
+正式名称は<a href=https://github.com/docker/compose-cli>Docker Compose CLI</a>です。</p><p>動作検証した環境は次のとおりです。</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>$ docker version
+Client:
+ Cloud integration: 1.0.14
+ Version:           20.10.6
+ API version:       1.41
+ Go version:        go1.16.3
+ Git commit:        370c289
+ Built:             Fri Apr  <span class=m>9</span> 22:46:57 <span class=m>2021</span>
+ OS/Arch:           darwin/arm64
+ Context:           default
+ Experimental:      <span class=nb>true</span>
+...
+</code></pre></div><h2 id=docker-compose-cliとは>Docker Compose CLIとは<a href=#docker-compose-cliとは class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2><p>簡単にいうと<code>docker-compose</code>のGo実装です。<code>docker-compose</code>と互換しています。
+<code>docker-compose</code>に置き換わることを目標としていて、実装は<a href=https://github.com/compose-spec/compose-spec>compose-spec</a>の仕様に準拠しています。
+既存<code>docker-compose</code>のメンテナンスは継続されるそうです。</p><p>現時点利用できるコマンド一覧は次になっています。</p><pre><code>Commands:
+  build       Build or rebuild services
+  convert     Converts the compose file to platform's canonical format
+  create      Creates containers for a service.
+  down        Stop and remove containers, networks
+  events      Receive real time events from containers.
+  exec        Execute a command in a running container.
+  images      List images used by the created containers
+  kill        Force stop service containers.
+  logs        View output from containers
+  ls          List running compose projects
+  pause       pause services
+  port        Print the public port for a port binding.
+  ps          List containers
+  pull        Pull service images
+  push        Push service images
+  restart     Restart containers
+  rm          Removes stopped service containers
+  run         Run a one-off command on a service.
+  start       Start services
+  stop        Stop services
+  top         Display the running processes
+  unpause     unpause services
+  up          Create and start containers
+</code></pre><h2 id=compose-specとは>compose-specとは<a href=#compose-specとは class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2><p>プラットフォームに依存しない、マルチコンテナなアプリケーションを定義するための標準仕様です。
+もともとは<code>docker-compose</code>が提供していた機能を標準な仕様として査定したので、特に大きな変更はないようです。
+公式サイトは <a href=https://compose-spec.io>https://compose-spec.io</a> です。</p><h2 id=docker-compose-cliの特徴>Docker Compose CLIの特徴<a href=#docker-compose-cliの特徴 class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2><p>大きく分けて2つの特徴があります。</p><h3 id=クラウド対応>クラウド対応<a href=#クラウド対応 class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h3><ul><li>マルチコンテナを<code>ECS</code>と<code>ACI(Azure Cloud Instance)</code>に簡単にデプロイできる</li><li>AWSのECSの場合<ul><li><code>docker compose up</code>でFargateのクラスタ、サービス、タスクやLBなどを作成してくれる</li><li><code>docker compose down</code>で作成したリソースを削除</li></ul></li></ul><h3 id=cli本体>CLI本体<a href=#cli本体 class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h3><ul><li><code>docker-compose.yaml</code>のパースライブラリ<a href=https://github.com/compose-spec/compose-go>compose-go</a>が公開されている<ul><li><code>Docker Compose CLI</code>もそれを利用している</li><li><code>compose</code>関連のツールの作成が楽になる</li></ul></li><li>buildkitがデフォルト有効になっている</li><li>Goによる実装なので、既存のエコシステム（<code>Docker CLI</code>のSDKなど）を利用できる<ul><li>実際内部ではSDKを使って<code>Docker Engine</code>とやりとりしている</li></ul></li></ul><h2 id=docker-composeとの差分>docker-composeとの差分<a href=#docker-composeとの差分 class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2><p>一部<code>docker-compose</code>で非推奨になったフラグは対応しないそうです。
+たとえば<code>docker-compose rm --all</code>など。</p><p>詳細は以下を参照してください。issueの方には具体的なオプションが記載されています。</p><ul><li><a href=https://docs.docker.com/compose/cli-command-compatibility>https://docs.docker.com/compose/cli-command-compatibility</a></li><li><a href=https://github.com/docker/compose-cli/issues/1283>https://github.com/docker/compose-cli/issues/1283</a></li></ul><h2 id=docker-composeからの移行について>docker-composeからの移行について<a href=#docker-composeからの移行について class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2><p>個人、開発での利用は移行しても良さそうと思っています。
+理由として以下になります。</p><ul><li><code>docker-compose</code>の機能をほぼ互換している<ul><li>一部のフラグは対応していないが、基本的に問題ない</li></ul></li><li>便利な新機能が追加される可能性が高い<ul><li>既存の財産を気軽に利用でくるのと、クラウドもターゲットに入れているので</li></ul></li></ul><h2 id=docker-composeを使ってみる>docker composeを使ってみる<a href=#docker-composeを使ってみる class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2><ul><li><p><a href=https://docs.docker.jp/compose/wordpress.html>https://docs.docker.jp/compose/wordpress.html</a> のyamlを使用</p><div class=highlight><pre class=chroma><code class=language-yaml data-lang=yaml><span class=nt>version</span><span class=p>:</span><span class=w> </span><span class=s1>&#39;3&#39;</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=nt>services</span><span class=p>:</span><span class=w>
+</span><span class=w>   </span><span class=nt>db</span><span class=p>:</span><span class=w>
+</span><span class=w>     </span><span class=l>...</span><span class=w>
+</span><span class=w>   </span><span class=nt>wordpress</span><span class=p>:</span><span class=w>
+</span><span class=w>     </span><span class=nt>depends_on</span><span class=p>:</span><span class=w>
+</span><span class=w>       </span>- <span class=l>db</span><span class=w>
+</span><span class=w>     </span><span class=nt>image</span><span class=p>:</span><span class=w> </span><span class=l>wordpress:latest</span><span class=w>
+</span><span class=w>     </span><span class=nt>ports</span><span class=p>:</span><span class=w>
+</span><span class=w>       </span>- <span class=s2>&#34;8000:80&#34;</span><span class=w>
+</span><span class=w>     </span><span class=nt>restart</span><span class=p>:</span><span class=w> </span><span class=l>always</span><span class=w>
+</span><span class=w>     </span><span class=nt>environment</span><span class=p>:</span><span class=w>
+</span><span class=w>       </span><span class=nt>WORDPRESS_DB_HOST</span><span class=p>:</span><span class=w> </span><span class=l>db:3306</span><span class=w>
+</span><span class=w>       </span><span class=nt>WORDPRESS_DB_USER</span><span class=p>:</span><span class=w> </span><span class=l>wordpress</span><span class=w>
+</span><span class=w>       </span><span class=nt>WORDPRESS_DB_PASSWORD</span><span class=p>:</span><span class=w> </span><span class=l>wordpress</span><span class=w>
+</span><span class=w></span><span class=nt>volumes</span><span class=p>:</span><span class=w>
+</span><span class=w>    </span><span class=nt>db_data</span><span class=p>:</span><span class=w>
+</span></code></pre></div></li><li><p>コンテナ作成</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>MacbookPro13% docker compose up
+<span class=o>[</span>+<span class=o>]</span> Building 12.3s <span class=o>(</span>3/4<span class=o>)</span>
+<span class=o>[</span>+<span class=o>]</span> Building 12.4s <span class=o>(</span>3/4<span class=o>)</span>
+<span class=o>[</span>+<span class=o>]</span> Building 12.5s <span class=o>(</span>3/4<span class=o>)</span>
+<span class=o>[</span>+<span class=o>]</span> Building 24.3s <span class=o>(</span>5/5<span class=o>)</span> <span class=nv>FINISHED</span>
+ <span class=o>=</span>&gt; <span class=o>[</span>internal<span class=o>]</span> load build definition from Dockerfile          0.0s
+ <span class=o>=</span>&gt; <span class=o>=</span>&gt; transferring dockerfile: 58B                           0.0s
+...
+<span class=o>[</span>+<span class=o>]</span> Running 4/1
+ ⠿ Network demo_default        Created                        3.5s
+ ⠿ Volume <span class=s2>&#34;demo_db_data&#34;</span>       Created                        0.0s
+ ⠿ Container demo_db_1         Created                        0.1s
+ ⠿ Container demo_wordpress_1  Created                        0.0s
+Attaching to db_1, wordpress_1
+...
+wordpress_1  <span class=p>|</span> <span class=o>[</span>Sun May <span class=m>23</span> 12:28:34.735398 2021<span class=o>]</span> <span class=o>[</span>mpm_prefork:n...
+wordpress_1  <span class=p>|</span> <span class=o>[</span>Sun May <span class=m>23</span> 12:28:34.735591 2021<span class=o>]</span> <span class=o>[</span>core:notice<span class=o>]</span> ...
+...
+db_1         <span class=p>|</span> 2021-05-23T12:28:46.521520Z <span class=m>0</span> <span class=o>[</span>Note<span class=o>]</span> /usr/sbin/m...
+db_1         <span class=p>|</span> Version: <span class=s1>&#39;5.7.33&#39;</span>  socket: <span class=err>&#39;</span>/var/run/mysqld/mysq...
+</code></pre></div></li><li><p>初期画面
+<img src=https://i.gyazo.com/4ca0bf51bac235bf75d6c829f20d9582.png alt></p></li><li><p>コンテナ一覧と停止</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>MacbookPro13% docker compose ps
+NAME                SERVICE      STATUS    PORTS
+demo_db_1           db           running   3306/tcp, 33060/tcp
+demo_wordpress_1    wordpress    running   0.0.0.0:8000-&gt;80/tcp, :::8000-&gt;80/tcp
+MacbookPro13% docker compose down
+<span class=o>[</span>+<span class=o>]</span> Running 3/3
+ ⠿ Container demo_wordpress_1  Removed     2.1s
+ ⠿ Container demo_db_1         Removed     1.2s
+ ⠿ Network demo_default        Removed     2.5s
+MacbookPro13%
+</code></pre></div></li><li><p>コンテナにアタッチする</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>MacbookPro13% docker compose <span class=nb>exec</span> db mysql -uwordpress -pwordpress -Dwordpress
+mysql: <span class=o>[</span>Warning<span class=o>]</span> Using a password on the <span class=nb>command</span> line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with <span class=p>;</span> or <span class=se>\g</span>.
+Your MySQL connection id is <span class=m>2</span>
+Server version: 5.7.33 MySQL Community Server <span class=o>(</span>GPL<span class=o>)</span>
+
+Copyright <span class=o>(</span>c<span class=o>)</span> 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type <span class=s1>&#39;help;&#39;</span> or <span class=s1>&#39;\h&#39;</span> <span class=k>for</span> help. Type <span class=s1>&#39;\c&#39;</span> to clear the current input statement.
+
+mysql&gt;
+</code></pre></div></li><li><p>プロセス一覧</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>MacbookPro13% docker compose top
+demo_db_1
+UID   PID   PPID   C    STIME   TTY   TIME       CMD
+<span class=m>999</span>   <span class=m>388</span>   <span class=m>358</span>    <span class=m>0</span>    13:22   ?     00:00:01   /usr/bin/qemu-x86_64 /u...
+
+demo_wordpress_1
+UID        PID    PPID   C    STIME   TTY   TIME       CMD
+root       <span class=m>809</span>    <span class=m>778</span>    <span class=m>0</span>    13:22   ?     00:00:00   apache2 -DFOREGROUND
+www-data   <span class=m>1175</span>   <span class=m>809</span>    <span class=m>0</span>    13:22   ?     00:00:00   apache2 -DFOREGROUND
+www-data   <span class=m>1176</span>   <span class=m>809</span>    <span class=m>0</span>    13:22   ?     00:00:00   apache2 -DFOREGROUND
+www-data   <span class=m>1177</span>   <span class=m>809</span>    <span class=m>0</span>    13:22   ?     00:00:00   apache2 -DFOREGROUND
+www-data   <span class=m>1178</span>   <span class=m>809</span>    <span class=m>0</span>    13:22   ?     00:00:00   apache2 -DFOREGROUND
+www-data   <span class=m>1179</span>   <span class=m>809</span>    <span class=m>0</span>    13:22   ?     00:00:00   apache2 -DFOREGROUND
+</code></pre></div></li></ul><h2 id=docker-composeを使ってecsにコンテナをデプロイしてみる>docker composeを使ってECSにコンテナをデプロイしてみる<a href=#docker-composeを使ってecsにコンテナをデプロイしてみる class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2><p>:::message
+サンプルなので、特にセキュリティを考慮していない内容となっています。
+:::</p><ul><li><p>利用する<code>docker-compose.yaml</code></p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>MacbookPro13% cat docker-compose.yaml
+version: <span class=s2>&#34;3&#34;</span>
+
+services:
+  nginx:
+    image: nginx:1.19.10-alpine
+    ports:
+      - <span class=s2>&#34;80:80&#34;</span>
+MacbookPro13%
+</code></pre></div></li><li><p>既存のAWSのプロファイルを利用</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>MacbookPro13% docker context create ecs myecs
+? Create a Docker context using: An existing AWS profile
+? Select AWS Profile xxxxxxx
+Successfully created ecs context <span class=s2>&#34;myecs&#34;</span>
+MacbookPro13% docker context use myecs
+myecs
+MacbookPro13% docker context ls
+NAME         TYPE      DESCRIPTION...
+default      moby      Current DOC...
+myecs *      ecs
+</code></pre></div></li><li><p>コンテナを作成</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>$ docker compose up
+<span class=o>[</span>+<span class=o>]</span> Running 12/14
+ ⠙ demo                        CreateInProgress User Initiated               177.2s
+ ⠿ NginxTCP80TargetGroup       CreateComplete                                  1.0s
+ ⠿ CloudMap                    CreateComplete                                 47.1s
+ ⠿ NginxTaskExecutionRole      CreateComplete                                 19.9s
+ ⠿ LogGroup                    CreateComplete                                  3.1s
+ ⠿ DefaultNetwork              CreateComplete                                  5.9s
+ ⠿ Cluster                     CreateComplete                                  5.8s
+ ⠿ DefaultNetworkIngress       CreateComplete                                  1.0s
+ ⠿ Default80Ingress            CreateComplete                                  1.0s
+ ⠿ LoadBalancer                CreateComplete                                 92.3s
+ ⠿ NginxTaskDefinition         CreateComplete                                  3.1s
+ ⠿ NginxServiceDiscoveryEntry  CreateComplete                                  2.0s
+ ⠿ NginxTCP80Listener          CreateComplete                                  3.0s
+ ⠋ NginxService                CreateInProgress Resource creation Initiated   65.0s
+</code></pre></div></li><li><p>サービスを確認</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>MacbookPro13% docker compose ps --format<span class=o>=</span>json <span class=p>|</span> jq
+<span class=o>[</span>
+  <span class=o>{</span>
+    <span class=s2>&#34;ID&#34;</span>: <span class=s2>&#34;arn:aws:ecs:ap-northeast-1:xxxxxxxxxxxx:task/demo/4af498c8586849c691063b7f4d202cec&#34;</span>,
+    <span class=s2>&#34;Name&#34;</span>: <span class=s2>&#34;task/demo/4af498c8586849c691063b7f4d202cec&#34;</span>,
+    <span class=s2>&#34;Project&#34;</span>: <span class=s2>&#34;demo&#34;</span>,
+    <span class=s2>&#34;Service&#34;</span>: <span class=s2>&#34;nginx&#34;</span>,
+    <span class=s2>&#34;State&#34;</span>: <span class=s2>&#34;Running&#34;</span>,
+    <span class=s2>&#34;Health&#34;</span>: <span class=s2>&#34;&#34;</span>,
+    <span class=s2>&#34;Publishers&#34;</span>: <span class=o>[</span>
+      <span class=o>{</span>
+        <span class=s2>&#34;URL&#34;</span>: <span class=s2>&#34;demo-LoadBa-187KUDJD32QRX-2082745493.ap-northeast-1.elb.amazonaws.com:80&#34;</span>,
+        <span class=s2>&#34;TargetPort&#34;</span>: 80,
+        <span class=s2>&#34;PublishedPort&#34;</span>: 80,
+        <span class=s2>&#34;Protocol&#34;</span>: <span class=s2>&#34;http&#34;</span>
+      <span class=o>}</span>
+    <span class=o>]</span>
+  <span class=o>}</span>
+<span class=o>]</span>
+</code></pre></div></li><li><p>アクセスしてみる</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>MacbookPro13% curl -L demo-LoadBa-187KUDJD32QRX-2082745493.ap-northeast-1.elb.amazonaws.com
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Welcome to nginx!&lt;/title&gt;
+&lt;style&gt;
+    body <span class=o>{</span>
+        width: 35em<span class=p>;</span>
+        margin: <span class=m>0</span> auto<span class=p>;</span>
+        font-family: Tahoma, Verdana, Arial, sans-serif<span class=p>;</span>
+    <span class=o>}</span>
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Welcome to nginx!&lt;/h1&gt;
+...
+</code></pre></div></li><li><p>リソースを削除</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>MacbookPro13% docker compose down
+<span class=o>[</span>+<span class=o>]</span> Running 14/14
+ ⠿ demo                        DeleteComplete                         466.1s
+ ⠿ Default80Ingress            DeleteComplete                           1.1s
+ ⠿ NginxService                DeleteComplete                         414.2s
+ ⠿ DefaultNetworkIngress       DeleteComplete                           1.1s
+ ⠿ NginxTCP80Listener          DeleteComplete                           1.7s
+ ⠿ Cluster                     DeleteComplete                           0.7s
+ ⠿ NginxServiceDiscoveryEntry  DeleteComplete                           1.7s
+ ⠿ NginxTaskDefinition         DeleteComplete                           1.7s
+ ⠿ CloudMap                    DeleteComplete                          47.1s
+ ⠿ LogGroup                    DeleteComplete                           2.0s
+ ⠿ NginxTaskExecutionRole      DeleteComplete                           1.0s
+ ⠿ LoadBalancer                DeleteComplete                           0.0s
+ ⠿ NginxTCP80TargetGroup       DeleteComplete                           0.0s
+ ⠿ DefaultNetwork              DeleteComplete                          24.1s
+MacbookPro13%
+</code></pre></div></li></ul><h2 id=docker-compose-cliのアーキテクチャ>Docker Compose CLIのアーキテクチャ<a href=#docker-compose-cliのアーキテクチャ class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2><p><a href=https://github.com/docker/compose-cli>Docker Compose CLI</a>より
+<img src="https://github.com/docker/compose-cli/blob/main/docs/images/cli-architecture.png?raw=true" alt></p><p><code>Docker Compose CLI</code>はプラットフォーム依存しないように、各プラットフォームの差異は<code>Backend Interface</code>で吸収しています。インタフェースの定義は次のようになっています。</p><div class=highlight><pre class=chroma><code class=language-go data-lang=go><span class=c1>// Service aggregates the service interfaces
+</span><span class=c1></span><span class=kd>type</span> <span class=nx>Service</span> <span class=kd>interface</span> <span class=p>{</span>
+	<span class=nf>ContainerService</span><span class=p>()</span> <span class=nx>containers</span><span class=p>.</span><span class=nx>Service</span>
+	<span class=nf>ComposeService</span><span class=p>()</span> <span class=nx>compose</span><span class=p>.</span><span class=nx>Service</span>
+	<span class=nf>ResourceService</span><span class=p>()</span> <span class=nx>resources</span><span class=p>.</span><span class=nx>Service</span>
+	<span class=nf>SecretsService</span><span class=p>()</span> <span class=nx>secrets</span><span class=p>.</span><span class=nx>Service</span>
+	<span class=nf>VolumeService</span><span class=p>()</span> <span class=nx>volumes</span><span class=p>.</span><span class=nx>Service</span>
+<span class=p>}</span>
+</code></pre></div><p><code>container.Service</code>はコンテナの作成、起動や停止など、<code>compose.Service</code>は<code>docker compose</code>のサブコマンド郡に相当します。</p><p>現時点で以下の<code>backend</code>が実装されています。</p><ul><li><code>ECS</code></li><li><code>ACI</code></li><li><code>Docker Engine</code></li></ul><p>また、<code>API</code>は<code>gRPC</code>のサーバとなっていて言語に縛られず<code>docker compose</code>の機能を使用可能のようです。
+実際動かしていないんですが、protoファイルは<a href=https://github.com/docker/compose-cli/tree/main/cli/server/protos>こちら</a>にあるので興味ある方は試してみてください。</p><h2 id=docker-cli-pluginについて>Docker CLI Pluginについて<a href=#docker-cli-pluginについて class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2><p><code>docker compose</code>は<code>Docker CLI Plugin</code>として同梱されています。（Mac以外は手動インストールが必要かも）
+本体は次のパスにいます。</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>MacbookPro13% ls /usr/local/lib/docker/cli-plugins/*
+/usr/local/lib/docker/cli-plugins/docker-app
+/usr/local/lib/docker/cli-plugins/docker-buildx
+/usr/local/lib/docker/cli-plugins/docker-compose  &lt;-- これ
+/usr/local/lib/docker/cli-plugins/docker-scan
+</code></pre></div><p>このように、バイナリを特定のディレクトリ配下に置くことで、<code>docker</code>のサブコマンドとして実行できるしくみが<code>Docker CLI Plugin</code>です。
+このしくみについて調べた限りでは公式のドキュメントはなく、プロポーザルissueと実装PRしか見つからなかったので、メモと言う意味でもこの記事に残していきます。</p><p>ちなみに、<code>docker plugin</code>というのがありますが、こちらは別物です。
+<code>Docker Engine</code>自体の機能を拡張する物となっていて、たとえばボリュームやネットワークの機能を拡張できたりします。
+詳細は<a href=https://docs.docker.jp/engine/extend/plugins.html>こちら</a>を参照してください。</p><p><code>Docker CLI Plugin</code>は<a href=https://github.com/docker/docker-ce/releases/tag/v19.03.0>v19.03.0</a>で導入された機能です。
+上記のパスは<code>docker</code>本体が提供しているプラグインですが、ユーザーの場合は<code>$HOME/.docker/cli-plugins</code>配下に実行ファイルを配置します。</p><p>プラグインのファイル名は<code>docker-*</code>にする必要があり、たとえば<code>docker-hello</code>なら<code>docker hello</code>として実行できます。
+また、<code>docker-cli-plugin-metadata</code>コマンドを実装する必要があり、出力は次のようなJSON構造になります。</p><div class=highlight><pre class=chroma><code class=language-json data-lang=json><span class=p>{</span>
+  <span class=nt>&#34;SchemaVersion&#34;</span><span class=p>:</span> <span class=s2>&#34;0.1.0&#34;</span><span class=p>,</span>
+  <span class=nt>&#34;Vendor&#34;</span><span class=p>:</span> <span class=s2>&#34;Gorilla&#34;</span><span class=p>,</span>
+  <span class=nt>&#34;Version&#34;</span><span class=p>:</span> <span class=s2>&#34;v0.0.1&#34;</span><span class=p>,</span>
+  <span class=nt>&#34;ShortDescription&#34;</span><span class=p>:</span> <span class=s2>&#34;Hello Gorilla&#34;</span>
+<span class=p>}</span>
+</code></pre></div><h3 id=実際プラグインを作ってみる>実際プラグインを作ってみる<a href=#実際プラグインを作ってみる class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h3><p>以下のスクリプトを用意します。</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh><span class=cp>#!/usr/bin/env bash
+</span><span class=cp></span>
+docker_cli_plugin_metadata<span class=o>()</span> <span class=o>{</span>
+  <span class=nb>local</span> <span class=nv>vendor</span><span class=o>=</span><span class=s2>&#34;Gorilla&#34;</span>
+  <span class=nb>local</span> <span class=nv>url</span><span class=o>=</span><span class=s2>&#34;https://github.com/skanehira&#34;</span>
+  <span class=nb>local</span> <span class=nv>description</span><span class=o>=</span><span class=s2>&#34;Hello Docker CLI Plugin&#34;</span>
+  <span class=nb>local</span> <span class=nv>version</span><span class=o>=</span><span class=s2>&#34;0.0.1&#34;</span>
+  cat <span class=s>&lt;&lt;-EOF
+</span><span class=s>  {&#34;SchemaVersion&#34;:&#34;0.1.0&#34;,&#34;Vendor&#34;:&#34;${vendor}&#34;,&#34;Version&#34;:&#34;${version}&#34;,&#34;ShortDescription&#34;:&#34;${description}&#34;,&#34;URL&#34;:&#34;${url
+</span><span class=s>}&#34;}
+</span><span class=s>EOF</span>
+<span class=o>}</span>
+
+<span class=k>case</span> <span class=s2>&#34;</span><span class=nv>$1</span><span class=s2>&#34;</span> in
+  docker-cli-plugin-metadata<span class=o>)</span>
+    docker_cli_plugin_metadata
+    <span class=p>;;</span>
+  *<span class=o>)</span>
+    <span class=nb>echo</span> <span class=nv>$@</span>
+    <span class=p>;;</span>
+<span class=k>esac</span>
+</code></pre></div><p>次に、ディレクトリと<code>docker-hello</code>を用意します。</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>MacbookPro13% mkdir -p ~/.docker/cli-plugins
+MacbookPro13% <span class=nb>cd</span> ~/.docker/cli-plugins
+MacbookPro13% curl -LO <span class=se>\
+</span><span class=se></span>https://gist.githubusercontent.com/skanehira/2907d10669d8d7e9e75a39cd97dce9bc/raw/a52e77595fcc29dcba395303ddb405f34ea1e7e1/docker-hello
+MacbookPro13% chmod +x docker-hello
+</code></pre></div><p>これで、プラグインの準備はできたので動かしてみます。</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>MacbookPro13% docker 2&gt;<span class=p>&amp;</span><span class=m>1</span> <span class=p>|</span> grep hello
+  hello*      Hello Docker CLI Plugin <span class=o>(</span>Gorilla, 0.0.1<span class=o>)</span>
+MacbookPro13% docker hello gorilla
+hello gorilla
+MacbookPro13% docker hello moby
+hello moby
+</code></pre></div><p>無事出力されましたね。自作ツールをこのように配置して<code>docker</code>のサブコマンドとして実行すると便利かもしれません。</p><h2 id=最後に>最後に<a href=#最後に class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2><p><code>docker compose</code>は今後期待していきたいところですね。
+みなさんもよかったら試してみてください。</p><h2 id=参考資料>参考資料<a href=#参考資料 class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2><ul><li><code>Docker Compsoe CLI</code>の公式ドキュメント<ul><li><a href=https://docs.docker.com/compose/cli-command/>https://docs.docker.com/compose/cli-command/</a></li></ul></li><li>クラウドサービスへのデプロイのドキュメント<ul><li><a href=https://docs.docker.com/cloud/aci-integration/>https://docs.docker.com/cloud/aci-integration/</a></li><li><a href=https://docs.docker.com/cloud/ecs-integration/>https://docs.docker.com/cloud/ecs-integration/</a></li></ul></li><li>docker-composeを<code>Docker CLI Plugin</code>として登録する方法<ul><li><a href=https://gist.github.com/thaJeztah/b7950186212a49e91a806689e66b317d>https://gist.github.com/thaJeztah/b7950186212a49e91a806689e66b317d</a></li></ul></li><li>docker expose プラグイン便利そうなので試す<ul><li><a href=https://qiita.com/tksarah/items/9e46d131107d3e15f7bc>https://qiita.com/tksarah/items/9e46d131107d3e15f7bc</a></li></ul></li></ul></div><hr class=post-end><footer class=post-info><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg><span class=tag><a href=https://skanehira.github.io/blog/tags/Docker>Docker</a></span><span class=tag><a href=https://skanehira.github.io/blog/tags/docker-compose>docker-compose</a></span></p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>2021/06/03 00:00</p></footer></article><aside id=toc><div class=toc-title></div><nav id=TableOfContents><ul><li><a href=#docker-compose-cliとは>Docker Compose CLIとは</a></li><li><a href=#compose-specとは>compose-specとは</a></li><li><a href=#docker-compose-cliの特徴>Docker Compose CLIの特徴</a><ul><li><a href=#クラウド対応>クラウド対応</a></li><li><a href=#cli本体>CLI本体</a></li></ul></li><li><a href=#docker-composeとの差分>docker-composeとの差分</a></li><li><a href=#docker-composeからの移行について>docker-composeからの移行について</a></li><li><a href=#docker-composeを使ってみる>docker composeを使ってみる</a></li><li><a href=#docker-composeを使ってecsにコンテナをデプロイしてみる>docker composeを使ってECSにコンテナをデプロイしてみる</a></li><li><a href=#docker-compose-cliのアーキテクチャ>Docker Compose CLIのアーキテクチャ</a></li><li><a href=#docker-cli-pluginについて>Docker CLI Pluginについて</a><ul><li><a href=#実際プラグインを作ってみる>実際プラグインを作ってみる</a></li></ul></li><li><a href=#最後に>最後に</a></li><li><a href=#参考資料>参考資料</a></li></ul></nav></aside><div class="post-nav thin"><a class=prev-post href=https://skanehira.github.io/blog/posts/20210520-vim-plugin-command/><span class=post-nav-label>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span><br><span>Vimでシェルコマンドを簡単に実行するcommand.vimを作った</span></a></div><div id=comments class=thin></div></main><footer id=site-footer class="section-inner thin animated fadeIn faster"><p>&copy; 2021 <a href=https://skanehira.github.io/blog/>skanehira</a></p><p>Made with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> &#183; Theme <a href=https://github.com/Track3/hermit target=_blank rel=noopener>Hermit</a> &#183; <a href=https://skanehira.github.io/blog/posts/index.xml target=_blank title=rss><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></a></p></footer><script src=https://skanehira.github.io/blog/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin=anonymous></script></body></html>
