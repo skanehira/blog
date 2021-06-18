@@ -205,9 +205,7 @@ Commands:
   www-data   1179   809    0    13:22   ?     00:00:00   apache2 -DFOREGROUND
   ```
 ## docker composeを使ってECSにコンテナをデプロイしてみる
-:::message
-サンプルなので、特にセキュリティを考慮していない内容となっています。
-:::
+※サンプルなので、特にセキュリティを考慮していない内容となっています。
 
 - 利用する`docker-compose.yaml`
   ```sh
