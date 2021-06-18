@@ -4,7 +4,7 @@ date: 2021-05-13
 toc: true
 tags:
   - Go
-	- Slack
+  - Slack
 ---
 
 ## 初めに
