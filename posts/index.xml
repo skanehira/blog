@@ -197,9 +197,7 @@ www-data   <span class="m">1179</span>   <span class="m">809</span>    <span cla
 </code></pre></div></li>
 </ul>
 <h2 id="docker-composeを使ってecsにコンテナをデプロイしてみる">docker composeを使ってECSにコンテナをデプロイしてみる</h2>
-<p>:::message
-サンプルなので、特にセキュリティを考慮していない内容となっています。
-:::</p>
+<p>※サンプルなので、特にセキュリティを考慮していない内容となっています。</p>
 <ul>
 <li>
 <p>利用する<code>docker-compose.yaml</code></p>
