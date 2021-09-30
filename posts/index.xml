@@ -1,4 +1,66 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>新しい docker compose</title><link>https://skanehira.github.io/blog/posts/20210603-docker-new-compose/</link><pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210603-docker-new-compose/</guid><description>こちらの記事はDockerCon 2021 &amp;amp; Docker Meetup Tokyo #35で発表した資料を記事にしたものです。 初めに docker composeが使えるようになったので、それにつ</description><content type="html"><![CDATA[<p>こちらの記事は<a href="https://dockerjp.connpass.com/event/194395/">DockerCon 2021 &amp; Docker Meetup Tokyo #35</a>で発表した資料を記事にしたものです。</p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>マネジメントして思ったこと</title><link>https://skanehira.github.io/blog/posts/20210930-poem-management/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210930-poem-management/</guid><description>初めに ぼくはSESでお客様と、自社チームのメンバーと一緒に働いています。 チームリーダーではないんですが、社の総責任者という立場、かつ開発のテ</description><content type="html"><![CDATA[<h1 id="初めに">初めに</h1>
+<p>ぼくはSESでお客様と、自社チームのメンバーと一緒に働いています。
+チームリーダーではないんですが、社の総責任者という立場、かつ開発のテックリードでもあるので、
+全体のことを見たりお客様と設計やら実装やらのことを話したりします。</p>
+<p>そんな感じで日々頑張って仕事していて、あらためて自分が思うマネジメントで大事なことを言語化して、備忘録として残しておこうと思って記事を書きました。
+この記事を読んでくれた人に、何か役立つことがあればうれしいです。</p>
+<h2 id="結論">結論</h2>
+<p>うまくできないことも多々ありますが、ぼくはマネジメントにおいて以下のことが大事と思っています。</p>
+<ol>
+<li>チームの主役はメンバー</li>
+<li>マネジメントしようとしない</li>
+<li>フェアな姿勢でいる</li>
+<li>優しさを持つこと</li>
+<li>チームの結果はマネジメントの結果</li>
+</ol>
+<h3 id="チームの主役はメンバー">チームの主役はメンバー</h3>
+<p>世間一般的に、人をまとめる側のが主役というイメージがあるかと思います。（自分だけかもしれないが）<br>
+しかし、ぼくはまとめる側ではなく一人一人が主役と思っています。<br>
+なぜならメンバーがいて初めてチームが成り立つからです。
+一人はチームとは言えないです。</p>
+<p>チームで仕事をする以上、以下のことは大事と感じています。</p>
+<ul>
+<li>メンバーの戦力をアップさせる</li>
+<li>メンバーを満足させる</li>
+<li>メンバーを楽しませる</li>
+<li>メンバーを安心させる</li>
+</ul>
+<p>こういうことを普段から考えて、一人一人のフォローをしていくのがマネジメント側の責務と感じています。<br>
+メンバーが働いてよかった、頑張ってよかった、成長できてうれしいといった気持ちになることがモチベーションにつながると思っています。</p>
+<p>なので、主役はあくまでチームメンバーであり、メンバーに満足してもらえるようにフォローするのが大事と思っています。
+自分はまだまだ全然できていないんですが、ここはぶれないように今後も継続して頑張っていきたいと思っています。</p>
+<h3 id="マネジメントしようとしない">マネジメントしようとしない</h3>
+<p>ちょっと何言っているのか分からないって思う方もいると思いますが、ここでいう「マネジメント」は「管理」という意味です。
+つまり「人を管理しない」ことが大事ということです。</p>
+<p>怒鳴って言うことをきかせようとしたり、「なんで」攻めをしたり、そういうことはご法度と思っています。<br>
+自分がされたら嫌じゃないですか？<br>
+相手に満足感を与えられるようにするのがマネジメントの仕事であり、萎縮させてパフォーマンスを落とすことがマネジメントではないです。</p>
+<h2 id="フェアな姿勢でいる">フェアな姿勢でいる</h2>
+<p>ここは個人的にすごく大事にしていることです。説明が難しいですが…<br>
+たえば、繁忙期で締めに間に合わなくても契約した時間分しか仕事しないのは、ぼく的にはフェアではないと思っています。<br>
+もちろん契約上の問題ないですが、人として大事なことが抜けていると思っています。<br>
+要は「助け合い」です。</p>
+<p>お互いが一方的に得したり、損したりしないように調整することが大事と思っています。
+自分が困ったときに助けてほしいのと同じ様に、相手も困ったときに誰かに助けてほしいと思っています。
+そういう思いをきちんと汲んで助けることは、人として大事なことと思っていて普段からそうしています。</p>
+<p>一例として契約の話を書きましたが、契約金とかもそうです。そういうふうにあらゆる面でフェアな判断して仕事していくことはとても大事と思っています。</p>
+<h2 id="チームの成果はマネジメントの成果">チームの成果はマネジメントの成果</h2>
+<p>ぼくは「チームの成果 = マネジメントの成果」と思っています。<br>
+成果を出せなかったとき、自分の改善点を顧みず、他責するのは最もやってはいけないことです。<br>
+自分が成果を出させられなかったが本質です。なので「あの人が」と言う前に、まず自分にもっと改善できるところがないかを振り返ることが大事です。<br>
+他責にした瞬間、目が曇ります。そしてメンバーのせいにした瞬間、メンバーからの信用と信頼がなくなります。<br>
+そしてチームが崩壊します。</p>
+<h2 id="優しさを持つこと">優しさを持つこと</h2>
+<p>要は「思いやりを持ちましょう」ということです。<br>
+発する言葉一つもそうだし、「助け合い」もそうです。<br>
+他チームの人が困るのはどうでも良くて、自チームの仕事だけやっていれば良いというわけではないです。<br>
+「みんなで」仕事しているので、自分達が問題なければ良いというのは「自分さえ良ければ良い」ということと同じです。<br>
+リソースが余っていて手伝えるなら、手伝いましょう。これはチーム内外とわず、そういう姿勢でいることが大事と思っています。</p>
+<h2 id="最後に">最後に</h2>
+<p>記事を書きながら、振り返りをしつつ自分にできていないことが多いなとあらめて思いました。<br>
+皆さんはどうでしたか？思いやりを持って周りと接していますか？<br>
+自分はこれらを忘れず、今後も頑張っていこうと思います。</p>
+]]></content></item><item><title>新しい docker compose</title><link>https://skanehira.github.io/blog/posts/20210603-docker-new-compose/</link><pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210603-docker-new-compose/</guid><description>こちらの記事はDockerCon 2021 &amp;amp; Docker Meetup Tokyo #35で発表した資料を記事にしたものです。 初めに docker composeが使えるようになったので、それにつ</description><content type="html"><![CDATA[<p>こちらの記事は<a href="https://dockerjp.connpass.com/event/194395/">DockerCon 2021 &amp; Docker Meetup Tokyo #35</a>で発表した資料を記事にしたものです。</p>
 <h1 id="初めに">初めに</h1>
 <p><code>docker compose</code>が使えるようになったので、それについて書いていきます。
 正式名称は<a href="https://github.com/docker/compose-cli">Docker Compose CLI</a>です。</p>
