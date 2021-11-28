@@ -1,4 +1,32 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>マネジメントして思ったこと</title><link>https://skanehira.github.io/blog/posts/20210930-poem-management/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210930-poem-management/</guid><description>初めに ぼくはSESでお客様と、自社チームのメンバーと一緒に働いています。 チームリーダーではないんですが、社の総責任者という立場、かつ開発のテ</description><content type="html"><![CDATA[<h1 id="初めに">初めに</h1>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ゴリラ@転生したら人間だった件</title><link>https://skanehira.github.io/blog/posts/</link><description>Recent content in Posts on ゴリラ@転生したら人間だった件</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sun, 28 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skanehira.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>「プログラミングは簡単」に対して思うこと</title><link>https://skanehira.github.io/blog/posts/20211128-poem-programming-thinking/</link><pubDate>Sun, 28 Nov 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20211128-poem-programming-thinking/</guid><description>初めに 先日Twitterでこんなツイートを見かけました。 このように、似たようなことをつぶやく人をたまに見かけます。 それに対して思うところがあ</description><content type="html"><![CDATA[<h1 id="初めに">初めに</h1>
+<p>先日Twitterでこんなツイートを見かけました。
+このように、似たようなことをつぶやく人をたまに見かけます。<br>
+それに対して思うところがあったので、ちょっと自分の考えを記事にしました。</p>
+<p>多くの初学者に届ければうれしいです。</p>
+<img src="https://i.gyazo.com/fd57682e9a4966525f9f8265799ca752.png" width=300>
+<h2 id="プログラミングは本当に簡単か">プログラミングは本当に簡単か</h2>
+<p>自分はプログラミングが簡単とは一ミリも思わないです。<br>
+プログラマーとして働き始めて4、5年くらい経っていますが、いまだによくわからないなと思うことが多いです。<br>
+自分が一番良く書いている言語の挙動すら、よくわからないことが多々あります。</p>
+<p>たしかにツイートにある通り、参考にできるOSSはたくさんあります。<br>
+しかし、それは参考にできるのであって、それが答えというわけではないです。</p>
+<p>目的や環境、制約といった要素があり、それらは異なることが多々あります。
+参考にできるものだからといってそれが最適解（つまり答え）というわけではないです。</p>
+<p>また、参考するOSSのコードをよく理解しないまま流用するのは良くないと思っています。<br>
+理解しないで使うことはただのコピペであり、応用が効かないためです。</p>
+<h2 id="プログラミングは簡単じゃないという証明">プログラミングは簡単じゃないという証明</h2>
+<p>本当にプログラミングが簡単なら、人材が山ほど溢れ返っているはずです。<br>
+しかし、現状はどこも人手不足です。なぜなら「できるエンジニア」が多くないからです。</p>
+<p>よく考えればわかることですが、どの業界でも一人前になるには年単位の時間がかかります。<br>
+包丁を握ったことのない人が、数月でその業界のプロと同じようになれるわけがないです。</p>
+<p>どの業界も努力を重ねて実力を磨いていかなければ、生き残れないです。これが現実です。<br>
+それをわかった上で飛び入るのであれば、特に問題ないと思います。</p>
+<p>しかし、「プログラミングは簡単」って聞いたから飛び込もうとするなら一度しっかり考えたほうが良いかと思います。<br>
+誰かが言ったからではなくしっかりと自分で調べて、どういう業界かを把握することをお勧めします。</p>
+<h2 id="最後に">最後に</h2>
+<p>これが今回一番伝えたいことですが、どの業界に行っても努力は必要です。<br>
+甘い言葉に惑わされずしっかりと自分で考え、試行錯誤して、経験を積んでいくことが大事です。</p>
+]]></content></item><item><title>マネジメントして思ったこと</title><link>https://skanehira.github.io/blog/posts/20210930-poem-management/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://skanehira.github.io/blog/posts/20210930-poem-management/</guid><description>初めに ぼくはSESでお客様と、自社チームのメンバーと一緒に働いています。 チームリーダーではないんですが、社の総責任者という立場、かつ開発のテ</description><content type="html"><![CDATA[<h1 id="初めに">初めに</h1>
 <p>ぼくはSESでお客様と、自社チームのメンバーと一緒に働いています。
 チームリーダーではないんですが、社の総責任者という立場、かつ開発のテックリードでもあるので、
 全体のことを見たりお客様と設計やら実装やらのことを話したりします。</p>
